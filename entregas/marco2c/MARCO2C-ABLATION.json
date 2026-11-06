@@ -1,0 +1,11 @@
+{
+  "method": "Read-only annual gate removal, at most one gate at a time, before lottery; no changed events, no projected counterfactual births. Only pairs with gestational-role person in reproductive age.",
+  "eligiblePairYears": 968,
+  "multipleBarrierPairYears": 3053,
+  "singleBarrierPairYears": {
+    "papéis incompatíveis": 1109,
+    "intervalo": 386,
+    "utilidade insuficiente": 61,
+    "idade": 142
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "note": "Comparação dentro da mesma política, antes/depois das otimizações. Não se espera equivalência entre regras 2b e 2c.",
+  "checks": [
+    {
+      "benchmark": "MARCO2C-BENCHMARK",
+      "mode": "before",
+      "repetition": 1,
+      "same": {
+        "eventHash": true,
+        "entitiesHash": true,
+        "jsonBytes": true,
+        "events": true,
+        "births": true,
+        "deaths": true,
+        "scenarioHash": true
+      }
+    },
+    {
+      "benchmark": "MARCO2C-BENCHMARK",
+      "mode": "before",
+      "repetition": 2,
+      "same": {
+        "eventHash": true,
+        "entitiesHash": true,
+        "jsonBytes": true,
+        "events": true,
+        "births": true,
+        "deaths": true,
+        "scenarioHash": true
+      }
+    },
+    {
+      "benchmark": "MARCO2C-BENCHMARK",
+      "mode": "before",
+      "repetition": 3,
+      "same": {
+        "eventHash": true,
+        "entitiesHash": true,
+        "jsonBytes": true,
+        "events": true,
+        "births": true,
+        "deaths": true,
+        "scenarioHash": true
+      }
+    },
+    {
+      "benchmark": "MARCO2C-BENCHMARK",
+      "mode": "after",
+      "repetition": 1,
+      "same": {
+        "eventHash": true,
+        "entitiesHash": true,
+        "jsonBytes": true,
+        "events": true,
+        "births": true,
+        "deaths": true,
+        "scenarioHash": true
+      }
+    },
+    {
+      "benchmark": "MARCO2C-BENCHMARK",
+      "mode": "after",
+      "repetition": 2,
+      "same": {
+        "eventHash": true,
+        "entitiesHash": true,
+        "jsonBytes": true,
+        "events": true,
+        "births": true,
+        "deaths": true,
+        "scenarioHash": true
+      }
+    },
+    {
+      "benchmark": "MARCO2C-BENCHMARK",
+      "mode": "after",
+      "repetition": 3,
+      "same": {
+        "eventHash": true,
+        "entitiesHash": true,
+        "jsonBytes": true,
+        "events": true,
+        "births": true,
+        "deaths": true,
+        "scenarioHash": true
+      }
+    },
+    {
+      "benchmark": "MARCO2C-ACTIVE-BENCHMARK",
+      "mode": "after",
+      "repetition": 1,
+      "same": {
+        "eventHash": true,
+        "entitiesHash": true,
+        "jsonBytes": true,
+        "events": true,
+        "births": true,
+        "deaths": true,
+        "scenarioHash": true
+      }
+    }
+  ]
+}

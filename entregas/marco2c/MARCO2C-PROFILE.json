@@ -1,0 +1,94 @@
+{
+  "coreMs": 86522.657422,
+  "method": "Isolated CPU profile, 12-month warmup, constructor+advance only, free seed demografia-2c-000, 100 founders. No validation/export/report concurrent.",
+  "topSelfMs": [
+    {
+      "functionAndBundledLine": " @2590",
+      "ms": 16465
+    },
+    {
+      "functionAndBundledLine": " @4578",
+      "ms": 14649
+    },
+    {
+      "functionAndBundledLine": " @2570",
+      "ms": 10676
+    },
+    {
+      "functionAndBundledLine": " @4584",
+      "ms": 4338
+    },
+    {
+      "functionAndBundledLine": "(garbage collector) @0",
+      "ms": 4125
+    },
+    {
+      "functionAndBundledLine": "metadata @936",
+      "ms": 3418
+    },
+    {
+      "functionAndBundledLine": "delta @833",
+      "ms": 3189
+    },
+    {
+      "functionAndBundledLine": "candidates @4410",
+      "ms": 2741
+    },
+    {
+      "functionAndBundledLine": "set Navigator @0",
+      "ms": 2627
+    },
+    {
+      "functionAndBundledLine": "__name @2",
+      "ms": 2530
+    },
+    {
+      "functionAndBundledLine": " @943",
+      "ms": 2455
+    },
+    {
+      "functionAndBundledLine": "emit @3144",
+      "ms": 1426
+    },
+    {
+      "functionAndBundledLine": "freeze @2571",
+      "ms": 1389
+    },
+    {
+      "functionAndBundledLine": "encodeEvent @846",
+      "ms": 1204
+    },
+    {
+      "functionAndBundledLine": "event @976",
+      "ms": 1104
+    },
+    {
+      "functionAndBundledLine": "encode @808",
+      "ms": 1044
+    },
+    {
+      "functionAndBundledLine": " @927",
+      "ms": 889
+    },
+    {
+      "functionAndBundledLine": "shape @798",
+      "ms": 887
+    },
+    {
+      "functionAndBundledLine": "allPersonalGoals @3467",
+      "ms": 825
+    },
+    {
+      "functionAndBundledLine": "needsPeriod @2929",
+      "ms": 740
+    },
+    {
+      "functionAndBundledLine": "act @4691",
+      "ms": 686
+    },
+    {
+      "functionAndBundledLine": "monthly @695",
+      "ms": 628
+    }
+  ]
+}
