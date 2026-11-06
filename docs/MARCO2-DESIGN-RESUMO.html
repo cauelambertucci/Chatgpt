@@ -1,0 +1,26 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>Marco 2 mínimo — modelo e loop</title><style>@page{size:A4;margin:15mm}body{font:10.5pt/1.3 Arial;color:#17202a}h1{font-size:17pt}h2{font-size:13pt}p{margin:7pt 0}table{border-collapse:collapse;width:100%;font-size:10pt}td{border:1px solid #ccc;padding:6pt;vertical-align:top}tr:first-child{font-weight:bold;background:#eef2f6}tr{break-inside:avoid}.page{break-before:page}a{color:#174e79}code{font-size:9pt}</style><body><h1>Marco 2 mínimo — modelo e loop implementados</h1>
+<p><strong>Suposição de design, não verificado.</strong> O usuário dispensou a pesquisa da wiki e autorizou esta fatia. <a href="MARCO2-FONTES.md">Fontes/limites</a>. Este resumo substitui a proposta anterior; a versão PDF acompanha este modelo atualizado.</p>
+<h2>Dados</h2>
+<table>
+<tr><td>Registro</td><td>Estado e contrato</td></tr>
+<tr><td>Catálogo humanoide</td><td>12 partes conectadas; tecidos de membros, tronco e cabeça. Compartilhado e imutável. Partes intactas são derivadas do catálogo.</td></tr>
+<tr><td><code>Body</code></td><td>Pessoa, sangue, dor, consciência, relógio clínico, arma e armadura. Separado da pessoa; não contém cópia da árvore anatômica.</td></tr>
+<tr><td><code>Part</code></td><td>Apenas partes alteradas: presença, função nervosa, osso e último evento. Ausência de conexão inutiliza descendentes; a outra mão pode continuar funcional.</td></tr>
+<tr><td><code>Wound</code></td><td>Dono, parte, agressor, arma, duelo, fonte, sangramento, perda acumulada, fratura, lesão nervosa, amputação, cuidado, prazo e sequela.</td></tr>
+<tr><td><code>PhysicalGoal</code></td><td>Objetivo marcial, requisitos de preensão, viabilidade, adaptação/abandono e períodos de prática.</td></tr>
+<tr><td><code>Duel</code></td><td>Participantes, decisão de iniciar/aceitar, instante inicial, feridas, término e desfecho.</td></tr>
+<tr><td><code>Kill</code></td><td>Chave única por vítima; morte factual, causa principal, ferida, arma, parte e responsável. Não confunde morte posterior externa com morte deste duelo.</td></tr>
+<tr><td>Pessoa/lugar</td><td>Conhecimento de lesão aguda/permanente, habilidade médica; material finito de cuidado no lugar. Personalidade e valores vêm do 1d.</td></tr>
+</table>
+<p>O log compacto conserva eventos, deltas, causas e decisões. As substituições temporárias de entidades são convertidas em patches no armazenamento; sangramento não copia pessoa ou corpo anatômico completo. Replay e retomada mensal são determinísticos. Não foram adicionados índices de agentes ou caches de decisão.</p>
+<h2 class="page">Loop</h2>
+<p>1. Inicializar corpos e materiais. Avaliar intenção/aceitação do duelo e elegibilidade do equipamento; sem arma não há golpe nesta fatia.</p>
+<p>2. Até seis trocas: verificar arma, conexão, preensão e consciência; comparar ataque/defesa; escolher parte presente; consumir orçamento de contato na armadura e nos tecidos. Uma lâmina cortante e três opções de armadura (nenhuma, couro, malha).</p>
+<p>3. Criar ferida e alterar somente os registros afetados. Soltar arma incompatível. Registrar percepção própria ou testemunhada; lesão vital que elimina consciência não produz percepção própria posterior.</p>
+<p>4. Percepção → emoção do 1d → estresse → transformação (quando aplicável) → reavaliação explícita de objetivo. Bloquear informação impede a reação à lesão desconhecida. Notícias posteriores exigem emissor informado e presença.</p>
+<p>5. Saltar aos limites clínicos: cuidado, coagulação ou morte. Cuidado exige presença, consentimento, mãos funcionais, habilidade, ferramentas e bandagens; pode falhar. Morte única interrompe ações; a ferida que mais contribuiu à hemorragia fundamenta a atribuição principal.</p>
+<p>6. Por mês, agregar reabilitação em um evento por período; resolver prazos de recuperação (dois/seis meses), registrar sequela e nova percepção. Colapsar períodos repetidos antes de calcular profundidade causal no relatório.</p>
+<p>A fixture fixa contato de 100 U no antebraço, couro, 6 mL/min e cuidado aos 5/15 minutos. Sangue 5000→4970→4958 mL; preensão 1→0,4→0,7 após cuidado e reabilitação. Sem cuidado há morte no minuto 335. São unidades e regras de jogo, não medicina real nem reprodução confirmada de Dwarf Fortress.</p>
+<h2>Limites e próxima etapa</h2>
+<p>Sem infecção, regeneração sanguínea, desgaste de armadura, múltiplos modos de ataque, locomoção detalhada ou demografia. Sangue é uma reserva fisiológica; não substitui lesões e funções por HP global. A regra de lesão nervosa sem coagulação espontânea torna este protótipo letal e deve ser avaliada separadamente, sem quotas de desfecho. A proteção abstrata anterior ainda precede os duelos no cenário amplo.</p>
+<p>A avaliação usa 100 seeds livres e 100 reservadas, sem regeneração seletiva; três exemplos são escolhidos depois de gerar o lote completo. Testes e benchmarks constam do <a href="MARCO2-REPORT.md">relatório</a>. Família, nascimento, envelhecimento e morte natural continuam propostos para o <a href="MARCO2B-LINHAGENS.md">Marco 2b</a>, antes das civilizações do 3. <strong>Parar ao final desta fatia.</strong></p></body></html>

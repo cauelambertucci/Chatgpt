@@ -1,0 +1,405 @@
+{
+  "method": "All original per-seed demographic metrics, exact compact JSON byte length and event count equal after observer/performance changes; elapsed time excluded.",
+  "checks": [
+    {
+      "seed": "linhagem-2b-000",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-001",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-002",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-003",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-004",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-005",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-006",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-007",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-008",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-009",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-010",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-011",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-012",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-013",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-014",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-015",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-016",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-017",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-018",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-019",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-020",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-021",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-022",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-023",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-024",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-025",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-026",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-027",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-028",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-029",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-030",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-031",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-032",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-033",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-034",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-035",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-036",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-037",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-038",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-039",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-040",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-041",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-042",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-043",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-044",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-045",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-046",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-047",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-048",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-049",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-050",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-051",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-052",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-053",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-054",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-055",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-056",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-057",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-058",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-059",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-060",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-061",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-062",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-063",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-064",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-065",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-066",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-067",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-068",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-069",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-070",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-071",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-072",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-073",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-074",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-075",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-076",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-077",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-078",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-079",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-080",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-081",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-082",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-083",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-084",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-085",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-086",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-087",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-088",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-089",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-090",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-091",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-092",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-093",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-094",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-095",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-096",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-097",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-098",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-099",
+      "equal": true
+    }
+  ]
+}

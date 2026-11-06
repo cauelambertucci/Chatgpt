@@ -1,0 +1,486 @@
+{
+  "method": "Três seeds fixadas, 40 fundadores, 100 anos, motor 2c sem alterações. Auditoria demográfica, validação causal e replay; tempos são diagnósticos, não benchmark.",
+  "rows": [
+    {
+      "seed": "interface-2c-000",
+      "founders": 40,
+      "months": 1200,
+      "complete": true,
+      "people": 51,
+      "alive": 3,
+      "events": 50615,
+      "errors": [],
+      "replayEqual": true,
+      "diagnosticMs": 11653.069861,
+      "entityHash": "040236cbd8dd052a9b38c9aec6b323c3666c5df45cbdcd53c98b401d72654840",
+      "person": "person:01",
+      "name": "Bram",
+      "generation": 0,
+      "introduction": "Bram integrava o grupo fundador, com 25 anos no início. Não há infância simulada nem ancestrais registrados para os fundadores. Há registro de sua morte no período gerado. Geração 0 (fundadores = 0).",
+      "facts": [
+        {
+          "id": "event:3",
+          "month": 0,
+          "type": "family.founder.registered",
+          "text": "No ano 0, mês 1: O arquivo incluiu Bram no grupo fundador; a história anterior não foi simulada.",
+          "causes": [
+            "event:1"
+          ]
+        },
+        {
+          "id": "event:47030",
+          "month": 788,
+          "type": "person.died",
+          "text": "No ano 65, mês 9: Bram morreu; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:1",
+            "event:47029"
+          ]
+        }
+      ]
+    },
+    {
+      "seed": "interface-2c-001",
+      "founders": 40,
+      "months": 1200,
+      "complete": true,
+      "people": 99,
+      "alive": 41,
+      "events": 100404,
+      "errors": [],
+      "replayEqual": true,
+      "diagnosticMs": 26833.991284,
+      "entityHash": "5db9c8ff51d5041e6e54e871e527e972dfa7ec1cb6dbe7435edd7fee367463d3",
+      "person": "person:birth:person:37:0",
+      "name": "Vela 0",
+      "generation": 1,
+      "introduction": "Vela 0 nasceu durante a simulação, no ano 0, mês 10. Há registro de sua morte no período gerado. Geração 1 (fundadores = 0).",
+      "facts": [
+        {
+          "id": "event:815",
+          "month": 9,
+          "type": "person.born",
+          "text": "No ano 0, mês 10: Nasceu Vela 0, com parentesco biológico registrado com Vela 2 e Mael 2.",
+          "causes": [
+            "event:92",
+            "event:93"
+          ]
+        },
+        {
+          "id": "event:21585",
+          "month": 240,
+          "type": "partnership.formed",
+          "text": "No ano 20, mês 1: Vela 0 e Iria 1 formaram parceria.",
+          "causes": [
+            "event:19012",
+            "event:20100",
+            "event:21205",
+            "event:21207"
+          ]
+        },
+        {
+          "id": "event:22411",
+          "month": 249,
+          "type": "person.born",
+          "text": "No ano 20, mês 10: Nasceu Neris 20, com parentesco biológico registrado com Iria 1 e Vela 0.",
+          "causes": [
+            "event:21587",
+            "event:22363",
+            "event:22365"
+          ]
+        },
+        {
+          "id": "event:27478",
+          "month": 297,
+          "type": "person.born",
+          "text": "No ano 24, mês 10: Nasceu Elian 24, com parentesco biológico registrado com Iria 1 e Vela 0.",
+          "causes": [
+            "event:26524",
+            "event:27428",
+            "event:27430"
+          ]
+        },
+        {
+          "id": "event:31118",
+          "month": 333,
+          "type": "person.born",
+          "text": "No ano 27, mês 10: Nasceu Luma 27, com parentesco biológico registrado com Iria 1 e Vela 0.",
+          "causes": [
+            "event:30357",
+            "event:31062",
+            "event:31064"
+          ]
+        },
+        {
+          "id": "event:39848",
+          "month": 433,
+          "type": "person.died",
+          "text": "No ano 36, mês 2: Mael 2 morreu; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:1",
+            "event:39847"
+          ]
+        },
+        {
+          "id": "event:39926",
+          "month": 433,
+          "type": "emotion.felt",
+          "text": "No ano 36, mês 2: Foi registrada para Vela 0 uma emoção: “luto temeroso”. O estresse passou de 0 para 220.",
+          "causes": [
+            "event:19012",
+            "event:39845",
+            "event:39910"
+          ]
+        },
+        {
+          "id": "event:39927",
+          "month": 433,
+          "type": "person.transformed",
+          "text": "No ano 36, mês 2: Em Vela 0, Cautela passou de 70 para 73; Paz passou de 0 para 3.",
+          "causes": [
+            "event:19012",
+            "event:39926"
+          ]
+        },
+        {
+          "id": "event:60381",
+          "month": 680,
+          "type": "person.died",
+          "text": "No ano 56, mês 9: Vela 2 morreu; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:1",
+            "event:60380"
+          ]
+        },
+        {
+          "id": "event:60445",
+          "month": 680,
+          "type": "emotion.felt",
+          "text": "No ano 56, mês 9: Foi registrada para Vela 0 uma emoção: “luto temeroso”. O estresse passou de 332 para 552.",
+          "causes": [
+            "event:39927",
+            "event:60294",
+            "event:60416"
+          ]
+        },
+        {
+          "id": "event:60446",
+          "month": 680,
+          "type": "person.transformed",
+          "text": "No ano 56, mês 9: Em Vela 0, Cautela passou de 73 para 76; Paz passou de 3 para 6.",
+          "causes": [
+            "event:39927",
+            "event:60445"
+          ]
+        },
+        {
+          "id": "event:80636",
+          "month": 899,
+          "type": "person.died",
+          "text": "No ano 74, mês 12: Iria 1 morreu; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:1862",
+            "event:80635"
+          ]
+        },
+        {
+          "id": "event:80637",
+          "month": 899,
+          "type": "partnership.ended",
+          "text": "No ano 74, mês 12: Terminou a parceria registrada entre Iria 1 e Vela 0; motivo registrado: morte.",
+          "causes": [
+            "event:80383",
+            "event:80385",
+            "event:80636"
+          ]
+        },
+        {
+          "id": "event:80700",
+          "month": 899,
+          "type": "emotion.felt",
+          "text": "No ano 74, mês 12: Foi registrada para Vela 0 uma emoção: “luto temeroso”. O estresse passou de 0 para 220.",
+          "causes": [
+            "event:60446",
+            "event:65427",
+            "event:80657"
+          ]
+        },
+        {
+          "id": "event:80701",
+          "month": 899,
+          "type": "person.transformed",
+          "text": "No ano 74, mês 12: Em Vela 0, Cautela passou de 76 para 79; Paz passou de 6 para 9.",
+          "causes": [
+            "event:60446",
+            "event:80700"
+          ]
+        },
+        {
+          "id": "event:80778",
+          "month": 900,
+          "type": "partnership.formed",
+          "text": "No ano 75, mês 1: Vela 0 e Skarn 43 formaram parceria.",
+          "causes": [
+            "event:65536",
+            "event:80467",
+            "event:80637",
+            "event:80701"
+          ]
+        },
+        {
+          "id": "event:84098",
+          "month": 943,
+          "type": "person.died",
+          "text": "No ano 78, mês 8: Vela 0 morreu; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:815",
+            "event:84097"
+          ]
+        },
+        {
+          "id": "event:84099",
+          "month": 943,
+          "type": "partnership.ended",
+          "text": "No ano 78, mês 8: Terminou a parceria registrada entre Vela 0 e Skarn 43; motivo registrado: morte.",
+          "causes": [
+            "event:83297",
+            "event:83378",
+            "event:84098"
+          ]
+        },
+        {
+          "id": "event:95735",
+          "month": 1110,
+          "type": "person.died",
+          "text": "No ano 92, mês 7: Neris 20 morreu; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:22411",
+            "event:95734"
+          ]
+        }
+      ]
+    },
+    {
+      "seed": "interface-2c-002",
+      "founders": 40,
+      "months": 1200,
+      "complete": true,
+      "people": 79,
+      "alive": 24,
+      "events": 81470,
+      "errors": [],
+      "replayEqual": true,
+      "diagnosticMs": 20851.793541,
+      "entityHash": "cb8b5859d603421710c0f47eb133f72c03d1b2a078a17e78e63c54c23252dcd0",
+      "person": "person:birth:person:birth:person:16:0:20",
+      "name": "Corin 20",
+      "generation": 2,
+      "introduction": "Corin 20 nasceu durante a simulação, no ano 20, mês 10. Há registro de sua morte no período gerado. Geração 2 (fundadores = 0).",
+      "facts": [
+        {
+          "id": "event:22304",
+          "month": 249,
+          "type": "person.born",
+          "text": "No ano 20, mês 10: Nasceu Corin 20, com parentesco biológico registrado com Runa 0 e Orin 0.",
+          "causes": [
+            "event:21473",
+            "event:22267",
+            "event:22271"
+          ]
+        },
+        {
+          "id": "event:41139",
+          "month": 468,
+          "type": "partnership.formed",
+          "text": "No ano 39, mês 1: Iria 2 e Corin 20 formaram parceria.",
+          "causes": [
+            "event:39186",
+            "event:40208",
+            "event:40911",
+            "event:41107"
+          ]
+        },
+        {
+          "id": "event:50476",
+          "month": 620,
+          "type": "person.died",
+          "text": "No ano 51, mês 9: Iria 2 morreu; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:1",
+            "event:50475"
+          ]
+        },
+        {
+          "id": "event:50477",
+          "month": 620,
+          "type": "partnership.ended",
+          "text": "No ano 51, mês 9: Terminou a parceria registrada entre Iria 2 e Corin 20; motivo registrado: morte.",
+          "causes": [
+            "event:49784",
+            "event:50052",
+            "event:50476"
+          ]
+        },
+        {
+          "id": "event:50540",
+          "month": 620,
+          "type": "emotion.felt",
+          "text": "No ano 51, mês 9: Foi registrada para Corin 20 uma emoção: “luto solidario”. O estresse passou de 0 para 192.",
+          "causes": [
+            "event:40208",
+            "event:50469",
+            "event:50521"
+          ]
+        },
+        {
+          "id": "event:50541",
+          "month": 620,
+          "type": "person.transformed",
+          "text": "No ano 51, mês 9: Em Corin 20, Compaixão passou de 62 para 64; Solidariedade passou de 0 para 2.",
+          "causes": [
+            "event:40208",
+            "event:50540"
+          ]
+        },
+        {
+          "id": "event:50854",
+          "month": 624,
+          "type": "partnership.formed",
+          "text": "No ano 52, mês 1: Corin 20 e Zarek 30 formaram parceria.",
+          "causes": [
+            "event:47434",
+            "event:50541",
+            "event:50626",
+            "event:50640"
+          ]
+        },
+        {
+          "id": "event:54765",
+          "month": 681,
+          "type": "person.born",
+          "text": "No ano 56, mês 10: Nasceu Bram 56, com parentesco biológico registrado com Zarek 30 e Corin 20.",
+          "causes": [
+            "event:54021",
+            "event:54727",
+            "event:54741"
+          ]
+        },
+        {
+          "id": "event:61692",
+          "month": 777,
+          "type": "emotion.felt",
+          "text": "No ano 64, mês 10: Foi registrada para Corin 20 uma emoção: “luto solidario”. O estresse passou de 87 para 279.",
+          "causes": [
+            "event:50541",
+            "event:61556",
+            "event:61691"
+          ]
+        },
+        {
+          "id": "event:61693",
+          "month": 777,
+          "type": "person.transformed",
+          "text": "No ano 64, mês 10: Em Corin 20, Compaixão passou de 64 para 66; Solidariedade passou de 2 para 4.",
+          "causes": [
+            "event:50541",
+            "event:61692"
+          ]
+        },
+        {
+          "id": "event:64818",
+          "month": 825,
+          "type": "person.born",
+          "text": "No ano 68, mês 10: Nasceu Neris 68, com parentesco biológico registrado com Zarek 30 e Corin 20.",
+          "causes": [
+            "event:64272",
+            "event:64776",
+            "event:64790"
+          ]
+        },
+        {
+          "id": "event:77562",
+          "month": 1079,
+          "type": "person.died",
+          "text": "No ano 89, mês 12: Runa 0 morreu; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:821",
+            "event:77561"
+          ]
+        },
+        {
+          "id": "event:77599",
+          "month": 1079,
+          "type": "emotion.felt",
+          "text": "No ano 89, mês 12: Foi registrada para Corin 20 uma emoção: “luto solidario”. O estresse passou de 0 para 192.",
+          "causes": [
+            "event:61693",
+            "event:72561",
+            "event:77579"
+          ]
+        },
+        {
+          "id": "event:77600",
+          "month": 1079,
+          "type": "person.transformed",
+          "text": "No ano 89, mês 12: Em Corin 20, Compaixão passou de 66 para 68; Solidariedade passou de 4 para 6.",
+          "causes": [
+            "event:61693",
+            "event:77599"
+          ]
+        },
+        {
+          "id": "event:79149",
+          "month": 1124,
+          "type": "person.died",
+          "text": "No ano 93, mês 9: Orin 0 morreu; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:817",
+            "event:79148"
+          ]
+        },
+        {
+          "id": "event:79185",
+          "month": 1124,
+          "type": "emotion.felt",
+          "text": "No ano 93, mês 9: Foi registrada para Corin 20 uma emoção: “luto solidario”. O estresse passou de 192 para 384.",
+          "causes": [
+            "event:77599",
+            "event:77600",
+            "event:79163"
+          ]
+        },
+        {
+          "id": "event:79186",
+          "month": 1124,
+          "type": "person.transformed",
+          "text": "No ano 93, mês 9: Em Corin 20, Compaixão passou de 68 para 70; Solidariedade passou de 6 para 8.",
+          "causes": [
+            "event:77600",
+            "event:79185"
+          ]
+        },
+        {
+          "id": "event:80307",
+          "month": 1160,
+          "type": "person.died",
+          "text": "No ano 96, mês 9: Corin 20 morreu; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:22304",
+            "event:80306"
+          ]
+        },
+        {
+          "id": "event:80308",
+          "month": 1160,
+          "type": "partnership.ended",
+          "text": "No ano 96, mês 9: Terminou a parceria registrada entre Corin 20 e Zarek 30; motivo registrado: morte.",
+          "causes": [
+            "event:79996",
+            "event:80010",
+            "event:80307"
+          ]
+        }
+      ]
+    }
+  ]
+}

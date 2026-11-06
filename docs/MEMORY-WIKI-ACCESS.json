@@ -1,0 +1,87 @@
+{
+  "date": "2026-11-04T17:15:05.119137-03:00",
+  "policyType": "restricted",
+  "consulted": false,
+  "attempts": [
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Body_part",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Tissue",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Weapon",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Armor",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Wound",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Health_care",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Stress",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Emotion",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Legends",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Material_science",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Combat",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Syndrome",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Pain",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Age",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Children",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Relationship",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Marriage",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Death",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Personality_trait",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Historical_figure",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    }
+  ]
+}

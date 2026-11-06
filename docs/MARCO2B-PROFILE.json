@@ -1,0 +1,87 @@
+{
+  "method": "Node inspector CPU sampling only around constructor + advance; warmup 12 months and gc before; no concurrent report/validation; pre-optimization source preserved in INITIAL benchmark scratch.",
+  "coreMs": 107840.783723,
+  "hotspot": "people() repeatedly inside candidates() informed-facts loop; 68.5 seconds self CPU. Fix: one transient sorted listener list per evaluation, no persistent index/cache.",
+  "topSelfMs": [
+    {
+      "functionAndBundledLine": " @2523",
+      "ms": 68501
+    },
+    {
+      "functionAndBundledLine": " @2503",
+      "ms": 5550
+    },
+    {
+      "functionAndBundledLine": "candidates @4340",
+      "ms": 4227
+    },
+    {
+      "functionAndBundledLine": " @4511",
+      "ms": 3493
+    },
+    {
+      "functionAndBundledLine": "(garbage collector) @0",
+      "ms": 3148
+    },
+    {
+      "functionAndBundledLine": "metadata @869",
+      "ms": 3072
+    },
+    {
+      "functionAndBundledLine": "act @4616",
+      "ms": 2468
+    },
+    {
+      "functionAndBundledLine": "__name @2",
+      "ms": 1959
+    },
+    {
+      "functionAndBundledLine": "set Navigator @0",
+      "ms": 1841
+    },
+    {
+      "functionAndBundledLine": "delta @766",
+      "ms": 1616
+    },
+    {
+      "functionAndBundledLine": "event @909",
+      "ms": 1213
+    },
+    {
+      "functionAndBundledLine": " @876",
+      "ms": 1062
+    },
+    {
+      "functionAndBundledLine": "freeze @2504",
+      "ms": 725
+    },
+    {
+      "functionAndBundledLine": "emit @3074",
+      "ms": 704
+    },
+    {
+      "functionAndBundledLine": "encodeEvent @779",
+      "ms": 559
+    },
+    {
+      "functionAndBundledLine": "encode @741",
+      "ms": 492
+    },
+    {
+      "functionAndBundledLine": "all @132",
+      "ms": 474
+    },
+    {
+      "functionAndBundledLine": "monthly @635",
+      "ms": 462
+    },
+    {
+      "functionAndBundledLine": "campaignContact @3793",
+      "ms": 459
+    },
+    {
+      "functionAndBundledLine": "shape @731",
+      "ms": 439
+    }
+  ]
+}

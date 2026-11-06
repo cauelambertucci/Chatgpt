@@ -1,0 +1,35 @@
+{
+  "method": "Entire compact-world JSON hash, five 100-year family scenarios including three reported stories and two reserved scenarios; compared to preserved pre-optimization logs.",
+  "rows": [
+    {
+      "seed": "linhagem-2b-007",
+      "before": "15775b3eeb4e9c82ca8b40c3b0f6b2c981f92f5e6a54c0f040b8197c302d3268",
+      "after": "15775b3eeb4e9c82ca8b40c3b0f6b2c981f92f5e6a54c0f040b8197c302d3268",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-009",
+      "before": "c34b86f47a6ae35f162459c9acba4b887d628bf1d4db9a9a3c89151eaca065e8",
+      "after": "c34b86f47a6ae35f162459c9acba4b887d628bf1d4db9a9a3c89151eaca065e8",
+      "equal": true
+    },
+    {
+      "seed": "linhagem-2b-031",
+      "before": "ed562b360020092d2b907d5072d14d964992f7e7617231f4c478cd35d23ccf8c",
+      "after": "ed562b360020092d2b907d5072d14d964992f7e7617231f4c478cd35d23ccf8c",
+      "equal": true
+    },
+    {
+      "seed": "reservado-2b-004",
+      "before": "846d3e776844e232be030cea75de0ac6e5456b1bccf10d369bdb9550e041504d",
+      "after": "846d3e776844e232be030cea75de0ac6e5456b1bccf10d369bdb9550e041504d",
+      "equal": true
+    },
+    {
+      "seed": "reservado-2b-006",
+      "before": "e1cd6bdde59a69cd8939661f30ac4bc6312854b63d360ae1c67ff6c013c45ef9",
+      "after": "e1cd6bdde59a69cd8939661f30ac4bc6312854b63d360ae1c67ff6c013c45ef9",
+      "equal": true
+    }
+  ]
+}

@@ -1,0 +1,6736 @@
+{
+  "engine": "agents-slice-2.1",
+  "assumption": "suposição de design, não verificado",
+  "noQuota": true,
+  "invalid": 0,
+  "batches": {
+    "duelo-2a": {
+      "outcomes": {
+        "morte do desafiante": 9,
+        "sem duelo": 49,
+        "morte do desafiado": 19,
+        "recuperação": 5,
+        "sequela permanente": 17,
+        "sem ferimento": 1
+      },
+      "terminations": {
+        "morte durante o duelo": 14,
+        "recusa": 49,
+        "limite de trocas": 2,
+        "rendição": 8,
+        "interrupção por desafiado": 3,
+        "interrupção por terceiro": 14,
+        "fuga": 6,
+        "interrupção por agressor": 2,
+        "incapacidade ou arma ausente": 2
+      },
+      "started": 51,
+      "survivedInjury": 24,
+      "spontaneousClots": 19,
+      "spontaneousByVessel": {
+        "capillary": 7,
+        "vein": 12,
+        "artery": 0
+      },
+      "rows": [
+        {
+          "seed": "duelo-2a-000",
+          "outcome": "morte do desafiante",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 120,
+          "bytes": 56635,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-001",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 60,
+          "bytes": 34319,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-002",
+          "outcome": "morte do desafiado",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 84,
+          "bytes": 50559,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-003",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 81,
+          "bytes": 43671,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-004",
+          "outcome": "recuperação",
+          "termination": "limite de trocas",
+          "started": true,
+          "wounds": 3,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 186,
+          "bytes": 71428,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-005",
+          "outcome": "morte do desafiado",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 117,
+          "bytes": 57251,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-006",
+          "outcome": "recuperação",
+          "termination": "interrupção por desafiado",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 1,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 151,
+          "bytes": 66179,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-007",
+          "outcome": "morte do desafiado",
+          "termination": "interrupção por desafiado",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 84,
+          "bytes": 49780,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-008",
+          "outcome": "morte do desafiante",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 107,
+          "bytes": 53550,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-009",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 60,
+          "bytes": 35128,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-010",
+          "outcome": "morte do desafiado",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 0,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 138,
+          "bytes": 64117,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-011",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 60,
+          "bytes": 34982,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-012",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 110,
+          "bytes": 51174,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-013",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 82,
+          "bytes": 45830,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-014",
+          "outcome": "sequela permanente",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 2,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 2,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 157,
+          "bytes": 68655,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-015",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 78,
+          "bytes": 44760,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-016",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 83,
+          "bytes": 43221,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-017",
+          "outcome": "morte do desafiante",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 81,
+          "bytes": 42071,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-018",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por agressor",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 166,
+          "bytes": 71365,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-019",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 109,
+          "bytes": 53747,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-020",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 97,
+          "bytes": 50202,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-021",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 78,
+          "bytes": 39379,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-022",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 83,
+          "bytes": 47389,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-023",
+          "outcome": "morte do desafiante",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 135,
+          "bytes": 55096,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-024",
+          "outcome": "morte do desafiado",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 3,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 2,
+          "spontaneousByVessel": {
+            "capillary": 2,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 153,
+          "bytes": 68323,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-025",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 94,
+          "bytes": 50732,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-026",
+          "outcome": "morte do desafiado",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 125,
+          "bytes": 64285,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-027",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 84,
+          "bytes": 43763,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-028",
+          "outcome": "sequela permanente",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 2,
+          "spontaneousByVessel": {
+            "capillary": 1,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 131,
+          "bytes": 55632,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-029",
+          "outcome": "morte do desafiante",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 124,
+          "bytes": 53690,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-030",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 100,
+          "bytes": 48747,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-031",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 90,
+          "bytes": 45603,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-032",
+          "outcome": "sequela permanente",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 115,
+          "bytes": 51331,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-033",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 97,
+          "bytes": 51530,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-034",
+          "outcome": "morte do desafiado",
+          "termination": "interrupção por desafiado",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 133,
+          "bytes": 63759,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-035",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 89,
+          "bytes": 44936,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-036",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 88,
+          "bytes": 50010,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-037",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 69,
+          "bytes": 36848,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-038",
+          "outcome": "morte do desafiado",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 100,
+          "bytes": 56042,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-039",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 60,
+          "bytes": 34981,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-040",
+          "outcome": "morte do desafiado",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 80,
+          "bytes": 50090,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-041",
+          "outcome": "morte do desafiante",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 78,
+          "bytes": 44467,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-042",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 86,
+          "bytes": 47136,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-043",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 115,
+          "bytes": 52716,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-044",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 81,
+          "bytes": 42402,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-045",
+          "outcome": "sequela permanente",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 104,
+          "bytes": 49986,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-046",
+          "outcome": "morte do desafiante",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 81,
+          "bytes": 42730,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-047",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 90,
+          "bytes": 45835,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-048",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 75,
+          "bytes": 42180,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-049",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 78,
+          "bytes": 44033,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-050",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 86,
+          "bytes": 47403,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-051",
+          "outcome": "sequela permanente",
+          "termination": "limite de trocas",
+          "started": true,
+          "wounds": 3,
+          "aliveWounded": 1,
+          "clotted": 3,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 190,
+          "bytes": 66860,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-052",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 91,
+          "bytes": 49640,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-053",
+          "outcome": "morte do desafiado",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 88,
+          "bytes": 48887,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-054",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por agressor",
+          "started": true,
+          "wounds": 3,
+          "aliveWounded": 2,
+          "clotted": 3,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 184,
+          "bytes": 71790,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-055",
+          "outcome": "morte do desafiado",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 96,
+          "bytes": 55914,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-056",
+          "outcome": "morte do desafiado",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 117,
+          "bytes": 60623,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-057",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 91,
+          "bytes": 47857,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-058",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 94,
+          "bytes": 48391,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-059",
+          "outcome": "morte do desafiado",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 92,
+          "bytes": 55320,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-060",
+          "outcome": "recuperação",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 3,
+          "aliveWounded": 1,
+          "clotted": 3,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 186,
+          "bytes": 74424,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-061",
+          "outcome": "morte do desafiado",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 70,
+          "bytes": 45252,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-062",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 96,
+          "bytes": 49746,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-063",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 75,
+          "bytes": 42485,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-064",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 94,
+          "bytes": 49219,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-065",
+          "outcome": "morte do desafiado",
+          "termination": "incapacidade ou arma ausente",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 88,
+          "bytes": 49326,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-066",
+          "outcome": "recuperação",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 2,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 2,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 152,
+          "bytes": 63420,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-067",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 73,
+          "bytes": 41996,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-068",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 102,
+          "bytes": 50681,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-069",
+          "outcome": "morte do desafiante",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 99,
+          "bytes": 51926,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-070",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 73,
+          "bytes": 41844,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-071",
+          "outcome": "morte do desafiado",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 113,
+          "bytes": 61005,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-072",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 82,
+          "bytes": 44864,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-073",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 83,
+          "bytes": 48502,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-074",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 69,
+          "bytes": 36996,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-075",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 66,
+          "bytes": 39753,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-076",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 116,
+          "bytes": 53648,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-077",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 78,
+          "bytes": 45690,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-078",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 66,
+          "bytes": 39355,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-079",
+          "outcome": "sequela permanente",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 3,
+          "aliveWounded": 1,
+          "clotted": 3,
+          "clottedWithoutCare": 3,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 3,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 179,
+          "bytes": 68842,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-080",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 180,
+          "bytes": 67573,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-081",
+          "outcome": "sequela permanente",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 3,
+          "aliveWounded": 2,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 192,
+          "bytes": 74798,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-082",
+          "outcome": "morte do desafiado",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 97,
+          "bytes": 55200,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-083",
+          "outcome": "sequela permanente",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 144,
+          "bytes": 56898,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-084",
+          "outcome": "sequela permanente",
+          "termination": "incapacidade ou arma ausente",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 102,
+          "bytes": 47039,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-085",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 119,
+          "bytes": 55281,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-086",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 127,
+          "bytes": 58657,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-087",
+          "outcome": "morte do desafiado",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 3,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 109,
+          "bytes": 55102,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-088",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 91,
+          "bytes": 51122,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-089",
+          "outcome": "sem ferimento",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 74,
+          "bytes": 38644,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-090",
+          "outcome": "recuperação",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 3,
+          "aliveWounded": 1,
+          "clotted": 3,
+          "clottedWithoutCare": 3,
+          "spontaneousByVessel": {
+            "capillary": 3,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 144,
+          "bytes": 55959,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-091",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 80,
+          "bytes": 45726,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-092",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 90,
+          "bytes": 51764,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-093",
+          "outcome": "morte do desafiante",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 88,
+          "bytes": 42129,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-094",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 114,
+          "bytes": 51605,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-095",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 72,
+          "bytes": 42317,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-096",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 86,
+          "bytes": 43979,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-097",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 81,
+          "bytes": 45590,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-098",
+          "outcome": "morte do desafiado",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 76,
+          "bytes": 48019,
+          "errors": []
+        },
+        {
+          "seed": "duelo-2a-099",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 89,
+          "bytes": 44636,
+          "errors": []
+        }
+      ]
+    },
+    "reservado-2a": {
+      "outcomes": {
+        "sequela permanente": 32,
+        "sem duelo": 38,
+        "morte do desafiado": 14,
+        "morte de ambos": 1,
+        "recuperação": 3,
+        "morte do desafiante": 9,
+        "sem ferimento": 3
+      },
+      "terminations": {
+        "incapacidade ou arma ausente": 7,
+        "recusa": 38,
+        "interrupção por agressor": 4,
+        "interrupção por terceiro": 23,
+        "fuga": 10,
+        "morte durante o duelo": 5,
+        "interrupção por desafiado": 6,
+        "rendição": 7
+      },
+      "started": 62,
+      "survivedInjury": 40,
+      "spontaneousClots": 26,
+      "spontaneousByVessel": {
+        "capillary": 8,
+        "vein": 18,
+        "artery": 0
+      },
+      "rows": [
+        {
+          "seed": "reservado-2a-000",
+          "outcome": "sequela permanente",
+          "termination": "incapacidade ou arma ausente",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 168,
+          "bytes": 67471,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-001",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 66,
+          "bytes": 39572,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-002",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por agressor",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 114,
+          "bytes": 51203,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-003",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 87,
+          "bytes": 41313,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-004",
+          "outcome": "morte do desafiado",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 96,
+          "bytes": 54984,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-005",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 96,
+          "bytes": 50352,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-006",
+          "outcome": "morte do desafiado",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 89,
+          "bytes": 46747,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-007",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 90,
+          "bytes": 49470,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-008",
+          "outcome": "sequela permanente",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 106,
+          "bytes": 51693,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-009",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 78,
+          "bytes": 39785,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-010",
+          "outcome": "morte de ambos",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 116,
+          "bytes": 58187,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-011",
+          "outcome": "morte do desafiado",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 74,
+          "bytes": 46447,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-012",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 93,
+          "bytes": 48970,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-013",
+          "outcome": "morte do desafiado",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 97,
+          "bytes": 52667,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-014",
+          "outcome": "sequela permanente",
+          "termination": "incapacidade ou arma ausente",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 127,
+          "bytes": 56880,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-015",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 96,
+          "bytes": 49747,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-016",
+          "outcome": "sequela permanente",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 152,
+          "bytes": 66980,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-017",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por desafiado",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 96,
+          "bytes": 46517,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-018",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 100,
+          "bytes": 48166,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-019",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 104,
+          "bytes": 49499,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-020",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 99,
+          "bytes": 52405,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-021",
+          "outcome": "morte do desafiado",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 108,
+          "bytes": 54603,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-022",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 84,
+          "bytes": 46519,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-023",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 113,
+          "bytes": 53240,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-024",
+          "outcome": "recuperação",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 3,
+          "aliveWounded": 1,
+          "clotted": 3,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 159,
+          "bytes": 63414,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-025",
+          "outcome": "morte do desafiante",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 4,
+          "aliveWounded": 1,
+          "clotted": 3,
+          "clottedWithoutCare": 3,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 3,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 152,
+          "bytes": 62049,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-026",
+          "outcome": "sequela permanente",
+          "termination": "incapacidade ou arma ausente",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 149,
+          "bytes": 65492,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-027",
+          "outcome": "morte do desafiante",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 117,
+          "bytes": 51074,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-028",
+          "outcome": "recuperação",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 2,
+          "spontaneousByVessel": {
+            "capillary": 2,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 124,
+          "bytes": 53287,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-029",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por desafiado",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 160,
+          "bytes": 66492,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-030",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 78,
+          "bytes": 43548,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-031",
+          "outcome": "morte do desafiado",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 103,
+          "bytes": 57265,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-032",
+          "outcome": "sequela permanente",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 3,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 201,
+          "bytes": 74168,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-033",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 91,
+          "bytes": 47031,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-034",
+          "outcome": "morte do desafiante",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 86,
+          "bytes": 46985,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-035",
+          "outcome": "sem ferimento",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 81,
+          "bytes": 40933,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-036",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 80,
+          "bytes": 41506,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-037",
+          "outcome": "morte do desafiado",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 115,
+          "bytes": 55242,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-038",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 89,
+          "bytes": 50357,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-039",
+          "outcome": "morte do desafiado",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 98,
+          "bytes": 54798,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-040",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 96,
+          "bytes": 49482,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-041",
+          "outcome": "sequela permanente",
+          "termination": "incapacidade ou arma ausente",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 115,
+          "bytes": 50324,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-042",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 81,
+          "bytes": 44984,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-043",
+          "outcome": "sequela permanente",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 4,
+          "aliveWounded": 2,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 180,
+          "bytes": 70141,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-044",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 72,
+          "bytes": 42273,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-045",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por desafiado",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": false,
+          "events": 131,
+          "bytes": 61045,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-046",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por agressor",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 108,
+          "bytes": 49251,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-047",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 81,
+          "bytes": 46434,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-048",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 94,
+          "bytes": 47642,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-049",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 69,
+          "bytes": 38398,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-050",
+          "outcome": "morte do desafiado",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 111,
+          "bytes": 60861,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-051",
+          "outcome": "sequela permanente",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 116,
+          "bytes": 52208,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-052",
+          "outcome": "sequela permanente",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 2,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 2,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 164,
+          "bytes": 71125,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-053",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 74,
+          "bytes": 39479,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-054",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 94,
+          "bytes": 48197,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-055",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 88,
+          "bytes": 48591,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-056",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 105,
+          "bytes": 53459,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-057",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 86,
+          "bytes": 49892,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-058",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 89,
+          "bytes": 47738,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-059",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 60,
+          "bytes": 34426,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-060",
+          "outcome": "morte do desafiado",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 85,
+          "bytes": 48563,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-061",
+          "outcome": "sequela permanente",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 3,
+          "aliveWounded": 1,
+          "clotted": 3,
+          "clottedWithoutCare": 3,
+          "spontaneousByVessel": {
+            "capillary": 2,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 171,
+          "bytes": 65791,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-062",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 66,
+          "bytes": 38964,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-063",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 74,
+          "bytes": 40106,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-064",
+          "outcome": "morte do desafiante",
+          "termination": "incapacidade ou arma ausente",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 97,
+          "bytes": 45130,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-065",
+          "outcome": "morte do desafiante",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 119,
+          "bytes": 56815,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-066",
+          "outcome": "sequela permanente",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": false,
+          "events": 134,
+          "bytes": 62911,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-067",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 102,
+          "bytes": 52935,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-068",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por desafiado",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 133,
+          "bytes": 62694,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-069",
+          "outcome": "sequela permanente",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 3,
+          "aliveWounded": 1,
+          "clotted": 3,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 184,
+          "bytes": 71391,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-070",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 127,
+          "bytes": 58598,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-071",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 92,
+          "bytes": 48797,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-072",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 75,
+          "bytes": 42089,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-073",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 1,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 126,
+          "bytes": 57298,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-074",
+          "outcome": "morte do desafiante",
+          "termination": "interrupção por agressor",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 84,
+          "bytes": 41676,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-075",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 104,
+          "bytes": 53026,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-076",
+          "outcome": "morte do desafiante",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 72,
+          "bytes": 39015,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-077",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 94,
+          "bytes": 45428,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-078",
+          "outcome": "morte do desafiado",
+          "termination": "interrupção por desafiado",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 90,
+          "bytes": 53237,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-079",
+          "outcome": "recuperação",
+          "termination": "interrupção por desafiado",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 2,
+          "spontaneousByVessel": {
+            "capillary": 2,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 128,
+          "bytes": 57552,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-080",
+          "outcome": "morte do desafiado",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 89,
+          "bytes": 55724,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-081",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 71,
+          "bytes": 39215,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-082",
+          "outcome": "morte do desafiante",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 94,
+          "bytes": 46775,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-083",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 1,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 110,
+          "bytes": 53401,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-084",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 135,
+          "bytes": 63351,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-085",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 166,
+          "bytes": 67552,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-086",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 115,
+          "bytes": 53355,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-087",
+          "outcome": "sequela permanente",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 2,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 2,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 167,
+          "bytes": 63076,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-088",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 88,
+          "bytes": 43505,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-089",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 121,
+          "bytes": 58146,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-090",
+          "outcome": "sequela permanente",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 146,
+          "bytes": 58501,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-091",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 65,
+          "bytes": 37649,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-092",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por agressor",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 2,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 131,
+          "bytes": 57019,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-093",
+          "outcome": "sequela permanente",
+          "termination": "incapacidade ou arma ausente",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 119,
+          "bytes": 54056,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-094",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 98,
+          "bytes": 51158,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-095",
+          "outcome": "morte do desafiante",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 0,
+          "clotted": 1,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 128,
+          "bytes": 53455,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-096",
+          "outcome": "sem ferimento",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 90,
+          "bytes": 47448,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-097",
+          "outcome": "morte do desafiado",
+          "termination": "incapacidade ou arma ausente",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 100,
+          "bytes": 53758,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-098",
+          "outcome": "morte do desafiado",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 123,
+          "bytes": 62010,
+          "errors": []
+        },
+        {
+          "seed": "reservado-2a-099",
+          "outcome": "sem ferimento",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 99,
+          "bytes": 51023,
+          "errors": []
+        }
+      ]
+    },
+    "novo-21": {
+      "outcomes": {
+        "sem duelo": 45,
+        "morte do desafiado": 13,
+        "sequela permanente": 28,
+        "morte de ambos": 1,
+        "morte do desafiante": 8,
+        "recuperação": 3,
+        "sem ferimento": 2
+      },
+      "terminations": {
+        "recusa": 45,
+        "morte durante o duelo": 11,
+        "interrupção por terceiro": 18,
+        "interrupção por desafiado": 2,
+        "incapacidade ou arma ausente": 6,
+        "fuga": 10,
+        "rendição": 8
+      },
+      "started": 55,
+      "survivedInjury": 32,
+      "spontaneousClots": 29,
+      "spontaneousByVessel": {
+        "capillary": 4,
+        "vein": 25,
+        "artery": 0
+      },
+      "rows": [
+        {
+          "seed": "novo-21-000",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 90,
+          "bytes": 45280,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-001",
+          "outcome": "morte do desafiado",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 100,
+          "bytes": 59893,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-002",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 92,
+          "bytes": 48972,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-003",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 101,
+          "bytes": 51029,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-004",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 66,
+          "bytes": 39421,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-005",
+          "outcome": "morte do desafiado",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 88,
+          "bytes": 49301,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-006",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 87,
+          "bytes": 48025,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-007",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 2,
+          "clotted": 2,
+          "clottedWithoutCare": 2,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 2,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 144,
+          "bytes": 59970,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-008",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por desafiado",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 119,
+          "bytes": 59310,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-009",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 122,
+          "bytes": 55961,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-010",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 75,
+          "bytes": 42451,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-011",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 85,
+          "bytes": 46881,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-012",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 106,
+          "bytes": 53006,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-013",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 78,
+          "bytes": 44126,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-014",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 108,
+          "bytes": 54280,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-015",
+          "outcome": "morte do desafiado",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 95,
+          "bytes": 52117,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-016",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 91,
+          "bytes": 49876,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-017",
+          "outcome": "sequela permanente",
+          "termination": "incapacidade ou arma ausente",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 143,
+          "bytes": 63949,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-018",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 73,
+          "bytes": 42922,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-019",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 93,
+          "bytes": 50085,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-020",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 92,
+          "bytes": 46287,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-021",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 2,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 152,
+          "bytes": 68016,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-022",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 82,
+          "bytes": 42337,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-023",
+          "outcome": "morte de ambos",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 90,
+          "bytes": 47957,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-024",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 86,
+          "bytes": 42554,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-025",
+          "outcome": "morte do desafiado",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 96,
+          "bytes": 55486,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-026",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 66,
+          "bytes": 39614,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-027",
+          "outcome": "morte do desafiado",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 85,
+          "bytes": 51699,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-028",
+          "outcome": "morte do desafiante",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 78,
+          "bytes": 43558,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-029",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 89,
+          "bytes": 45064,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-030",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 81,
+          "bytes": 45179,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-031",
+          "outcome": "sequela permanente",
+          "termination": "incapacidade ou arma ausente",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 117,
+          "bytes": 52501,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-032",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 81,
+          "bytes": 45907,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-033",
+          "outcome": "morte do desafiante",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 118,
+          "bytes": 53305,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-034",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 79,
+          "bytes": 46374,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-035",
+          "outcome": "sequela permanente",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 2,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 2,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 147,
+          "bytes": 62843,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-036",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 72,
+          "bytes": 39117,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-037",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 139,
+          "bytes": 64510,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-038",
+          "outcome": "sequela permanente",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 2,
+          "spontaneousByVessel": {
+            "capillary": 1,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 144,
+          "bytes": 62879,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-039",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 100,
+          "bytes": 49443,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-040",
+          "outcome": "recuperação",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 128,
+          "bytes": 59735,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-041",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por desafiado",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 120,
+          "bytes": 55966,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-042",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 93,
+          "bytes": 46073,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-043",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 95,
+          "bytes": 49528,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-044",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 79,
+          "bytes": 46055,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-045",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 122,
+          "bytes": 55566,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-046",
+          "outcome": "sequela permanente",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 3,
+          "aliveWounded": 2,
+          "clotted": 3,
+          "clottedWithoutCare": 3,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 3,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 160,
+          "bytes": 61160,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-047",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 84,
+          "bytes": 44546,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-048",
+          "outcome": "sem ferimento",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 87,
+          "bytes": 45629,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-049",
+          "outcome": "sequela permanente",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 2,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 2,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 135,
+          "bytes": 54097,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-050",
+          "outcome": "morte do desafiado",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 86,
+          "bytes": 54143,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-051",
+          "outcome": "sequela permanente",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 2,
+          "spontaneousByVessel": {
+            "capillary": 1,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 145,
+          "bytes": 61180,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-052",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 75,
+          "bytes": 42115,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-053",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 71,
+          "bytes": 42149,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-054",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 96,
+          "bytes": 49300,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-055",
+          "outcome": "morte do desafiante",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 72,
+          "bytes": 39080,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-056",
+          "outcome": "morte do desafiado",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 88,
+          "bytes": 49497,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-057",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 124,
+          "bytes": 55732,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-058",
+          "outcome": "morte do desafiante",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 3,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 2,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 2,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 154,
+          "bytes": 64364,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-059",
+          "outcome": "sequela permanente",
+          "termination": "incapacidade ou arma ausente",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 117,
+          "bytes": 54651,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-060",
+          "outcome": "morte do desafiado",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 99,
+          "bytes": 55656,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-061",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 71,
+          "bytes": 42171,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-062",
+          "outcome": "morte do desafiado",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 87,
+          "bytes": 50029,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-063",
+          "outcome": "sequela permanente",
+          "termination": "incapacidade ou arma ausente",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 128,
+          "bytes": 56781,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-064",
+          "outcome": "recuperação",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 2,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 2,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 137,
+          "bytes": 60316,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-065",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 103,
+          "bytes": 49929,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-066",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 99,
+          "bytes": 47820,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-067",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 77,
+          "bytes": 45059,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-068",
+          "outcome": "sequela permanente",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 2,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 2,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 171,
+          "bytes": 70909,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-069",
+          "outcome": "sequela permanente",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 122,
+          "bytes": 58806,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-070",
+          "outcome": "morte do desafiado",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 82,
+          "bytes": 51615,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-071",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 110,
+          "bytes": 50739,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-072",
+          "outcome": "morte do desafiante",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 91,
+          "bytes": 50652,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-073",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 85,
+          "bytes": 45172,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-074",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 78,
+          "bytes": 44088,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-075",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 72,
+          "bytes": 42917,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-076",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 81,
+          "bytes": 45466,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-077",
+          "outcome": "morte do desafiante",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 92,
+          "bytes": 49731,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-078",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 75,
+          "bytes": 42641,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-079",
+          "outcome": "sequela permanente",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 95,
+          "bytes": 45224,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-080",
+          "outcome": "sequela permanente",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:00",
+          "stoppingInjured": true,
+          "events": 117,
+          "bytes": 52952,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-081",
+          "outcome": "sequela permanente",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 106,
+          "bytes": 53198,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-082",
+          "outcome": "morte do desafiado",
+          "termination": "incapacidade ou arma ausente",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 105,
+          "bytes": 54105,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-083",
+          "outcome": "sequela permanente",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 1,
+          "clotted": 2,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 151,
+          "bytes": 63775,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-084",
+          "outcome": "morte do desafiante",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 122,
+          "bytes": 63399,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-085",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 90,
+          "bytes": 46309,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-086",
+          "outcome": "sequela permanente",
+          "termination": "fuga",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 109,
+          "bytes": 50618,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-087",
+          "outcome": "morte do desafiado",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:02",
+          "stoppingInjured": false,
+          "events": 90,
+          "bytes": 50770,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-088",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 101,
+          "bytes": 48413,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-089",
+          "outcome": "morte do desafiado",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 79,
+          "bytes": 45482,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-090",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 96,
+          "bytes": 52081,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-091",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 69,
+          "bytes": 36802,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-092",
+          "outcome": "sequela permanente",
+          "termination": "rendição",
+          "started": true,
+          "wounds": 3,
+          "aliveWounded": 2,
+          "clotted": 3,
+          "clottedWithoutCare": 3,
+          "spontaneousByVessel": {
+            "capillary": 2,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:01",
+          "stoppingInjured": true,
+          "events": 173,
+          "bytes": 68614,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-093",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 81,
+          "bytes": 42765,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-094",
+          "outcome": "sem ferimento",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 80,
+          "bytes": 43659,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-095",
+          "outcome": "recuperação",
+          "termination": "interrupção por terceiro",
+          "started": true,
+          "wounds": 1,
+          "aliveWounded": 1,
+          "clotted": 1,
+          "clottedWithoutCare": 1,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 1,
+            "artery": 0
+          },
+          "stoppingActor": "person:03",
+          "stoppingInjured": false,
+          "events": 128,
+          "bytes": 56081,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-096",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 86,
+          "bytes": 46843,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-097",
+          "outcome": "morte do desafiante",
+          "termination": "morte durante o duelo",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 110,
+          "bytes": 52942,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-098",
+          "outcome": "sem duelo",
+          "termination": "recusa",
+          "started": false,
+          "wounds": 0,
+          "aliveWounded": 0,
+          "clotted": 0,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 79,
+          "bytes": 46358,
+          "errors": []
+        },
+        {
+          "seed": "novo-21-099",
+          "outcome": "sequela permanente",
+          "termination": "incapacidade ou arma ausente",
+          "started": true,
+          "wounds": 2,
+          "aliveWounded": 2,
+          "clotted": 2,
+          "clottedWithoutCare": 0,
+          "spontaneousByVessel": {
+            "capillary": 0,
+            "vein": 0,
+            "artery": 0
+          },
+          "stoppingActor": null,
+          "stoppingInjured": false,
+          "events": 134,
+          "bytes": 60026,
+          "errors": []
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "seed": "duelo-2a-005",
+      "outcome": "morte do desafiado",
+      "termination": "rendição",
+      "started": true,
+      "wounds": [
+        {
+          "id": "wound:event:11",
+          "kind": "wound",
+          "owner": "person:01",
+          "aggressor": "person:00",
+          "weapon": "weapon:person:00",
+          "part": "leg.left",
+          "source": "event:12",
+          "lastEvent": "event:53",
+          "bloodLoss": 1080,
+          "duel": "duel:person:00:person:01:0:0",
+          "month": 0,
+          "minute": 0,
+          "vessel": "artery",
+          "severity": "severe",
+          "rate": 18,
+          "clotAt": null,
+          "nerve": true,
+          "fracture": true,
+          "amputation": true,
+          "vital": false,
+          "due": 6
+        },
+        {
+          "id": "wound:event:39",
+          "kind": "wound",
+          "owner": "person:01",
+          "aggressor": "person:00",
+          "weapon": "weapon:person:00",
+          "part": "forearm.left",
+          "source": "event:41",
+          "lastEvent": "event:53",
+          "bloodLoss": 1044,
+          "duel": "duel:person:00:person:01:0:0",
+          "month": 0,
+          "minute": 2,
+          "vessel": "artery",
+          "severity": "severe",
+          "rate": 18,
+          "clotAt": null,
+          "nerve": true,
+          "fracture": true,
+          "amputation": true,
+          "vital": false,
+          "due": 6
+        }
+      ],
+      "aliveWounded": 0,
+      "clotted": 0,
+      "clottedWithoutCare": 0,
+      "spontaneousByVessel": {
+        "capillary": 0,
+        "vein": 0,
+        "artery": 0
+      },
+      "stoppingActor": "person:01",
+      "stoppingInjured": true,
+      "events": 117,
+      "bytes": 57251,
+      "errors": [],
+      "choice": {
+        "id": "event:50",
+        "seq": 50,
+        "month": 0,
+        "ano": 0,
+        "dia": 0,
+        "type": "duel.choice",
+        "location": "place:void",
+        "participants": [
+          {
+            "id": "person:01",
+            "role": "actor"
+          },
+          {
+            "id": "person:00",
+            "role": "reference"
+          }
+        ],
+        "causes": [
+          "event:1",
+          "event:3",
+          "event:41",
+          "event:43",
+          "event:44",
+          "event:49"
+        ],
+        "data": {
+          "duel": "duel:person:00:person:01:0:0",
+          "minute": 2,
+          "role": "desafiado",
+          "injured": true,
+          "stress": 148,
+          "pain": 70,
+          "visibleDanger": 0,
+          "bloodLoss": 36,
+          "mobile": false,
+          "utilities": {
+            "continuar": 26.600000000000005,
+            "render": 101.9,
+            "fugir": 122.1,
+            "interromper": 10.3
+          },
+          "eligible": [
+            "render",
+            "continuar",
+            "interromper"
+          ],
+          "chosen": "render",
+          "stopped": true,
+          "reason": "rendição",
+          "convention": "rendição/interrupção encerram o duelo consentido; perseguição fora desta fatia"
+        },
+        "effects": []
+      }
+    },
+    {
+      "seed": "duelo-2a-006",
+      "outcome": "recuperação",
+      "termination": "interrupção por desafiado",
+      "started": true,
+      "wounds": [
+        {
+          "id": "wound:event:11",
+          "kind": "wound",
+          "owner": "person:01",
+          "aggressor": "person:00",
+          "weapon": "weapon:person:00",
+          "part": "forearm.left",
+          "source": "event:12",
+          "lastEvent": "event:92",
+          "bloodLoss": 10,
+          "duel": "duel:person:00:person:01:0:0",
+          "month": 0,
+          "minute": 0,
+          "vessel": "capillary",
+          "severity": "light",
+          "rate": 0,
+          "clotAt": 5,
+          "nerve": false,
+          "fracture": false,
+          "amputation": false,
+          "vital": false,
+          "due": 2,
+          "permanent": false,
+          "closed": 2
+        },
+        {
+          "id": "wound:event:39",
+          "kind": "wound",
+          "owner": "person:01",
+          "aggressor": "person:00",
+          "weapon": "weapon:person:00",
+          "part": "torso",
+          "source": "event:41",
+          "lastEvent": "event:93",
+          "bloodLoss": 9.6,
+          "duel": "duel:person:00:person:01:0:0",
+          "month": 0,
+          "minute": 2,
+          "vessel": "capillary",
+          "severity": "light",
+          "rate": 0,
+          "clotAt": 14,
+          "nerve": false,
+          "fracture": false,
+          "amputation": false,
+          "vital": false,
+          "due": 2,
+          "care": "event:53",
+          "permanent": false,
+          "closed": 2
+        }
+      ],
+      "aliveWounded": 1,
+      "clotted": 2,
+      "clottedWithoutCare": 1,
+      "spontaneousByVessel": {
+        "capillary": 1,
+        "vein": 0,
+        "artery": 0
+      },
+      "stoppingActor": "person:01",
+      "stoppingInjured": true,
+      "events": 151,
+      "bytes": 66179,
+      "errors": [],
+      "choice": {
+        "id": "event:50",
+        "seq": 50,
+        "month": 0,
+        "ano": 0,
+        "dia": 0,
+        "type": "duel.choice",
+        "location": "place:void",
+        "participants": [
+          {
+            "id": "person:01",
+            "role": "actor"
+          },
+          {
+            "id": "person:00",
+            "role": "reference"
+          }
+        ],
+        "causes": [
+          "event:1",
+          "event:3",
+          "event:41",
+          "event:43",
+          "event:44",
+          "event:49"
+        ],
+        "data": {
+          "duel": "duel:person:00:person:01:0:0",
+          "minute": 2,
+          "role": "desafiado",
+          "injured": true,
+          "stress": 180,
+          "pain": 24,
+          "visibleDanger": 0,
+          "bloodLoss": 4,
+          "mobile": true,
+          "utilities": {
+            "continuar": 105.8,
+            "render": 64.26666666666667,
+            "fugir": 79.16666666666667,
+            "interromper": 122.5
+          },
+          "eligible": [
+            "interromper",
+            "continuar",
+            "fugir",
+            "render"
+          ],
+          "chosen": "interromper",
+          "stopped": true,
+          "reason": "interrupção por desafiado",
+          "convention": "rendição/interrupção encerram o duelo consentido; perseguição fora desta fatia"
+        },
+        "effects": []
+      }
+    },
+    {
+      "seed": "duelo-2a-008",
+      "outcome": "morte do desafiante",
+      "termination": "interrupção por terceiro",
+      "started": true,
+      "wounds": [
+        {
+          "id": "wound:event:21",
+          "kind": "wound",
+          "owner": "person:00",
+          "aggressor": "person:01",
+          "weapon": "weapon:person:01",
+          "part": "forearm.right",
+          "source": "event:22",
+          "lastEvent": "event:38",
+          "bloodLoss": 2070,
+          "duel": "duel:person:00:person:01:0:0",
+          "month": 0,
+          "minute": 1,
+          "vessel": "artery",
+          "severity": "severe",
+          "rate": 18,
+          "clotAt": null,
+          "nerve": true,
+          "fracture": true,
+          "amputation": true,
+          "vital": false,
+          "due": 6
+        }
+      ],
+      "aliveWounded": 0,
+      "clotted": 0,
+      "clottedWithoutCare": 0,
+      "spontaneousByVessel": {
+        "capillary": 0,
+        "vein": 0,
+        "artery": 0
+      },
+      "stoppingActor": "person:03",
+      "stoppingInjured": false,
+      "events": 107,
+      "bytes": 53550,
+      "errors": [],
+      "choice": {
+        "id": "event:35",
+        "seq": 35,
+        "month": 0,
+        "ano": 0,
+        "dia": 0,
+        "type": "duel.choice",
+        "location": "place:void",
+        "participants": [
+          {
+            "id": "person:03",
+            "role": "actor"
+          },
+          {
+            "id": "person:00",
+            "role": "reference"
+          },
+          {
+            "id": "person:01",
+            "role": "reference"
+          }
+        ],
+        "causes": [
+          "event:1",
+          "event:4",
+          "event:6",
+          "event:27",
+          "event:34"
+        ],
+        "data": {
+          "duel": "duel:person:00:person:01:0:0",
+          "minute": 1,
+          "role": "terceiro",
+          "injured": false,
+          "stress": 0,
+          "pain": 0,
+          "visibleDanger": 60,
+          "bloodLoss": 0,
+          "mobile": true,
+          "utilities": {
+            "observar": 89,
+            "interromper": 137
+          },
+          "eligible": [
+            "interromper",
+            "observar"
+          ],
+          "chosen": "interromper",
+          "stopped": true,
+          "reason": "interrupção por terceiro",
+          "convention": "rendição/interrupção encerram o duelo consentido; perseguição fora desta fatia"
+        },
+        "effects": []
+      }
+    },
+    {
+      "seed": "duelo-2a-010",
+      "outcome": "morte do desafiado",
+      "termination": "fuga",
+      "started": true,
+      "wounds": [
+        {
+          "id": "wound:event:11",
+          "kind": "wound",
+          "owner": "person:01",
+          "aggressor": "person:00",
+          "weapon": "weapon:person:00",
+          "part": "torso",
+          "source": "event:12",
+          "lastEvent": "event:54",
+          "bloodLoss": 1800,
+          "duel": "duel:person:00:person:01:0:0",
+          "month": 0,
+          "minute": 0,
+          "vessel": "artery",
+          "severity": "severe",
+          "rate": 18,
+          "clotAt": null,
+          "nerve": false,
+          "fracture": true,
+          "amputation": false,
+          "vital": false,
+          "due": 6
+        },
+        {
+          "id": "wound:event:39",
+          "kind": "wound",
+          "owner": "person:01",
+          "aggressor": "person:00",
+          "weapon": "weapon:person:00",
+          "part": "forearm.left",
+          "source": "event:41",
+          "lastEvent": "event:53",
+          "bloodLoss": 288,
+          "duel": "duel:person:00:person:01:0:0",
+          "month": 0,
+          "minute": 2,
+          "vessel": "vein",
+          "severity": "moderate",
+          "rate": 0,
+          "clotAt": 50,
+          "nerve": true,
+          "fracture": true,
+          "amputation": false,
+          "vital": false,
+          "due": 6
+        }
+      ],
+      "aliveWounded": 0,
+      "clotted": 1,
+      "clottedWithoutCare": 1,
+      "spontaneousByVessel": {
+        "capillary": 0,
+        "vein": 1,
+        "artery": 0
+      },
+      "stoppingActor": "person:01",
+      "stoppingInjured": true,
+      "events": 138,
+      "bytes": 64117,
+      "errors": [],
+      "choice": {
+        "id": "event:50",
+        "seq": 50,
+        "month": 0,
+        "ano": 0,
+        "dia": 0,
+        "type": "duel.choice",
+        "location": "place:void",
+        "participants": [
+          {
+            "id": "person:01",
+            "role": "actor"
+          },
+          {
+            "id": "person:00",
+            "role": "reference"
+          }
+        ],
+        "causes": [
+          "event:1",
+          "event:3",
+          "event:41",
+          "event:43",
+          "event:44",
+          "event:49"
+        ],
+        "data": {
+          "duel": "duel:person:00:person:01:0:0",
+          "minute": 2,
+          "role": "desafiado",
+          "injured": true,
+          "stress": 172,
+          "pain": 65,
+          "visibleDanger": 0,
+          "bloodLoss": 36,
+          "mobile": true,
+          "utilities": {
+            "continuar": 125.8,
+            "render": 107.4,
+            "fugir": 143.73333333333335,
+            "interromper": 138.2
+          },
+          "eligible": [
+            "fugir",
+            "interromper",
+            "continuar",
+            "render"
+          ],
+          "chosen": "fugir",
+          "stopped": true,
+          "reason": "fuga",
+          "convention": "rendição/interrupção encerram o duelo consentido; perseguição fora desta fatia"
+        },
+        "effects": []
+      }
+    },
+    {
+      "seed": "duelo-2a-018",
+      "outcome": "sequela permanente",
+      "termination": "interrupção por agressor",
+      "started": true,
+      "wounds": [
+        {
+          "id": "wound:event:21",
+          "kind": "wound",
+          "owner": "person:00",
+          "aggressor": "person:01",
+          "weapon": "weapon:person:01",
+          "part": "forearm.left",
+          "source": "event:22",
+          "lastEvent": "event:139",
+          "bloodLoss": 42,
+          "duel": "duel:person:00:person:01:0:0",
+          "month": 0,
+          "minute": 1,
+          "vessel": "vein",
+          "severity": "moderate",
+          "rate": 0,
+          "clotAt": 57,
+          "nerve": true,
+          "fracture": true,
+          "amputation": false,
+          "vital": false,
+          "due": 6,
+          "care": "event:59",
+          "rehabMonths": 5,
+          "permanent": true,
+          "closed": 6
+        },
+        {
+          "id": "wound:event:46",
+          "kind": "wound",
+          "owner": "person:00",
+          "aggressor": "person:01",
+          "weapon": "weapon:person:01",
+          "part": "forearm.left",
+          "source": "event:48",
+          "lastEvent": "event:145",
+          "bloodLoss": 30,
+          "duel": "duel:person:00:person:01:0:0",
+          "month": 0,
+          "minute": 3,
+          "vessel": "vein",
+          "severity": "moderate",
+          "rate": 0,
+          "clotAt": 58,
+          "nerve": true,
+          "fracture": true,
+          "amputation": false,
+          "vital": false,
+          "due": 6,
+          "care": "event:59",
+          "rehabMonths": 5,
+          "permanent": true,
+          "closed": 6
+        }
+      ],
+      "aliveWounded": 1,
+      "clotted": 0,
+      "clottedWithoutCare": 0,
+      "spontaneousByVessel": {
+        "capillary": 0,
+        "vein": 0,
+        "artery": 0
+      },
+      "stoppingActor": "person:00",
+      "stoppingInjured": true,
+      "events": 166,
+      "bytes": 71365,
+      "errors": [],
+      "choice": {
+        "id": "event:54",
+        "seq": 54,
+        "month": 0,
+        "ano": 0,
+        "dia": 0,
+        "type": "duel.choice",
+        "location": "place:void",
+        "participants": [
+          {
+            "id": "person:00",
+            "role": "actor"
+          },
+          {
+            "id": "person:01",
+            "role": "reference"
+          }
+        ],
+        "causes": [
+          "event:1",
+          "event:4",
+          "event:48",
+          "event:50",
+          "event:51",
+          "event:53"
+        ],
+        "data": {
+          "duel": "duel:person:00:person:01:0:0",
+          "minute": 3,
+          "role": "agressor",
+          "injured": true,
+          "stress": 196,
+          "pain": 70,
+          "visibleDanger": 0,
+          "bloodLoss": 12,
+          "mobile": true,
+          "utilities": {
+            "continuar": 133.20000000000002,
+            "render": 130.3,
+            "fugir": 140.7,
+            "interromper": 151.1
+          },
+          "eligible": [
+            "interromper",
+            "fugir",
+            "continuar",
+            "render"
+          ],
+          "chosen": "interromper",
+          "stopped": true,
+          "reason": "interrupção por agressor",
+          "convention": "rendição/interrupção encerram o duelo consentido; perseguição fora desta fatia"
+        },
+        "effects": []
+      }
+    }
+  ],
+  "previous": {
+    "duelo-2a": {
+      "outcomes": {
+        "morte do desafiante": 18,
+        "sem duelo": 49,
+        "morte do desafiado": 21,
+        "recuperação": 3,
+        "sequela permanente": 6,
+        "morte de ambos": 3
+      },
+      "terminations": {
+        "morte durante o duelo": 19,
+        "recusa": 49,
+        "limite de trocas": 12,
+        "rendição por dor/risco": 8,
+        "incapacidade ou arma ausente": 12
+      }
+    },
+    "reservado-2a": {
+      "outcomes": {
+        "sequela permanente": 17,
+        "sem duelo": 38,
+        "morte do desafiante": 17,
+        "morte do desafiado": 18,
+        "morte de ambos": 7,
+        "recuperação": 3
+      },
+      "terminations": {
+        "incapacidade ou arma ausente": 19,
+        "recusa": 38,
+        "limite de trocas": 14,
+        "morte durante o duelo": 9,
+        "rendição por dor/risco": 20
+      }
+    }
+  }
+}

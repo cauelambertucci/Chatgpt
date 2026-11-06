@@ -1,0 +1,430 @@
+{
+  "totalSampledMs": 14484.525,
+  "method": "timeDelta-weighted V8 samples. Anonymous clone frame recognized by exact generated-source line. Inclusive rows overlap; disjoint categories do not.",
+  "exclusive": [
+    {
+      "name": "clone_JSON",
+      "sampledMs": 7323.608,
+      "percent": 50.56160281403774
+    },
+    {
+      "name": "(anonymous)",
+      "sampledMs": 1420.475,
+      "percent": 9.806845581750178
+    },
+    {
+      "name": "freeze",
+      "sampledMs": 1327.185,
+      "percent": 9.162778896788124
+    },
+    {
+      "name": "campaignContact",
+      "sampledMs": 752.583,
+      "percent": 5.195772729861697
+    },
+    {
+      "name": "emit",
+      "sampledMs": 557.38,
+      "percent": 3.848106858871796
+    },
+    {
+      "name": "(garbage collector)",
+      "sampledMs": 495.123,
+      "percent": 3.4182895193318386
+    },
+    {
+      "name": "campaign",
+      "sampledMs": 493.955,
+      "percent": 3.4102257409200507
+    },
+    {
+      "name": "personalityFactors",
+      "sampledMs": 363.785,
+      "percent": 2.511542491037849
+    },
+    {
+      "name": "candidates",
+      "sampledMs": 360.355,
+      "percent": 2.487862045873096
+    },
+    {
+      "name": "changed",
+      "sampledMs": 304.864,
+      "percent": 2.1047566281945733
+    },
+    {
+      "name": "act",
+      "sampledMs": 201.934,
+      "percent": 1.3941361556557774
+    },
+    {
+      "name": "needsPeriod",
+      "sampledMs": 196.783,
+      "percent": 1.3585740643894086
+    },
+    {
+      "name": "advance",
+      "sampledMs": 152.592,
+      "percent": 1.0534829412769835
+    },
+    {
+      "name": "set TextDecoder",
+      "sampledMs": 118.974,
+      "percent": 0.8213869629829076
+    },
+    {
+      "name": "__name",
+      "sampledMs": 116.122,
+      "percent": 0.8016969835048094
+    },
+    {
+      "name": "hash",
+      "sampledMs": 84.963,
+      "percent": 0.586577744178701
+    },
+    {
+      "name": "applyEvent",
+      "sampledMs": 55.687,
+      "percent": 0.3844585859736512
+    },
+    {
+      "name": "availability",
+      "sampledMs": 43.193,
+      "percent": 0.29820101107906544
+    },
+    {
+      "name": "post",
+      "sampledMs": 23.419,
+      "percent": 0.1616828995082683
+    },
+    {
+      "name": "prepareAdvancedGoals",
+      "sampledMs": 17.713,
+      "percent": 0.12228913271232573
+    },
+    {
+      "name": "prepareFriendship",
+      "sampledMs": 17.011,
+      "percent": 0.11744258096140536
+    },
+    {
+      "name": "personalGoals",
+      "sampledMs": 16.482,
+      "percent": 0.11379040734853231
+    },
+    {
+      "name": "dispatch",
+      "sampledMs": 14.935,
+      "percent": 0.1031100433048374
+    },
+    {
+      "name": "(program)",
+      "sampledMs": 6.609,
+      "percent": 0.04562800644135724
+    },
+    {
+      "name": "stressAction",
+      "sampledMs": 5.557,
+      "percent": 0.03836508273484978
+    },
+    {
+      "name": "drain",
+      "sampledMs": 3.49,
+      "percent": 0.024094680357139776
+    },
+    {
+      "name": "perceiveThreat",
+      "sampledMs": 2.235,
+      "percent": 0.015430260916391804
+    },
+    {
+      "name": "confront",
+      "sampledMs": 2.156,
+      "percent": 0.014884851246416433
+    },
+    {
+      "name": "allPersonalGoals",
+      "sampledMs": 1.119,
+      "percent": 0.007725486338005561
+    },
+    {
+      "name": "targetFor",
+      "sampledMs": 1.09,
+      "percent": 0.007525272661685489
+    },
+    {
+      "name": "finishPersonalGoal",
+      "sampledMs": 1.084,
+      "percent": 0.007483849142446853
+    },
+    {
+      "name": "adoptPersonalGoal",
+      "sampledMs": 1.078,
+      "percent": 0.007442425623208217
+    },
+    {
+      "name": "enqueue",
+      "sampledMs": 0.964,
+      "percent": 0.006655378757674139
+    },
+    {
+      "name": "nextId",
+      "sampledMs": 0.022,
+      "percent": 0.00015188623720833097
+    }
+  ],
+  "inclusive": [
+    {
+      "name": "(root)",
+      "sampledMs": 14484.525,
+      "percent": 100
+    },
+    {
+      "name": "(anonymous)",
+      "sampledMs": 13981.742,
+      "percent": 96.52882645444016
+    },
+    {
+      "name": "advance",
+      "sampledMs": 13945.16,
+      "percent": 96.2762672576422
+    },
+    {
+      "name": "emit",
+      "sampledMs": 7786.817,
+      "percent": 53.75956063453928
+    },
+    {
+      "name": "clone_JSON",
+      "sampledMs": 7323.608,
+      "percent": 50.56160281403774
+    },
+    {
+      "name": "needsPeriod",
+      "sampledMs": 7279.103,
+      "percent": 50.25434386008516
+    },
+    {
+      "name": "act",
+      "sampledMs": 6324.246,
+      "percent": 43.66208764181083
+    },
+    {
+      "name": "candidates",
+      "sampledMs": 2462.343,
+      "percent": 16.999818772103332
+    },
+    {
+      "name": "applyEvent",
+      "sampledMs": 2167.134,
+      "percent": 14.961719490283595
+    },
+    {
+      "name": "changed",
+      "sampledMs": 2134.286,
+      "percent": 14.734939530291811
+    },
+    {
+      "name": "campaign",
+      "sampledMs": 1328.665,
+      "percent": 9.17299669820032
+    },
+    {
+      "name": "freeze",
+      "sampledMs": 1327.185,
+      "percent": 9.162778896788124
+    },
+    {
+      "name": "campaignContact",
+      "sampledMs": 971.602,
+      "percent": 6.70786235654949
+    },
+    {
+      "name": "(garbage collector)",
+      "sampledMs": 495.123,
+      "percent": 3.4182895193318386
+    },
+    {
+      "name": "personalityFactors",
+      "sampledMs": 363.785,
+      "percent": 2.511542491037849
+    },
+    {
+      "name": "__name",
+      "sampledMs": 220.822,
+      "percent": 1.5245373942190026
+    },
+    {
+      "name": "dispatch",
+      "sampledMs": 155.933,
+      "percent": 1.0765489375730306
+    },
+    {
+      "name": "set TextDecoder",
+      "sampledMs": 118.974,
+      "percent": 0.8213869629829076
+    },
+    {
+      "name": "availability",
+      "sampledMs": 94.568,
+      "percent": 0.6528898945598838
+    },
+    {
+      "name": "hash",
+      "sampledMs": 84.963,
+      "percent": 0.586577744178701
+    },
+    {
+      "name": "prepareFriendship",
+      "sampledMs": 74.533,
+      "percent": 0.5145698599022059
+    },
+    {
+      "name": "stressAction",
+      "sampledMs": 68.105,
+      "percent": 0.4701914629578809
+    },
+    {
+      "name": "personalGoals",
+      "sampledMs": 53.003,
+      "percent": 0.3659284650342348
+    },
+    {
+      "name": "confront",
+      "sampledMs": 48.169,
+      "percent": 0.3325549163676406
+    },
+    {
+      "name": "drain",
+      "sampledMs": 38.556,
+      "percent": 0.26618753462747313
+    },
+    {
+      "name": "prepareAdvancedGoals",
+      "sampledMs": 33.017,
+      "percent": 0.22794672245033923
+    },
+    {
+      "name": "perceiveThreat",
+      "sampledMs": 29.648,
+      "percent": 0.2046874163978453
+    },
+    {
+      "name": "post",
+      "sampledMs": 23.419,
+      "percent": 0.1616828995082683
+    },
+    {
+      "name": "adoptPersonalGoal",
+      "sampledMs": 13.053,
+      "percent": 0.09011686610365201
+    },
+    {
+      "name": "socialize",
+      "sampledMs": 9.763,
+      "percent": 0.06740296972113341
+    },
+    {
+      "name": "writeWork",
+      "sampledMs": 9.749,
+      "percent": 0.06730631484290993
+    },
+    {
+      "name": "knownAllies",
+      "sampledMs": 8.867,
+      "percent": 0.06121705751483048
+    },
+    {
+      "name": "(program)",
+      "sampledMs": 6.609,
+      "percent": 0.04562800644135724
+    },
+    {
+      "name": "finishPersonalGoal",
+      "sampledMs": 5.901,
+      "percent": 0.040740031171198225
+    },
+    {
+      "name": "SliceSimulation",
+      "sampledMs": 5.555,
+      "percent": 0.038351274895103565
+    },
+    {
+      "name": "resolveThreat",
+      "sampledMs": 5.467,
+      "percent": 0.037743729946270246
+    },
+    {
+      "name": "feel",
+      "sampledMs": 5.418,
+      "percent": 0.037405437872488054
+    },
+    {
+      "name": "protectiveResponse",
+      "sampledMs": 4.253,
+      "percent": 0.02936237122031962
+    },
+    {
+      "name": "allPersonalGoals",
+      "sampledMs": 1.119,
+      "percent": 0.007725486338005561
+    },
+    {
+      "name": "targetFor",
+      "sampledMs": 1.09,
+      "percent": 0.007525272661685489
+    },
+    {
+      "name": "recurrentThreat",
+      "sampledMs": 1.085,
+      "percent": 0.007490753062319958
+    },
+    {
+      "name": "enqueue",
+      "sampledMs": 0.964,
+      "percent": 0.006655378757674139
+    },
+    {
+      "name": "nextId",
+      "sampledMs": 0.022,
+      "percent": 0.00015188623720833097
+    }
+  ],
+  "disjointCategories": [
+    {
+      "name": "JSON copies",
+      "sampledMs": 7323.608,
+      "percent": 50.56160281403774
+    },
+    {
+      "name": "other",
+      "sampledMs": 2052.153,
+      "percent": 14.167899879354
+    },
+    {
+      "name": "campaign excluding copies",
+      "sampledMs": 1749.136,
+      "percent": 12.075894791165053
+    },
+    {
+      "name": "other decisions excluding copies",
+      "sampledMs": 1491.822,
+      "percent": 10.29941955293667
+    },
+    {
+      "name": "freeze",
+      "sampledMs": 1327.185,
+      "percent": 9.162778896788124
+    },
+    {
+      "name": "GC",
+      "sampledMs": 495.123,
+      "percent": 3.4182895193318386
+    },
+    {
+      "name": "other entity scans",
+      "sampledMs": 45.498,
+      "percent": 0.31411454638657466
+    }
+  ]
+}

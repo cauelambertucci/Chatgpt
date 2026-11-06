@@ -1,0 +1,16 @@
+# Marco 2b — verificação e correções
+
+- O validador anterior rejeitou ganho infantil de habilidade por ocorrer fora de `activity.period`. Foi adicionado o contrato explícito de `development.period`, com período e responsáveis reais; não foi removida a exigência de procedência.
+- A primeira fixture de sequela falhou: os participantes treinavam antes do duelo, alterando o contato numérico. O treino desses adultos foi desabilitado apenas na fixture, mantendo habilidades controladas. Os lotes livres continuam variando normalmente.
+- Foram corrigidos erros de tipagem na opção de papel reprodutivo e no candidato de guarda opcional antes do build final.
+- A revisão identificou dois encerramentos ausentes: guarda termina na maioridade e gestação termina imediatamente na morte da gestante. A rotina mensal também relê o registro atual para não sobrescrever uma parceria encerrada por uma morte anterior no mesmo mês.
+- Armas perdidas não são recriadas pelo envelhecimento anual. Crianças não recebem ações de proteção/ajuda adultas via a fila de reações; percepção e emoção continuam permitidas conforme idade/conhecimento.
+- Foram preservados os primeiros 200 resultados apenas como avaliação preliminar. Os 200 cenários são regenerados e validados com a revisão final; não há alteração de pesos ou descarte de seeds para obter três gerações.
+
+Verificação final do código: 117 testes em 15 arquivos passaram (81,22 s de suíte), incluindo sete testes demográficos, os testes de corpo/saída de duelo e os anteriores do 1d. Build TypeScript/Vite passou. Relatórios e benchmarks rodam depois da suíte; o benchmark fica isolado de geração de relatórios e validação.
+
+As fixtures exercitam concepção/perda controladas, mortes antecipadas para gerar órfãos, três gerações e a sequela numérica. Overrides de concepção, perda, papéis ou prazo de morte usados nelas não são usados nos 100 cenários livres nem nos 100 reservados.
+
+O primeiro benchmark isolado falhou na meta de tempo: mediana de 101,75 s em Node e 95,34 s no Chromium. O perfil localizou 68,5 s de CPU na reconstrução/ordenação de pessoas repetida para cada notícia conhecida durante a avaliação de candidatos. A correção cria uma lista transitória de ouvintes por avaliação e remove uma leitura de evento sem uso; não introduz índices persistentes ou cache de decisões. Três repetições caíram para 28,46–29,53 s (mediana 29,48 s), com hashes de todos os eventos e estado final exatamente iguais e os mesmos 45.160.087 bytes de JSON. As primeiras medidas foram preservadas em `MARCO2B-BENCHMARK-INITIAL.json` e `MARCO2B-BROWSER-INITIAL.json`.
+
+Verificação após a otimização: suíte completa novamente aprovada (117/117 testes, 15 arquivos, 54,82 s), build aprovado. As três histórias publicadas e duas seeds reservadas foram regeneradas por 100 anos; o hash do JSON compacto inteiro foi idêntico ao dos logs preservados (`MARCO2B-OPTIMIZATION-CHECKS.json`). No Chromium final: 26,54 s, PSS observado 781,14 MB; estimativa com margem de 20% de 937,37 MB. A soma conservadora dos picos RSS dos processos foi 1.197,41 MB, com duplicação de páginas compartilhadas e picos não simultâneos. Não se apresenta isso como garantia universal de consumo inferior a 1 GB.

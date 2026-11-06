@@ -1,0 +1,2698 @@
+{
+  "engine": "agents-slice-2a",
+  "assumption": "suposição de design, não verificado",
+  "invalid": 0,
+  "noQuota": true,
+  "batches": {
+    "duelo-2a": {
+      "counts": {
+        "morte do desafiante": 18,
+        "sem duelo": 49,
+        "morte do desafiado": 21,
+        "recuperação": 3,
+        "sequela permanente": 6,
+        "morte de ambos": 3
+      },
+      "terminations": {
+        "morte durante o duelo": 19,
+        "recusa": 49,
+        "limite de trocas": 12,
+        "rendição por dor/risco": 8,
+        "incapacidade ou arma ausente": 12
+      }
+    },
+    "reservado-2a": {
+      "counts": {
+        "sequela permanente": 17,
+        "sem duelo": 38,
+        "morte do desafiante": 17,
+        "morte do desafiado": 18,
+        "morte de ambos": 7,
+        "recuperação": 3
+      },
+      "terminations": {
+        "incapacidade ou arma ausente": 19,
+        "recusa": 38,
+        "limite de trocas": 14,
+        "morte durante o duelo": 9,
+        "rendição por dor/risco": 20
+      }
+    }
+  },
+  "stories": [
+    {
+      "seed": "duelo-2a-000",
+      "outcome": "morte do desafiante",
+      "termination": "morte durante o duelo",
+      "wounds": [
+        {
+          "id": "wound:event:13",
+          "kind": "wound",
+          "owner": "person:00",
+          "aggressor": "person:01",
+          "weapon": "weapon:person:01",
+          "part": "forearm.left",
+          "source": "event:14",
+          "lastEvent": "event:23",
+          "bloodLoss": 12,
+          "duel": "duel:person:00:person:01:0:0",
+          "month": 0,
+          "minute": 1,
+          "rate": 6,
+          "clotAt": null,
+          "nerve": true,
+          "fracture": true,
+          "amputation": true,
+          "vital": false,
+          "due": 6
+        },
+        {
+          "id": "wound:event:22",
+          "kind": "wound",
+          "owner": "person:00",
+          "aggressor": "person:01",
+          "weapon": "weapon:person:01",
+          "part": "torso",
+          "source": "event:24",
+          "lastEvent": "event:24",
+          "bloodLoss": 0,
+          "duel": "duel:person:00:person:01:0:0",
+          "month": 0,
+          "minute": 3,
+          "rate": 4,
+          "clotAt": 34,
+          "nerve": false,
+          "fracture": true,
+          "amputation": false,
+          "vital": true,
+          "due": 6
+        }
+      ],
+      "kills": [
+        {
+          "id": "kill:person:00",
+          "kind": "kill",
+          "victim": "person:00",
+          "killer": "person:01",
+          "source": "event:26",
+          "recordedAt": "event:32",
+          "wound": "wound:event:22",
+          "weapon": "weapon:person:01",
+          "part": "torso",
+          "cause": "estrutura vital destruída"
+        }
+      ],
+      "events": [
+        {
+          "id": "event:7",
+          "month": 0,
+          "type": "duel.agreed",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "target"
+            }
+          ],
+          "data": {
+            "duel": "duel:person:00:person:01:0:0",
+            "initiating": 183.5,
+            "accepting": 145.5,
+            "eligible": true,
+            "started": true,
+            "utilities": {
+              "iniciar": 108.5,
+              "esperar": 0,
+              "aceitar": 115.5,
+              "recusar": 0
+            },
+            "fixture": false
+          }
+        },
+        {
+          "id": "event:13",
+          "month": 0,
+          "type": "attack.contact",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            },
+            {
+              "id": "person:00",
+              "role": "target"
+            }
+          ],
+          "data": {
+            "duel": "duel:person:00:person:01:0:0",
+            "exchange": 1,
+            "part": "forearm.left",
+            "budget": 140,
+            "remaining": 30,
+            "trace": [
+              {
+                "layer": "skin",
+                "resistance": 8,
+                "entering": 140,
+                "spent": 8,
+                "remaining": 132
+              },
+              {
+                "layer": "muscle",
+                "resistance": 30,
+                "entering": 132,
+                "spent": 30,
+                "remaining": 102
+              },
+              {
+                "layer": "nerve",
+                "resistance": 12,
+                "entering": 102,
+                "spent": 12,
+                "remaining": 90
+              },
+              {
+                "layer": "bone",
+                "resistance": 60,
+                "entering": 90,
+                "spent": 60,
+                "remaining": 30
+              }
+            ],
+            "assumption": "suposição de design, não verificado"
+          }
+        },
+        {
+          "id": "event:14",
+          "month": 0,
+          "type": "wound.created",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "victim"
+            },
+            {
+              "id": "person:01",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "duel": "duel:person:00:person:01:0:0",
+            "wound": "wound:event:13",
+            "part": "forearm.left",
+            "nerve": true,
+            "fracture": true,
+            "amputation": true,
+            "vital": false,
+            "minute": 1
+          }
+        },
+        {
+          "id": "event:15",
+          "month": 0,
+          "type": "injury.perceived",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "actor"
+            },
+            {
+              "id": "person:00",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "subject": "person:00",
+            "wound": "wound:event:13",
+            "permanent": false,
+            "channel": "testemunho"
+          }
+        },
+        {
+          "id": "event:16",
+          "month": 0,
+          "type": "emotion.felt",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "stimulus": "ameaca",
+            "emotion": "raiva",
+            "intensity": 56,
+            "stressDelta": 112,
+            "facet": "rancor",
+            "belief": "vinganca",
+            "change": 3,
+            "appraisal": {
+              "anger": 126,
+              "care": 88,
+              "anxiety": 121
+            },
+            "stressBefore": 0,
+            "stressAfter": 112,
+            "stimulusSource": "event:15"
+          }
+        },
+        {
+          "id": "event:17",
+          "month": 0,
+          "type": "person.transformed",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "emotion": "event:16",
+            "facet": "rancor",
+            "facetBefore": 66,
+            "facetAfter": 69,
+            "value": "vinganca",
+            "valueBefore": -51,
+            "valueAfter": -48
+          }
+        },
+        {
+          "id": "event:18",
+          "month": 0,
+          "type": "physicalGoal.reassessed",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "goal": "physical:person:00",
+            "leftGrip": 0,
+            "rightGrip": 1,
+            "viableBefore": false,
+            "utilities": {
+              "continuar": -500,
+              "adaptar": 160,
+              "abandonar": 76.2
+            },
+            "chosen": "adaptar",
+            "knowledgeSource": "event:17"
+          }
+        },
+        {
+          "id": "event:22",
+          "month": 0,
+          "type": "attack.contact",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            },
+            {
+              "id": "person:00",
+              "role": "target"
+            }
+          ],
+          "data": {
+            "duel": "duel:person:00:person:01:0:0",
+            "exchange": 3,
+            "part": "torso",
+            "budget": 140,
+            "remaining": 22,
+            "trace": [
+              {
+                "layer": "skin",
+                "resistance": 8,
+                "entering": 140,
+                "spent": 8,
+                "remaining": 132
+              },
+              {
+                "layer": "muscle",
+                "resistance": 30,
+                "entering": 132,
+                "spent": 30,
+                "remaining": 102
+              },
+              {
+                "layer": "rib",
+                "resistance": 60,
+                "entering": 102,
+                "spent": 60,
+                "remaining": 42
+              },
+              {
+                "layer": "heart",
+                "resistance": 20,
+                "entering": 42,
+                "spent": 20,
+                "remaining": 22
+              }
+            ],
+            "assumption": "suposição de design, não verificado"
+          }
+        },
+        {
+          "id": "event:24",
+          "month": 0,
+          "type": "wound.created",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "victim"
+            },
+            {
+              "id": "person:01",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "duel": "duel:person:00:person:01:0:0",
+            "wound": "wound:event:22",
+            "part": "torso",
+            "nerve": false,
+            "fracture": true,
+            "amputation": false,
+            "vital": true,
+            "minute": 3
+          }
+        },
+        {
+          "id": "event:25",
+          "month": 0,
+          "type": "body.death",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "victim"
+            },
+            {
+              "id": "person:01",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "victim": "person:00",
+            "aggressor": "person:01",
+            "wound": "wound:event:22",
+            "weapon": "weapon:person:01",
+            "bodyPart": "torso",
+            "cause": "estrutura vital destruída"
+          }
+        },
+        {
+          "id": "event:26",
+          "month": 0,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "victim"
+            },
+            {
+              "id": "person:01",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "victim": "person:00",
+            "killer": "person:01",
+            "killerSkill": 834,
+            "cause": "estrutura vital destruída",
+            "weapon": "weapon:person:01",
+            "bodyPart": "torso",
+            "wound": "wound:event:22",
+            "abstract": false
+          }
+        },
+        {
+          "id": "event:32",
+          "month": 0,
+          "type": "kill.credited",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "reference"
+            },
+            {
+              "id": "person:00",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "victim": "person:00",
+            "killer": "person:01",
+            "primary": true
+          }
+        }
+      ],
+      "bytes": 51875,
+      "errors": [],
+      "category": "morte",
+      "a": "Iria",
+      "b": "Zarek",
+      "depth": 23,
+      "chain": [
+        "event:0",
+        "event:1",
+        "event:3",
+        "event:7",
+        "event:10",
+        "event:11",
+        "event:12",
+        "event:13",
+        "event:14",
+        "event:15",
+        "event:16",
+        "event:17",
+        "event:18",
+        "event:19",
+        "event:20",
+        "event:21",
+        "event:22",
+        "event:24",
+        "event:25",
+        "event:26",
+        "event:32",
+        "event:33",
+        "event:34"
+      ]
+    },
+    {
+      "seed": "duelo-2a-004",
+      "outcome": "recuperação",
+      "termination": "limite de trocas",
+      "wounds": [
+        {
+          "id": "wound:event:11",
+          "kind": "wound",
+          "owner": "person:01",
+          "aggressor": "person:00",
+          "weapon": "weapon:person:00",
+          "part": "leg.left",
+          "source": "event:12",
+          "lastEvent": "event:85",
+          "bloodLoss": 14,
+          "duel": "duel:person:00:person:01:0:0",
+          "month": 0,
+          "minute": 0,
+          "rate": 0,
+          "clotAt": 60,
+          "nerve": false,
+          "fracture": false,
+          "amputation": false,
+          "vital": false,
+          "due": 2,
+          "care": "event:52",
+          "permanent": false,
+          "closed": 2
+        },
+        {
+          "id": "wound:event:23",
+          "kind": "wound",
+          "owner": "person:01",
+          "aggressor": "person:00",
+          "weapon": "weapon:person:00",
+          "part": "forearm.left",
+          "source": "event:25",
+          "lastEvent": "event:86",
+          "bloodLoss": 10,
+          "duel": "duel:person:00:person:01:0:0",
+          "month": 0,
+          "minute": 2,
+          "rate": 0,
+          "clotAt": 60,
+          "nerve": false,
+          "fracture": false,
+          "amputation": false,
+          "vital": false,
+          "due": 2,
+          "care": "event:52",
+          "permanent": false,
+          "closed": 2
+        },
+        {
+          "id": "wound:event:36",
+          "kind": "wound",
+          "owner": "person:01",
+          "aggressor": "person:00",
+          "weapon": "weapon:person:00",
+          "part": "forearm.left",
+          "source": "event:38",
+          "lastEvent": "event:87",
+          "bloodLoss": 6,
+          "duel": "duel:person:00:person:01:0:0",
+          "month": 0,
+          "minute": 4,
+          "rate": 0,
+          "clotAt": 32,
+          "nerve": false,
+          "fracture": false,
+          "amputation": false,
+          "vital": false,
+          "due": 2,
+          "care": "event:52",
+          "permanent": false,
+          "closed": 2
+        }
+      ],
+      "kills": [],
+      "events": [
+        {
+          "id": "event:7",
+          "month": 0,
+          "type": "duel.agreed",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "target"
+            }
+          ],
+          "data": {
+            "duel": "duel:person:00:person:01:0:0",
+            "initiating": 147,
+            "accepting": 94.25,
+            "eligible": true,
+            "started": true,
+            "utilities": {
+              "iniciar": 72,
+              "esperar": 0,
+              "aceitar": 64.25,
+              "recusar": 0
+            },
+            "fixture": false
+          }
+        },
+        {
+          "id": "event:11",
+          "month": 0,
+          "type": "attack.contact",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "target"
+            }
+          ],
+          "data": {
+            "duel": "duel:person:00:person:01:0:0",
+            "exchange": 0,
+            "part": "leg.left",
+            "budget": 77,
+            "remaining": 0,
+            "trace": [
+              {
+                "layer": "cloth",
+                "resistance": 5,
+                "entering": 77,
+                "spent": 5,
+                "remaining": 72
+              },
+              {
+                "layer": "armor",
+                "resistance": 45,
+                "entering": 72,
+                "spent": 45,
+                "remaining": 27
+              },
+              {
+                "layer": "skin",
+                "resistance": 8,
+                "entering": 27,
+                "spent": 8,
+                "remaining": 19
+              },
+              {
+                "layer": "muscle",
+                "resistance": 30,
+                "entering": 19,
+                "spent": 19,
+                "remaining": 0
+              }
+            ],
+            "assumption": "suposição de design, não verificado"
+          }
+        },
+        {
+          "id": "event:12",
+          "month": 0,
+          "type": "wound.created",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "victim"
+            },
+            {
+              "id": "person:00",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "duel": "duel:person:00:person:01:0:0",
+            "wound": "wound:event:11",
+            "part": "leg.left",
+            "nerve": false,
+            "fracture": false,
+            "amputation": false,
+            "vital": false,
+            "minute": 0
+          }
+        },
+        {
+          "id": "event:13",
+          "month": 0,
+          "type": "injury.perceived",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "subject": "person:01",
+            "wound": "wound:event:11",
+            "permanent": false,
+            "channel": "testemunho"
+          }
+        },
+        {
+          "id": "event:14",
+          "month": 0,
+          "type": "emotion.felt",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "stimulus": "ameaca",
+            "emotion": "medo",
+            "intensity": 51,
+            "stressDelta": 102,
+            "facet": "cautela",
+            "belief": "paz",
+            "change": 3,
+            "appraisal": {
+              "anger": 171,
+              "care": 78,
+              "anxiety": 174
+            },
+            "stressBefore": 0,
+            "stressAfter": 102,
+            "stimulusSource": "event:13"
+          }
+        },
+        {
+          "id": "event:15",
+          "month": 0,
+          "type": "person.transformed",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "emotion": "event:14",
+            "facet": "cautela",
+            "facetBefore": 97,
+            "facetAfter": 100,
+            "value": "paz",
+            "valueBefore": -45,
+            "valueAfter": -42
+          }
+        },
+        {
+          "id": "event:16",
+          "month": 0,
+          "type": "physicalGoal.reassessed",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "goal": "physical:person:01",
+            "leftGrip": 1,
+            "rightGrip": 1,
+            "viableBefore": true,
+            "utilities": {
+              "continuar": 200,
+              "adaptar": 206,
+              "abandonar": 110.2
+            },
+            "chosen": "adaptar",
+            "knowledgeSource": "event:15"
+          }
+        },
+        {
+          "id": "event:17",
+          "month": 0,
+          "type": "injury.perceived",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "subject": "person:01",
+            "wound": "wound:event:11",
+            "permanent": false,
+            "channel": "testemunho"
+          }
+        },
+        {
+          "id": "event:18",
+          "month": 0,
+          "type": "emotion.felt",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "stimulus": "ameaca",
+            "emotion": "raiva",
+            "intensity": 60,
+            "stressDelta": 120,
+            "facet": "rancor",
+            "belief": "vinganca",
+            "change": 3,
+            "appraisal": {
+              "anger": 159,
+              "care": 111,
+              "anxiety": 142
+            },
+            "stressBefore": 0,
+            "stressAfter": 120,
+            "stimulusSource": "event:17"
+          }
+        },
+        {
+          "id": "event:19",
+          "month": 0,
+          "type": "person.transformed",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "emotion": "event:18",
+            "facet": "rancor",
+            "facetBefore": 63,
+            "facetAfter": 66,
+            "value": "vinganca",
+            "valueBefore": -66,
+            "valueAfter": -63
+          }
+        },
+        {
+          "id": "event:23",
+          "month": 0,
+          "type": "attack.contact",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "target"
+            }
+          ],
+          "data": {
+            "duel": "duel:person:00:person:01:0:0",
+            "exchange": 2,
+            "part": "forearm.left",
+            "budget": 77,
+            "remaining": 0,
+            "trace": [
+              {
+                "layer": "cloth",
+                "resistance": 5,
+                "entering": 77,
+                "spent": 5,
+                "remaining": 72
+              },
+              {
+                "layer": "armor",
+                "resistance": 45,
+                "entering": 72,
+                "spent": 45,
+                "remaining": 27
+              },
+              {
+                "layer": "skin",
+                "resistance": 8,
+                "entering": 27,
+                "spent": 8,
+                "remaining": 19
+              },
+              {
+                "layer": "muscle",
+                "resistance": 30,
+                "entering": 19,
+                "spent": 19,
+                "remaining": 0
+              }
+            ],
+            "assumption": "suposição de design, não verificado"
+          }
+        },
+        {
+          "id": "event:25",
+          "month": 0,
+          "type": "wound.created",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "victim"
+            },
+            {
+              "id": "person:00",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "duel": "duel:person:00:person:01:0:0",
+            "wound": "wound:event:23",
+            "part": "forearm.left",
+            "nerve": false,
+            "fracture": false,
+            "amputation": false,
+            "vital": false,
+            "minute": 2
+          }
+        },
+        {
+          "id": "event:26",
+          "month": 0,
+          "type": "injury.perceived",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "subject": "person:01",
+            "wound": "wound:event:23",
+            "permanent": false,
+            "channel": "testemunho"
+          }
+        },
+        {
+          "id": "event:27",
+          "month": 0,
+          "type": "emotion.felt",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "stimulus": "ameaca",
+            "emotion": "medo",
+            "intensity": 51,
+            "stressDelta": 102,
+            "facet": "cautela",
+            "belief": "paz",
+            "change": 3,
+            "appraisal": {
+              "anger": 171,
+              "care": 78,
+              "anxiety": 177
+            },
+            "stressBefore": 102,
+            "stressAfter": 204,
+            "stimulusSource": "event:26"
+          }
+        },
+        {
+          "id": "event:28",
+          "month": 0,
+          "type": "person.transformed",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "emotion": "event:27",
+            "facet": "cautela",
+            "facetBefore": 100,
+            "facetAfter": 100,
+            "value": "paz",
+            "valueBefore": -42,
+            "valueAfter": -39
+          }
+        },
+        {
+          "id": "event:29",
+          "month": 0,
+          "type": "physicalGoal.reassessed",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "goal": "physical:person:01",
+            "leftGrip": 1,
+            "rightGrip": 1,
+            "viableBefore": true,
+            "utilities": {
+              "continuar": 200,
+              "adaptar": 206,
+              "abandonar": 120.4
+            },
+            "chosen": "adaptar",
+            "knowledgeSource": "event:28"
+          }
+        },
+        {
+          "id": "event:30",
+          "month": 0,
+          "type": "injury.perceived",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "subject": "person:01",
+            "wound": "wound:event:23",
+            "permanent": false,
+            "channel": "testemunho"
+          }
+        },
+        {
+          "id": "event:31",
+          "month": 0,
+          "type": "emotion.felt",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "stimulus": "ameaca",
+            "emotion": "raiva",
+            "intensity": 60,
+            "stressDelta": 120,
+            "facet": "rancor",
+            "belief": "vinganca",
+            "change": 3,
+            "appraisal": {
+              "anger": 162,
+              "care": 111,
+              "anxiety": 142
+            },
+            "stressBefore": 120,
+            "stressAfter": 240,
+            "stimulusSource": "event:30"
+          }
+        },
+        {
+          "id": "event:32",
+          "month": 0,
+          "type": "person.transformed",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "emotion": "event:31",
+            "facet": "rancor",
+            "facetBefore": 66,
+            "facetAfter": 69,
+            "value": "vinganca",
+            "valueBefore": -63,
+            "valueAfter": -60
+          }
+        },
+        {
+          "id": "event:36",
+          "month": 0,
+          "type": "attack.contact",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "target"
+            }
+          ],
+          "data": {
+            "duel": "duel:person:00:person:01:0:0",
+            "exchange": 4,
+            "part": "forearm.left",
+            "budget": 77,
+            "remaining": 0,
+            "trace": [
+              {
+                "layer": "cloth",
+                "resistance": 5,
+                "entering": 77,
+                "spent": 5,
+                "remaining": 72
+              },
+              {
+                "layer": "armor",
+                "resistance": 45,
+                "entering": 72,
+                "spent": 45,
+                "remaining": 27
+              },
+              {
+                "layer": "skin",
+                "resistance": 8,
+                "entering": 27,
+                "spent": 8,
+                "remaining": 19
+              },
+              {
+                "layer": "muscle",
+                "resistance": 30,
+                "entering": 19,
+                "spent": 19,
+                "remaining": 0
+              }
+            ],
+            "assumption": "suposição de design, não verificado"
+          }
+        },
+        {
+          "id": "event:38",
+          "month": 0,
+          "type": "wound.created",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "victim"
+            },
+            {
+              "id": "person:00",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "duel": "duel:person:00:person:01:0:0",
+            "wound": "wound:event:36",
+            "part": "forearm.left",
+            "nerve": false,
+            "fracture": false,
+            "amputation": false,
+            "vital": false,
+            "minute": 4
+          }
+        },
+        {
+          "id": "event:39",
+          "month": 0,
+          "type": "injury.perceived",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "subject": "person:01",
+            "wound": "wound:event:36",
+            "permanent": false,
+            "channel": "testemunho"
+          }
+        },
+        {
+          "id": "event:40",
+          "month": 0,
+          "type": "emotion.felt",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "stimulus": "ameaca",
+            "emotion": "medo",
+            "intensity": 51,
+            "stressDelta": 102,
+            "facet": "cautela",
+            "belief": "paz",
+            "change": 3,
+            "appraisal": {
+              "anger": 171,
+              "care": 78,
+              "anxiety": 177
+            },
+            "stressBefore": 204,
+            "stressAfter": 306,
+            "stimulusSource": "event:39"
+          }
+        },
+        {
+          "id": "event:41",
+          "month": 0,
+          "type": "person.transformed",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "emotion": "event:40",
+            "facet": "cautela",
+            "facetBefore": 100,
+            "facetAfter": 100,
+            "value": "paz",
+            "valueBefore": -39,
+            "valueAfter": -36
+          }
+        },
+        {
+          "id": "event:42",
+          "month": 0,
+          "type": "physicalGoal.reassessed",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "goal": "physical:person:01",
+            "leftGrip": 1,
+            "rightGrip": 1,
+            "viableBefore": true,
+            "utilities": {
+              "continuar": 200,
+              "adaptar": 206,
+              "abandonar": 130.6
+            },
+            "chosen": "adaptar",
+            "knowledgeSource": "event:41"
+          }
+        },
+        {
+          "id": "event:43",
+          "month": 0,
+          "type": "injury.perceived",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "subject": "person:01",
+            "wound": "wound:event:36",
+            "permanent": false,
+            "channel": "testemunho"
+          }
+        },
+        {
+          "id": "event:44",
+          "month": 0,
+          "type": "emotion.felt",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "stimulus": "ameaca",
+            "emotion": "raiva",
+            "intensity": 60,
+            "stressDelta": 120,
+            "facet": "rancor",
+            "belief": "vinganca",
+            "change": 3,
+            "appraisal": {
+              "anger": 165,
+              "care": 111,
+              "anxiety": 142
+            },
+            "stressBefore": 240,
+            "stressAfter": 360,
+            "stimulusSource": "event:43"
+          }
+        },
+        {
+          "id": "event:45",
+          "month": 0,
+          "type": "person.transformed",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "emotion": "event:44",
+            "facet": "rancor",
+            "facetBefore": 69,
+            "facetAfter": 72,
+            "value": "vinganca",
+            "valueBefore": -60,
+            "valueAfter": -57
+          }
+        },
+        {
+          "id": "event:49",
+          "month": 0,
+          "type": "care.requested",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            },
+            {
+              "id": "person:02",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "medical": 82,
+            "willingness": 146,
+            "consent": 100,
+            "accepted": true,
+            "minute": 5
+          }
+        },
+        {
+          "id": "event:52",
+          "month": 0,
+          "type": "care.controlled",
+          "participants": [
+            {
+              "id": "person:02",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "beneficiary"
+            }
+          ],
+          "data": {
+            "minute": 15,
+            "medical": 82,
+            "material": "atadura e instrumental"
+          }
+        },
+        {
+          "id": "event:85",
+          "month": 2,
+          "type": "wound.healed",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "wound": "wound:event:11",
+            "permanent": false,
+            "gripLeftBefore": 1,
+            "gripLeftAfter": 1,
+            "care": "event:52",
+            "rehabMonths": 0
+          }
+        },
+        {
+          "id": "event:86",
+          "month": 2,
+          "type": "wound.healed",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "wound": "wound:event:23",
+            "permanent": false,
+            "gripLeftBefore": 1,
+            "gripLeftAfter": 1,
+            "care": "event:52",
+            "rehabMonths": 0
+          }
+        },
+        {
+          "id": "event:87",
+          "month": 2,
+          "type": "wound.healed",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "wound": "wound:event:36",
+            "permanent": false,
+            "gripLeftBefore": 1,
+            "gripLeftAfter": 1,
+            "care": "event:52",
+            "rehabMonths": 0
+          }
+        }
+      ],
+      "bytes": 61860,
+      "errors": [],
+      "category": "recuperação",
+      "a": "Alda",
+      "b": "Corin",
+      "depth": 31,
+      "chain": [
+        "event:0",
+        "event:1",
+        "event:3",
+        "event:7",
+        "event:10",
+        "event:11",
+        "event:12",
+        "event:17",
+        "event:18",
+        "event:19",
+        "event:20",
+        "event:21",
+        "event:22",
+        "event:23",
+        "event:25",
+        "event:30",
+        "event:31",
+        "event:32",
+        "event:33",
+        "event:34",
+        "event:35",
+        "event:36",
+        "event:38",
+        "event:43",
+        "event:44",
+        "event:45",
+        "event:46",
+        "event:47",
+        "event:53",
+        "event:54",
+        "event:88"
+      ]
+    },
+    {
+      "seed": "duelo-2a-012",
+      "outcome": "sequela permanente",
+      "termination": "rendição por dor/risco",
+      "wounds": [
+        {
+          "id": "wound:event:11",
+          "kind": "wound",
+          "owner": "person:01",
+          "aggressor": "person:00",
+          "weapon": "weapon:person:00",
+          "part": "forearm.left",
+          "source": "event:12",
+          "lastEvent": "event:102",
+          "bloodLoss": 42,
+          "duel": "duel:person:00:person:01:0:0",
+          "month": 0,
+          "minute": 0,
+          "rate": 0,
+          "clotAt": null,
+          "nerve": true,
+          "fracture": false,
+          "amputation": false,
+          "vital": false,
+          "due": 6,
+          "care": "event:37",
+          "rehabMonths": 5,
+          "permanent": true,
+          "closed": 6
+        },
+        {
+          "id": "wound:event:23",
+          "kind": "wound",
+          "owner": "person:01",
+          "aggressor": "person:00",
+          "weapon": "weapon:person:00",
+          "part": "forearm.left",
+          "source": "event:25",
+          "lastEvent": "event:111",
+          "bloodLoss": 30,
+          "duel": "duel:person:00:person:01:0:0",
+          "month": 0,
+          "minute": 2,
+          "rate": 0,
+          "clotAt": null,
+          "nerve": true,
+          "fracture": false,
+          "amputation": false,
+          "vital": false,
+          "due": 6,
+          "care": "event:37",
+          "rehabMonths": 5,
+          "permanent": true,
+          "closed": 6
+        }
+      ],
+      "kills": [],
+      "events": [
+        {
+          "id": "event:7",
+          "month": 0,
+          "type": "duel.agreed",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "target"
+            }
+          ],
+          "data": {
+            "duel": "duel:person:00:person:01:0:0",
+            "initiating": 115,
+            "accepting": 126.5,
+            "eligible": true,
+            "started": true,
+            "utilities": {
+              "iniciar": 40,
+              "esperar": 0,
+              "aceitar": 96.5,
+              "recusar": 0
+            },
+            "fixture": false
+          }
+        },
+        {
+          "id": "event:11",
+          "month": 0,
+          "type": "attack.contact",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "target"
+            }
+          ],
+          "data": {
+            "duel": "duel:person:00:person:01:0:0",
+            "exchange": 0,
+            "part": "forearm.left",
+            "budget": 102,
+            "remaining": 0,
+            "trace": [
+              {
+                "layer": "cloth",
+                "resistance": 5,
+                "entering": 102,
+                "spent": 5,
+                "remaining": 97
+              },
+              {
+                "layer": "armor",
+                "resistance": 45,
+                "entering": 97,
+                "spent": 45,
+                "remaining": 52
+              },
+              {
+                "layer": "skin",
+                "resistance": 8,
+                "entering": 52,
+                "spent": 8,
+                "remaining": 44
+              },
+              {
+                "layer": "muscle",
+                "resistance": 30,
+                "entering": 44,
+                "spent": 30,
+                "remaining": 14
+              },
+              {
+                "layer": "nerve",
+                "resistance": 12,
+                "entering": 14,
+                "spent": 12,
+                "remaining": 2
+              },
+              {
+                "layer": "bone",
+                "resistance": 60,
+                "entering": 2,
+                "spent": 2,
+                "remaining": 0
+              }
+            ],
+            "assumption": "suposição de design, não verificado"
+          }
+        },
+        {
+          "id": "event:12",
+          "month": 0,
+          "type": "wound.created",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "victim"
+            },
+            {
+              "id": "person:00",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "duel": "duel:person:00:person:01:0:0",
+            "wound": "wound:event:11",
+            "part": "forearm.left",
+            "nerve": true,
+            "fracture": false,
+            "amputation": false,
+            "vital": false,
+            "minute": 0
+          }
+        },
+        {
+          "id": "event:13",
+          "month": 0,
+          "type": "injury.perceived",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "subject": "person:01",
+            "wound": "wound:event:11",
+            "permanent": false,
+            "channel": "testemunho"
+          }
+        },
+        {
+          "id": "event:14",
+          "month": 0,
+          "type": "emotion.felt",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "stimulus": "ameaca",
+            "emotion": "raiva",
+            "intensity": 71,
+            "stressDelta": 142,
+            "facet": "rancor",
+            "belief": "vinganca",
+            "change": 3,
+            "appraisal": {
+              "anger": 226,
+              "care": 65,
+              "anxiety": 15
+            },
+            "stressBefore": 0,
+            "stressAfter": 142,
+            "stimulusSource": "event:13"
+          }
+        },
+        {
+          "id": "event:15",
+          "month": 0,
+          "type": "person.transformed",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "emotion": "event:14",
+            "facet": "rancor",
+            "facetBefore": 81,
+            "facetAfter": 84,
+            "value": "vinganca",
+            "valueBefore": 63,
+            "valueAfter": 66
+          }
+        },
+        {
+          "id": "event:16",
+          "month": 0,
+          "type": "physicalGoal.reassessed",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "goal": "physical:person:01",
+            "leftGrip": 0.4,
+            "rightGrip": 1,
+            "viableBefore": false,
+            "utilities": {
+              "continuar": -500,
+              "adaptar": 131,
+              "abandonar": 24.2
+            },
+            "chosen": "adaptar",
+            "knowledgeSource": "event:15"
+          }
+        },
+        {
+          "id": "event:17",
+          "month": 0,
+          "type": "injury.perceived",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "subject": "person:01",
+            "wound": "wound:event:11",
+            "permanent": false,
+            "channel": "testemunho"
+          }
+        },
+        {
+          "id": "event:18",
+          "month": 0,
+          "type": "emotion.felt",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "stimulus": "ameaca",
+            "emotion": "tristeza reflexiva",
+            "intensity": 61,
+            "stressDelta": 122,
+            "facet": "compaixao",
+            "belief": "solidariedade",
+            "change": 2,
+            "appraisal": {
+              "anger": 27,
+              "care": 123,
+              "anxiety": 15
+            },
+            "stressBefore": 0,
+            "stressAfter": 122,
+            "stimulusSource": "event:17"
+          }
+        },
+        {
+          "id": "event:19",
+          "month": 0,
+          "type": "person.transformed",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "emotion": "event:18",
+            "facet": "compaixao",
+            "facetBefore": 3,
+            "facetAfter": 5,
+            "value": "solidariedade",
+            "valueBefore": 97,
+            "valueAfter": 99
+          }
+        },
+        {
+          "id": "event:23",
+          "month": 0,
+          "type": "attack.contact",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "target"
+            }
+          ],
+          "data": {
+            "duel": "duel:person:00:person:01:0:0",
+            "exchange": 2,
+            "part": "forearm.left",
+            "budget": 102,
+            "remaining": 0,
+            "trace": [
+              {
+                "layer": "cloth",
+                "resistance": 5,
+                "entering": 102,
+                "spent": 5,
+                "remaining": 97
+              },
+              {
+                "layer": "armor",
+                "resistance": 45,
+                "entering": 97,
+                "spent": 45,
+                "remaining": 52
+              },
+              {
+                "layer": "skin",
+                "resistance": 8,
+                "entering": 52,
+                "spent": 8,
+                "remaining": 44
+              },
+              {
+                "layer": "muscle",
+                "resistance": 30,
+                "entering": 44,
+                "spent": 30,
+                "remaining": 14
+              },
+              {
+                "layer": "nerve",
+                "resistance": 12,
+                "entering": 14,
+                "spent": 12,
+                "remaining": 2
+              },
+              {
+                "layer": "bone",
+                "resistance": 60,
+                "entering": 2,
+                "spent": 2,
+                "remaining": 0
+              }
+            ],
+            "assumption": "suposição de design, não verificado"
+          }
+        },
+        {
+          "id": "event:25",
+          "month": 0,
+          "type": "wound.created",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "victim"
+            },
+            {
+              "id": "person:00",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "duel": "duel:person:00:person:01:0:0",
+            "wound": "wound:event:23",
+            "part": "forearm.left",
+            "nerve": true,
+            "fracture": false,
+            "amputation": false,
+            "vital": false,
+            "minute": 2
+          }
+        },
+        {
+          "id": "event:26",
+          "month": 0,
+          "type": "injury.perceived",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "subject": "person:01",
+            "wound": "wound:event:23",
+            "permanent": false,
+            "channel": "testemunho"
+          }
+        },
+        {
+          "id": "event:27",
+          "month": 0,
+          "type": "emotion.felt",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "stimulus": "ameaca",
+            "emotion": "raiva",
+            "intensity": 71,
+            "stressDelta": 142,
+            "facet": "rancor",
+            "belief": "vinganca",
+            "change": 3,
+            "appraisal": {
+              "anger": 232,
+              "care": 65,
+              "anxiety": 15
+            },
+            "stressBefore": 142,
+            "stressAfter": 284,
+            "stimulusSource": "event:26"
+          }
+        },
+        {
+          "id": "event:28",
+          "month": 0,
+          "type": "person.transformed",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "emotion": "event:27",
+            "facet": "rancor",
+            "facetBefore": 84,
+            "facetAfter": 87,
+            "value": "vinganca",
+            "valueBefore": 66,
+            "valueAfter": 69
+          }
+        },
+        {
+          "id": "event:29",
+          "month": 0,
+          "type": "physicalGoal.reassessed",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "goal": "physical:person:01",
+            "leftGrip": 0.4,
+            "rightGrip": 1,
+            "viableBefore": true,
+            "utilities": {
+              "continuar": 200,
+              "adaptar": 131,
+              "abandonar": 38.4
+            },
+            "chosen": "continuar",
+            "knowledgeSource": "event:28"
+          }
+        },
+        {
+          "id": "event:30",
+          "month": 0,
+          "type": "injury.perceived",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "subject": "person:01",
+            "wound": "wound:event:23",
+            "permanent": false,
+            "channel": "testemunho"
+          }
+        },
+        {
+          "id": "event:31",
+          "month": 0,
+          "type": "emotion.felt",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "stimulus": "ameaca",
+            "emotion": "tristeza reflexiva",
+            "intensity": 61,
+            "stressDelta": 122,
+            "facet": "compaixao",
+            "belief": "solidariedade",
+            "change": 2,
+            "appraisal": {
+              "anger": 27,
+              "care": 125,
+              "anxiety": 15
+            },
+            "stressBefore": 122,
+            "stressAfter": 244,
+            "stimulusSource": "event:30"
+          }
+        },
+        {
+          "id": "event:32",
+          "month": 0,
+          "type": "person.transformed",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "emotion": "event:31",
+            "facet": "compaixao",
+            "facetBefore": 5,
+            "facetAfter": 7,
+            "value": "solidariedade",
+            "valueBefore": 99,
+            "valueAfter": 100
+          }
+        },
+        {
+          "id": "event:34",
+          "month": 0,
+          "type": "care.requested",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            },
+            {
+              "id": "person:02",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "medical": 84,
+            "willingness": 158,
+            "consent": 42,
+            "accepted": true,
+            "minute": 5
+          }
+        },
+        {
+          "id": "event:37",
+          "month": 0,
+          "type": "care.controlled",
+          "participants": [
+            {
+              "id": "person:02",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "beneficiary"
+            }
+          ],
+          "data": {
+            "minute": 15,
+            "medical": 84,
+            "material": "atadura e instrumental"
+          }
+        },
+        {
+          "id": "event:102",
+          "month": 6,
+          "type": "sequela.confirmed",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "wound": "wound:event:11",
+            "permanent": true,
+            "gripLeftBefore": 0.4,
+            "gripLeftAfter": 0.7,
+            "care": "event:37",
+            "rehabMonths": 5
+          }
+        },
+        {
+          "id": "event:103",
+          "month": 6,
+          "type": "sequela.perceived",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "subject": "person:01",
+            "wound": "wound:event:11",
+            "permanent": true,
+            "channel": "testemunho"
+          }
+        },
+        {
+          "id": "event:104",
+          "month": 6,
+          "type": "emotion.felt",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "stimulus": "perda",
+            "emotion": "luto irado",
+            "intensity": 71,
+            "stressDelta": 284,
+            "facet": "rancor",
+            "belief": "vinganca",
+            "change": 3,
+            "appraisal": {
+              "anger": 238,
+              "care": 65,
+              "anxiety": 15
+            },
+            "stressBefore": 0,
+            "stressAfter": 284,
+            "stimulusSource": "event:103"
+          }
+        },
+        {
+          "id": "event:105",
+          "month": 6,
+          "type": "person.transformed",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "emotion": "event:104",
+            "facet": "rancor",
+            "facetBefore": 87,
+            "facetAfter": 90,
+            "value": "vinganca",
+            "valueBefore": 69,
+            "valueAfter": 72
+          }
+        },
+        {
+          "id": "event:106",
+          "month": 6,
+          "type": "physicalGoal.reassessed",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "goal": "physical:person:01",
+            "leftGrip": 0.7,
+            "rightGrip": 1,
+            "viableBefore": true,
+            "utilities": {
+              "continuar": 200,
+              "adaptar": 131,
+              "abandonar": 38.4
+            },
+            "chosen": "continuar",
+            "knowledgeSource": "event:105"
+          }
+        },
+        {
+          "id": "event:107",
+          "month": 6,
+          "type": "sequela.perceived",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "subject": "person:01",
+            "wound": "wound:event:11",
+            "permanent": true,
+            "channel": "testemunho"
+          }
+        },
+        {
+          "id": "event:108",
+          "month": 6,
+          "type": "emotion.felt",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "stimulus": "perda",
+            "emotion": "luto solidario",
+            "intensity": 61,
+            "stressDelta": 244,
+            "facet": "compaixao",
+            "belief": "solidariedade",
+            "change": 2,
+            "appraisal": {
+              "anger": 27,
+              "care": 127,
+              "anxiety": 15
+            },
+            "stressBefore": 85,
+            "stressAfter": 329,
+            "stimulusSource": "event:107"
+          }
+        },
+        {
+          "id": "event:109",
+          "month": 6,
+          "type": "person.transformed",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "emotion": "event:108",
+            "facet": "compaixao",
+            "facetBefore": 7,
+            "facetAfter": 9,
+            "value": "solidariedade",
+            "valueBefore": 100,
+            "valueAfter": 100
+          }
+        },
+        {
+          "id": "event:111",
+          "month": 6,
+          "type": "sequela.confirmed",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "wound": "wound:event:23",
+            "permanent": true,
+            "gripLeftBefore": 0.7,
+            "gripLeftAfter": 0.7,
+            "care": "event:37",
+            "rehabMonths": 5
+          }
+        },
+        {
+          "id": "event:112",
+          "month": 6,
+          "type": "sequela.perceived",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "subject": "person:01",
+            "wound": "wound:event:23",
+            "permanent": true,
+            "channel": "testemunho"
+          }
+        },
+        {
+          "id": "event:113",
+          "month": 6,
+          "type": "emotion.felt",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "stimulus": "perda",
+            "emotion": "luto irado",
+            "intensity": 71,
+            "stressDelta": 284,
+            "facet": "rancor",
+            "belief": "vinganca",
+            "change": 3,
+            "appraisal": {
+              "anger": 244,
+              "care": 65,
+              "anxiety": 15
+            },
+            "stressBefore": 284,
+            "stressAfter": 568,
+            "stimulusSource": "event:112"
+          }
+        },
+        {
+          "id": "event:114",
+          "month": 6,
+          "type": "person.transformed",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "emotion": "event:113",
+            "facet": "rancor",
+            "facetBefore": 90,
+            "facetAfter": 93,
+            "value": "vinganca",
+            "valueBefore": 72,
+            "valueAfter": 75
+          }
+        },
+        {
+          "id": "event:115",
+          "month": 6,
+          "type": "physicalGoal.reassessed",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "goal": "physical:person:01",
+            "leftGrip": 0.7,
+            "rightGrip": 1,
+            "viableBefore": true,
+            "utilities": {
+              "continuar": 200,
+              "adaptar": 131,
+              "abandonar": 66.8
+            },
+            "chosen": "continuar",
+            "knowledgeSource": "event:114"
+          }
+        },
+        {
+          "id": "event:116",
+          "month": 6,
+          "type": "sequela.perceived",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            },
+            {
+              "id": "person:01",
+              "role": "reference"
+            }
+          ],
+          "data": {
+            "subject": "person:01",
+            "wound": "wound:event:23",
+            "permanent": true,
+            "channel": "testemunho"
+          }
+        },
+        {
+          "id": "event:117",
+          "month": 6,
+          "type": "emotion.felt",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "stimulus": "perda",
+            "emotion": "luto solidario",
+            "intensity": 61,
+            "stressDelta": 244,
+            "facet": "compaixao",
+            "belief": "solidariedade",
+            "change": 2,
+            "appraisal": {
+              "anger": 27,
+              "care": 129,
+              "anxiety": 15
+            },
+            "stressBefore": 329,
+            "stressAfter": 573,
+            "stimulusSource": "event:116"
+          }
+        },
+        {
+          "id": "event:118",
+          "month": 6,
+          "type": "person.transformed",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "actor"
+            }
+          ],
+          "data": {
+            "emotion": "event:117",
+            "facet": "compaixao",
+            "facetBefore": 9,
+            "facetAfter": 11,
+            "value": "solidariedade",
+            "valueBefore": 100,
+            "valueAfter": 100
+          }
+        }
+      ],
+      "bytes": 54037,
+      "errors": [],
+      "category": "sequela",
+      "a": "Neris",
+      "b": "Doran",
+      "depth": 29,
+      "chain": [
+        "event:0",
+        "event:1",
+        "event:3",
+        "event:7",
+        "event:10",
+        "event:11",
+        "event:12",
+        "event:17",
+        "event:18",
+        "event:19",
+        "event:20",
+        "event:21",
+        "event:22",
+        "event:23",
+        "event:25",
+        "event:33",
+        "event:34",
+        "event:35",
+        "event:36",
+        "event:37",
+        "event:38",
+        "event:41",
+        "event:54",
+        "event:65",
+        "event:77",
+        "event:75",
+        "event:93",
+        "event:102",
+        "event:110"
+      ]
+    }
+  ],
+  "fixtures": [
+    {
+      "care": true,
+      "errors": [],
+      "events": [
+        {
+          "id": "event:11",
+          "type": "attack.contact",
+          "data": {
+            "duel": "duel:person:00:person:01:0:0",
+            "exchange": 0,
+            "part": "forearm.left",
+            "budget": 100,
+            "remaining": 0,
+            "trace": [
+              {
+                "layer": "cloth",
+                "resistance": 5,
+                "entering": 100,
+                "spent": 5,
+                "remaining": 95
+              },
+              {
+                "layer": "armor",
+                "resistance": 15,
+                "entering": 95,
+                "spent": 15,
+                "remaining": 80
+              },
+              {
+                "layer": "skin",
+                "resistance": 8,
+                "entering": 80,
+                "spent": 8,
+                "remaining": 72
+              },
+              {
+                "layer": "muscle",
+                "resistance": 30,
+                "entering": 72,
+                "spent": 30,
+                "remaining": 42
+              },
+              {
+                "layer": "nerve",
+                "resistance": 12,
+                "entering": 42,
+                "spent": 12,
+                "remaining": 30
+              },
+              {
+                "layer": "bone",
+                "resistance": 60,
+                "entering": 30,
+                "spent": 30,
+                "remaining": 0
+              }
+            ],
+            "assumption": "suposição de design, não verificado"
+          }
+        },
+        {
+          "id": "event:20",
+          "type": "blood.interval",
+          "data": {
+            "fromMinute": 0,
+            "toMinute": 5,
+            "loss": 30,
+            "before": 5000,
+            "after": 4970
+          }
+        },
+        {
+          "id": "event:23",
+          "type": "blood.interval",
+          "data": {
+            "fromMinute": 5,
+            "toMinute": 15,
+            "loss": 12,
+            "before": 4970,
+            "after": 4958
+          }
+        },
+        {
+          "id": "event:80",
+          "type": "sequela.confirmed",
+          "data": {
+            "wound": "wound:event:11",
+            "permanent": true,
+            "gripLeftBefore": 0.4,
+            "gripLeftAfter": 0.7,
+            "care": "event:24",
+            "rehabMonths": 5
+          }
+        }
+      ]
+    },
+    {
+      "care": false,
+      "errors": [],
+      "events": [
+        {
+          "id": "event:11",
+          "type": "attack.contact",
+          "data": {
+            "duel": "duel:person:00:person:01:0:0",
+            "exchange": 0,
+            "part": "forearm.left",
+            "budget": 100,
+            "remaining": 0,
+            "trace": [
+              {
+                "layer": "cloth",
+                "resistance": 5,
+                "entering": 100,
+                "spent": 5,
+                "remaining": 95
+              },
+              {
+                "layer": "armor",
+                "resistance": 15,
+                "entering": 95,
+                "spent": 15,
+                "remaining": 80
+              },
+              {
+                "layer": "skin",
+                "resistance": 8,
+                "entering": 80,
+                "spent": 8,
+                "remaining": 72
+              },
+              {
+                "layer": "muscle",
+                "resistance": 30,
+                "entering": 72,
+                "spent": 30,
+                "remaining": 42
+              },
+              {
+                "layer": "nerve",
+                "resistance": 12,
+                "entering": 42,
+                "spent": 12,
+                "remaining": 30
+              },
+              {
+                "layer": "bone",
+                "resistance": 60,
+                "entering": 30,
+                "spent": 30,
+                "remaining": 0
+              }
+            ],
+            "assumption": "suposição de design, não verificado"
+          }
+        },
+        {
+          "id": "event:20",
+          "type": "blood.interval",
+          "data": {
+            "fromMinute": 0,
+            "toMinute": 5,
+            "loss": 30,
+            "before": 5000,
+            "after": 4970
+          }
+        },
+        {
+          "id": "event:22",
+          "type": "blood.interval",
+          "data": {
+            "fromMinute": 5,
+            "toMinute": 335,
+            "loss": 1980,
+            "before": 4970,
+            "after": 2990
+          }
+        },
+        {
+          "id": "event:24",
+          "type": "person.died",
+          "data": {
+            "victim": "person:01",
+            "killer": "person:00",
+            "killerSkill": 650,
+            "cause": "hemorragia",
+            "weapon": "weapon:person:00",
+            "bodyPart": "forearm.left",
+            "wound": "wound:event:11",
+            "abstract": false
+          }
+        },
+        {
+          "id": "event:34",
+          "type": "kill.credited",
+          "data": {
+            "victim": "person:01",
+            "killer": "person:00",
+            "primary": true
+          }
+        }
+      ]
+    }
+  ]
+}

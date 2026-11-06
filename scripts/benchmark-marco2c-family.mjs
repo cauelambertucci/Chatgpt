@@ -1,0 +1,14 @@
+import {build} from 'esbuild';
+import {cpSync,mkdtempSync,writeFileSync,readFileSync,mkdirSync} from 'node:fs';
+import {tmpdir,cpus} from 'node:os';
+import {join} from 'node:path';
+import {spawn} from 'node:child_process';
+const scratch=mkdtempSync(join(tmpdir(),'chronicle-m2c-family-')),dir=join(scratch,'after');
+mkdirSync(dir);cpSync('src',join(dir,'src'),{recursive:true});
+writeFileSync(join(dir,'scenario.ts'),`import {demographicScenario} from './src/engine/v2/demographic-scenario';export const memoryScenario=()=>demographicScenario('demografia-2c-000',100,true);`);
+writeFileSync(join(dir,'adapter.ts'),`import {CompactLog} from './src/engine/v2/compact-log';export const output=(s:any)=>s.runCompact();export const eventStream=(w:any)=>CompactLog.from(w.log).view(true);`);
+writeFileSync(join(dir,'runner.ts'),readFileSync('scripts/benchmark-marco2c-runner.ts'));
+await build({entryPoints:[join(dir,'runner.ts')],outfile:join(dir,'runner.mjs'),bundle:true,platform:'node',format:'esm',keepNames:true});
+const result=await new Promise((res,rej)=>{const p=spawn(process.execPath,['--expose-gc','--max-old-space-size=8192',join(dir,'runner.mjs'),'warm'],{stdio:['ignore','pipe','inherit']});let s='';p.stdout.on('data',x=>s+=x);p.on('error',rej);p.on('close',c=>c?rej(Error(String(c))):res(JSON.parse(s)));});
+writeFileSync('docs/MARCO2C-ACTIVE-BENCHMARK.json',JSON.stringify({method:'Supplementary predetermined first free seed, 100 founders, one isolated repetition; diagnostic, not median. Same constructor/advance timer and export phases.',scratch,node:process.version,cpu:cpus()[0]?.model,rows:[{mode:'after',repetition:1,...result}]},null,2));
+console.log({coreMs:result.coreMs,births:result.births,deaths:result.deaths,jsonBytes:result.jsonBytes,exportPeakRssKiB:result.exportPeakRssKiB});

@@ -1,0 +1,6 @@
+{
+  "src/engine/v2/protection.ts": true,
+  "src/data/v2/personality.ts": true,
+  "socialize": true,
+  "writeWork": true
+}

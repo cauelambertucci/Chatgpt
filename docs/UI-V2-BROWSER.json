@@ -1,0 +1,30 @@
+{
+  "seed": "interface-2c-000",
+  "browser": "154.0.8037.57",
+  "summary": "interface-2c-000 · 51 pessoas registradas · 3 vivas · 48 mortas · 50.615 eventos",
+  "checks": [
+    "seed inicial fixa",
+    "geração desabilita início concorrente",
+    "mesma população do exemplo Node 000",
+    "busca vazia",
+    "filtro de vivas",
+    "filtro de mortas",
+    "filtro de geração",
+    "filtro de mutilação",
+    "ficha biográfica",
+    "árvore genealógica",
+    "Por quê abre explicação",
+    "causa real disponível",
+    "navegação causal",
+    "modal acessível por Escape",
+    "linha do tempo paginada",
+    "próxima página temporal",
+    "layout móvel sem rolagem horizontal",
+    "cancelamento",
+    "cancelamento conserva arquivo anterior",
+    "falha exibe mensagem",
+    "falha conserva arquivo anterior",
+    "sem erros JavaScript não tratados"
+  ],
+  "errors": []
+}

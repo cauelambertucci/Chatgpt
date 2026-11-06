@@ -1,0 +1,13 @@
+{
+  "attempts": [
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Body_part",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dwarffortresswiki.org/index.php/Tissue",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    }
+  ],
+  "consulted": false
+}

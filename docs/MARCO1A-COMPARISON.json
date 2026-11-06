@@ -1,0 +1,2041 @@
+{
+  "engine": "agents-slice-1a",
+  "errors": 0,
+  "batches": {
+    "livre": {
+      "before": {
+        "total": 100,
+        "counts": {
+          "vingança cumprida": 13,
+          "desistência": 70,
+          "alvo morto por outra causa": 1,
+          "reconciliação": 0,
+          "fuga": 14,
+          "objetivo frustrado": 2
+        },
+        "dominant": [
+          "desistência"
+        ],
+        "warning": "Concentração no limiar de 70% ou acima: desistência. Proposta: inspecionar escores e oportunidades; revisar pesos de paz/vingança, disponibilidade de ajuda e limiares do resolvedor, um fator por vez, sem selecionar desfechos por quota."
+      },
+      "after": {
+        "total": 100,
+        "counts": {
+          "vingança cumprida": 18,
+          "desistência": 36,
+          "alvo morto por outra causa": 4,
+          "reconciliação": 24,
+          "fuga": 16,
+          "objetivo frustrado": 2
+        },
+        "dominant": [],
+        "warning": null
+      },
+      "outcomes": [
+        {
+          "seed": "livre-000",
+          "outcome": "desistência",
+          "depth": 18,
+          "rawDepth": 64
+        },
+        {
+          "seed": "livre-001",
+          "outcome": "desistência",
+          "depth": 18,
+          "rawDepth": 65
+        },
+        {
+          "seed": "livre-002",
+          "outcome": "desistência",
+          "depth": 16,
+          "rawDepth": 41
+        },
+        {
+          "seed": "livre-003",
+          "outcome": "desistência",
+          "depth": 18,
+          "rawDepth": 99
+        },
+        {
+          "seed": "livre-004",
+          "outcome": "desistência",
+          "depth": 17,
+          "rawDepth": 63
+        },
+        {
+          "seed": "livre-005",
+          "outcome": "vingança cumprida",
+          "depth": 15,
+          "rawDepth": 103
+        },
+        {
+          "seed": "livre-006",
+          "outcome": "desistência",
+          "depth": 18,
+          "rawDepth": 110
+        },
+        {
+          "seed": "livre-007",
+          "outcome": "reconciliação",
+          "depth": 17,
+          "rawDepth": 46
+        },
+        {
+          "seed": "livre-008",
+          "outcome": "reconciliação",
+          "depth": 16,
+          "rawDepth": 46
+        },
+        {
+          "seed": "livre-009",
+          "outcome": "reconciliação",
+          "depth": 13,
+          "rawDepth": 30
+        },
+        {
+          "seed": "livre-010",
+          "outcome": "desistência",
+          "depth": 17,
+          "rawDepth": 59
+        },
+        {
+          "seed": "livre-011",
+          "outcome": "vingança cumprida",
+          "depth": 15,
+          "rawDepth": 100
+        },
+        {
+          "seed": "livre-012",
+          "outcome": "fuga",
+          "depth": 14,
+          "rawDepth": 75
+        },
+        {
+          "seed": "livre-013",
+          "outcome": "objetivo frustrado",
+          "depth": 8,
+          "rawDepth": 8
+        },
+        {
+          "seed": "livre-014",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 85
+        },
+        {
+          "seed": "livre-015",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 70
+        },
+        {
+          "seed": "livre-016",
+          "outcome": "reconciliação",
+          "depth": 13,
+          "rawDepth": 27
+        },
+        {
+          "seed": "livre-017",
+          "outcome": "desistência",
+          "depth": 17,
+          "rawDepth": 42
+        },
+        {
+          "seed": "livre-018",
+          "outcome": "reconciliação",
+          "depth": 17,
+          "rawDepth": 61
+        },
+        {
+          "seed": "livre-019",
+          "outcome": "reconciliação",
+          "depth": 13,
+          "rawDepth": 19
+        },
+        {
+          "seed": "livre-020",
+          "outcome": "desistência",
+          "depth": 19,
+          "rawDepth": 95
+        },
+        {
+          "seed": "livre-021",
+          "outcome": "reconciliação",
+          "depth": 14,
+          "rawDepth": 34
+        },
+        {
+          "seed": "livre-022",
+          "outcome": "desistência",
+          "depth": 14,
+          "rawDepth": 80
+        },
+        {
+          "seed": "livre-023",
+          "outcome": "desistência",
+          "depth": 16,
+          "rawDepth": 63
+        },
+        {
+          "seed": "livre-024",
+          "outcome": "fuga",
+          "depth": 14,
+          "rawDepth": 98
+        },
+        {
+          "seed": "livre-025",
+          "outcome": "vingança cumprida",
+          "depth": 15,
+          "rawDepth": 84
+        },
+        {
+          "seed": "livre-026",
+          "outcome": "reconciliação",
+          "depth": 13,
+          "rawDepth": 20
+        },
+        {
+          "seed": "livre-027",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 80
+        },
+        {
+          "seed": "livre-028",
+          "outcome": "vingança cumprida",
+          "depth": 15,
+          "rawDepth": 85
+        },
+        {
+          "seed": "livre-029",
+          "outcome": "reconciliação",
+          "depth": 17,
+          "rawDepth": 54
+        },
+        {
+          "seed": "livre-030",
+          "outcome": "desistência",
+          "depth": 16,
+          "rawDepth": 56
+        },
+        {
+          "seed": "livre-031",
+          "outcome": "reconciliação",
+          "depth": 12,
+          "rawDepth": 12
+        },
+        {
+          "seed": "livre-032",
+          "outcome": "fuga",
+          "depth": 14,
+          "rawDepth": 93
+        },
+        {
+          "seed": "livre-033",
+          "outcome": "vingança cumprida",
+          "depth": 15,
+          "rawDepth": 101
+        },
+        {
+          "seed": "livre-034",
+          "outcome": "desistência",
+          "depth": 17,
+          "rawDepth": 84
+        },
+        {
+          "seed": "livre-035",
+          "outcome": "desistência",
+          "depth": 20,
+          "rawDepth": 98
+        },
+        {
+          "seed": "livre-036",
+          "outcome": "reconciliação",
+          "depth": 16,
+          "rawDepth": 63
+        },
+        {
+          "seed": "livre-037",
+          "outcome": "vingança cumprida",
+          "depth": 19,
+          "rawDepth": 117
+        },
+        {
+          "seed": "livre-038",
+          "outcome": "vingança cumprida",
+          "depth": 15,
+          "rawDepth": 93
+        },
+        {
+          "seed": "livre-039",
+          "outcome": "alvo morto por outra causa",
+          "depth": 8,
+          "rawDepth": 8
+        },
+        {
+          "seed": "livre-040",
+          "outcome": "desistência",
+          "depth": 16,
+          "rawDepth": 59
+        },
+        {
+          "seed": "livre-041",
+          "outcome": "reconciliação",
+          "depth": 16,
+          "rawDepth": 31
+        },
+        {
+          "seed": "livre-042",
+          "outcome": "fuga",
+          "depth": 14,
+          "rawDepth": 70
+        },
+        {
+          "seed": "livre-043",
+          "outcome": "reconciliação",
+          "depth": 13,
+          "rawDepth": 25
+        },
+        {
+          "seed": "livre-044",
+          "outcome": "vingança cumprida",
+          "depth": 18,
+          "rawDepth": 109
+        },
+        {
+          "seed": "livre-045",
+          "outcome": "desistência",
+          "depth": 8,
+          "rawDepth": 8
+        },
+        {
+          "seed": "livre-046",
+          "outcome": "reconciliação",
+          "depth": 14,
+          "rawDepth": 30
+        },
+        {
+          "seed": "livre-047",
+          "outcome": "desistência",
+          "depth": 17,
+          "rawDepth": 51
+        },
+        {
+          "seed": "livre-048",
+          "outcome": "vingança cumprida",
+          "depth": 15,
+          "rawDepth": 108
+        },
+        {
+          "seed": "livre-049",
+          "outcome": "desistência",
+          "depth": 14,
+          "rawDepth": 75
+        },
+        {
+          "seed": "livre-050",
+          "outcome": "vingança cumprida",
+          "depth": 15,
+          "rawDepth": 108
+        },
+        {
+          "seed": "livre-051",
+          "outcome": "vingança cumprida",
+          "depth": 15,
+          "rawDepth": 107
+        },
+        {
+          "seed": "livre-052",
+          "outcome": "reconciliação",
+          "depth": 16,
+          "rawDepth": 62
+        },
+        {
+          "seed": "livre-053",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 102
+        },
+        {
+          "seed": "livre-054",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 67
+        },
+        {
+          "seed": "livre-055",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 89
+        },
+        {
+          "seed": "livre-056",
+          "outcome": "vingança cumprida",
+          "depth": 19,
+          "rawDepth": 143
+        },
+        {
+          "seed": "livre-057",
+          "outcome": "alvo morto por outra causa",
+          "depth": 10,
+          "rawDepth": 10
+        },
+        {
+          "seed": "livre-058",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 56
+        },
+        {
+          "seed": "livre-059",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 88
+        },
+        {
+          "seed": "livre-060",
+          "outcome": "desistência",
+          "depth": 19,
+          "rawDepth": 35
+        },
+        {
+          "seed": "livre-061",
+          "outcome": "desistência",
+          "depth": 14,
+          "rawDepth": 48
+        },
+        {
+          "seed": "livre-062",
+          "outcome": "fuga",
+          "depth": 10,
+          "rawDepth": 86
+        },
+        {
+          "seed": "livre-063",
+          "outcome": "reconciliação",
+          "depth": 13,
+          "rawDepth": 13
+        },
+        {
+          "seed": "livre-064",
+          "outcome": "desistência",
+          "depth": 8,
+          "rawDepth": 8
+        },
+        {
+          "seed": "livre-065",
+          "outcome": "vingança cumprida",
+          "depth": 15,
+          "rawDepth": 92
+        },
+        {
+          "seed": "livre-066",
+          "outcome": "desistência",
+          "depth": 13,
+          "rawDepth": 64
+        },
+        {
+          "seed": "livre-067",
+          "outcome": "desistência",
+          "depth": 16,
+          "rawDepth": 35
+        },
+        {
+          "seed": "livre-068",
+          "outcome": "reconciliação",
+          "depth": 17,
+          "rawDepth": 64
+        },
+        {
+          "seed": "livre-069",
+          "outcome": "desistência",
+          "depth": 17,
+          "rawDepth": 42
+        },
+        {
+          "seed": "livre-070",
+          "outcome": "desistência",
+          "depth": 8,
+          "rawDepth": 8
+        },
+        {
+          "seed": "livre-071",
+          "outcome": "alvo morto por outra causa",
+          "depth": 13,
+          "rawDepth": 17
+        },
+        {
+          "seed": "livre-072",
+          "outcome": "desistência",
+          "depth": 16,
+          "rawDepth": 51
+        },
+        {
+          "seed": "livre-073",
+          "outcome": "desistência",
+          "depth": 18,
+          "rawDepth": 84
+        },
+        {
+          "seed": "livre-074",
+          "outcome": "reconciliação",
+          "depth": 12,
+          "rawDepth": 12
+        },
+        {
+          "seed": "livre-075",
+          "outcome": "desistência",
+          "depth": 13,
+          "rawDepth": 106
+        },
+        {
+          "seed": "livre-076",
+          "outcome": "desistência",
+          "depth": 16,
+          "rawDepth": 86
+        },
+        {
+          "seed": "livre-077",
+          "outcome": "reconciliação",
+          "depth": 17,
+          "rawDepth": 68
+        },
+        {
+          "seed": "livre-078",
+          "outcome": "fuga",
+          "depth": 14,
+          "rawDepth": 91
+        },
+        {
+          "seed": "livre-079",
+          "outcome": "vingança cumprida",
+          "depth": 16,
+          "rawDepth": 71
+        },
+        {
+          "seed": "livre-080",
+          "outcome": "objetivo frustrado",
+          "depth": 8,
+          "rawDepth": 8
+        },
+        {
+          "seed": "livre-081",
+          "outcome": "desistência",
+          "depth": 18,
+          "rawDepth": 55
+        },
+        {
+          "seed": "livre-082",
+          "outcome": "vingança cumprida",
+          "depth": 17,
+          "rawDepth": 101
+        },
+        {
+          "seed": "livre-083",
+          "outcome": "desistência",
+          "depth": 8,
+          "rawDepth": 8
+        },
+        {
+          "seed": "livre-084",
+          "outcome": "reconciliação",
+          "depth": 12,
+          "rawDepth": 12
+        },
+        {
+          "seed": "livre-085",
+          "outcome": "reconciliação",
+          "depth": 12,
+          "rawDepth": 12
+        },
+        {
+          "seed": "livre-086",
+          "outcome": "reconciliação",
+          "depth": 14,
+          "rawDepth": 22
+        },
+        {
+          "seed": "livre-087",
+          "outcome": "vingança cumprida",
+          "depth": 15,
+          "rawDepth": 91
+        },
+        {
+          "seed": "livre-088",
+          "outcome": "desistência",
+          "depth": 17,
+          "rawDepth": 51
+        },
+        {
+          "seed": "livre-089",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 69
+        },
+        {
+          "seed": "livre-090",
+          "outcome": "reconciliação",
+          "depth": 16,
+          "rawDepth": 49
+        },
+        {
+          "seed": "livre-091",
+          "outcome": "vingança cumprida",
+          "depth": 19,
+          "rawDepth": 105
+        },
+        {
+          "seed": "livre-092",
+          "outcome": "desistência",
+          "depth": 17,
+          "rawDepth": 81
+        },
+        {
+          "seed": "livre-093",
+          "outcome": "vingança cumprida",
+          "depth": 16,
+          "rawDepth": 60
+        },
+        {
+          "seed": "livre-094",
+          "outcome": "reconciliação",
+          "depth": 13,
+          "rawDepth": 18
+        },
+        {
+          "seed": "livre-095",
+          "outcome": "desistência",
+          "depth": 14,
+          "rawDepth": 46
+        },
+        {
+          "seed": "livre-096",
+          "outcome": "desistência",
+          "depth": 16,
+          "rawDepth": 17
+        },
+        {
+          "seed": "livre-097",
+          "outcome": "desistência",
+          "depth": 8,
+          "rawDepth": 8
+        },
+        {
+          "seed": "livre-098",
+          "outcome": "alvo morto por outra causa",
+          "depth": 8,
+          "rawDepth": 8
+        },
+        {
+          "seed": "livre-099",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 106
+        }
+      ],
+      "example": {
+        "seed": "livre-007",
+        "mode": "free",
+        "outcome": "reconciliação",
+        "reason": "Acordo aceito pelos dois agentes após contato efetivo.",
+        "months": 240,
+        "events": 4317,
+        "agent": "Zarek",
+        "target": "Alda",
+        "victim": "Syl",
+        "offenseMonth": 0,
+        "adoptedMonth": 0,
+        "closedMonth": 94,
+        "trainingPeriods": 31,
+        "skillGained": 292,
+        "communications": 1,
+        "chain": [
+          "event:0",
+          "event:1",
+          "event:3",
+          "event:4",
+          "event:5",
+          "event:7",
+          "event:8",
+          "event:9",
+          "event:43",
+          "event:390",
+          "event:392",
+          "event:409",
+          "event:596",
+          "event:1669",
+          "event:1670",
+          "event:1671",
+          "event:1672"
+        ],
+        "rawDepth": 46,
+        "episodes": [
+          {
+            "id": "event:0",
+            "type": "world.created",
+            "from": 0,
+            "to": 0,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:0"
+            ],
+            "causes": []
+          },
+          {
+            "id": "event:1",
+            "type": "people.created",
+            "from": 0,
+            "to": 0,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:1"
+            ],
+            "causes": [
+              "event:0"
+            ]
+          },
+          {
+            "id": "event:3",
+            "type": "activity.period",
+            "actor": "person:01",
+            "action": "treinar",
+            "from": 0,
+            "to": 0,
+            "periods": 1,
+            "gain": 5,
+            "members": [
+              "event:3"
+            ],
+            "causes": [
+              "event:1"
+            ]
+          },
+          {
+            "id": "event:4",
+            "type": "confrontation.resolved",
+            "actor": "person:02",
+            "from": 0,
+            "to": 0,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:4"
+            ],
+            "causes": [
+              "event:1",
+              "event:3"
+            ]
+          },
+          {
+            "id": "event:5",
+            "type": "person.died",
+            "from": 0,
+            "to": 0,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:5"
+            ],
+            "causes": [
+              "event:1",
+              "event:4"
+            ]
+          },
+          {
+            "id": "event:6",
+            "type": "remorse.felt",
+            "from": 0,
+            "to": 0,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:6"
+            ],
+            "causes": [
+              "event:1",
+              "event:5"
+            ]
+          },
+          {
+            "id": "event:7",
+            "type": "information.received",
+            "from": 0,
+            "to": 0,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:7"
+            ],
+            "causes": [
+              "event:1",
+              "event:5"
+            ]
+          },
+          {
+            "id": "event:8",
+            "type": "memory.formed",
+            "from": 0,
+            "to": 0,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:8"
+            ],
+            "causes": [
+              "event:1",
+              "event:7"
+            ]
+          },
+          {
+            "id": "event:9",
+            "type": "goal.adopted",
+            "from": 0,
+            "to": 0,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:9"
+            ],
+            "causes": [
+              "event:1",
+              "event:8"
+            ]
+          },
+          {
+            "id": "event:43",
+            "type": "activity.period",
+            "actor": "person:00",
+            "action": "treinar",
+            "from": 1,
+            "to": 20,
+            "periods": 20,
+            "gain": 160,
+            "members": [
+              "event:43",
+              "event:61",
+              "event:79",
+              "event:97",
+              "event:115",
+              "event:133",
+              "event:152",
+              "event:169",
+              "event:186",
+              "event:203",
+              "event:220",
+              "event:237",
+              "event:254",
+              "event:271",
+              "event:288",
+              "event:305",
+              "event:322",
+              "event:339",
+              "event:356",
+              "event:373"
+            ],
+            "causes": [
+              "event:1",
+              "event:7",
+              "event:9"
+            ]
+          },
+          {
+            "id": "event:151",
+            "type": "presence.changed",
+            "from": 7,
+            "to": 7,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:151"
+            ],
+            "causes": [
+              "event:0",
+              "event:1"
+            ]
+          },
+          {
+            "id": "event:390",
+            "type": "help.requested",
+            "actor": "person:00",
+            "from": 21,
+            "to": 21,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:390"
+            ],
+            "causes": [
+              "event:1",
+              "event:7",
+              "event:9",
+              "event:43"
+            ]
+          },
+          {
+            "id": "event:392",
+            "type": "help.responded",
+            "from": 21,
+            "to": 21,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:392"
+            ],
+            "causes": [
+              "event:1",
+              "event:390"
+            ]
+          },
+          {
+            "id": "event:409",
+            "type": "activity.period",
+            "actor": "person:00",
+            "action": "treinar",
+            "from": 22,
+            "to": 32,
+            "periods": 11,
+            "gain": 132,
+            "members": [
+              "event:409",
+              "event:426",
+              "event:443",
+              "event:460",
+              "event:477",
+              "event:494",
+              "event:511",
+              "event:528",
+              "event:545",
+              "event:562",
+              "event:579"
+            ],
+            "causes": [
+              "event:1",
+              "event:7",
+              "event:9",
+              "event:43",
+              "event:392"
+            ]
+          },
+          {
+            "id": "event:596",
+            "type": "agreement.sought",
+            "actor": "person:00",
+            "from": 33,
+            "to": 33,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:596"
+            ],
+            "causes": [
+              "event:1",
+              "event:7",
+              "event:9",
+              "event:409"
+            ]
+          },
+          {
+            "id": "event:1668",
+            "type": "presence.changed",
+            "from": 94,
+            "to": 94,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:1668"
+            ],
+            "causes": [
+              "event:0",
+              "event:151"
+            ]
+          },
+          {
+            "id": "event:1669",
+            "type": "agreement.offered",
+            "from": 94,
+            "to": 94,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:1669"
+            ],
+            "causes": [
+              "event:1",
+              "event:596",
+              "event:1668"
+            ]
+          },
+          {
+            "id": "event:1670",
+            "type": "agreement.responded",
+            "from": 94,
+            "to": 94,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:1670"
+            ],
+            "causes": [
+              "event:1",
+              "event:6",
+              "event:1669"
+            ]
+          },
+          {
+            "id": "event:1671",
+            "type": "reconciliation.agreed",
+            "from": 94,
+            "to": 94,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:1671"
+            ],
+            "causes": [
+              "event:596",
+              "event:1670"
+            ]
+          },
+          {
+            "id": "event:1672",
+            "type": "goal.closed",
+            "from": 94,
+            "to": 94,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:1672"
+            ],
+            "causes": [
+              "event:9",
+              "event:1671"
+            ]
+          }
+        ],
+        "causalEvents": [
+          "event:0",
+          "event:1",
+          "event:3",
+          "event:4",
+          "event:5",
+          "event:6",
+          "event:7",
+          "event:8",
+          "event:9",
+          "event:43",
+          "event:61",
+          "event:79",
+          "event:97",
+          "event:115",
+          "event:133",
+          "event:151",
+          "event:152",
+          "event:169",
+          "event:186",
+          "event:203",
+          "event:220",
+          "event:237",
+          "event:254",
+          "event:271",
+          "event:288",
+          "event:305",
+          "event:322",
+          "event:339",
+          "event:356",
+          "event:373",
+          "event:390",
+          "event:392",
+          "event:409",
+          "event:426",
+          "event:443",
+          "event:460",
+          "event:477",
+          "event:494",
+          "event:511",
+          "event:528",
+          "event:545",
+          "event:562",
+          "event:579",
+          "event:596",
+          "event:1668",
+          "event:1669",
+          "event:1670",
+          "event:1671",
+          "event:1672"
+        ],
+        "narrative": [
+          "Zarek e Syl começaram como familiares; Alda tinha uma rivalidade conhecida com Syl.",
+          "No ano 0, mês 1, Syl morreu em confronto abstrato, com responsabilidade atribuída a Alda.",
+          "No ano 0, mês 1, Zarek soube por testemunho; a notícia deu origem à memória e à avaliação de vingança.",
+          "A resposta foi avaliada no ano 0, mês 1. Até o desfecho houve 31 períodos mensais de treino, com ganho de 292 pontos de habilidade.",
+          "No ano 1, mês 10, Zarek escolheu comunicar/pedir ajuda a Neris, em vez de impor confronto imediato.",
+          "No ano 7, mês 11, desfecho: reconciliação. Acordo aceito pelos dois agentes após contato efetivo."
+        ]
+      }
+    },
+    "reservado-1a": {
+      "before": {
+        "total": 100,
+        "counts": {
+          "vingança cumprida": 14,
+          "desistência": 53,
+          "alvo morto por outra causa": 1,
+          "reconciliação": 0,
+          "fuga": 30,
+          "objetivo frustrado": 2
+        },
+        "dominant": [],
+        "warning": null
+      },
+      "after": {
+        "total": 100,
+        "counts": {
+          "vingança cumprida": 18,
+          "desistência": 23,
+          "alvo morto por outra causa": 7,
+          "reconciliação": 14,
+          "fuga": 35,
+          "objetivo frustrado": 3
+        },
+        "dominant": [],
+        "warning": null
+      },
+      "outcomes": [
+        {
+          "seed": "reservado-1a-000",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 112
+        },
+        {
+          "seed": "reservado-1a-001",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 77
+        },
+        {
+          "seed": "reservado-1a-002",
+          "outcome": "fuga",
+          "depth": 10,
+          "rawDepth": 74
+        },
+        {
+          "seed": "reservado-1a-003",
+          "outcome": "fuga",
+          "depth": 14,
+          "rawDepth": 106
+        },
+        {
+          "seed": "reservado-1a-004",
+          "outcome": "desistência",
+          "depth": 17,
+          "rawDepth": 53
+        },
+        {
+          "seed": "reservado-1a-005",
+          "outcome": "reconciliação",
+          "depth": 16,
+          "rawDepth": 16
+        },
+        {
+          "seed": "reservado-1a-006",
+          "outcome": "reconciliação",
+          "depth": 14,
+          "rawDepth": 23
+        },
+        {
+          "seed": "reservado-1a-007",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 80
+        },
+        {
+          "seed": "reservado-1a-008",
+          "outcome": "fuga",
+          "depth": 10,
+          "rawDepth": 66
+        },
+        {
+          "seed": "reservado-1a-009",
+          "outcome": "vingança cumprida",
+          "depth": 16,
+          "rawDepth": 99
+        },
+        {
+          "seed": "reservado-1a-010",
+          "outcome": "fuga",
+          "depth": 17,
+          "rawDepth": 81
+        },
+        {
+          "seed": "reservado-1a-011",
+          "outcome": "fuga",
+          "depth": 19,
+          "rawDepth": 60
+        },
+        {
+          "seed": "reservado-1a-012",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 101
+        },
+        {
+          "seed": "reservado-1a-013",
+          "outcome": "fuga",
+          "depth": 14,
+          "rawDepth": 98
+        },
+        {
+          "seed": "reservado-1a-014",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 129
+        },
+        {
+          "seed": "reservado-1a-015",
+          "outcome": "reconciliação",
+          "depth": 13,
+          "rawDepth": 21
+        },
+        {
+          "seed": "reservado-1a-016",
+          "outcome": "objetivo frustrado",
+          "depth": 9,
+          "rawDepth": 9
+        },
+        {
+          "seed": "reservado-1a-017",
+          "outcome": "reconciliação",
+          "depth": 16,
+          "rawDepth": 59
+        },
+        {
+          "seed": "reservado-1a-018",
+          "outcome": "fuga",
+          "depth": 14,
+          "rawDepth": 76
+        },
+        {
+          "seed": "reservado-1a-019",
+          "outcome": "vingança cumprida",
+          "depth": 15,
+          "rawDepth": 113
+        },
+        {
+          "seed": "reservado-1a-020",
+          "outcome": "desistência",
+          "depth": 19,
+          "rawDepth": 60
+        },
+        {
+          "seed": "reservado-1a-021",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 95
+        },
+        {
+          "seed": "reservado-1a-022",
+          "outcome": "vingança cumprida",
+          "depth": 16,
+          "rawDepth": 89
+        },
+        {
+          "seed": "reservado-1a-023",
+          "outcome": "fuga",
+          "depth": 14,
+          "rawDepth": 74
+        },
+        {
+          "seed": "reservado-1a-024",
+          "outcome": "reconciliação",
+          "depth": 12,
+          "rawDepth": 12
+        },
+        {
+          "seed": "reservado-1a-025",
+          "outcome": "desistência",
+          "depth": 17,
+          "rawDepth": 62
+        },
+        {
+          "seed": "reservado-1a-026",
+          "outcome": "vingança cumprida",
+          "depth": 15,
+          "rawDepth": 105
+        },
+        {
+          "seed": "reservado-1a-027",
+          "outcome": "desistência",
+          "depth": 16,
+          "rawDepth": 51
+        },
+        {
+          "seed": "reservado-1a-028",
+          "outcome": "alvo morto por outra causa",
+          "depth": 8,
+          "rawDepth": 8
+        },
+        {
+          "seed": "reservado-1a-029",
+          "outcome": "desistência",
+          "depth": 20,
+          "rawDepth": 97
+        },
+        {
+          "seed": "reservado-1a-030",
+          "outcome": "desistência",
+          "depth": 17,
+          "rawDepth": 64
+        },
+        {
+          "seed": "reservado-1a-031",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 97
+        },
+        {
+          "seed": "reservado-1a-032",
+          "outcome": "fuga",
+          "depth": 17,
+          "rawDepth": 71
+        },
+        {
+          "seed": "reservado-1a-033",
+          "outcome": "alvo morto por outra causa",
+          "depth": 12,
+          "rawDepth": 12
+        },
+        {
+          "seed": "reservado-1a-034",
+          "outcome": "alvo morto por outra causa",
+          "depth": 9,
+          "rawDepth": 9
+        },
+        {
+          "seed": "reservado-1a-035",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 89
+        },
+        {
+          "seed": "reservado-1a-036",
+          "outcome": "desistência",
+          "depth": 17,
+          "rawDepth": 61
+        },
+        {
+          "seed": "reservado-1a-037",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 94
+        },
+        {
+          "seed": "reservado-1a-038",
+          "outcome": "reconciliação",
+          "depth": 13,
+          "rawDepth": 33
+        },
+        {
+          "seed": "reservado-1a-039",
+          "outcome": "vingança cumprida",
+          "depth": 21,
+          "rawDepth": 71
+        },
+        {
+          "seed": "reservado-1a-040",
+          "outcome": "desistência",
+          "depth": 18,
+          "rawDepth": 46
+        },
+        {
+          "seed": "reservado-1a-041",
+          "outcome": "desistência",
+          "depth": 17,
+          "rawDepth": 49
+        },
+        {
+          "seed": "reservado-1a-042",
+          "outcome": "desistência",
+          "depth": 17,
+          "rawDepth": 37
+        },
+        {
+          "seed": "reservado-1a-043",
+          "outcome": "vingança cumprida",
+          "depth": 12,
+          "rawDepth": 83
+        },
+        {
+          "seed": "reservado-1a-044",
+          "outcome": "alvo morto por outra causa",
+          "depth": 15,
+          "rawDepth": 40
+        },
+        {
+          "seed": "reservado-1a-045",
+          "outcome": "desistência",
+          "depth": 16,
+          "rawDepth": 25
+        },
+        {
+          "seed": "reservado-1a-046",
+          "outcome": "reconciliação",
+          "depth": 16,
+          "rawDepth": 55
+        },
+        {
+          "seed": "reservado-1a-047",
+          "outcome": "fuga",
+          "depth": 14,
+          "rawDepth": 94
+        },
+        {
+          "seed": "reservado-1a-048",
+          "outcome": "vingança cumprida",
+          "depth": 17,
+          "rawDepth": 95
+        },
+        {
+          "seed": "reservado-1a-049",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 89
+        },
+        {
+          "seed": "reservado-1a-050",
+          "outcome": "desistência",
+          "depth": 17,
+          "rawDepth": 111
+        },
+        {
+          "seed": "reservado-1a-051",
+          "outcome": "reconciliação",
+          "depth": 13,
+          "rawDepth": 29
+        },
+        {
+          "seed": "reservado-1a-052",
+          "outcome": "vingança cumprida",
+          "depth": 17,
+          "rawDepth": 109
+        },
+        {
+          "seed": "reservado-1a-053",
+          "outcome": "desistência",
+          "depth": 17,
+          "rawDepth": 47
+        },
+        {
+          "seed": "reservado-1a-054",
+          "outcome": "vingança cumprida",
+          "depth": 15,
+          "rawDepth": 85
+        },
+        {
+          "seed": "reservado-1a-055",
+          "outcome": "alvo morto por outra causa",
+          "depth": 8,
+          "rawDepth": 8
+        },
+        {
+          "seed": "reservado-1a-056",
+          "outcome": "vingança cumprida",
+          "depth": 13,
+          "rawDepth": 77
+        },
+        {
+          "seed": "reservado-1a-057",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 67
+        },
+        {
+          "seed": "reservado-1a-058",
+          "outcome": "reconciliação",
+          "depth": 13,
+          "rawDepth": 30
+        },
+        {
+          "seed": "reservado-1a-059",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 91
+        },
+        {
+          "seed": "reservado-1a-060",
+          "outcome": "fuga",
+          "depth": 28,
+          "rawDepth": 112
+        },
+        {
+          "seed": "reservado-1a-061",
+          "outcome": "fuga",
+          "depth": 14,
+          "rawDepth": 70
+        },
+        {
+          "seed": "reservado-1a-062",
+          "outcome": "fuga",
+          "depth": 14,
+          "rawDepth": 100
+        },
+        {
+          "seed": "reservado-1a-063",
+          "outcome": "reconciliação",
+          "depth": 16,
+          "rawDepth": 46
+        },
+        {
+          "seed": "reservado-1a-064",
+          "outcome": "desistência",
+          "depth": 16,
+          "rawDepth": 51
+        },
+        {
+          "seed": "reservado-1a-065",
+          "outcome": "desistência",
+          "depth": 16,
+          "rawDepth": 26
+        },
+        {
+          "seed": "reservado-1a-066",
+          "outcome": "alvo morto por outra causa",
+          "depth": 8,
+          "rawDepth": 8
+        },
+        {
+          "seed": "reservado-1a-067",
+          "outcome": "objetivo frustrado",
+          "depth": 9,
+          "rawDepth": 9
+        },
+        {
+          "seed": "reservado-1a-068",
+          "outcome": "fuga",
+          "depth": 16,
+          "rawDepth": 112
+        },
+        {
+          "seed": "reservado-1a-069",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 73
+        },
+        {
+          "seed": "reservado-1a-070",
+          "outcome": "reconciliação",
+          "depth": 13,
+          "rawDepth": 26
+        },
+        {
+          "seed": "reservado-1a-071",
+          "outcome": "vingança cumprida",
+          "depth": 15,
+          "rawDepth": 87
+        },
+        {
+          "seed": "reservado-1a-072",
+          "outcome": "fuga",
+          "depth": 10,
+          "rawDepth": 96
+        },
+        {
+          "seed": "reservado-1a-073",
+          "outcome": "fuga",
+          "depth": 26,
+          "rawDepth": 124
+        },
+        {
+          "seed": "reservado-1a-074",
+          "outcome": "desistência",
+          "depth": 18,
+          "rawDepth": 74
+        },
+        {
+          "seed": "reservado-1a-075",
+          "outcome": "reconciliação",
+          "depth": 17,
+          "rawDepth": 59
+        },
+        {
+          "seed": "reservado-1a-076",
+          "outcome": "vingança cumprida",
+          "depth": 19,
+          "rawDepth": 83
+        },
+        {
+          "seed": "reservado-1a-077",
+          "outcome": "fuga",
+          "depth": 17,
+          "rawDepth": 72
+        },
+        {
+          "seed": "reservado-1a-078",
+          "outcome": "vingança cumprida",
+          "depth": 24,
+          "rawDepth": 112
+        },
+        {
+          "seed": "reservado-1a-079",
+          "outcome": "desistência",
+          "depth": 16,
+          "rawDepth": 34
+        },
+        {
+          "seed": "reservado-1a-080",
+          "outcome": "fuga",
+          "depth": 15,
+          "rawDepth": 83
+        },
+        {
+          "seed": "reservado-1a-081",
+          "outcome": "vingança cumprida",
+          "depth": 16,
+          "rawDepth": 102
+        },
+        {
+          "seed": "reservado-1a-082",
+          "outcome": "reconciliação",
+          "depth": 16,
+          "rawDepth": 74
+        },
+        {
+          "seed": "reservado-1a-083",
+          "outcome": "fuga",
+          "depth": 17,
+          "rawDepth": 68
+        },
+        {
+          "seed": "reservado-1a-084",
+          "outcome": "reconciliação",
+          "depth": 16,
+          "rawDepth": 77
+        },
+        {
+          "seed": "reservado-1a-085",
+          "outcome": "vingança cumprida",
+          "depth": 15,
+          "rawDepth": 101
+        },
+        {
+          "seed": "reservado-1a-086",
+          "outcome": "fuga",
+          "depth": 16,
+          "rawDepth": 96
+        },
+        {
+          "seed": "reservado-1a-087",
+          "outcome": "vingança cumprida",
+          "depth": 15,
+          "rawDepth": 99
+        },
+        {
+          "seed": "reservado-1a-088",
+          "outcome": "fuga",
+          "depth": 20,
+          "rawDepth": 102
+        },
+        {
+          "seed": "reservado-1a-089",
+          "outcome": "desistência",
+          "depth": 17,
+          "rawDepth": 41
+        },
+        {
+          "seed": "reservado-1a-090",
+          "outcome": "objetivo frustrado",
+          "depth": 8,
+          "rawDepth": 8
+        },
+        {
+          "seed": "reservado-1a-091",
+          "outcome": "desistência",
+          "depth": 19,
+          "rawDepth": 95
+        },
+        {
+          "seed": "reservado-1a-092",
+          "outcome": "alvo morto por outra causa",
+          "depth": 8,
+          "rawDepth": 8
+        },
+        {
+          "seed": "reservado-1a-093",
+          "outcome": "vingança cumprida",
+          "depth": 16,
+          "rawDepth": 120
+        },
+        {
+          "seed": "reservado-1a-094",
+          "outcome": "desistência",
+          "depth": 17,
+          "rawDepth": 42
+        },
+        {
+          "seed": "reservado-1a-095",
+          "outcome": "fuga",
+          "depth": 13,
+          "rawDepth": 92
+        },
+        {
+          "seed": "reservado-1a-096",
+          "outcome": "vingança cumprida",
+          "depth": 15,
+          "rawDepth": 107
+        },
+        {
+          "seed": "reservado-1a-097",
+          "outcome": "desistência",
+          "depth": 13,
+          "rawDepth": 75
+        },
+        {
+          "seed": "reservado-1a-098",
+          "outcome": "desistência",
+          "depth": 14,
+          "rawDepth": 40
+        },
+        {
+          "seed": "reservado-1a-099",
+          "outcome": "desistência",
+          "depth": 17,
+          "rawDepth": 49
+        }
+      ],
+      "example": {
+        "seed": "reservado-1a-005",
+        "mode": "free",
+        "outcome": "reconciliação",
+        "reason": "Acordo aceito pelos dois agentes após contato efetivo.",
+        "months": 240,
+        "events": 4322,
+        "agent": "Thorin",
+        "target": "Sora",
+        "victim": "Mael",
+        "offenseMonth": 0,
+        "adoptedMonth": 0,
+        "closedMonth": 4,
+        "trainingPeriods": 2,
+        "skillGained": 14,
+        "communications": 2,
+        "chain": [
+          "event:0",
+          "event:1",
+          "event:4",
+          "event:5",
+          "event:7",
+          "event:8",
+          "event:9",
+          "event:43",
+          "event:61",
+          "event:63",
+          "event:81",
+          "event:99",
+          "event:100",
+          "event:101",
+          "event:102",
+          "event:103"
+        ],
+        "rawDepth": 16,
+        "episodes": [
+          {
+            "id": "event:0",
+            "type": "world.created",
+            "from": 0,
+            "to": 0,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:0"
+            ],
+            "causes": []
+          },
+          {
+            "id": "event:1",
+            "type": "people.created",
+            "from": 0,
+            "to": 0,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:1"
+            ],
+            "causes": [
+              "event:0"
+            ]
+          },
+          {
+            "id": "event:4",
+            "type": "confrontation.resolved",
+            "actor": "person:02",
+            "from": 0,
+            "to": 0,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:4"
+            ],
+            "causes": [
+              "event:1"
+            ]
+          },
+          {
+            "id": "event:5",
+            "type": "person.died",
+            "from": 0,
+            "to": 0,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:5"
+            ],
+            "causes": [
+              "event:1",
+              "event:4"
+            ]
+          },
+          {
+            "id": "event:6",
+            "type": "remorse.felt",
+            "from": 0,
+            "to": 0,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:6"
+            ],
+            "causes": [
+              "event:1",
+              "event:5"
+            ]
+          },
+          {
+            "id": "event:7",
+            "type": "information.received",
+            "from": 0,
+            "to": 0,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:7"
+            ],
+            "causes": [
+              "event:1",
+              "event:5"
+            ]
+          },
+          {
+            "id": "event:8",
+            "type": "memory.formed",
+            "from": 0,
+            "to": 0,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:8"
+            ],
+            "causes": [
+              "event:1",
+              "event:7"
+            ]
+          },
+          {
+            "id": "event:9",
+            "type": "goal.adopted",
+            "from": 0,
+            "to": 0,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:9"
+            ],
+            "causes": [
+              "event:1",
+              "event:8"
+            ]
+          },
+          {
+            "id": "event:43",
+            "type": "activity.period",
+            "actor": "person:00",
+            "action": "treinar",
+            "from": 1,
+            "to": 1,
+            "periods": 1,
+            "gain": 5,
+            "members": [
+              "event:43"
+            ],
+            "causes": [
+              "event:1",
+              "event:7",
+              "event:9"
+            ]
+          },
+          {
+            "id": "event:61",
+            "type": "help.requested",
+            "actor": "person:00",
+            "from": 2,
+            "to": 2,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:61"
+            ],
+            "causes": [
+              "event:1",
+              "event:7",
+              "event:9",
+              "event:43"
+            ]
+          },
+          {
+            "id": "event:63",
+            "type": "help.responded",
+            "from": 2,
+            "to": 2,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:63"
+            ],
+            "causes": [
+              "event:1",
+              "event:61"
+            ]
+          },
+          {
+            "id": "event:81",
+            "type": "activity.period",
+            "actor": "person:00",
+            "action": "treinar",
+            "from": 3,
+            "to": 3,
+            "periods": 1,
+            "gain": 9,
+            "members": [
+              "event:81"
+            ],
+            "causes": [
+              "event:1",
+              "event:7",
+              "event:9",
+              "event:43",
+              "event:63"
+            ]
+          },
+          {
+            "id": "event:99",
+            "type": "agreement.sought",
+            "actor": "person:00",
+            "from": 4,
+            "to": 4,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:99"
+            ],
+            "causes": [
+              "event:1",
+              "event:7",
+              "event:9",
+              "event:81"
+            ]
+          },
+          {
+            "id": "event:100",
+            "type": "agreement.offered",
+            "from": 4,
+            "to": 4,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:100"
+            ],
+            "causes": [
+              "event:1",
+              "event:99"
+            ]
+          },
+          {
+            "id": "event:101",
+            "type": "agreement.responded",
+            "from": 4,
+            "to": 4,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:101"
+            ],
+            "causes": [
+              "event:1",
+              "event:6",
+              "event:100"
+            ]
+          },
+          {
+            "id": "event:102",
+            "type": "reconciliation.agreed",
+            "from": 4,
+            "to": 4,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:102"
+            ],
+            "causes": [
+              "event:99",
+              "event:101"
+            ]
+          },
+          {
+            "id": "event:103",
+            "type": "goal.closed",
+            "from": 4,
+            "to": 4,
+            "periods": 0,
+            "gain": 0,
+            "members": [
+              "event:103"
+            ],
+            "causes": [
+              "event:9",
+              "event:102"
+            ]
+          }
+        ],
+        "causalEvents": [
+          "event:0",
+          "event:1",
+          "event:4",
+          "event:5",
+          "event:6",
+          "event:7",
+          "event:8",
+          "event:9",
+          "event:43",
+          "event:61",
+          "event:63",
+          "event:81",
+          "event:99",
+          "event:100",
+          "event:101",
+          "event:102",
+          "event:103"
+        ],
+        "narrative": [
+          "Thorin e Mael começaram como familiares; Sora tinha uma rivalidade conhecida com Mael.",
+          "No ano 0, mês 1, Mael morreu em confronto abstrato, com responsabilidade atribuída a Sora.",
+          "No ano 0, mês 1, Thorin soube por testemunho; a notícia deu origem à memória e à avaliação de vingança.",
+          "A resposta foi avaliada no ano 0, mês 1. Até o desfecho houve 2 períodos mensais de treino, com ganho de 14 pontos de habilidade.",
+          "No ano 0, mês 3, Thorin escolheu comunicar/pedir ajuda a Luma, em vez de impor confronto imediato.",
+          "No ano 3, mês 6, Thorin escolheu comunicar/pedir ajuda a Runa, em vez de impor confronto imediato.",
+          "No ano 0, mês 5, desfecho: reconciliação. Acordo aceito pelos dois agentes após contato efetivo."
+        ]
+      }
+    }
+  }
+}

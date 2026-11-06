@@ -1,0 +1,3257 @@
+{
+  "invalid": 0,
+  "batches": {
+    "pessoal-1b": {
+      "before": {
+        "adopted": 1370,
+        "completed": 19,
+        "failed": 1351,
+        "declined": 0,
+        "deaths": 127,
+        "threats": 256
+      },
+      "after": {
+        "adopted": 1283,
+        "completed": 193,
+        "failed": 1090,
+        "declined": 152,
+        "deaths": 15,
+        "threats": 1089
+      },
+      "failedNoOwnActionButAlive": 979,
+      "failureBefore": 0.9861313868613139,
+      "failureAfter": 0.8495713172252534,
+      "rows": [
+        {
+          "seed": "pessoal-1b-000",
+          "adopted": 28,
+          "completed": 3,
+          "failed": 25,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 25,
+          "deaths": 0,
+          "threats": 15,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 7,
+            "pedir_aliados": 8,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-001",
+          "adopted": 8,
+          "completed": 1,
+          "failed": 7,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 0,
+          "threats": 12,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 12,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-002",
+          "adopted": 8,
+          "completed": 2,
+          "failed": 6,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 6,
+          "deaths": 0,
+          "threats": 12,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 12,
+            "pedir_aliados": 4,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-003",
+          "adopted": 14,
+          "completed": 2,
+          "failed": 12,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 12,
+          "deaths": 0,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 8,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-004",
+          "adopted": 19,
+          "completed": 2,
+          "failed": 17,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 17,
+          "deaths": 0,
+          "threats": 4,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 4,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-005",
+          "adopted": 15,
+          "completed": 2,
+          "failed": 13,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 13,
+          "deaths": 0,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 6,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-006",
+          "adopted": 22,
+          "completed": 2,
+          "failed": 20,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 20,
+          "deaths": 0,
+          "threats": 24,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 24,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-007",
+          "adopted": 7,
+          "completed": 1,
+          "failed": 6,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 6,
+          "deaths": 0,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 6,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-008",
+          "adopted": 6,
+          "completed": 2,
+          "failed": 4,
+          "declined": 30,
+          "failedNoOwnActionButAlive": 4,
+          "deaths": 0,
+          "threats": 14,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 8,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-009",
+          "adopted": 20,
+          "completed": 4,
+          "failed": 16,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 16,
+          "deaths": 0,
+          "threats": 10,
+          "actions": {
+            "proteger": 4,
+            "avisar_alvo": 7,
+            "pedir_aliados": 1,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-010",
+          "adopted": 13,
+          "completed": 3,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 10,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 10,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-011",
+          "adopted": 9,
+          "completed": 1,
+          "failed": 8,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 8,
+          "deaths": 0,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 6,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-012",
+          "adopted": 11,
+          "completed": 1,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 6,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-013",
+          "adopted": 22,
+          "completed": 2,
+          "failed": 20,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 20,
+          "deaths": 0,
+          "threats": 20,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 56,
+            "pedir_aliados": 12,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-014",
+          "adopted": 17,
+          "completed": 2,
+          "failed": 15,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 15,
+          "deaths": 0,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 6,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-015",
+          "adopted": 20,
+          "completed": 2,
+          "failed": 18,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 18,
+          "deaths": 0,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 8,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-016",
+          "adopted": 14,
+          "completed": 3,
+          "failed": 11,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 11,
+          "deaths": 0,
+          "threats": 15,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 15,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-017",
+          "adopted": 5,
+          "completed": 1,
+          "failed": 4,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 4,
+          "deaths": 0,
+          "threats": 10,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 10,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-018",
+          "adopted": 12,
+          "completed": 1,
+          "failed": 11,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 5,
+          "deaths": 1,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 13,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-019",
+          "adopted": 9,
+          "completed": 3,
+          "failed": 6,
+          "declined": 4,
+          "failedNoOwnActionButAlive": 6,
+          "deaths": 0,
+          "threats": 11,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 11,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-020",
+          "adopted": 7,
+          "completed": 3,
+          "failed": 4,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 4,
+          "deaths": 0,
+          "threats": 3,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 1,
+            "pedir_aliados": 2,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-021",
+          "adopted": 8,
+          "completed": 3,
+          "failed": 5,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 5,
+          "deaths": 0,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 8,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-022",
+          "adopted": 9,
+          "completed": 3,
+          "failed": 6,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 6,
+          "deaths": 0,
+          "threats": 30,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 30,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-023",
+          "adopted": 9,
+          "completed": 2,
+          "failed": 7,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 0,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 2,
+            "pedir_aliados": 4,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-024",
+          "adopted": 5,
+          "completed": 1,
+          "failed": 4,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 4,
+          "deaths": 0,
+          "threats": 10,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 10,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-025",
+          "adopted": 8,
+          "completed": 3,
+          "failed": 5,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 5,
+          "deaths": 0,
+          "threats": 8,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 6,
+            "pedir_aliados": 3,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-026",
+          "adopted": 15,
+          "completed": 3,
+          "failed": 12,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 12,
+          "deaths": 0,
+          "threats": 3,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 1,
+            "pedir_aliados": 2,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-027",
+          "adopted": 9,
+          "completed": 0,
+          "failed": 9,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 0,
+          "deaths": 1,
+          "threats": 4,
+          "actions": {
+            "proteger": 2,
+            "avisar_alvo": 18,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-028",
+          "adopted": 8,
+          "completed": 1,
+          "failed": 7,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 0,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 8,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-029",
+          "adopted": 14,
+          "completed": 2,
+          "failed": 12,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 12,
+          "deaths": 0,
+          "threats": 12,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 12,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-030",
+          "adopted": 11,
+          "completed": 2,
+          "failed": 9,
+          "declined": 5,
+          "failedNoOwnActionButAlive": 9,
+          "deaths": 0,
+          "threats": 10,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 10,
+            "pedir_aliados": 2,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-031",
+          "adopted": 10,
+          "completed": 2,
+          "failed": 8,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 8,
+          "deaths": 0,
+          "threats": 11,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 10,
+            "pedir_aliados": 1,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-032",
+          "adopted": 17,
+          "completed": 2,
+          "failed": 15,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 6,
+          "deaths": 1,
+          "threats": 7,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 14,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-033",
+          "adopted": 9,
+          "completed": 1,
+          "failed": 8,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 8,
+          "deaths": 0,
+          "threats": 4,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 4,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-034",
+          "adopted": 11,
+          "completed": 1,
+          "failed": 10,
+          "declined": 14,
+          "failedNoOwnActionButAlive": 1,
+          "deaths": 1,
+          "threats": 5,
+          "actions": {
+            "proteger": 3,
+            "avisar_alvo": 10,
+            "pedir_aliados": 1,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-035",
+          "adopted": 14,
+          "completed": 2,
+          "failed": 12,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 12,
+          "deaths": 0,
+          "threats": 10,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 10,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-036",
+          "adopted": 7,
+          "completed": 1,
+          "failed": 6,
+          "declined": 49,
+          "failedNoOwnActionButAlive": 6,
+          "deaths": 0,
+          "threats": 16,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 9,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-037",
+          "adopted": 20,
+          "completed": 3,
+          "failed": 17,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 17,
+          "deaths": 0,
+          "threats": 12,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 16,
+            "pedir_aliados": 4,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-038",
+          "adopted": 11,
+          "completed": 2,
+          "failed": 9,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 9,
+          "deaths": 0,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 6,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-039",
+          "adopted": 11,
+          "completed": 3,
+          "failed": 8,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 8,
+          "deaths": 0,
+          "threats": 15,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 15,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-040",
+          "adopted": 15,
+          "completed": 1,
+          "failed": 14,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 6,
+          "deaths": 1,
+          "threats": 15,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 22,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-041",
+          "adopted": 12,
+          "completed": 2,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 5,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 5,
+            "pedir_aliados": 1,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-042",
+          "adopted": 15,
+          "completed": 2,
+          "failed": 13,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 13,
+          "deaths": 0,
+          "threats": 3,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 3,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-043",
+          "adopted": 16,
+          "completed": 2,
+          "failed": 14,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 14,
+          "deaths": 0,
+          "threats": 12,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 12,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-044",
+          "adopted": 5,
+          "completed": 1,
+          "failed": 4,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 4,
+          "deaths": 0,
+          "threats": 7,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 7,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-045",
+          "adopted": 12,
+          "completed": 2,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 15,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 27,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-046",
+          "adopted": 20,
+          "completed": 2,
+          "failed": 18,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 18,
+          "deaths": 0,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 8,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-047",
+          "adopted": 19,
+          "completed": 2,
+          "failed": 17,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 17,
+          "deaths": 0,
+          "threats": 4,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 4,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-048",
+          "adopted": 8,
+          "completed": 1,
+          "failed": 7,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 0,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 6,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-049",
+          "adopted": 15,
+          "completed": 0,
+          "failed": 15,
+          "declined": 5,
+          "failedNoOwnActionButAlive": 0,
+          "deaths": 2,
+          "threats": 9,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 28,
+            "pedir_aliados": 1,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-050",
+          "adopted": 18,
+          "completed": 2,
+          "failed": 16,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 16,
+          "deaths": 0,
+          "threats": 7,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 7,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-051",
+          "adopted": 9,
+          "completed": 2,
+          "failed": 7,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 0,
+          "threats": 15,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 15,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-052",
+          "adopted": 9,
+          "completed": 1,
+          "failed": 8,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 4,
+          "deaths": 1,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 11,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-053",
+          "adopted": 7,
+          "completed": 1,
+          "failed": 6,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 6,
+          "deaths": 0,
+          "threats": 3,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 3,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-054",
+          "adopted": 17,
+          "completed": 2,
+          "failed": 15,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 15,
+          "deaths": 0,
+          "threats": 10,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 10,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-055",
+          "adopted": 7,
+          "completed": 2,
+          "failed": 5,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 5,
+          "deaths": 0,
+          "threats": 5,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 5,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-056",
+          "adopted": 5,
+          "completed": 1,
+          "failed": 4,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 4,
+          "deaths": 0,
+          "threats": 12,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 12,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-057",
+          "adopted": 23,
+          "completed": 2,
+          "failed": 21,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 21,
+          "deaths": 0,
+          "threats": 54,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 54,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-058",
+          "adopted": 10,
+          "completed": 1,
+          "failed": 9,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 9,
+          "deaths": 0,
+          "threats": 10,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 10,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-059",
+          "adopted": 8,
+          "completed": 2,
+          "failed": 6,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 6,
+          "deaths": 0,
+          "threats": 3,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 12,
+            "pedir_aliados": 3,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-060",
+          "adopted": 16,
+          "completed": 4,
+          "failed": 12,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 12,
+          "deaths": 0,
+          "threats": 19,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 20,
+            "pedir_aliados": 10,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-061",
+          "adopted": 10,
+          "completed": 3,
+          "failed": 7,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 0,
+          "threats": 5,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 10,
+            "pedir_aliados": 1,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-062",
+          "adopted": 7,
+          "completed": 1,
+          "failed": 6,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 6,
+          "deaths": 1,
+          "threats": 12,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 48,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-063",
+          "adopted": 20,
+          "completed": 3,
+          "failed": 17,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 17,
+          "deaths": 0,
+          "threats": 20,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 20,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-064",
+          "adopted": 13,
+          "completed": 2,
+          "failed": 11,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 11,
+          "deaths": 0,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 6,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-065",
+          "adopted": 20,
+          "completed": 2,
+          "failed": 18,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 18,
+          "deaths": 0,
+          "threats": 13,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 19,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-066",
+          "adopted": 14,
+          "completed": 2,
+          "failed": 12,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 12,
+          "deaths": 0,
+          "threats": 12,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 12,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-067",
+          "adopted": 11,
+          "completed": 2,
+          "failed": 9,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 9,
+          "deaths": 0,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 8,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-068",
+          "adopted": 23,
+          "completed": 1,
+          "failed": 22,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 1,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 19,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-069",
+          "adopted": 11,
+          "completed": 1,
+          "failed": 10,
+          "declined": 5,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 5,
+          "actions": {
+            "proteger": 2,
+            "avisar_alvo": 4,
+            "pedir_aliados": 1,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-070",
+          "adopted": 15,
+          "completed": 1,
+          "failed": 14,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 6,
+          "deaths": 1,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 13,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-071",
+          "adopted": 17,
+          "completed": 3,
+          "failed": 14,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 14,
+          "deaths": 0,
+          "threats": 21,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 16,
+            "pedir_aliados": 20,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-072",
+          "adopted": 16,
+          "completed": 2,
+          "failed": 14,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 14,
+          "deaths": 0,
+          "threats": 12,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 12,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-073",
+          "adopted": 13,
+          "completed": 2,
+          "failed": 11,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 11,
+          "deaths": 0,
+          "threats": 14,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 14,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-074",
+          "adopted": 15,
+          "completed": 2,
+          "failed": 13,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 13,
+          "deaths": 0,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 8,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-075",
+          "adopted": 11,
+          "completed": 3,
+          "failed": 8,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 8,
+          "deaths": 0,
+          "threats": 13,
+          "actions": {
+            "proteger": 2,
+            "avisar_alvo": 16,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-076",
+          "adopted": 13,
+          "completed": 2,
+          "failed": 11,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 11,
+          "deaths": 0,
+          "threats": 21,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 21,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-077",
+          "adopted": 18,
+          "completed": 1,
+          "failed": 17,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 9,
+          "deaths": 1,
+          "threats": 10,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 28,
+            "pedir_aliados": 3,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-078",
+          "adopted": 19,
+          "completed": 5,
+          "failed": 14,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 14,
+          "deaths": 0,
+          "threats": 10,
+          "actions": {
+            "proteger": 3,
+            "avisar_alvo": 6,
+            "pedir_aliados": 4,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-079",
+          "adopted": 15,
+          "completed": 2,
+          "failed": 13,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 13,
+          "deaths": 0,
+          "threats": 32,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 32,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-080",
+          "adopted": 11,
+          "completed": 3,
+          "failed": 8,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 8,
+          "deaths": 0,
+          "threats": 7,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 6,
+            "pedir_aliados": 1,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-081",
+          "adopted": 20,
+          "completed": 2,
+          "failed": 18,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 18,
+          "deaths": 0,
+          "threats": 14,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 14,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-082",
+          "adopted": 17,
+          "completed": 2,
+          "failed": 15,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 15,
+          "deaths": 0,
+          "threats": 5,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 7,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-083",
+          "adopted": 9,
+          "completed": 1,
+          "failed": 8,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 4,
+          "deaths": 1,
+          "threats": 8,
+          "actions": {
+            "proteger": 3,
+            "avisar_alvo": 17,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-084",
+          "adopted": 8,
+          "completed": 1,
+          "failed": 7,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 0,
+          "threats": 16,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 4,
+            "pedir_aliados": 12,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-085",
+          "adopted": 10,
+          "completed": 3,
+          "failed": 7,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 0,
+          "threats": 14,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 11,
+            "pedir_aliados": 3,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-086",
+          "adopted": 20,
+          "completed": 4,
+          "failed": 16,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 16,
+          "deaths": 0,
+          "threats": 12,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 26,
+            "pedir_aliados": 5,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-087",
+          "adopted": 9,
+          "completed": 1,
+          "failed": 8,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 8,
+          "deaths": 0,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 6,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-088",
+          "adopted": 13,
+          "completed": 2,
+          "failed": 11,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 11,
+          "deaths": 0,
+          "threats": 12,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 12,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-089",
+          "adopted": 8,
+          "completed": 1,
+          "failed": 7,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 0,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 8,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-090",
+          "adopted": 6,
+          "completed": 1,
+          "failed": 5,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 5,
+          "deaths": 0,
+          "threats": 9,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 9,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-091",
+          "adopted": 14,
+          "completed": 2,
+          "failed": 12,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 12,
+          "deaths": 0,
+          "threats": 20,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 20,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-092",
+          "adopted": 12,
+          "completed": 3,
+          "failed": 9,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 9,
+          "deaths": 0,
+          "threats": 20,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 13,
+            "pedir_aliados": 7,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-093",
+          "adopted": 8,
+          "completed": 1,
+          "failed": 7,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 0,
+          "threats": 10,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 10,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-094",
+          "adopted": 12,
+          "completed": 2,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 13,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 13,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-095",
+          "adopted": 11,
+          "completed": 2,
+          "failed": 9,
+          "declined": 4,
+          "failedNoOwnActionButAlive": 9,
+          "deaths": 0,
+          "threats": 5,
+          "actions": {
+            "proteger": 4,
+            "avisar_alvo": 3,
+            "pedir_aliados": 2,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-096",
+          "adopted": 17,
+          "completed": 1,
+          "failed": 16,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 8,
+          "deaths": 1,
+          "threats": 11,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 17,
+            "pedir_aliados": 1,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-097",
+          "adopted": 4,
+          "completed": 2,
+          "failed": 2,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 2,
+          "deaths": 0,
+          "threats": 7,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 7,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-098",
+          "adopted": 22,
+          "completed": 3,
+          "failed": 19,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 19,
+          "deaths": 0,
+          "threats": 14,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 31,
+            "pedir_aliados": 10,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "pessoal-1b-099",
+          "adopted": 13,
+          "completed": 1,
+          "failed": 12,
+          "declined": 36,
+          "failedNoOwnActionButAlive": 1,
+          "deaths": 1,
+          "threats": 13,
+          "actions": {
+            "proteger": 2,
+            "avisar_alvo": 18,
+            "pedir_aliados": 3,
+            "afastar_alvo": 0
+          }
+        }
+      ]
+    },
+    "reservado-protecao": {
+      "before": {
+        "adopted": 1349,
+        "completed": 22,
+        "failed": 1327,
+        "declined": 0,
+        "deaths": 131,
+        "threats": 293
+      },
+      "after": {
+        "adopted": 1269,
+        "completed": 188,
+        "failed": 1081,
+        "declined": 12,
+        "deaths": 20,
+        "threats": 1078
+      },
+      "failedNoOwnActionButAlive": 948,
+      "failureBefore": 0.9836916234247591,
+      "failureAfter": 0.8518518518518519,
+      "rows": [
+        {
+          "seed": "reservado-protecao-000",
+          "adopted": 14,
+          "completed": 1,
+          "failed": 13,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 6,
+          "deaths": 1,
+          "threats": 4,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 9,
+            "pedir_aliados": 1,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-001",
+          "adopted": 7,
+          "completed": 1,
+          "failed": 6,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 6,
+          "deaths": 0,
+          "threats": 3,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 2,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-002",
+          "adopted": 9,
+          "completed": 1,
+          "failed": 8,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 4,
+          "deaths": 1,
+          "threats": 5,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 8,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-003",
+          "adopted": 15,
+          "completed": 3,
+          "failed": 12,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 12,
+          "deaths": 0,
+          "threats": 16,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 16,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-004",
+          "adopted": 19,
+          "completed": 2,
+          "failed": 17,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 17,
+          "deaths": 0,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 8,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-005",
+          "adopted": 23,
+          "completed": 4,
+          "failed": 19,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 19,
+          "deaths": 0,
+          "threats": 11,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 13,
+            "pedir_aliados": 5,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-006",
+          "adopted": 15,
+          "completed": 2,
+          "failed": 13,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 13,
+          "deaths": 0,
+          "threats": 21,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 21,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-007",
+          "adopted": 11,
+          "completed": 2,
+          "failed": 9,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 9,
+          "deaths": 0,
+          "threats": 14,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 14,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-008",
+          "adopted": 10,
+          "completed": 2,
+          "failed": 8,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 8,
+          "deaths": 0,
+          "threats": 21,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 21,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-009",
+          "adopted": 8,
+          "completed": 1,
+          "failed": 7,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 0,
+          "threats": 9,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 9,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-010",
+          "adopted": 17,
+          "completed": 2,
+          "failed": 15,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 15,
+          "deaths": 0,
+          "threats": 9,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 9,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-011",
+          "adopted": 10,
+          "completed": 3,
+          "failed": 7,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 0,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 5,
+            "pedir_aliados": 1,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-012",
+          "adopted": 8,
+          "completed": 1,
+          "failed": 7,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 0,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 6,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-013",
+          "adopted": 17,
+          "completed": 3,
+          "failed": 14,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 14,
+          "deaths": 0,
+          "threats": 10,
+          "actions": {
+            "proteger": 2,
+            "avisar_alvo": 14,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-014",
+          "adopted": 16,
+          "completed": 2,
+          "failed": 14,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 14,
+          "deaths": 0,
+          "threats": 22,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 22,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-015",
+          "adopted": 6,
+          "completed": 1,
+          "failed": 5,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 5,
+          "deaths": 0,
+          "threats": 24,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 24,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-016",
+          "adopted": 13,
+          "completed": 3,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 16,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 4,
+            "pedir_aliados": 12,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-017",
+          "adopted": 15,
+          "completed": 2,
+          "failed": 13,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 13,
+          "deaths": 0,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 6,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-018",
+          "adopted": 8,
+          "completed": 1,
+          "failed": 7,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 0,
+          "threats": 4,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 4,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-019",
+          "adopted": 10,
+          "completed": 2,
+          "failed": 8,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 8,
+          "deaths": 0,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 8,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-020",
+          "adopted": 16,
+          "completed": 2,
+          "failed": 14,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 14,
+          "deaths": 0,
+          "threats": 12,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 5,
+            "pedir_aliados": 7,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-021",
+          "adopted": 9,
+          "completed": 2,
+          "failed": 7,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 0,
+          "threats": 3,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 3,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-022",
+          "adopted": 16,
+          "completed": 2,
+          "failed": 14,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 14,
+          "deaths": 0,
+          "threats": 7,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 7,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-023",
+          "adopted": 18,
+          "completed": 1,
+          "failed": 17,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 8,
+          "deaths": 1,
+          "threats": 8,
+          "actions": {
+            "proteger": 4,
+            "avisar_alvo": 36,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-024",
+          "adopted": 16,
+          "completed": 2,
+          "failed": 14,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 14,
+          "deaths": 0,
+          "threats": 21,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 21,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-025",
+          "adopted": 6,
+          "completed": 2,
+          "failed": 4,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 4,
+          "deaths": 0,
+          "threats": 5,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 8,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-026",
+          "adopted": 21,
+          "completed": 2,
+          "failed": 19,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 19,
+          "deaths": 0,
+          "threats": 13,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 16,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-027",
+          "adopted": 16,
+          "completed": 2,
+          "failed": 14,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 14,
+          "deaths": 0,
+          "threats": 5,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 5,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-028",
+          "adopted": 17,
+          "completed": 2,
+          "failed": 15,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 15,
+          "deaths": 0,
+          "threats": 12,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 12,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-029",
+          "adopted": 17,
+          "completed": 1,
+          "failed": 16,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 1,
+          "threats": 7,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 13,
+            "pedir_aliados": 1,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-030",
+          "adopted": 12,
+          "completed": 2,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 11,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 11,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-031",
+          "adopted": 7,
+          "completed": 1,
+          "failed": 6,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 6,
+          "deaths": 0,
+          "threats": 4,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 4,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-032",
+          "adopted": 18,
+          "completed": 3,
+          "failed": 15,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 15,
+          "deaths": 0,
+          "threats": 12,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 5,
+            "pedir_aliados": 9,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-033",
+          "adopted": 10,
+          "completed": 1,
+          "failed": 9,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 9,
+          "deaths": 0,
+          "threats": 5,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 5,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-034",
+          "adopted": 11,
+          "completed": 3,
+          "failed": 8,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 8,
+          "deaths": 0,
+          "threats": 18,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 17,
+            "pedir_aliados": 1,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-035",
+          "adopted": 8,
+          "completed": 2,
+          "failed": 6,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 6,
+          "deaths": 0,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 3,
+            "pedir_aliados": 5,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-036",
+          "adopted": 11,
+          "completed": 2,
+          "failed": 9,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 9,
+          "deaths": 0,
+          "threats": 21,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 21,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-037",
+          "adopted": 24,
+          "completed": 2,
+          "failed": 22,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 22,
+          "deaths": 0,
+          "threats": 5,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 5,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-038",
+          "adopted": 17,
+          "completed": 2,
+          "failed": 15,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 15,
+          "deaths": 0,
+          "threats": 4,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 4,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-039",
+          "adopted": 8,
+          "completed": 1,
+          "failed": 7,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 0,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 6,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-040",
+          "adopted": 8,
+          "completed": 2,
+          "failed": 6,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 6,
+          "deaths": 0,
+          "threats": 10,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 10,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-041",
+          "adopted": 10,
+          "completed": 2,
+          "failed": 8,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 8,
+          "deaths": 0,
+          "threats": 5,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 3,
+            "pedir_aliados": 2,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-042",
+          "adopted": 11,
+          "completed": 1,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 5,
+          "deaths": 1,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 12,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-043",
+          "adopted": 12,
+          "completed": 2,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 8,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-044",
+          "adopted": 12,
+          "completed": 2,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 12,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 12,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-045",
+          "adopted": 13,
+          "completed": 2,
+          "failed": 11,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 11,
+          "deaths": 0,
+          "threats": 24,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 63,
+            "pedir_aliados": 10,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-046",
+          "adopted": 16,
+          "completed": 1,
+          "failed": 15,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 1,
+          "threats": 9,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 22,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-047",
+          "adopted": 12,
+          "completed": 2,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 12,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 9,
+            "pedir_aliados": 3,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-048",
+          "adopted": 9,
+          "completed": 1,
+          "failed": 8,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 8,
+          "deaths": 0,
+          "threats": 3,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 3,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-049",
+          "adopted": 14,
+          "completed": 3,
+          "failed": 11,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 11,
+          "deaths": 0,
+          "threats": 10,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 10,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-050",
+          "adopted": 7,
+          "completed": 1,
+          "failed": 6,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 6,
+          "deaths": 0,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 6,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-051",
+          "adopted": 13,
+          "completed": 1,
+          "failed": 12,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 5,
+          "deaths": 1,
+          "threats": 10,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 16,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-052",
+          "adopted": 17,
+          "completed": 1,
+          "failed": 16,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 8,
+          "deaths": 1,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 15,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-053",
+          "adopted": 5,
+          "completed": 2,
+          "failed": 3,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 3,
+          "deaths": 0,
+          "threats": 4,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 3,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-054",
+          "adopted": 11,
+          "completed": 1,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 5,
+          "deaths": 1,
+          "threats": 12,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 20,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-055",
+          "adopted": 18,
+          "completed": 1,
+          "failed": 17,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 8,
+          "deaths": 1,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 19,
+            "pedir_aliados": 3,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-056",
+          "adopted": 8,
+          "completed": 1,
+          "failed": 7,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 0,
+          "threats": 10,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 10,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-057",
+          "adopted": 16,
+          "completed": 1,
+          "failed": 15,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 1,
+          "threats": 16,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 22,
+            "pedir_aliados": 6,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-058",
+          "adopted": 8,
+          "completed": 0,
+          "failed": 8,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 0,
+          "deaths": 1,
+          "threats": 5,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 11,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-059",
+          "adopted": 11,
+          "completed": 2,
+          "failed": 9,
+          "declined": 1,
+          "failedNoOwnActionButAlive": 9,
+          "deaths": 0,
+          "threats": 19,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 18,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-060",
+          "adopted": 22,
+          "completed": 2,
+          "failed": 20,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 20,
+          "deaths": 0,
+          "threats": 14,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 14,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-061",
+          "adopted": 7,
+          "completed": 2,
+          "failed": 5,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 5,
+          "deaths": 0,
+          "threats": 9,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 9,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-062",
+          "adopted": 17,
+          "completed": 3,
+          "failed": 14,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 14,
+          "deaths": 0,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 26,
+            "pedir_aliados": 4,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-063",
+          "adopted": 13,
+          "completed": 3,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 3,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 6,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-064",
+          "adopted": 15,
+          "completed": 2,
+          "failed": 13,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 13,
+          "deaths": 0,
+          "threats": 30,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 30,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-065",
+          "adopted": 9,
+          "completed": 1,
+          "failed": 8,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 8,
+          "deaths": 0,
+          "threats": 2,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 2,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-066",
+          "adopted": 8,
+          "completed": 1,
+          "failed": 7,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 0,
+          "threats": 12,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 12,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-067",
+          "adopted": 6,
+          "completed": 3,
+          "failed": 3,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 3,
+          "deaths": 0,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 8,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-068",
+          "adopted": 15,
+          "completed": 3,
+          "failed": 12,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 12,
+          "deaths": 0,
+          "threats": 12,
+          "actions": {
+            "proteger": 2,
+            "avisar_alvo": 28,
+            "pedir_aliados": 3,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-069",
+          "adopted": 6,
+          "completed": 4,
+          "failed": 2,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 2,
+          "deaths": 0,
+          "threats": 13,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 17,
+            "pedir_aliados": 7,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-070",
+          "adopted": 6,
+          "completed": 1,
+          "failed": 5,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 5,
+          "deaths": 0,
+          "threats": 9,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 9,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-071",
+          "adopted": 12,
+          "completed": 2,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 8,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-072",
+          "adopted": 18,
+          "completed": 2,
+          "failed": 16,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 16,
+          "deaths": 0,
+          "threats": 5,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 5,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-073",
+          "adopted": 12,
+          "completed": 3,
+          "failed": 9,
+          "declined": 3,
+          "failedNoOwnActionButAlive": 9,
+          "deaths": 0,
+          "threats": 7,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 6,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-074",
+          "adopted": 22,
+          "completed": 5,
+          "failed": 17,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 17,
+          "deaths": 0,
+          "threats": 23,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 48,
+            "pedir_aliados": 14,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-075",
+          "adopted": 22,
+          "completed": 3,
+          "failed": 19,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 19,
+          "deaths": 0,
+          "threats": 5,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 12,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-076",
+          "adopted": 15,
+          "completed": 1,
+          "failed": 14,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 6,
+          "deaths": 1,
+          "threats": 7,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 21,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-077",
+          "adopted": 15,
+          "completed": 4,
+          "failed": 11,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 11,
+          "deaths": 0,
+          "threats": 6,
+          "actions": {
+            "proteger": 2,
+            "avisar_alvo": 2,
+            "pedir_aliados": 2,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-078",
+          "adopted": 16,
+          "completed": 2,
+          "failed": 14,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 14,
+          "deaths": 0,
+          "threats": 7,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 5,
+            "pedir_aliados": 1,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-079",
+          "adopted": 20,
+          "completed": 2,
+          "failed": 18,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 18,
+          "deaths": 0,
+          "threats": 23,
+          "actions": {
+            "proteger": 15,
+            "avisar_alvo": 92,
+            "pedir_aliados": 14,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-080",
+          "adopted": 5,
+          "completed": 1,
+          "failed": 4,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 4,
+          "deaths": 0,
+          "threats": 12,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 11,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-081",
+          "adopted": 14,
+          "completed": 0,
+          "failed": 14,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 0,
+          "deaths": 2,
+          "threats": 14,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 25,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-082",
+          "adopted": 12,
+          "completed": 2,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 18,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 18,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-083",
+          "adopted": 15,
+          "completed": 2,
+          "failed": 13,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 13,
+          "deaths": 0,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 3,
+            "pedir_aliados": 3,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-084",
+          "adopted": 10,
+          "completed": 1,
+          "failed": 9,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 9,
+          "deaths": 0,
+          "threats": 20,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 20,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-085",
+          "adopted": 12,
+          "completed": 2,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 21,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 21,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-086",
+          "adopted": 12,
+          "completed": 2,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 21,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 21,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-087",
+          "adopted": 12,
+          "completed": 2,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 28,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 28,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-088",
+          "adopted": 15,
+          "completed": 3,
+          "failed": 12,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 12,
+          "deaths": 0,
+          "threats": 14,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 6,
+            "pedir_aliados": 8,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-089",
+          "adopted": 11,
+          "completed": 0,
+          "failed": 11,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 0,
+          "deaths": 1,
+          "threats": 5,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 14,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-090",
+          "adopted": 12,
+          "completed": 2,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 11,
+          "actions": {
+            "proteger": 4,
+            "avisar_alvo": 42,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-091",
+          "adopted": 13,
+          "completed": 2,
+          "failed": 11,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 11,
+          "deaths": 0,
+          "threats": 4,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 4,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-092",
+          "adopted": 15,
+          "completed": 1,
+          "failed": 14,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 7,
+          "deaths": 1,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 12,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-093",
+          "adopted": 5,
+          "completed": 1,
+          "failed": 4,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 4,
+          "deaths": 1,
+          "threats": 8,
+          "actions": {
+            "proteger": 1,
+            "avisar_alvo": 15,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-094",
+          "adopted": 8,
+          "completed": 2,
+          "failed": 6,
+          "declined": 8,
+          "failedNoOwnActionButAlive": 0,
+          "deaths": 2,
+          "threats": 6,
+          "actions": {
+            "proteger": 2,
+            "avisar_alvo": 9,
+            "pedir_aliados": 1,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-095",
+          "adopted": 11,
+          "completed": 1,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 6,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 6,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-096",
+          "adopted": 11,
+          "completed": 2,
+          "failed": 9,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 9,
+          "deaths": 0,
+          "threats": 13,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 8,
+            "pedir_aliados": 5,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-097",
+          "adopted": 16,
+          "completed": 2,
+          "failed": 14,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 14,
+          "deaths": 0,
+          "threats": 10,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 10,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-098",
+          "adopted": 11,
+          "completed": 3,
+          "failed": 8,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 8,
+          "deaths": 0,
+          "threats": 8,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 8,
+            "pedir_aliados": 0,
+            "afastar_alvo": 0
+          }
+        },
+        {
+          "seed": "reservado-protecao-099",
+          "adopted": 13,
+          "completed": 3,
+          "failed": 10,
+          "declined": 0,
+          "failedNoOwnActionButAlive": 10,
+          "deaths": 0,
+          "threats": 31,
+          "actions": {
+            "proteger": 0,
+            "avisar_alvo": 16,
+            "pedir_aliados": 15,
+            "afastar_alvo": 0
+          }
+        }
+      ]
+    }
+  },
+  "audit": {
+    "before": 49,
+    "after": 12,
+    "oldRoutineNodes": 44,
+    "monitoringPeriods": 0
+  }
+}

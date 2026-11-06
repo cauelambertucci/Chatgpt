@@ -1,0 +1,851 @@
+{
+  "engine": "revenge-slice-1",
+  "batches": {
+    "livre": {
+      "distribution": {
+        "total": 100,
+        "counts": {
+          "vingança cumprida": 13,
+          "desistência": 70,
+          "alvo morto por outra causa": 1,
+          "reconciliação": 0,
+          "fuga": 14,
+          "objetivo frustrado": 2
+        },
+        "dominant": [
+          "desistência"
+        ],
+        "warning": "Concentração no limiar de 70% ou acima: desistência. Proposta: inspecionar escores e oportunidades; revisar pesos de paz/vingança, disponibilidade de ajuda e limiares do resolvedor, um fator por vez, sem selecionar desfechos por quota."
+      },
+      "outcomes": [
+        {
+          "seed": "livre-000",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-001",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-002",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-003",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-004",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-005",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "livre-006",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-007",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-008",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-009",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-010",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-011",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "livre-012",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "livre-013",
+          "outcome": "objetivo frustrado"
+        },
+        {
+          "seed": "livre-014",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "livre-015",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-016",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-017",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-018",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-019",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-020",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-021",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-022",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-023",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-024",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "livre-025",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "livre-026",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-027",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "livre-028",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "livre-029",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-030",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-031",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-032",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "livre-033",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "livre-034",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-035",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-036",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "livre-037",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-038",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-039",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-040",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-041",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-042",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-043",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-044",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-045",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-046",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-047",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-048",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "livre-049",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-050",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "livre-051",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "livre-052",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-053",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "livre-054",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-055",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "livre-056",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "livre-057",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-058",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "livre-059",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-060",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-061",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-062",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "livre-063",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-064",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-065",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-066",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-067",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-068",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "livre-069",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-070",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-071",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-072",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-073",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-074",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-075",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-076",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-077",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "livre-078",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "livre-079",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-080",
+          "outcome": "objetivo frustrado"
+        },
+        {
+          "seed": "livre-081",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-082",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "livre-083",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-084",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-085",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-086",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-087",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "livre-088",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-089",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "livre-090",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-091",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-092",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-093",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "livre-094",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-095",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-096",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-097",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "livre-098",
+          "outcome": "alvo morto por outra causa"
+        },
+        {
+          "seed": "livre-099",
+          "outcome": "fuga"
+        }
+      ]
+    },
+    "reservado-1a": {
+      "distribution": {
+        "total": 100,
+        "counts": {
+          "vingança cumprida": 14,
+          "desistência": 53,
+          "alvo morto por outra causa": 1,
+          "reconciliação": 0,
+          "fuga": 30,
+          "objetivo frustrado": 2
+        },
+        "dominant": [],
+        "warning": null
+      },
+      "outcomes": [
+        {
+          "seed": "reservado-1a-000",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-001",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-002",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-003",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-004",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-005",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-006",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-007",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-008",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-009",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "reservado-1a-010",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-011",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-012",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-013",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-014",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-015",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-016",
+          "outcome": "objetivo frustrado"
+        },
+        {
+          "seed": "reservado-1a-017",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-018",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-019",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "reservado-1a-020",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-021",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-022",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "reservado-1a-023",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-024",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-025",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-026",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-027",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-028",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-029",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-030",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-031",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-032",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-033",
+          "outcome": "alvo morto por outra causa"
+        },
+        {
+          "seed": "reservado-1a-034",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-035",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-036",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-037",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-038",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-039",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-040",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-041",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-042",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-043",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "reservado-1a-044",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-045",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-046",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-047",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-048",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "reservado-1a-049",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-050",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-051",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-052",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "reservado-1a-053",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-054",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-055",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-056",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "reservado-1a-057",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-058",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-059",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-060",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-061",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-062",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-063",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-064",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-065",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-066",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-067",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-068",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-069",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-070",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-071",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "reservado-1a-072",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-073",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-074",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-075",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-076",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "reservado-1a-077",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-078",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "reservado-1a-079",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-080",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-081",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "reservado-1a-082",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-083",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-084",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-085",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-086",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-087",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "reservado-1a-088",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-089",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-090",
+          "outcome": "objetivo frustrado"
+        },
+        {
+          "seed": "reservado-1a-091",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-092",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-093",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "reservado-1a-094",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-095",
+          "outcome": "fuga"
+        },
+        {
+          "seed": "reservado-1a-096",
+          "outcome": "vingança cumprida"
+        },
+        {
+          "seed": "reservado-1a-097",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-098",
+          "outcome": "desistência"
+        },
+        {
+          "seed": "reservado-1a-099",
+          "outcome": "desistência"
+        }
+      ]
+    }
+  },
+  "sourceHashes": {
+    "validate.ts": "1e027601114f591d4a7e94a98778d992b432b14c7f6182bfd658c5b392e7c728",
+    "scenario.ts": "7da815caebe13a0b86abc5b5da9e26e32c4440e1c8177977417cf4de4a682980",
+    "slice.test.ts": "6ffdb5ac4bce7b27c7bcd62e4b67f655ab9aa75589b67f98588760864c8ee12f",
+    "worker.ts": "8d1a66762f956667b0de225a3f07bc7eaa9aa51b958a3523fad9e57d9cb7beae",
+    "types.ts": "9a7688c18b495329cf81c048d51d2e1c87e7bfbf66e4c91cfc50c65f8a2707c8",
+    "rules.ts": "51c503fa70411aa21d5b1744b3c5d11bb04ca46217e94b8a8a04e1873c0abf63",
+    "report.ts": "890beec17da782089c7103c5b0d28c900dcf556c2fffe30e161e49faa107b73c",
+    "engine.ts": "1585deb8ba154f3dd34ae519409c73465a154bf2713b14a0d3ee861424c82a39"
+  }
+}

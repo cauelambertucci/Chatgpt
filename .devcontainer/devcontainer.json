@@ -1,0 +1,15 @@
+{
+  "name": "Chronicle World — interface v2",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+  "postCreateCommand": "npm ci",
+  "postStartCommand": "npm run dev -- --port 5173 --strictPort > /tmp/chronicle-v2-vite.log 2>&1 &",
+  "forwardPorts": [
+    5173
+  ],
+  "portsAttributes": {
+    "5173": {
+      "label": "Chronicle World v2",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}

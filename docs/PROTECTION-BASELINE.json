@@ -1,0 +1,1813 @@
+{
+  "engine": "agents-slice-1b",
+  "batches": {
+    "pessoal-1b": [
+      {
+        "seed": "pessoal-1b-000",
+        "completed": 1,
+        "failed": 25,
+        "adopted": 26,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-001",
+        "completed": 0,
+        "failed": 8,
+        "adopted": 8,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 1
+      },
+      {
+        "seed": "pessoal-1b-002",
+        "completed": 0,
+        "failed": 7,
+        "adopted": 7,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 1
+      },
+      {
+        "seed": "pessoal-1b-003",
+        "completed": 0,
+        "failed": 13,
+        "adopted": 13,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-004",
+        "completed": 1,
+        "failed": 17,
+        "adopted": 18,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-005",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-006",
+        "completed": 0,
+        "failed": 21,
+        "adopted": 21,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-007",
+        "completed": 0,
+        "failed": 7,
+        "adopted": 7,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 1
+      },
+      {
+        "seed": "pessoal-1b-008",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 7
+      },
+      {
+        "seed": "pessoal-1b-009",
+        "completed": 0,
+        "failed": 20,
+        "adopted": 20,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-010",
+        "completed": 0,
+        "failed": 13,
+        "adopted": 13,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 3
+      },
+      {
+        "seed": "pessoal-1b-011",
+        "completed": 0,
+        "failed": 9,
+        "adopted": 9,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 1
+      },
+      {
+        "seed": "pessoal-1b-012",
+        "completed": 0,
+        "failed": 18,
+        "adopted": 18,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-013",
+        "completed": 0,
+        "failed": 21,
+        "adopted": 21,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-014",
+        "completed": 0,
+        "failed": 17,
+        "adopted": 17,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-015",
+        "completed": 0,
+        "failed": 19,
+        "adopted": 19,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-016",
+        "completed": 2,
+        "failed": 11,
+        "adopted": 13,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 10
+      },
+      {
+        "seed": "pessoal-1b-017",
+        "completed": 1,
+        "failed": 7,
+        "adopted": 8,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 8
+      },
+      {
+        "seed": "pessoal-1b-018",
+        "completed": 0,
+        "failed": 12,
+        "adopted": 12,
+        "declined": 0,
+        "deaths": 3,
+        "threats": 4
+      },
+      {
+        "seed": "pessoal-1b-019",
+        "completed": 1,
+        "failed": 12,
+        "adopted": 13,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-020",
+        "completed": 0,
+        "failed": 13,
+        "adopted": 13,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-021",
+        "completed": 0,
+        "failed": 8,
+        "adopted": 8,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-022",
+        "completed": 0,
+        "failed": 9,
+        "adopted": 9,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-023",
+        "completed": 0,
+        "failed": 9,
+        "adopted": 9,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-024",
+        "completed": 1,
+        "failed": 7,
+        "adopted": 8,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 7
+      },
+      {
+        "seed": "pessoal-1b-025",
+        "completed": 0,
+        "failed": 7,
+        "adopted": 7,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-026",
+        "completed": 0,
+        "failed": 13,
+        "adopted": 13,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-027",
+        "completed": 0,
+        "failed": 16,
+        "adopted": 16,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-028",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-029",
+        "completed": 0,
+        "failed": 13,
+        "adopted": 13,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-030",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-031",
+        "completed": 0,
+        "failed": 9,
+        "adopted": 9,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 1
+      },
+      {
+        "seed": "pessoal-1b-032",
+        "completed": 0,
+        "failed": 16,
+        "adopted": 16,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-033",
+        "completed": 0,
+        "failed": 8,
+        "adopted": 8,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 1
+      },
+      {
+        "seed": "pessoal-1b-034",
+        "completed": 0,
+        "failed": 17,
+        "adopted": 17,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-035",
+        "completed": 0,
+        "failed": 13,
+        "adopted": 13,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-036",
+        "completed": 1,
+        "failed": 13,
+        "adopted": 14,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 8
+      },
+      {
+        "seed": "pessoal-1b-037",
+        "completed": 0,
+        "failed": 20,
+        "adopted": 20,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-038",
+        "completed": 1,
+        "failed": 10,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-039",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-040",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-041",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-042",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-043",
+        "completed": 1,
+        "failed": 15,
+        "adopted": 16,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-044",
+        "completed": 0,
+        "failed": 4,
+        "adopted": 4,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 1
+      },
+      {
+        "seed": "pessoal-1b-045",
+        "completed": 0,
+        "failed": 12,
+        "adopted": 12,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-046",
+        "completed": 0,
+        "failed": 20,
+        "adopted": 20,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-047",
+        "completed": 1,
+        "failed": 18,
+        "adopted": 19,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-048",
+        "completed": 0,
+        "failed": 16,
+        "adopted": 16,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 7
+      },
+      {
+        "seed": "pessoal-1b-049",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 6
+      },
+      {
+        "seed": "pessoal-1b-050",
+        "completed": 1,
+        "failed": 17,
+        "adopted": 18,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-051",
+        "completed": 0,
+        "failed": 17,
+        "adopted": 17,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-052",
+        "completed": 0,
+        "failed": 9,
+        "adopted": 9,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-053",
+        "completed": 0,
+        "failed": 12,
+        "adopted": 12,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-054",
+        "completed": 0,
+        "failed": 16,
+        "adopted": 16,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-055",
+        "completed": 0,
+        "failed": 7,
+        "adopted": 7,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-056",
+        "completed": 0,
+        "failed": 9,
+        "adopted": 9,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-057",
+        "completed": 0,
+        "failed": 22,
+        "adopted": 22,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-058",
+        "completed": 0,
+        "failed": 18,
+        "adopted": 18,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-059",
+        "completed": 0,
+        "failed": 14,
+        "adopted": 14,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-060",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-061",
+        "completed": 0,
+        "failed": 9,
+        "adopted": 9,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-062",
+        "completed": 0,
+        "failed": 7,
+        "adopted": 7,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 1
+      },
+      {
+        "seed": "pessoal-1b-063",
+        "completed": 0,
+        "failed": 17,
+        "adopted": 17,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-064",
+        "completed": 0,
+        "failed": 13,
+        "adopted": 13,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-065",
+        "completed": 1,
+        "failed": 19,
+        "adopted": 20,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-066",
+        "completed": 0,
+        "failed": 14,
+        "adopted": 14,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-067",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-068",
+        "completed": 0,
+        "failed": 22,
+        "adopted": 22,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-069",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-070",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-071",
+        "completed": 1,
+        "failed": 15,
+        "adopted": 16,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 8
+      },
+      {
+        "seed": "pessoal-1b-072",
+        "completed": 1,
+        "failed": 15,
+        "adopted": 16,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-073",
+        "completed": 0,
+        "failed": 12,
+        "adopted": 12,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-074",
+        "completed": 0,
+        "failed": 14,
+        "adopted": 14,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-075",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-076",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 3
+      },
+      {
+        "seed": "pessoal-1b-077",
+        "completed": 0,
+        "failed": 17,
+        "adopted": 17,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 8
+      },
+      {
+        "seed": "pessoal-1b-078",
+        "completed": 0,
+        "failed": 18,
+        "adopted": 18,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-079",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-080",
+        "completed": 1,
+        "failed": 9,
+        "adopted": 10,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-081",
+        "completed": 0,
+        "failed": 20,
+        "adopted": 20,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-082",
+        "completed": 0,
+        "failed": 17,
+        "adopted": 17,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-083",
+        "completed": 0,
+        "failed": 9,
+        "adopted": 9,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 5
+      },
+      {
+        "seed": "pessoal-1b-084",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-085",
+        "completed": 0,
+        "failed": 9,
+        "adopted": 9,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-086",
+        "completed": 0,
+        "failed": 19,
+        "adopted": 19,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-087",
+        "completed": 0,
+        "failed": 17,
+        "adopted": 17,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-088",
+        "completed": 1,
+        "failed": 12,
+        "adopted": 13,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 7
+      },
+      {
+        "seed": "pessoal-1b-089",
+        "completed": 0,
+        "failed": 7,
+        "adopted": 7,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 1
+      },
+      {
+        "seed": "pessoal-1b-090",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-091",
+        "completed": 1,
+        "failed": 13,
+        "adopted": 14,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-092",
+        "completed": 1,
+        "failed": 9,
+        "adopted": 10,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-093",
+        "completed": 0,
+        "failed": 8,
+        "adopted": 8,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 1
+      },
+      {
+        "seed": "pessoal-1b-094",
+        "completed": 0,
+        "failed": 12,
+        "adopted": 12,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-095",
+        "completed": 0,
+        "failed": 13,
+        "adopted": 13,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-096",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-097",
+        "completed": 0,
+        "failed": 3,
+        "adopted": 3,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 1
+      },
+      {
+        "seed": "pessoal-1b-098",
+        "completed": 0,
+        "failed": 20,
+        "adopted": 20,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "pessoal-1b-099",
+        "completed": 0,
+        "failed": 21,
+        "adopted": 21,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 6
+      }
+    ],
+    "reservado-protecao": [
+      {
+        "seed": "reservado-protecao-000",
+        "completed": 1,
+        "failed": 13,
+        "adopted": 14,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-001",
+        "completed": 1,
+        "failed": 11,
+        "adopted": 12,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 3
+      },
+      {
+        "seed": "reservado-protecao-002",
+        "completed": 0,
+        "failed": 9,
+        "adopted": 9,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-003",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-004",
+        "completed": 1,
+        "failed": 18,
+        "adopted": 19,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-005",
+        "completed": 1,
+        "failed": 21,
+        "adopted": 22,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-006",
+        "completed": 1,
+        "failed": 14,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 16
+      },
+      {
+        "seed": "reservado-protecao-007",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-008",
+        "completed": 0,
+        "failed": 10,
+        "adopted": 10,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-009",
+        "completed": 0,
+        "failed": 7,
+        "adopted": 7,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 1
+      },
+      {
+        "seed": "reservado-protecao-010",
+        "completed": 0,
+        "failed": 17,
+        "adopted": 17,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-011",
+        "completed": 0,
+        "failed": 9,
+        "adopted": 9,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-012",
+        "completed": 0,
+        "failed": 12,
+        "adopted": 12,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-013",
+        "completed": 0,
+        "failed": 16,
+        "adopted": 16,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-014",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-015",
+        "completed": 0,
+        "failed": 10,
+        "adopted": 10,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 4
+      },
+      {
+        "seed": "reservado-protecao-016",
+        "completed": 0,
+        "failed": 13,
+        "adopted": 13,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-017",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-018",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-019",
+        "completed": 0,
+        "failed": 9,
+        "adopted": 9,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-020",
+        "completed": 0,
+        "failed": 16,
+        "adopted": 16,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-021",
+        "completed": 1,
+        "failed": 15,
+        "adopted": 16,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 5
+      },
+      {
+        "seed": "reservado-protecao-022",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-023",
+        "completed": 0,
+        "failed": 17,
+        "adopted": 17,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-024",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 9
+      },
+      {
+        "seed": "reservado-protecao-025",
+        "completed": 0,
+        "failed": 6,
+        "adopted": 6,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 1
+      },
+      {
+        "seed": "reservado-protecao-026",
+        "completed": 2,
+        "failed": 19,
+        "adopted": 21,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 6
+      },
+      {
+        "seed": "reservado-protecao-027",
+        "completed": 0,
+        "failed": 16,
+        "adopted": 16,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-028",
+        "completed": 1,
+        "failed": 15,
+        "adopted": 16,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-029",
+        "completed": 0,
+        "failed": 17,
+        "adopted": 17,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 7
+      },
+      {
+        "seed": "reservado-protecao-030",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-031",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-032",
+        "completed": 0,
+        "failed": 18,
+        "adopted": 18,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-033",
+        "completed": 0,
+        "failed": 9,
+        "adopted": 9,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 1
+      },
+      {
+        "seed": "reservado-protecao-034",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 6
+      },
+      {
+        "seed": "reservado-protecao-035",
+        "completed": 0,
+        "failed": 7,
+        "adopted": 7,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-036",
+        "completed": 0,
+        "failed": 21,
+        "adopted": 21,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 3
+      },
+      {
+        "seed": "reservado-protecao-037",
+        "completed": 0,
+        "failed": 24,
+        "adopted": 24,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-038",
+        "completed": 1,
+        "failed": 16,
+        "adopted": 17,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-039",
+        "completed": 0,
+        "failed": 8,
+        "adopted": 8,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 1
+      },
+      {
+        "seed": "reservado-protecao-040",
+        "completed": 0,
+        "failed": 7,
+        "adopted": 7,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-041",
+        "completed": 0,
+        "failed": 17,
+        "adopted": 17,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-042",
+        "completed": 1,
+        "failed": 9,
+        "adopted": 10,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-043",
+        "completed": 0,
+        "failed": 12,
+        "adopted": 12,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-044",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-045",
+        "completed": 0,
+        "failed": 13,
+        "adopted": 13,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 19
+      },
+      {
+        "seed": "reservado-protecao-046",
+        "completed": 0,
+        "failed": 16,
+        "adopted": 16,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-047",
+        "completed": 0,
+        "failed": 12,
+        "adopted": 12,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-048",
+        "completed": 0,
+        "failed": 17,
+        "adopted": 17,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-049",
+        "completed": 0,
+        "failed": 13,
+        "adopted": 13,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-050",
+        "completed": 0,
+        "failed": 13,
+        "adopted": 13,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 4
+      },
+      {
+        "seed": "reservado-protecao-051",
+        "completed": 0,
+        "failed": 13,
+        "adopted": 13,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-052",
+        "completed": 1,
+        "failed": 15,
+        "adopted": 16,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-053",
+        "completed": 1,
+        "failed": 4,
+        "adopted": 5,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-054",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-055",
+        "completed": 0,
+        "failed": 17,
+        "adopted": 17,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-056",
+        "completed": 0,
+        "failed": 8,
+        "adopted": 8,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 1
+      },
+      {
+        "seed": "reservado-protecao-057",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-058",
+        "completed": 0,
+        "failed": 14,
+        "adopted": 14,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-059",
+        "completed": 1,
+        "failed": 11,
+        "adopted": 12,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-060",
+        "completed": 0,
+        "failed": 21,
+        "adopted": 21,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-061",
+        "completed": 0,
+        "failed": 6,
+        "adopted": 6,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 1
+      },
+      {
+        "seed": "reservado-protecao-062",
+        "completed": 0,
+        "failed": 17,
+        "adopted": 17,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-063",
+        "completed": 1,
+        "failed": 12,
+        "adopted": 13,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-064",
+        "completed": 0,
+        "failed": 14,
+        "adopted": 14,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-065",
+        "completed": 0,
+        "failed": 17,
+        "adopted": 17,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-066",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 3
+      },
+      {
+        "seed": "reservado-protecao-067",
+        "completed": 0,
+        "failed": 5,
+        "adopted": 5,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-068",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-069",
+        "completed": 0,
+        "failed": 6,
+        "adopted": 6,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-070",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 9
+      },
+      {
+        "seed": "reservado-protecao-071",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-072",
+        "completed": 1,
+        "failed": 17,
+        "adopted": 18,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-073",
+        "completed": 1,
+        "failed": 14,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 3
+      },
+      {
+        "seed": "reservado-protecao-074",
+        "completed": 0,
+        "failed": 21,
+        "adopted": 21,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-075",
+        "completed": 1,
+        "failed": 21,
+        "adopted": 22,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-076",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 3
+      },
+      {
+        "seed": "reservado-protecao-077",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-078",
+        "completed": 1,
+        "failed": 13,
+        "adopted": 14,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-079",
+        "completed": 1,
+        "failed": 19,
+        "adopted": 20,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-080",
+        "completed": 0,
+        "failed": 5,
+        "adopted": 5,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 1
+      },
+      {
+        "seed": "reservado-protecao-081",
+        "completed": 0,
+        "failed": 13,
+        "adopted": 13,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-082",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-083",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-084",
+        "completed": 0,
+        "failed": 19,
+        "adopted": 19,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-085",
+        "completed": 0,
+        "failed": 12,
+        "adopted": 12,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-086",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-087",
+        "completed": 1,
+        "failed": 11,
+        "adopted": 12,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-088",
+        "completed": 1,
+        "failed": 13,
+        "adopted": 14,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 18
+      },
+      {
+        "seed": "reservado-protecao-089",
+        "completed": 0,
+        "failed": 21,
+        "adopted": 21,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-090",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-091",
+        "completed": 0,
+        "failed": 12,
+        "adopted": 12,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-092",
+        "completed": 0,
+        "failed": 14,
+        "adopted": 14,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-093",
+        "completed": 0,
+        "failed": 9,
+        "adopted": 9,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-094",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 3
+      },
+      {
+        "seed": "reservado-protecao-095",
+        "completed": 0,
+        "failed": 10,
+        "adopted": 10,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 1
+      },
+      {
+        "seed": "reservado-protecao-096",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-097",
+        "completed": 0,
+        "failed": 15,
+        "adopted": 15,
+        "declined": 0,
+        "deaths": 2,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-098",
+        "completed": 0,
+        "failed": 11,
+        "adopted": 11,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 2
+      },
+      {
+        "seed": "reservado-protecao-099",
+        "completed": 0,
+        "failed": 12,
+        "adopted": 12,
+        "declined": 0,
+        "deaths": 1,
+        "threats": 16
+      }
+    ]
+  },
+  "sourceArchive": "reference-baselines/marco1b-source.zip",
+  "archiveSha256": "09462967ed2c0ad5d830cb1989b959bc5a1645600a1a6e4cb1bc900a76d2a9a4",
+  "auditArchive": "reference-baselines/marco1b-audit.json.gz",
+  "auditSha256": "c4910fae0fba33b4a8e979ca19578686f9022a40c7f300f3363f0150f6215309"
+}

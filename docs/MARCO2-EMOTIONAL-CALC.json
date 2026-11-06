@@ -1,0 +1,31 @@
+{
+  "note": "Existing 1d appraisal only; body numbers remain an unimplemented proposal.",
+  "a": {
+    "stimulus": "perda",
+    "emotion": "luto irado",
+    "intensity": 57,
+    "stressDelta": 228,
+    "facet": "rancor",
+    "belief": "vinganca",
+    "change": 3,
+    "appraisal": {
+      "anger": 210,
+      "care": 50,
+      "anxiety": 50
+    }
+  },
+  "b": {
+    "stimulus": "perda",
+    "emotion": "luto solidario",
+    "intensity": 57,
+    "stressDelta": 228,
+    "facet": "compaixao",
+    "belief": "solidariedade",
+    "change": 2,
+    "appraisal": {
+      "anger": 20,
+      "care": 230,
+      "anxiety": 50
+    }
+  }
+}

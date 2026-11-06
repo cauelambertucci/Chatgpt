@@ -1,0 +1,2119 @@
+{
+  "method": "Separate main-thread browser diagnostic; yearly yielding/sampling. PSS sums Chromium process tree. Snapshot + real cross-isolate receiver Worker + frozen payload + JSON string + UTF8 + Blob retained. Sum of per-process RSS high-water marks is a conservative non-simultaneous/shared-pages upper bound.",
+  "rows": [
+    {
+      "mode": "before",
+      "version": "154.0.8037.57",
+      "coreMs": 29445.00000011921,
+      "month": 1200,
+      "snapshotMs": 18.200000017881393,
+      "format": 3,
+      "complete": true,
+      "nextMonth": 1200,
+      "transferAndFreezeMs": 362.7999999821186,
+      "exportMs": 842.5,
+      "jsonBytes": 68648664,
+      "blobBytes": 68648664,
+      "entitiesHash": "011804bb6aeb583d312946049eb5f5cb333bf72c0805cb557d59b08829f4159e",
+      "samples": [
+        {
+          "stage": "warmup-collected",
+          "usedSize": 2069576,
+          "totalSize": 3477504,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 282007,
+          "rssHighWaterKiB": 645684,
+          "processes": 9
+        },
+        {
+          "stage": "month-12",
+          "usedSize": 51144688,
+          "totalSize": 99422208,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 379570,
+          "rssHighWaterKiB": 645804,
+          "processes": 9
+        },
+        {
+          "stage": "month-24",
+          "usedSize": 19222964,
+          "totalSize": 101781504,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 395330,
+          "rssHighWaterKiB": 661572,
+          "processes": 9
+        },
+        {
+          "stage": "month-36",
+          "usedSize": 40822204,
+          "totalSize": 101781504,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 395862,
+          "rssHighWaterKiB": 665044,
+          "processes": 9
+        },
+        {
+          "stage": "month-48",
+          "usedSize": 62960732,
+          "totalSize": 117510144,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 398074,
+          "rssHighWaterKiB": 665948,
+          "processes": 9
+        },
+        {
+          "stage": "month-60",
+          "usedSize": 81862260,
+          "totalSize": 138481664,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 419774,
+          "rssHighWaterKiB": 686028,
+          "processes": 9
+        },
+        {
+          "stage": "month-72",
+          "usedSize": 13760556,
+          "totalSize": 123015168,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 436454,
+          "rssHighWaterKiB": 705632,
+          "processes": 9
+        },
+        {
+          "stage": "month-84",
+          "usedSize": 42835588,
+          "totalSize": 123015168,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 436758,
+          "rssHighWaterKiB": 705632,
+          "processes": 9
+        },
+        {
+          "stage": "month-96",
+          "usedSize": 66451112,
+          "totalSize": 123015168,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 437182,
+          "rssHighWaterKiB": 706072,
+          "processes": 9
+        },
+        {
+          "stage": "month-108",
+          "usedSize": 95697200,
+          "totalSize": 143106048,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 438234,
+          "rssHighWaterKiB": 706084,
+          "processes": 9
+        },
+        {
+          "stage": "month-120",
+          "usedSize": 117653276,
+          "totalSize": 165388288,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 447470,
+          "rssHighWaterKiB": 713708,
+          "processes": 9
+        },
+        {
+          "stage": "month-132",
+          "usedSize": 42384444,
+          "totalSize": 134688768,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 452949,
+          "rssHighWaterKiB": 722760,
+          "processes": 9
+        },
+        {
+          "stage": "month-144",
+          "usedSize": 65454280,
+          "totalSize": 134688768,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 452821,
+          "rssHighWaterKiB": 722840,
+          "processes": 9
+        },
+        {
+          "stage": "month-156",
+          "usedSize": 88375188,
+          "totalSize": 134893568,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 453161,
+          "rssHighWaterKiB": 722840,
+          "processes": 9
+        },
+        {
+          "stage": "month-168",
+          "usedSize": 110948360,
+          "totalSize": 156389376,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 453121,
+          "rssHighWaterKiB": 722208,
+          "processes": 9
+        },
+        {
+          "stage": "month-180",
+          "usedSize": 132440488,
+          "totalSize": 177885184,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 459577,
+          "rssHighWaterKiB": 726044,
+          "processes": 9
+        },
+        {
+          "stage": "month-192",
+          "usedSize": 39627088,
+          "totalSize": 152055808,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 470177,
+          "rssHighWaterKiB": 736644,
+          "processes": 9
+        },
+        {
+          "stage": "month-204",
+          "usedSize": 59713708,
+          "totalSize": 152055808,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 470189,
+          "rssHighWaterKiB": 736656,
+          "processes": 9
+        },
+        {
+          "stage": "month-216",
+          "usedSize": 16554048,
+          "totalSize": 130822144,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 470597,
+          "rssHighWaterKiB": 737064,
+          "processes": 9
+        },
+        {
+          "stage": "month-228",
+          "usedSize": 54913424,
+          "totalSize": 130822144,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 470458,
+          "rssHighWaterKiB": 736932,
+          "processes": 9
+        },
+        {
+          "stage": "month-240",
+          "usedSize": 73807740,
+          "totalSize": 131129344,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 470818,
+          "rssHighWaterKiB": 737292,
+          "processes": 9
+        },
+        {
+          "stage": "month-252",
+          "usedSize": 18803628,
+          "totalSize": 133808128,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 470830,
+          "rssHighWaterKiB": 737300,
+          "processes": 9
+        },
+        {
+          "stage": "month-264",
+          "usedSize": 55773204,
+          "totalSize": 133808128,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 470686,
+          "rssHighWaterKiB": 737156,
+          "processes": 9
+        },
+        {
+          "stage": "month-276",
+          "usedSize": 73780864,
+          "totalSize": 133808128,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 470858,
+          "rssHighWaterKiB": 737328,
+          "processes": 9
+        },
+        {
+          "stage": "month-288",
+          "usedSize": 20936144,
+          "totalSize": 136953856,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 470966,
+          "rssHighWaterKiB": 739152,
+          "processes": 9
+        },
+        {
+          "stage": "month-300",
+          "usedSize": 57825236,
+          "totalSize": 136953856,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 470857,
+          "rssHighWaterKiB": 739168,
+          "processes": 9
+        },
+        {
+          "stage": "month-312",
+          "usedSize": 75899072,
+          "totalSize": 136953856,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 468705,
+          "rssHighWaterKiB": 743856,
+          "processes": 9
+        },
+        {
+          "stage": "month-324",
+          "usedSize": 92785644,
+          "totalSize": 146653184,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 156085,
+          "pssKiB": 468725,
+          "rssHighWaterKiB": 743856,
+          "processes": 9
+        },
+        {
+          "stage": "month-336",
+          "usedSize": 23736532,
+          "totalSize": 144556032,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 469021,
+          "rssHighWaterKiB": 743856,
+          "processes": 9
+        },
+        {
+          "stage": "month-348",
+          "usedSize": 60664628,
+          "totalSize": 144556032,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 469013,
+          "rssHighWaterKiB": 743856,
+          "processes": 9
+        },
+        {
+          "stage": "month-360",
+          "usedSize": 78322264,
+          "totalSize": 144556032,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 468977,
+          "rssHighWaterKiB": 743856,
+          "processes": 9
+        },
+        {
+          "stage": "month-372",
+          "usedSize": 95713928,
+          "totalSize": 150257664,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 469617,
+          "rssHighWaterKiB": 743856,
+          "processes": 9
+        },
+        {
+          "stage": "month-384",
+          "usedSize": 113327860,
+          "totalSize": 172539904,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 469146,
+          "rssHighWaterKiB": 743860,
+          "processes": 9
+        },
+        {
+          "stage": "month-396",
+          "usedSize": 63602884,
+          "totalSize": 151523328,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 433238,
+          "rssHighWaterKiB": 743860,
+          "processes": 9
+        },
+        {
+          "stage": "month-408",
+          "usedSize": 81184076,
+          "totalSize": 151523328,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 433106,
+          "rssHighWaterKiB": 743860,
+          "processes": 9
+        },
+        {
+          "stage": "month-420",
+          "usedSize": 98058860,
+          "totalSize": 152834048,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 434226,
+          "rssHighWaterKiB": 743860,
+          "processes": 9
+        },
+        {
+          "stage": "month-432",
+          "usedSize": 115437864,
+          "totalSize": 175116288,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 455874,
+          "rssHighWaterKiB": 743860,
+          "processes": 9
+        },
+        {
+          "stage": "month-444",
+          "usedSize": 66241100,
+          "totalSize": 153620480,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 455786,
+          "rssHighWaterKiB": 743860,
+          "processes": 9
+        },
+        {
+          "stage": "month-456",
+          "usedSize": 83821180,
+          "totalSize": 153620480,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 455946,
+          "rssHighWaterKiB": 743860,
+          "processes": 9
+        },
+        {
+          "stage": "month-468",
+          "usedSize": 100658884,
+          "totalSize": 155193344,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 456110,
+          "rssHighWaterKiB": 743860,
+          "processes": 9
+        },
+        {
+          "stage": "month-480",
+          "usedSize": 117731932,
+          "totalSize": 178262016,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 458426,
+          "rssHighWaterKiB": 743860,
+          "processes": 9
+        },
+        {
+          "stage": "month-492",
+          "usedSize": 32801908,
+          "totalSize": 158339072,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 475026,
+          "rssHighWaterKiB": 743860,
+          "processes": 9
+        },
+        {
+          "stage": "month-504",
+          "usedSize": 69439016,
+          "totalSize": 158339072,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 475554,
+          "rssHighWaterKiB": 746288,
+          "processes": 9
+        },
+        {
+          "stage": "month-516",
+          "usedSize": 86960940,
+          "totalSize": 158339072,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 475398,
+          "rssHighWaterKiB": 747224,
+          "processes": 9
+        },
+        {
+          "stage": "month-528",
+          "usedSize": 103840112,
+          "totalSize": 159125504,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 475626,
+          "rssHighWaterKiB": 747224,
+          "processes": 9
+        },
+        {
+          "stage": "month-540",
+          "usedSize": 120594192,
+          "totalSize": 181669888,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 475558,
+          "rssHighWaterKiB": 747224,
+          "processes": 9
+        },
+        {
+          "stage": "month-552",
+          "usedSize": 140570884,
+          "totalSize": 204902400,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 484882,
+          "rssHighWaterKiB": 753392,
+          "processes": 9
+        },
+        {
+          "stage": "month-564",
+          "usedSize": 73097776,
+          "totalSize": 170364928,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 485026,
+          "rssHighWaterKiB": 753536,
+          "processes": 9
+        },
+        {
+          "stage": "month-576",
+          "usedSize": 90572100,
+          "totalSize": 170364928,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 484946,
+          "rssHighWaterKiB": 753452,
+          "processes": 9
+        },
+        {
+          "stage": "month-588",
+          "usedSize": 107473380,
+          "totalSize": 170364928,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 485206,
+          "rssHighWaterKiB": 753712,
+          "processes": 9
+        },
+        {
+          "stage": "month-600",
+          "usedSize": 124050336,
+          "totalSize": 185307136,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 485766,
+          "rssHighWaterKiB": 754272,
+          "processes": 9
+        },
+        {
+          "stage": "month-612",
+          "usedSize": 143593628,
+          "totalSize": 207851520,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 488650,
+          "rssHighWaterKiB": 757156,
+          "processes": 9
+        },
+        {
+          "stage": "month-624",
+          "usedSize": 183690740,
+          "totalSize": 224366592,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 505274,
+          "rssHighWaterKiB": 773780,
+          "processes": 9
+        },
+        {
+          "stage": "month-636",
+          "usedSize": 77211756,
+          "totalSize": 169054208,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 505414,
+          "rssHighWaterKiB": 773920,
+          "processes": 9
+        },
+        {
+          "stage": "month-648",
+          "usedSize": 94577608,
+          "totalSize": 169054208,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 505526,
+          "rssHighWaterKiB": 774032,
+          "processes": 9
+        },
+        {
+          "stage": "month-660",
+          "usedSize": 111393776,
+          "totalSize": 169054208,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 505826,
+          "rssHighWaterKiB": 774328,
+          "processes": 9
+        },
+        {
+          "stage": "month-672",
+          "usedSize": 127980176,
+          "totalSize": 189239296,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 506042,
+          "rssHighWaterKiB": 774544,
+          "processes": 9
+        },
+        {
+          "stage": "month-684",
+          "usedSize": 147712988,
+          "totalSize": 212570112,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 506126,
+          "rssHighWaterKiB": 775296,
+          "processes": 9
+        },
+        {
+          "stage": "month-696",
+          "usedSize": 168994200,
+          "totalSize": 234065920,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 514770,
+          "rssHighWaterKiB": 783272,
+          "processes": 9
+        },
+        {
+          "stage": "month-708",
+          "usedSize": 81714476,
+          "totalSize": 190287872,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 515138,
+          "rssHighWaterKiB": 786252,
+          "processes": 9
+        },
+        {
+          "stage": "month-720",
+          "usedSize": 99076344,
+          "totalSize": 190287872,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 514990,
+          "rssHighWaterKiB": 786252,
+          "processes": 9
+        },
+        {
+          "stage": "month-732",
+          "usedSize": 116199164,
+          "totalSize": 190287872,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 515194,
+          "rssHighWaterKiB": 786252,
+          "processes": 9
+        },
+        {
+          "stage": "month-744",
+          "usedSize": 132893200,
+          "totalSize": 194482176,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 516030,
+          "rssHighWaterKiB": 786252,
+          "processes": 9
+        },
+        {
+          "stage": "month-756",
+          "usedSize": 152256192,
+          "totalSize": 217026560,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 516254,
+          "rssHighWaterKiB": 786252,
+          "processes": 9
+        },
+        {
+          "stage": "month-768",
+          "usedSize": 173545252,
+          "totalSize": 238784512,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 519394,
+          "rssHighWaterKiB": 787896,
+          "processes": 9
+        },
+        {
+          "stage": "month-780",
+          "usedSize": 213116276,
+          "totalSize": 255037440,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 536322,
+          "rssHighWaterKiB": 804824,
+          "processes": 9
+        },
+        {
+          "stage": "month-792",
+          "usedSize": 86449576,
+          "totalSize": 198938624,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 536350,
+          "rssHighWaterKiB": 804852,
+          "processes": 9
+        },
+        {
+          "stage": "month-804",
+          "usedSize": 103737140,
+          "totalSize": 198938624,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 536654,
+          "rssHighWaterKiB": 805156,
+          "processes": 9
+        },
+        {
+          "stage": "month-816",
+          "usedSize": 120812560,
+          "totalSize": 198938624,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 536874,
+          "rssHighWaterKiB": 805376,
+          "processes": 9
+        },
+        {
+          "stage": "month-828",
+          "usedSize": 137126260,
+          "totalSize": 198938624,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 536646,
+          "rssHighWaterKiB": 805148,
+          "processes": 9
+        },
+        {
+          "stage": "month-840",
+          "usedSize": 158102476,
+          "totalSize": 222777344,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 538002,
+          "rssHighWaterKiB": 806504,
+          "processes": 9
+        },
+        {
+          "stage": "month-852",
+          "usedSize": 179449876,
+          "totalSize": 244535296,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 538030,
+          "rssHighWaterKiB": 806532,
+          "processes": 9
+        },
+        {
+          "stage": "month-864",
+          "usedSize": 200765144,
+          "totalSize": 265768960,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 547874,
+          "rssHighWaterKiB": 816376,
+          "processes": 9
+        },
+        {
+          "stage": "month-876",
+          "usedSize": 240095420,
+          "totalSize": 281497600,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 563762,
+          "rssHighWaterKiB": 832264,
+          "processes": 9
+        },
+        {
+          "stage": "month-888",
+          "usedSize": 92347864,
+          "totalSize": 212127744,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 563418,
+          "rssHighWaterKiB": 832248,
+          "processes": 9
+        },
+        {
+          "stage": "month-900",
+          "usedSize": 109629396,
+          "totalSize": 212127744,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 563854,
+          "rssHighWaterKiB": 834824,
+          "processes": 9
+        },
+        {
+          "stage": "month-912",
+          "usedSize": 126751968,
+          "totalSize": 212127744,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 563554,
+          "rssHighWaterKiB": 834824,
+          "processes": 9
+        },
+        {
+          "stage": "month-924",
+          "usedSize": 143187172,
+          "totalSize": 212127744,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 563650,
+          "rssHighWaterKiB": 834824,
+          "processes": 9
+        },
+        {
+          "stage": "month-936",
+          "usedSize": 163096760,
+          "totalSize": 227332096,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 563938,
+          "rssHighWaterKiB": 834824,
+          "processes": 9
+        },
+        {
+          "stage": "month-948",
+          "usedSize": 184442964,
+          "totalSize": 248827904,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 563834,
+          "rssHighWaterKiB": 834824,
+          "processes": 9
+        },
+        {
+          "stage": "month-960",
+          "usedSize": 205786772,
+          "totalSize": 270585856,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 564338,
+          "rssHighWaterKiB": 834824,
+          "processes": 9
+        },
+        {
+          "stage": "month-972",
+          "usedSize": 244857564,
+          "totalSize": 286576640,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 569718,
+          "rssHighWaterKiB": 838220,
+          "processes": 9
+        },
+        {
+          "stage": "month-984",
+          "usedSize": 62377304,
+          "totalSize": 227594240,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 592798,
+          "rssHighWaterKiB": 861300,
+          "processes": 9
+        },
+        {
+          "stage": "month-996",
+          "usedSize": 98657828,
+          "totalSize": 227594240,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 592230,
+          "rssHighWaterKiB": 861064,
+          "processes": 9
+        },
+        {
+          "stage": "month-1008",
+          "usedSize": 116039600,
+          "totalSize": 227594240,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 592290,
+          "rssHighWaterKiB": 861064,
+          "processes": 9
+        },
+        {
+          "stage": "month-1020",
+          "usedSize": 132989844,
+          "totalSize": 227594240,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 592378,
+          "rssHighWaterKiB": 861064,
+          "processes": 9
+        },
+        {
+          "stage": "month-1032",
+          "usedSize": 149399580,
+          "totalSize": 227594240,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 592354,
+          "rssHighWaterKiB": 861064,
+          "processes": 9
+        },
+        {
+          "stage": "month-1044",
+          "usedSize": 169360184,
+          "totalSize": 233885696,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 592770,
+          "rssHighWaterKiB": 861272,
+          "processes": 9
+        },
+        {
+          "stage": "month-1056",
+          "usedSize": 190735324,
+          "totalSize": 255381504,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 592710,
+          "rssHighWaterKiB": 861212,
+          "processes": 9
+        },
+        {
+          "stage": "month-1068",
+          "usedSize": 212074504,
+          "totalSize": 276877312,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 593282,
+          "rssHighWaterKiB": 861784,
+          "processes": 9
+        },
+        {
+          "stage": "month-1080",
+          "usedSize": 251225040,
+          "totalSize": 292868096,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 593382,
+          "rssHighWaterKiB": 863340,
+          "processes": 9
+        },
+        {
+          "stage": "month-1092",
+          "usedSize": 267958432,
+          "totalSize": 315150336,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 599018,
+          "rssHighWaterKiB": 867596,
+          "processes": 9
+        },
+        {
+          "stage": "month-1104",
+          "usedSize": 283709484,
+          "totalSize": 337432576,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 614726,
+          "rssHighWaterKiB": 890216,
+          "processes": 9
+        },
+        {
+          "stage": "month-1116",
+          "usedSize": 105435980,
+          "totalSize": 242536448,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 614146,
+          "rssHighWaterKiB": 889936,
+          "processes": 9
+        },
+        {
+          "stage": "month-1128",
+          "usedSize": 122272524,
+          "totalSize": 242536448,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 612014,
+          "rssHighWaterKiB": 889936,
+          "processes": 9
+        },
+        {
+          "stage": "month-1140",
+          "usedSize": 139313696,
+          "totalSize": 242536448,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 612086,
+          "rssHighWaterKiB": 889936,
+          "processes": 9
+        },
+        {
+          "stage": "month-1152",
+          "usedSize": 155295268,
+          "totalSize": 242536448,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 612142,
+          "rssHighWaterKiB": 889936,
+          "processes": 9
+        },
+        {
+          "stage": "month-1164",
+          "usedSize": 176366476,
+          "totalSize": 242536448,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 612162,
+          "rssHighWaterKiB": 889936,
+          "processes": 9
+        },
+        {
+          "stage": "month-1176",
+          "usedSize": 197716556,
+          "totalSize": 262459392,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 612366,
+          "rssHighWaterKiB": 890076,
+          "processes": 9
+        },
+        {
+          "stage": "month-1188",
+          "usedSize": 236728996,
+          "totalSize": 278450176,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 612938,
+          "rssHighWaterKiB": 890648,
+          "processes": 9
+        },
+        {
+          "stage": "month-1200",
+          "usedSize": 255853776,
+          "totalSize": 301518848,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 612942,
+          "rssHighWaterKiB": 892096,
+          "processes": 9
+        },
+        {
+          "stage": "snapshot",
+          "usedSize": 258764812,
+          "totalSize": 303812608,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 156085,
+          "pssKiB": 615842,
+          "rssHighWaterKiB": 893552,
+          "processes": 9
+        },
+        {
+          "stage": "receiver-clone-and-freeze",
+          "usedSize": 259794364,
+          "totalSize": 304803840,
+          "embedderHeapUsedSize": 807888,
+          "backingStorageSize": 156724,
+          "pssKiB": 668115,
+          "rssHighWaterKiB": 1032348,
+          "processes": 9
+        },
+        {
+          "stage": "JSON-and-UTF8-held",
+          "usedSize": 259801584,
+          "totalSize": 304803840,
+          "embedderHeapUsedSize": 807888,
+          "backingStorageSize": 156724,
+          "pssKiB": 879144,
+          "rssHighWaterKiB": 1347520,
+          "processes": 9
+        }
+      ]
+    },
+    {
+      "mode": "after",
+      "version": "154.0.8037.57",
+      "coreMs": 29593.999999940395,
+      "month": 1200,
+      "snapshotMs": 20.099999994039536,
+      "format": 3,
+      "complete": true,
+      "nextMonth": 1200,
+      "transferAndFreezeMs": 338.30000001192093,
+      "exportMs": 733.7999999821186,
+      "jsonBytes": 68648665,
+      "blobBytes": 68648665,
+      "entitiesHash": "011804bb6aeb583d312946049eb5f5cb333bf72c0805cb557d59b08829f4159e",
+      "samples": [
+        {
+          "stage": "warmup-collected",
+          "usedSize": 2070064,
+          "totalSize": 2691072,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 282919,
+          "rssHighWaterKiB": 647336,
+          "processes": 9
+        },
+        {
+          "stage": "month-12",
+          "usedSize": 50973880,
+          "totalSize": 99422208,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 379935,
+          "rssHighWaterKiB": 647340,
+          "processes": 9
+        },
+        {
+          "stage": "month-24",
+          "usedSize": 19075196,
+          "totalSize": 100732928,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 395740,
+          "rssHighWaterKiB": 662556,
+          "processes": 9
+        },
+        {
+          "stage": "month-36",
+          "usedSize": 40713128,
+          "totalSize": 100732928,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 396022,
+          "rssHighWaterKiB": 666208,
+          "processes": 9
+        },
+        {
+          "stage": "month-48",
+          "usedSize": 62904220,
+          "totalSize": 117510144,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 398554,
+          "rssHighWaterKiB": 666872,
+          "processes": 9
+        },
+        {
+          "stage": "month-60",
+          "usedSize": 81752452,
+          "totalSize": 139005952,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 420186,
+          "rssHighWaterKiB": 687016,
+          "processes": 9
+        },
+        {
+          "stage": "month-72",
+          "usedSize": 13755700,
+          "totalSize": 130617344,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 437030,
+          "rssHighWaterKiB": 707012,
+          "processes": 9
+        },
+        {
+          "stage": "month-84",
+          "usedSize": 42785820,
+          "totalSize": 130617344,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 437326,
+          "rssHighWaterKiB": 707012,
+          "processes": 9
+        },
+        {
+          "stage": "month-96",
+          "usedSize": 66384672,
+          "totalSize": 130617344,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 437550,
+          "rssHighWaterKiB": 707352,
+          "processes": 9
+        },
+        {
+          "stage": "month-108",
+          "usedSize": 95769788,
+          "totalSize": 143106048,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 438370,
+          "rssHighWaterKiB": 707364,
+          "processes": 9
+        },
+        {
+          "stage": "month-120",
+          "usedSize": 117618700,
+          "totalSize": 165126144,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 447990,
+          "rssHighWaterKiB": 714800,
+          "processes": 9
+        },
+        {
+          "stage": "month-132",
+          "usedSize": 42388284,
+          "totalSize": 141766656,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 453869,
+          "rssHighWaterKiB": 723896,
+          "processes": 9
+        },
+        {
+          "stage": "month-144",
+          "usedSize": 65528756,
+          "totalSize": 141766656,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 452665,
+          "rssHighWaterKiB": 723916,
+          "processes": 9
+        },
+        {
+          "stage": "month-156",
+          "usedSize": 88458440,
+          "totalSize": 141971456,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 452725,
+          "rssHighWaterKiB": 723928,
+          "processes": 9
+        },
+        {
+          "stage": "month-168",
+          "usedSize": 110920760,
+          "totalSize": 156127232,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 454117,
+          "rssHighWaterKiB": 723928,
+          "processes": 9
+        },
+        {
+          "stage": "month-180",
+          "usedSize": 132444684,
+          "totalSize": 177360896,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 459270,
+          "rssHighWaterKiB": 727316,
+          "processes": 9
+        },
+        {
+          "stage": "month-192",
+          "usedSize": 39669456,
+          "totalSize": 159920128,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 470926,
+          "rssHighWaterKiB": 738972,
+          "processes": 9
+        },
+        {
+          "stage": "month-204",
+          "usedSize": 59747164,
+          "totalSize": 159920128,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 470742,
+          "rssHighWaterKiB": 738788,
+          "processes": 9
+        },
+        {
+          "stage": "month-216",
+          "usedSize": 16584312,
+          "totalSize": 133181440,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 470362,
+          "rssHighWaterKiB": 738408,
+          "processes": 9
+        },
+        {
+          "stage": "month-228",
+          "usedSize": 54955784,
+          "totalSize": 133181440,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 470350,
+          "rssHighWaterKiB": 738396,
+          "processes": 9
+        },
+        {
+          "stage": "month-240",
+          "usedSize": 73855232,
+          "totalSize": 133488640,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 470717,
+          "rssHighWaterKiB": 738768,
+          "processes": 9
+        },
+        {
+          "stage": "month-252",
+          "usedSize": 18804100,
+          "totalSize": 136167424,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 470669,
+          "rssHighWaterKiB": 738720,
+          "processes": 9
+        },
+        {
+          "stage": "month-264",
+          "usedSize": 55820896,
+          "totalSize": 136167424,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 470369,
+          "rssHighWaterKiB": 738708,
+          "processes": 9
+        },
+        {
+          "stage": "month-276",
+          "usedSize": 73731620,
+          "totalSize": 136167424,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 470361,
+          "rssHighWaterKiB": 738708,
+          "processes": 9
+        },
+        {
+          "stage": "month-288",
+          "usedSize": 20936232,
+          "totalSize": 137478144,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 470453,
+          "rssHighWaterKiB": 740100,
+          "processes": 9
+        },
+        {
+          "stage": "month-300",
+          "usedSize": 57934580,
+          "totalSize": 137478144,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 470525,
+          "rssHighWaterKiB": 741096,
+          "processes": 9
+        },
+        {
+          "stage": "month-312",
+          "usedSize": 76007444,
+          "totalSize": 137740288,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 470688,
+          "rssHighWaterKiB": 745336,
+          "processes": 9
+        },
+        {
+          "stage": "month-324",
+          "usedSize": 92838216,
+          "totalSize": 146653184,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 468511,
+          "rssHighWaterKiB": 744748,
+          "processes": 9
+        },
+        {
+          "stage": "month-336",
+          "usedSize": 110561440,
+          "totalSize": 169197568,
+          "embedderHeapUsedSize": 307376,
+          "backingStorageSize": 161273,
+          "pssKiB": 468427,
+          "rssHighWaterKiB": 744748,
+          "processes": 9
+        },
+        {
+          "stage": "month-348",
+          "usedSize": 60678584,
+          "totalSize": 146391040,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 468511,
+          "rssHighWaterKiB": 744748,
+          "processes": 9
+        },
+        {
+          "stage": "month-360",
+          "usedSize": 78292136,
+          "totalSize": 146391040,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 468583,
+          "rssHighWaterKiB": 744752,
+          "processes": 9
+        },
+        {
+          "stage": "month-372",
+          "usedSize": 95677792,
+          "totalSize": 149995520,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 469255,
+          "rssHighWaterKiB": 744752,
+          "processes": 9
+        },
+        {
+          "stage": "month-384",
+          "usedSize": 26665864,
+          "totalSize": 151785472,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 468639,
+          "rssHighWaterKiB": 744752,
+          "processes": 9
+        },
+        {
+          "stage": "month-396",
+          "usedSize": 63608668,
+          "totalSize": 151785472,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 468395,
+          "rssHighWaterKiB": 744752,
+          "processes": 9
+        },
+        {
+          "stage": "month-408",
+          "usedSize": 81195332,
+          "totalSize": 151785472,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 432835,
+          "rssHighWaterKiB": 744752,
+          "processes": 9
+        },
+        {
+          "stage": "month-420",
+          "usedSize": 98019004,
+          "totalSize": 152834048,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 433475,
+          "rssHighWaterKiB": 744752,
+          "processes": 9
+        },
+        {
+          "stage": "month-432",
+          "usedSize": 29440900,
+          "totalSize": 157290496,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 454935,
+          "rssHighWaterKiB": 744752,
+          "processes": 9
+        },
+        {
+          "stage": "month-444",
+          "usedSize": 66293632,
+          "totalSize": 157290496,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 454823,
+          "rssHighWaterKiB": 744752,
+          "processes": 9
+        },
+        {
+          "stage": "month-456",
+          "usedSize": 83823704,
+          "totalSize": 157290496,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 455251,
+          "rssHighWaterKiB": 744752,
+          "processes": 9
+        },
+        {
+          "stage": "month-468",
+          "usedSize": 100724748,
+          "totalSize": 157290496,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 455327,
+          "rssHighWaterKiB": 744752,
+          "processes": 9
+        },
+        {
+          "stage": "month-480",
+          "usedSize": 117730008,
+          "totalSize": 177999872,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 458151,
+          "rssHighWaterKiB": 744752,
+          "processes": 9
+        },
+        {
+          "stage": "month-492",
+          "usedSize": 157748436,
+          "totalSize": 195039232,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 474427,
+          "rssHighWaterKiB": 744752,
+          "processes": 9
+        },
+        {
+          "stage": "month-504",
+          "usedSize": 69507300,
+          "totalSize": 166727680,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 474951,
+          "rssHighWaterKiB": 747344,
+          "processes": 9
+        },
+        {
+          "stage": "month-516",
+          "usedSize": 87074724,
+          "totalSize": 166727680,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 475019,
+          "rssHighWaterKiB": 747576,
+          "processes": 9
+        },
+        {
+          "stage": "month-528",
+          "usedSize": 103969332,
+          "totalSize": 166727680,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 475079,
+          "rssHighWaterKiB": 747576,
+          "processes": 9
+        },
+        {
+          "stage": "month-540",
+          "usedSize": 120706420,
+          "totalSize": 181932032,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 475419,
+          "rssHighWaterKiB": 747576,
+          "processes": 9
+        },
+        {
+          "stage": "month-552",
+          "usedSize": 140678300,
+          "totalSize": 204902400,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 484331,
+          "rssHighWaterKiB": 754276,
+          "processes": 9
+        },
+        {
+          "stage": "month-564",
+          "usedSize": 73201500,
+          "totalSize": 172986368,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 484427,
+          "rssHighWaterKiB": 754372,
+          "processes": 9
+        },
+        {
+          "stage": "month-576",
+          "usedSize": 90654080,
+          "totalSize": 172986368,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 484483,
+          "rssHighWaterKiB": 754428,
+          "processes": 9
+        },
+        {
+          "stage": "month-588",
+          "usedSize": 107522748,
+          "totalSize": 172986368,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 484659,
+          "rssHighWaterKiB": 754604,
+          "processes": 9
+        },
+        {
+          "stage": "month-600",
+          "usedSize": 124281844,
+          "totalSize": 185569280,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 485107,
+          "rssHighWaterKiB": 755052,
+          "processes": 9
+        },
+        {
+          "stage": "month-612",
+          "usedSize": 143644260,
+          "totalSize": 208113664,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 488087,
+          "rssHighWaterKiB": 758032,
+          "processes": 9
+        },
+        {
+          "stage": "month-624",
+          "usedSize": 40920424,
+          "totalSize": 182685696,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 504691,
+          "rssHighWaterKiB": 774636,
+          "processes": 9
+        },
+        {
+          "stage": "month-636",
+          "usedSize": 77359464,
+          "totalSize": 182685696,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 504935,
+          "rssHighWaterKiB": 774880,
+          "processes": 9
+        },
+        {
+          "stage": "month-648",
+          "usedSize": 94705552,
+          "totalSize": 182685696,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 505051,
+          "rssHighWaterKiB": 774996,
+          "processes": 9
+        },
+        {
+          "stage": "month-660",
+          "usedSize": 111491008,
+          "totalSize": 182685696,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 505159,
+          "rssHighWaterKiB": 775100,
+          "processes": 9
+        },
+        {
+          "stage": "month-672",
+          "usedSize": 128106952,
+          "totalSize": 189501440,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 505547,
+          "rssHighWaterKiB": 775488,
+          "processes": 9
+        },
+        {
+          "stage": "month-684",
+          "usedSize": 147864768,
+          "totalSize": 211783680,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 505435,
+          "rssHighWaterKiB": 775916,
+          "processes": 9
+        },
+        {
+          "stage": "month-696",
+          "usedSize": 169190072,
+          "totalSize": 234065920,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 514183,
+          "rssHighWaterKiB": 784124,
+          "processes": 9
+        },
+        {
+          "stage": "month-708",
+          "usedSize": 81696576,
+          "totalSize": 189501440,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 515007,
+          "rssHighWaterKiB": 787544,
+          "processes": 9
+        },
+        {
+          "stage": "month-720",
+          "usedSize": 99035248,
+          "totalSize": 189501440,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 514963,
+          "rssHighWaterKiB": 787544,
+          "processes": 9
+        },
+        {
+          "stage": "month-732",
+          "usedSize": 116248500,
+          "totalSize": 189501440,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 515135,
+          "rssHighWaterKiB": 787544,
+          "processes": 9
+        },
+        {
+          "stage": "month-744",
+          "usedSize": 133002636,
+          "totalSize": 194482176,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 515559,
+          "rssHighWaterKiB": 787544,
+          "processes": 9
+        },
+        {
+          "stage": "month-756",
+          "usedSize": 152237256,
+          "totalSize": 217288704,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 515623,
+          "rssHighWaterKiB": 787544,
+          "processes": 9
+        },
+        {
+          "stage": "month-768",
+          "usedSize": 173571788,
+          "totalSize": 238522368,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 519019,
+          "rssHighWaterKiB": 788960,
+          "processes": 9
+        },
+        {
+          "stage": "month-780",
+          "usedSize": 213145956,
+          "totalSize": 254513152,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 535563,
+          "rssHighWaterKiB": 805504,
+          "processes": 9
+        },
+        {
+          "stage": "month-792",
+          "usedSize": 86436560,
+          "totalSize": 202608640,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 535591,
+          "rssHighWaterKiB": 805532,
+          "processes": 9
+        },
+        {
+          "stage": "month-804",
+          "usedSize": 103760564,
+          "totalSize": 202608640,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 535707,
+          "rssHighWaterKiB": 805648,
+          "processes": 9
+        },
+        {
+          "stage": "month-816",
+          "usedSize": 120775264,
+          "totalSize": 202608640,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 535795,
+          "rssHighWaterKiB": 805736,
+          "processes": 9
+        },
+        {
+          "stage": "month-828",
+          "usedSize": 137065864,
+          "totalSize": 202608640,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 535863,
+          "rssHighWaterKiB": 805804,
+          "processes": 9
+        },
+        {
+          "stage": "month-840",
+          "usedSize": 158098464,
+          "totalSize": 222515200,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 536739,
+          "rssHighWaterKiB": 806680,
+          "processes": 9
+        },
+        {
+          "stage": "month-852",
+          "usedSize": 179422476,
+          "totalSize": 243748864,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 525759,
+          "rssHighWaterKiB": 806248,
+          "processes": 9
+        },
+        {
+          "stage": "month-864",
+          "usedSize": 200773056,
+          "totalSize": 265506816,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 547171,
+          "rssHighWaterKiB": 817112,
+          "processes": 9
+        },
+        {
+          "stage": "month-876",
+          "usedSize": 240076268,
+          "totalSize": 281759744,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 563215,
+          "rssHighWaterKiB": 833240,
+          "processes": 9
+        },
+        {
+          "stage": "month-888",
+          "usedSize": 92312916,
+          "totalSize": 214224896,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 563031,
+          "rssHighWaterKiB": 833240,
+          "processes": 9
+        },
+        {
+          "stage": "month-900",
+          "usedSize": 109603280,
+          "totalSize": 214224896,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 563459,
+          "rssHighWaterKiB": 835696,
+          "processes": 9
+        },
+        {
+          "stage": "month-912",
+          "usedSize": 126694816,
+          "totalSize": 214224896,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 563391,
+          "rssHighWaterKiB": 835696,
+          "processes": 9
+        },
+        {
+          "stage": "month-924",
+          "usedSize": 143165620,
+          "totalSize": 214224896,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 563171,
+          "rssHighWaterKiB": 835696,
+          "processes": 9
+        },
+        {
+          "stage": "month-936",
+          "usedSize": 163118416,
+          "totalSize": 227594240,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 563583,
+          "rssHighWaterKiB": 835696,
+          "processes": 9
+        },
+        {
+          "stage": "month-948",
+          "usedSize": 184428708,
+          "totalSize": 249352192,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 563499,
+          "rssHighWaterKiB": 835696,
+          "processes": 9
+        },
+        {
+          "stage": "month-960",
+          "usedSize": 205776812,
+          "totalSize": 270585856,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 564015,
+          "rssHighWaterKiB": 835696,
+          "processes": 9
+        },
+        {
+          "stage": "month-972",
+          "usedSize": 244921540,
+          "totalSize": 286576640,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 568963,
+          "rssHighWaterKiB": 838904,
+          "processes": 9
+        },
+        {
+          "stage": "month-984",
+          "usedSize": 261930856,
+          "totalSize": 309383168,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 592031,
+          "rssHighWaterKiB": 861972,
+          "processes": 9
+        },
+        {
+          "stage": "month-996",
+          "usedSize": 98625576,
+          "totalSize": 228118528,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 591939,
+          "rssHighWaterKiB": 861992,
+          "processes": 9
+        },
+        {
+          "stage": "month-1008",
+          "usedSize": 116014364,
+          "totalSize": 228118528,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 591643,
+          "rssHighWaterKiB": 861992,
+          "processes": 9
+        },
+        {
+          "stage": "month-1020",
+          "usedSize": 132992540,
+          "totalSize": 228118528,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 591911,
+          "rssHighWaterKiB": 861992,
+          "processes": 9
+        },
+        {
+          "stage": "month-1032",
+          "usedSize": 149441740,
+          "totalSize": 228118528,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 591863,
+          "rssHighWaterKiB": 861992,
+          "processes": 9
+        },
+        {
+          "stage": "month-1044",
+          "usedSize": 169352608,
+          "totalSize": 233885696,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 592383,
+          "rssHighWaterKiB": 862324,
+          "processes": 9
+        },
+        {
+          "stage": "month-1056",
+          "usedSize": 190677056,
+          "totalSize": 255643648,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 592471,
+          "rssHighWaterKiB": 862412,
+          "processes": 9
+        },
+        {
+          "stage": "month-1068",
+          "usedSize": 212022388,
+          "totalSize": 277139456,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 592967,
+          "rssHighWaterKiB": 862908,
+          "processes": 9
+        },
+        {
+          "stage": "month-1080",
+          "usedSize": 251182724,
+          "totalSize": 292605952,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 593263,
+          "rssHighWaterKiB": 864444,
+          "processes": 9
+        },
+        {
+          "stage": "month-1092",
+          "usedSize": 267958616,
+          "totalSize": 315412480,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 599091,
+          "rssHighWaterKiB": 868936,
+          "processes": 9
+        },
+        {
+          "stage": "month-1104",
+          "usedSize": 283761440,
+          "totalSize": 337432576,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 613871,
+          "rssHighWaterKiB": 891184,
+          "processes": 9
+        },
+        {
+          "stage": "month-1116",
+          "usedSize": 105460648,
+          "totalSize": 246206464,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 613703,
+          "rssHighWaterKiB": 891016,
+          "processes": 9
+        },
+        {
+          "stage": "month-1128",
+          "usedSize": 122251472,
+          "totalSize": 246206464,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 611324,
+          "rssHighWaterKiB": 890892,
+          "processes": 9
+        },
+        {
+          "stage": "month-1140",
+          "usedSize": 139271784,
+          "totalSize": 246206464,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 611636,
+          "rssHighWaterKiB": 891024,
+          "processes": 9
+        },
+        {
+          "stage": "month-1152",
+          "usedSize": 155153160,
+          "totalSize": 246206464,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 611652,
+          "rssHighWaterKiB": 891040,
+          "processes": 9
+        },
+        {
+          "stage": "month-1164",
+          "usedSize": 176349016,
+          "totalSize": 246206464,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 611644,
+          "rssHighWaterKiB": 891032,
+          "processes": 9
+        },
+        {
+          "stage": "month-1176",
+          "usedSize": 215460112,
+          "totalSize": 257216512,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 611824,
+          "rssHighWaterKiB": 891212,
+          "processes": 9
+        },
+        {
+          "stage": "month-1188",
+          "usedSize": 232375876,
+          "totalSize": 279760896,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 612324,
+          "rssHighWaterKiB": 891712,
+          "processes": 9
+        },
+        {
+          "stage": "month-1200",
+          "usedSize": 250545608,
+          "totalSize": 302305280,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 612380,
+          "rssHighWaterKiB": 893316,
+          "processes": 9
+        },
+        {
+          "stage": "snapshot",
+          "usedSize": 253459096,
+          "totalSize": 304599040,
+          "embedderHeapUsedSize": 307344,
+          "backingStorageSize": 161273,
+          "pssKiB": 615268,
+          "rssHighWaterKiB": 894656,
+          "processes": 9
+        },
+        {
+          "stage": "receiver-clone-and-freeze",
+          "usedSize": 254488648,
+          "totalSize": 305590272,
+          "embedderHeapUsedSize": 807888,
+          "backingStorageSize": 161912,
+          "pssKiB": 668039,
+          "rssHighWaterKiB": 1033612,
+          "processes": 9
+        },
+        {
+          "stage": "JSON-and-UTF8-held",
+          "usedSize": 254495868,
+          "totalSize": 305590272,
+          "embedderHeapUsedSize": 807888,
+          "backingStorageSize": 161912,
+          "pssKiB": 878732,
+          "rssHighWaterKiB": 1349252,
+          "processes": 9
+        }
+      ]
+    }
+  ]
+}

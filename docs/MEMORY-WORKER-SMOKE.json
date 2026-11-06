@@ -1,0 +1,16 @@
+[
+  {
+    "output": "compact",
+    "version": 3,
+    "complete": true,
+    "format": "delta-routine-v1",
+    "events": 187
+  },
+  {
+    "output": "legacy",
+    "version": 2,
+    "complete": true,
+    "format": "legacy",
+    "events": 187
+  }
+]
