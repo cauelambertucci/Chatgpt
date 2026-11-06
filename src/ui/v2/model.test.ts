@@ -1,57 +1,265 @@
 import { describe, it, expect } from "vitest";
-import { Archive, lightScenario } from "./model";
+import ts from "typescript";
+import { Archive, lightScenario, eventLabel } from "./model";
+import { eventLabels } from "./labels";
 import { SliceSimulation } from "../../engine/v2/engine";
+import { CompactLog, type CompactWorld } from "../../engine/v2/compact-log";
 import type { SliceEvent } from "../../engine/v2/types";
-import type { Life } from "../../engine/v2/life";
-const seed = "ui-unit";
-const base = new SliceSimulation(lightScenario(seed)).runCompact(1);
-function event(
-  type: string,
-  data: Record<string, unknown> = {},
-  participants: SliceEvent["participants"] = [],
-): SliceEvent {
-  return {
-    id: "event:900",
-    seq: 900,
-    month: 13,
-    ano: 1,
-    dia: 30,
-    type,
-    data,
-    participants,
-    causes: [],
-    location: "place:void",
-    get effects(): never {
-      throw Error("Narration must not expand effects");
+const base = new SliceSimulation(lightScenario("ui-unit")).runCompact(1);
+function fixture() {
+  const w = structuredClone(base),
+    log = new CompactLog(),
+    events: SliceEvent[] = [];
+  const add = (
+    type: string,
+    month: number,
+    data: Record<string, unknown>,
+    people: string[],
+    causes: string[] = [],
+  ) => {
+    const e: SliceEvent = {
+      id: `event:${events.length}`,
+      seq: events.length,
+      type,
+      month,
+      ano: Math.floor(month / 12),
+      dia: (month % 12) * 30,
+      location: "place:void",
+      data,
+      causes,
+      participants: people.map((id, i) => ({
+        id,
+        role: i === 0 ? "actor" : "reference",
+      })),
+      effects: [],
+    };
+    events.push(e);
+    log.append(log.encodeEvent(e, {}));
+    return e;
+  };
+  const root = add("world.created", 0, {}, []);
+  for (const [id, birthMonth] of [
+    ["person:00", -360],
+    ["person:01", -300],
+    ["person:04", -336],
+    ["person:06", -300],
+  ] as const)
+    add("family.founder.registered", 0, { birthMonth }, [id], [root.id]);
+  const born = add(
+    "person.born",
+    12,
+    {
+      parents: ["person:00", "person:01"],
+      guardians: ["person:00"],
+      birthMonth: 12,
     },
+    ["person:02", "person:00", "person:01"],
+  );
+  const partnership = add("partnership.formed", 24, {}, [
+    "person:00",
+    "person:01",
+  ]);
+  add(
+    "person.born",
+    36,
+    {
+      parents: ["person:00", "person:01"],
+      guardians: ["person:00", "person:01"],
+      birthMonth: 36,
+    },
+    ["person:03", "person:00", "person:01"],
+  );
+  add(
+    "person.born",
+    48,
+    {
+      parents: ["person:00", "person:01"],
+      guardians: ["person:00", "person:01"],
+      birthMonth: 48,
+    },
+    ["person:05", "person:00", "person:01"],
+  );
+  const development = add(
+    "development.period",
+    48,
+    {},
+    ["person:02"],
+    [born.id],
+  );
+  const death = add(
+    "person.died",
+    60,
+    { victim: "person:02", cause: "causa registrada de teste", killer: null },
+    ["person:02"],
+    [development.id],
+  );
+  const shared = add(
+    "information.shared",
+    61,
+    { sender: "person:01", recipient: "person:00", offense: death.id },
+    ["person:01", "person:00"],
+    [death.id],
+  );
+  const routine = add(
+    "needs.period",
+    61,
+    { periodMonths: 1 },
+    ["person:00"],
+    [root.id],
+  );
+  const news = add(
+    "information.received",
+    61,
+    { offense: death.id, source: shared.id, channel: "relato" },
+    ["person:00", "person:02"],
+    [routine.id, shared.id],
+  );
+  const emotion = add(
+    "emotion.felt",
+    61,
+    {
+      emotion: "tristeza reflexiva",
+      stimulusSource: news.id,
+      stressBefore: 10,
+      stressAfter: 40,
+    },
+    ["person:00"],
+    [routine.id, news.id],
+  );
+  const transform = add(
+    "person.transformed",
+    61,
+    { facet: "coragem", facetBefore: 40, facetAfter: 42, emotion: emotion.id },
+    ["person:00"],
+    [routine.id, emotion.id],
+  );
+  const partnerDeath = add(
+    "person.died",
+    120,
+    { victim: "person:01", cause: "morte natural", killer: null },
+    ["person:01"],
+  );
+  add(
+    "partnership.ended",
+    120,
+    { cause: "morte", death: partnerDeath.id },
+    ["person:01", "person:00"],
+    [partnership.id, partnerDeath.id],
+  );
+  add("partnership.formed", 132, {}, ["person:00", "person:04"]);
+  add("partnership.ended", 180, { cause: "ruptura" }, [
+    "person:00",
+    "person:04",
+  ]);
+  add("partnership.formed", 192, {}, ["person:00", "person:04"]);
+  const parentDeath = add(
+    "person.died",
+    240,
+    { victim: "person:00", cause: "morte natural", killer: null },
+    ["person:00"],
+  );
+  add("partnership.ended", 240, { cause: "morte", death: parentDeath.id }, [
+    "person:00",
+    "person:04",
+  ]);
+  add("partnership.formed", 252, {}, ["person:03", "person:06"]);
+  add(
+    "person.died",
+    300,
+    { victim: "person:05", cause: "morte natural", killer: null },
+    ["person:05"],
+  );
+  w.log = log.snapshot();
+  w.nextMonth = 1200;
+  w.complete = true;
+  return {
+    w,
+    events,
+    born,
+    death,
+    shared,
+    news,
+    emotion,
+    transform,
+    routine,
+    development,
   };
 }
-describe("arquivo v2: fatos e navegação", () => {
-  it("usa exatamente 40 fundadores, 100 anos e regras 2c existentes", () => {
+describe("arquivo v2: histórico familiar e narrativa", () => {
+  it("preserva 40 fundadores, 100 anos e a política atual", () => {
     const s = lightScenario("  exemplo  ");
     expect(s.seed).toBe("exemplo");
     expect(s.people).toHaveLength(40);
     expect(s.months).toBe(1200);
     expect(s.lifeSimulation?.fertilityPolicy).toBe("replacement-2c");
   });
-  it("não cria infância ou ancestrais para fundadores nem altera o mundo", () => {
-    const before = JSON.stringify(base),
-      a = new Archive(base);
-    expect(a.introduction("person:00")).toContain("Não há infância simulada");
-    expect(a.generation("person:00")).toBe(0);
-    expect(a.life("person:00")?.parents).toEqual([]);
-    a.biography("person:00").forEach((e) => a.narrate(e));
-    expect(JSON.stringify(base)).toBe(before);
+  it("lista todos os filhos e mortes pelo log, mesmo com estado final contraditório ou ausente", () => {
+    const { w } = fixture();
+    delete w.entities["life:person:00"];
+    delete w.entities["life:person:02"];
+    delete w.entities["life:person:03"];
+    const a = new Archive(w);
+    expect(a.children.get("person:00")).toEqual([
+      "person:02",
+      "person:03",
+      "person:05",
+    ]);
+    expect(a.isAlive("person:02")).toBe(false);
+    expect(a.isAlive("person:03")).toBe(true);
+    expect(a.isAlive("person:05")).toBe(false);
+    expect(a.lifeSpan("person:02")).toContain("nascimento: ano 1");
+    expect(a.lifeSpan("person:02")).toContain("morta: ano 5, aos 4 anos");
+    expect(a.family.age("person:02", 23)).toBe(0);
   });
-  it("combina busca sem acentos, situação, mutilação e geração sem confundir sequela com amputação", () => {
-    const w = structuredClone(base),
-      p = w.entities["person:00"];
+  it("separa guarda de pais biológicos sem assumir que são iguais", () => {
+    const a = new Archive(fixture().w);
+    expect(a.family.parents("person:02")).toEqual(["person:00", "person:01"]);
+    expect(a.family.custody.get("person:02")?.[0].guardians).toEqual([
+      "person:00",
+    ]);
+    expect(a.family.parents("person:00")).toEqual([]);
+  });
+  it("preserva viuvez, ruptura, nova parceria com a mesma pessoa e vigência após consultar pessoa morta", () => {
+    const a = new Archive(fixture().w),
+      p = a.family.partners("person:00");
+    expect(a.isAlive("person:00")).toBe(false);
+    expect(p.map((p) => [p.start, p.end, a.partnershipReason(p)])).toEqual([
+      [24, 120, "morte"],
+      [132, 180, "ruptura"],
+      [192, 240, "morte"],
+    ]);
+    expect(a.partnershipReason(a.family.partners("person:03")[0])).toBe(
+      "vigente",
+    );
+  });
+  it("deriva irmãos, descendentes e gerações do nascimento; fundadores não ganham ancestrais", () => {
+    const a = new Archive(fixture().w);
+    expect(a.family.siblings("person:02")).toEqual(["person:03", "person:05"]);
+    expect(a.generation("person:02")).toBe(1);
+    expect(a.generation("person:00")).toBe(0);
+    expect(a.introduction("person:00")).toContain("Não há infância simulada");
+  });
+  it("contém ciclos em registros importados sem recursão infinita", () => {
+    const a = new Archive(fixture().w);
+    a.family.births.set("person:00", {
+      id: "person:00",
+      month: 0,
+      parents: ["person:02"],
+      founder: false,
+      source: "event:0",
+    });
+    a.family.generations.clear();
+    expect(a.generation("person:02")).toBe(null);
+  });
+  it("combina busca, estado derivado do log, mutilação e geração", () => {
+    const { w } = fixture();
+    const p = w.entities["person:02"];
     if (p.kind !== "person") throw Error();
     p.name = "Ágata";
-    p.alive = false;
+    p.alive = true;
     w.entities["test:part"] = {
-      kind: "bodyPart",
       id: "test:part",
+      kind: "bodyPart",
       owner: p.id,
       part: "hand.left",
       present: false,
@@ -66,63 +274,171 @@ describe("arquivo v2: fatos e navegação", () => {
           query: "agata",
           status: "dead",
           mutilated: "yes",
-          generation: "0",
+          generation: "1",
         })
         .map((p) => p.id),
     ).toEqual([p.id]);
     expect(a.filter({ query: "agata", status: "alive" })).toEqual([]);
-    expect(a.filter({ mutilated: "no" })).toHaveLength(39);
   });
-  it("calcula gerações por ascendência e contém ciclos sem inventar ancestrais", () => {
-    const w = structuredClone(base);
-    (w.entities["life:person:01"] as Life).parents = ["person:00"];
-    (w.entities["life:person:02"] as Life).parents = ["person:01"];
-    let a = new Archive(w);
-    expect(a.generation("person:02")).toBe(2);
-    expect(a.children.get("person:01")).toEqual(["person:02"]);
-    (w.entities["life:person:00"] as Life).parents = ["person:02"];
-    a = new Archive(w);
-    expect(a.generation("person:02")).toBe(null);
+  it("explica fato sabido, relação de parentesco e quem transmitiu o relato", () => {
+    const { w, news } = fixture(),
+      a = new Archive(w),
+      text = a.narrate(news);
+    expect(text).toContain(`a morte de ${a.name("person:02")}`);
+    expect(text).toContain("descendentes diretos");
+    expect(text).toContain(`relato de ${a.name("person:01")}`);
+    expect(text).not.toContain("information.received");
   });
-  it("narra lesão e transformação somente com campos presentes, sem adjetivar nem inventar agressor", () => {
-    const a = new Archive(base),
-      p = [{ id: "person:01", role: "victim" as const }],
-      e = event("wound.created", { part: "hand.left", amputation: true }, p),
-      text = a.narrate(e);
-    expect(text).toContain("mão esquerda");
-    expect(text).toContain("amputação registrada");
-    expect(text).not.toContain(a.name("person:00"));
-    expect(text).not.toContain("fratura");
-    const change = a.narrate(
-      event(
-        "person.transformed",
-        { facet: "coragem", facetBefore: 40, facetAfter: 39 },
-        [{ id: "person:01", role: "actor" }],
-      ),
+  it("distingue testemunho de relato e não inventa uma fonte ausente", () => {
+    const { w, news, death } = fixture(),
+      a = new Archive(w);
+    expect(
+      a.narrate({
+        ...news,
+        data: { ...news.data, source: death.id, channel: "testemunho" },
+      }),
+    ).toContain("testemunho do acontecimento");
+    expect(a.narrate({ ...news, data: { offense: death.id } })).toContain(
+      "fonte não especificada",
     );
-    expect(change).toContain("Coragem passou de 40 para 39");
-    expect(change).not.toMatch(/covarde|bravo|herói/);
-    expect(change).not.toContain("undefined");
   });
-  it("não atribui assassino a morte natural nem transforma parentesco em percepção", () => {
-    const a = new Archive(base),
-      e = event("person.died", {
-        victim: "person:00",
-        natural: true,
-        cause: "morte natural: declínio fisiológico",
-        killer: null,
-      });
-    expect(a.narrate(e)).toContain("morte natural");
-    expect(a.narrate(e)).not.toContain("atribuída");
-    expect(a.narrate(e)).not.toMatch(/soube|sentiu|lamentou/);
+  it("só atribui emoção a um estímulo explicitamente registrado como causa", () => {
+    const { w, emotion } = fixture(),
+      a = new Archive(w);
+    expect(a.narrate(emotion)).toContain("receber notícia sobre a morte");
+    expect(a.narrate(emotion)).toContain("de 10 para 40");
+    expect(a.narrate({ ...emotion, causes: [] })).not.toContain(
+      "em resposta a",
+    );
   });
-  it("navega causas pelo ID gravado e rejeita referências inválidas", () => {
-    const a = new Archive(base),
-      e = a.event(5)!;
-    expect(a.event(e.id)?.id).toBe(e.id);
-    for (const id of e.causes) expect(a.event(id)!.seq).toBeLessThan(e.seq);
-    expect(a.event("event:-1")).toBeUndefined();
-    expect(a.event("event:99999999")).toBeUndefined();
-    expect(a.event("foo")).toBeUndefined();
+  it("prioriza notícia e emoção, deixando necessidades e desenvolvimento fora da cadeia visível", () => {
+    const { w, transform, news, emotion, routine } = fixture(),
+      a = new Archive(w),
+      p = a.causalPresentation(transform);
+    expect(p.chain.map((e) => e.id)).toEqual(
+      expect.arrayContaining([news.id, emotion.id, transform.id]),
+    );
+    expect(p.chain.map((e) => e.type)).not.toContain("needs.period");
+    expect(p.chain.map((e) => e.type)).not.toContain("development.period");
+    expect(p.routine.map((e) => e.id)).toContain(routine.id);
+    for (let i = 1; i < p.chain.length; i++)
+      expect(p.chain[i].seq).toBeGreaterThan(p.chain[i - 1].seq);
+  });
+  it("produz parágrafos com fontes, idade e causa de morte, sem atribuir percepção apenas pelo parentesco", () => {
+    const a = new Archive(fixture().w),
+      paras = a.paragraphs("person:00");
+    expect(paras.some((p) => p.sources.length > 1)).toBe(true);
+    expect(paras.map((p) => p.text).join(" ")).toContain("aos 50 anos");
+    const childNarrative = a
+      .paragraphs("person:03")
+      .map((p) => p.text)
+      .join(" ");
+    expect(childNarrative).not.toContain("tristeza reflexiva");
+    expect(a.children.get("person:00")).toContain("person:05");
+    expect(a.biography("person:00").some((e) => e.month > 240)).toBe(false);
+  });
+  it("não expande efeitos, inventa ferimentos adicionais ou atribui assassino a morte natural", () => {
+    const { w, death } = fixture(),
+      a = new Archive(w),
+      e: SliceEvent = {
+        ...death,
+        type: "wound.created",
+        participants: [{ id: "person:00", role: "victim" }],
+        data: { part: "hand.left", amputation: true },
+        get effects(): never {
+          throw Error("expansão indevida");
+        },
+      };
+    const text = a.narrate(e);
+    expect(text).toContain("mão esquerda");
+    expect(text).toContain("amputação");
+    expect(text).not.toContain("fratura");
+    expect(a.narrate(death)).not.toContain("atribuída");
+  });
+  it("não altera o mundo nem usa estado final para recalcular vínculos", () => {
+    const w = fixture().w,
+      before = JSON.stringify(w),
+      a = new Archive(w);
+    a.paragraphs("person:00");
+    a.causalPresentation(a.event(10)!);
+    expect(JSON.stringify(w)).toBe(before);
+    expect(a.event("bad")).toBeUndefined();
+  });
+});
+it("não narra um duelo iniciado quando houve apenas avaliação recusada", () => {
+  const { w, death } = fixture(),
+    a = new Archive(w);
+  const e = {
+    ...death,
+    type: "duel.agreed",
+    data: { started: false },
+    participants: [
+      { id: "person:00", role: "actor" as const },
+      { id: "person:01", role: "target" as const },
+    ],
+  };
+  expect(a.narrate(e)).toContain("o duelo não foi iniciado");
+  expect(a.narrate(e)).not.toContain("combinaram um duelo");
+});
+it("distingue pessoas homônimas sem inventar identidade ou misturar mortes", () => {
+  const { w } = fixture();
+  const p = w.entities["person:00"],
+    q = w.entities["person:01"];
+  if (p.kind !== "person" || q.kind !== "person") throw Error();
+  p.name = q.name = "Orin";
+  const a = new Archive(w);
+  expect(a.name(p.id)).not.toBe(a.name(q.id));
+  expect(a.name(p.id)).toContain("Orin (registro");
+  expect(a.lifeSpan(p.id)).not.toBe(a.lifeSpan(q.id));
+});
+describe("catálogo obrigatório de tipos do motor", () => {
+  it("todo tipo emitido pelo motor possui rótulo em português", () => {
+    const sources = import.meta.glob<string>("../../engine/v2/*.ts", {
+        query: "?raw",
+        import: "default",
+        eager: true,
+      }),
+      types = new Set<string>();
+    for (const [file, source] of Object.entries(sources)) {
+      if (file.endsWith(".test.ts")) continue;
+      const ast = ts.createSourceFile(
+        file,
+        source,
+        ts.ScriptTarget.Latest,
+        true,
+      );
+      const extract = (node: ts.Node) => {
+        if (ts.isStringLiteral(node)) types.add(node.text);
+        else if (ts.isConditionalExpression(node)) {
+          extract(node.whenTrue);
+          extract(node.whenFalse);
+        } else
+          expect(
+            ts.isSpreadElement(node),
+            `Tipo dinâmico não verificado em ${file}`,
+          ).toBe(true);
+      };
+      const visit = (node: ts.Node) => {
+        if (
+          ts.isCallExpression(node) &&
+          ts.isPropertyAccessExpression(node.expression) &&
+          node.expression.name.text === "emit" &&
+          node.arguments[0]
+        )
+          extract(node.arguments[0]);
+        ts.forEachChild(node, visit);
+      };
+      visit(ast);
+    }
+    expect(types.size).toBeGreaterThan(100);
+    for (const type of types) {
+      expect(eventLabels[type], `Falta rótulo para ${type}`).toBeTruthy();
+      expect(eventLabel({ type })).not.toContain(type);
+    }
+  });
+  it("um tipo desconhecido nunca vaza como código na apresentação", () => {
+    expect(eventLabel({ type: "new.unknown.event" })).toBe(
+      "Acontecimento sem descrição disponível",
+    );
   });
 });

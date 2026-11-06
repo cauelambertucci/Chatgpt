@@ -1,0 +1,40 @@
+{
+  "engineComparison": {
+    "baselineCommit": "77fc16a8777e923fee0248cae0b0de4dc393d50f",
+    "filesCompared": 38,
+    "byteIdentical": true,
+    "sha256PathsAndContents": "7d3a44a9ac5bd2efea1b9fe1c0eaf21e951f24065f54cc8ca3b3c12f84211cd4"
+  },
+  "unitTestsPassed": 18,
+  "browserChecksPassed": 77,
+  "buildPassed": true,
+  "seeds": [
+    {
+      "seed": "reservado-2b-006",
+      "founders": 40,
+      "months": 1200,
+      "people": 105,
+      "events": 108575,
+      "errors": [],
+      "replayEqual": true
+    },
+    {
+      "seed": "reservado-2b-011",
+      "founders": 40,
+      "months": 1200,
+      "people": 81,
+      "events": 83641,
+      "errors": [],
+      "replayEqual": true
+    },
+    {
+      "seed": "reservado-2b-028",
+      "founders": 40,
+      "months": 1200,
+      "people": 73,
+      "events": 74963,
+      "errors": [],
+      "replayEqual": true
+    }
+  ]
+}

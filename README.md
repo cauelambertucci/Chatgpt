@@ -13,7 +13,7 @@ npm ci
 npm run dev -- --port 5173 --strictPort
 ```
 
-Na página, deixe a seed `interface-2c-000` e clique em **Gerar história**. Para os outros exemplos, use `interface-2c-001` ou `interface-2c-002`. As biografias de referência estão em [docs/UI-V2-BIOGRAFIAS.md](docs/UI-V2-BIOGRAFIAS.md).
+Na página, deixe a seed `reservado-2b-006` e clique em **Gerar história**. Para os outros exemplos, use `reservado-2b-011` ou `reservado-2b-028`. As novas biografias estão em [docs/UI-V2-FEEDBACK-BIOGRAFIAS.md](docs/UI-V2-FEEDBACK-BIOGRAFIAS.md).
 
 ## Executar
 
@@ -236,3 +236,7 @@ A avaliação completa executa 1.050 mundos e pode demorar horas. `npm run repor
 ## Interface mínima v2 — entrega atual
 
 [Relatório e limites](docs/UI-V2-REPORT.md) · [três biografias reais](docs/UI-V2-BIOGRAFIAS.md) · [validação de três seeds](docs/UI-V2-VALIDATION.json). A interface não altera o motor nem implementa o Marco 3. Os textos narram apenas campos conhecidos; causas são consultadas por ID, sem inferência de motivos.
+
+## Revisão da interface após feedback
+
+[Correções e validação](docs/UI-V2-FEEDBACK-REPORT.md) · [três novas biografias](docs/UI-V2-FEEDBACK-BIOGRAFIAS.md). Filiação, anos de vida e parcerias vêm do log; pais e guarda estão separados. A árvore alterna ascendência/descendência/irmãos e parceiros. A explicação causal tem rótulos em português e contexto de rotina recolhido. O comando `examples:ui` usa somente as três seeds selecionadas e reaproveita os mundos locais já gravados; exclua `reports/ui-feedback/*.world.json` apenas se quiser repetir a simulação.

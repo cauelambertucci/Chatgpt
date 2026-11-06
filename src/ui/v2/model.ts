@@ -1,7 +1,14 @@
 import { CompactLog, type CompactWorld } from "../../engine/v2/compact-log";
 import { demographicScenario } from "../../engine/v2/demographic-scenario";
 import type { Person, SliceEvent } from "../../engine/v2/types";
-import type { Life } from "../../engine/v2/life";
+import {
+  FamilyHistory,
+  familyTypes,
+  stringIds,
+  type Partnership,
+} from "./family";
+import { eventLabel, eventLabels, routineTypes, readable } from "./labels";
+export { eventLabel } from "./labels";
 import { traits, values } from "../../data/v2/personality";
 export const lightScenario = (seed: string) =>
   demographicScenario(seed.trim(), 40, true);
@@ -19,6 +26,11 @@ const biographyTypes = new Set([
   "person.transformed",
   "emotion.felt",
   "person.died",
+  "information.received",
+  "family.loss.perceived",
+  "pregnancy.lost",
+  "duel.agreed",
+  "duel.ended",
 ]);
 export const date = (month: number) =>
   `ano ${Math.floor(month / 12)}, mês ${(month % 12) + 1}`;
@@ -36,27 +48,6 @@ const parts: Record<string, string> = {
   "foot.left": "pé esquerdo",
   "foot.right": "pé direito",
 };
-const labels: Record<string, string> = {
-  "person.born": "Nascimento",
-  "person.died": "Morte",
-  "emotion.felt": "Emoção registrada",
-  "person.transformed": "Transformação pessoal",
-  "wound.created": "Ferimento",
-  "sequela.confirmed": "Sequela permanente",
-  "wound.healed": "Cicatrização",
-  "partnership.formed": "Parceria",
-  "partnership.ended": "Fim de parceria",
-  "family.founder.registered": "Registro de fundador",
-  "guardianship.decided": "Decisão de guarda",
-  "injury.perceived": "Percepção de ferimento",
-  "sequela.perceived": "Percepção de sequela",
-  "needs.period": "Necessidades do período",
-  "activity.period": "Atividade do período",
-  "decision.made": "Decisão",
-  "world.created": "Criação do mundo",
-};
-export const eventLabel = (e: SliceEvent) =>
-  labels[e.type] || `Registro ${e.type}`;
 export interface PeopleFilter {
   query?: string;
   status?: string;
@@ -68,24 +59,32 @@ export class Archive {
   readonly log: CompactLog;
   readonly people: Person[];
   readonly facts = new Map<string, number[]>();
-  readonly generations = new Map<string, number | null>();
-  readonly children = new Map<string, string[]>();
+  readonly family: FamilyHistory;
+  readonly children: Map<string, string[]>;
   readonly missing = new Set<string>();
   readonly highlights: number[] = [];
+  readonly displayNames = new Map<string, string>();
   constructor(readonly world: CompactWorld) {
     this.log = CompactLog.from(world.log);
     this.people = Object.values(world.entities).filter(
       (p): p is Person => p.kind === "person",
     );
-    for (const e of Object.values(world.entities)) {
-      if (e.kind === "life")
-        for (const parent of e.parents)
-          this.children.set(parent, [
-            ...(this.children.get(parent) || []),
-            e.owner,
-          ]);
-      if (e.kind === "bodyPart" && !e.present) this.missing.add(e.owner);
+    this.family = new FamilyHistory(this.log.select(familyTypes));
+    this.children = this.family.children;
+    const counts = new Map<string, number>();
+    for (const p of this.people)
+      counts.set(p.name, (counts.get(p.name) || 0) + 1);
+    for (const p of this.people) {
+      const source = this.family.births.get(p.id)?.source;
+      this.displayNames.set(
+        p.id,
+        (counts.get(p.name) || 0) > 1
+          ? `${p.name} (registro ${source?.replace("event:", "") || p.id})`
+          : p.name,
+      );
     }
+    for (const e of Object.values(world.entities))
+      if (e.kind === "bodyPart" && !e.present) this.missing.add(e.owner);
     for (const p of this.people) this.generation(p.id);
     for (const e of this.log.select(biographyTypes)) {
       this.highlights.push(e.seq);
@@ -101,11 +100,37 @@ export class Archive {
   }
   name(id: unknown) {
     const e = typeof id === "string" ? this.world.entities[id] : undefined;
-    return e?.kind === "person" ? e.name : "Pessoa não identificada";
+    return e?.kind === "person"
+      ? this.displayNames.get(e.id) || e.name
+      : "Pessoa não identificada";
   }
-  life(id: string): Life | undefined {
-    const e = this.world.entities[`life:${id}`];
-    return e?.kind === "life" ? e : undefined;
+  life(id: string) {
+    return this.family.births.get(id);
+  }
+  isAlive(id: string) {
+    return this.family.isAlive(id);
+  }
+  lifeSpan(id: string) {
+    const b = this.life(id),
+      d = this.family.deaths.get(id),
+      born =
+        b?.month === undefined
+          ? "nascimento não registrado"
+          : `nascimento: ano ${Math.floor(b.month / 12)}`;
+    if (!d)
+      return `${born} · ${this.isAlive(id) ? "viva" : "situação não registrada"}`;
+    const age = this.family.age(id, d.month);
+    return `${born} · morta: ano ${Math.floor(d.month / 12)}${age === undefined ? "" : `, aos ${age} anos`}`;
+  }
+  partnershipReason(p: Partnership) {
+    if (p.end === undefined)
+      return p.people.some((id) => this.family.deaths.has(id))
+        ? "fim não registrado"
+        : "vigente";
+    if (p.reason === "morte") return "morte";
+    if (p.reason && /ruptura|separação|separacao/.test(p.reason))
+      return "ruptura";
+    return p.reason ? readable(p.reason) : "motivo não registrado";
   }
   event(id: string | number) {
     const n =
@@ -118,23 +143,8 @@ export class Archive {
       ? this.log.event(n)
       : undefined;
   }
-  generation(id: string, path = new Set<string>()): number | null {
-    if (this.generations.has(id)) return this.generations.get(id)!;
-    if (path.has(id)) return null;
-    const life = this.life(id);
-    if (!life) return null;
-    if (!life.parents.length) {
-      const g = this.world.scenario.people.some((p) => p.id === id) ? 0 : null;
-      this.generations.set(id, g);
-      return g;
-    }
-    const next = new Set(path).add(id),
-      gs = life.parents.map((p) => this.generation(p, next));
-    const g = gs.some((g) => g === null)
-      ? null
-      : 1 + Math.max(...(gs as number[]));
-    this.generations.set(id, g);
-    return g;
+  generation(id: string) {
+    return this.family.generation(id);
   }
   filter(f: PeopleFilter) {
     const normalize = (s: string) =>
@@ -146,42 +156,239 @@ export class Archive {
       (p) =>
         (!f.query ||
           normalize(`${p.name} ${p.id}`).includes(normalize(f.query))) &&
-        (!f.status || (f.status === "alive") === p.alive) &&
+        (!f.status ||
+          (f.status === "alive"
+            ? this.isAlive(p.id)
+            : this.family.deaths.has(p.id))) &&
         (!f.mutilated || (f.mutilated === "yes") === this.missing.has(p.id)) &&
         (!f.generation || String(this.generation(p.id)) === f.generation),
     );
   }
+  relation(observer: string, subject: string, month: number) {
+    if (this.family.parents(observer).includes(subject))
+      return "um de seus pais biológicos";
+    if ((this.children.get(observer) || []).includes(subject))
+      return "um de seus descendentes diretos";
+    if (this.family.siblings(observer).includes(subject))
+      return "alguém com quem compartilhava ao menos um progenitor";
+    if (
+      this.family
+        .partners(observer)
+        .some(
+          (p) =>
+            p.people.includes(subject) &&
+            (p.start ?? 0) <= month &&
+            (p.end === undefined || p.end >= month),
+        )
+    )
+      return "com quem mantinha parceria";
+    return "";
+  }
   introduction(id: string) {
-    const p = this.world.entities[id];
-    if (p?.kind !== "person") return "Pessoa não registrada.";
-    const l = this.life(id),
-      founder = this.world.scenario.people.some((p) => p.id === id);
-    const origin = founder
-      ? `${p.name} integrava o grupo fundador${l ? `, com ${Math.floor(-l.birthMonth / 12)} anos no início` : ""}. Não há infância simulada nem ancestrais registrados para os fundadores.`
-      : `${p.name} nasceu durante a simulação${l ? `, no ${date(l.birthMonth)}` : ""}.`;
-    return `${origin} ${p.alive ? "Permanecia com vida ao fim do período gerado." : "Há registro de sua morte no período gerado."} Geração ${this.generation(id) ?? "não determinada"} (fundadores = 0).`;
+    const b = this.life(id);
+    if (!b)
+      return `${this.name(id)} não tem nascimento documentado neste arquivo.`;
+    if (b.founder)
+      return `${this.name(id)} integrava o grupo fundador${b.month === undefined ? "" : `, com ${Math.floor(-b.month / 12)} anos no início`}. Não há infância simulada nem ancestrais registrados para os fundadores.`;
+    return `${this.name(id)} nasceu${b.month === undefined ? "" : ` no ${date(b.month)}`}${b.parents.length ? `, com parentesco biológico registrado com ${b.parents.map((p) => this.name(p)).join(" e ")}` : ""}.`;
   }
   biography(id: string) {
-    const ids = new Set(this.facts.get(id) || []);
+    const ids = new Set(this.facts.get(id) || []),
+      death = this.family.deaths.get(id);
     for (const n of [...ids]) {
       const e = this.event(n)!;
       if (e.type === "partnership.ended" && typeof e.data.death === "string") {
-        const death = this.event(e.data.death);
-        if (death?.type === "person.died") ids.add(death.seq);
+        const d = this.event(e.data.death);
+        if (d?.type === "person.died") ids.add(d.seq);
       }
     }
-    // Deaths of directly registered biological relatives are facts, not inferred perceptions.
     for (const relative of [
-      ...(this.life(id)?.parents || []),
+      ...this.family.parents(id),
       ...(this.children.get(id) || []),
     ]) {
-      const p = this.world.entities[relative];
-      if (p?.kind === "person" && p.death) {
-        const e = this.event(p.death);
-        if (e) ids.add(e.seq);
-      }
+      const d = this.family.deaths.get(relative);
+      if (d) ids.add(d.seq);
     }
-    return [...ids].sort((a, b) => a - b).map((n) => this.event(n)!);
+    const personalEmotions = [...ids]
+      .map((n) => this.event(n)!)
+      .filter(
+        (e) =>
+          e.type === "emotion.felt" &&
+          e.participants.some((p) => p.id === id && p.role === "actor"),
+      );
+    return [...ids]
+      .sort((a, b) => a - b)
+      .map((n) => this.event(n)!)
+      .filter((e) => {
+        if (death && e.month > death.month) return false;
+        if (
+          [
+            "information.received",
+            "injury.perceived",
+            "sequela.perceived",
+            "family.loss.perceived",
+            "emotion.felt",
+            "person.transformed",
+          ].includes(e.type) &&
+          !e.participants.some((p) => p.id === id && p.role === "actor")
+        )
+          return false;
+        if (e.type === "information.received") {
+          const fact =
+            typeof e.data.offense === "string"
+              ? this.event(e.data.offense)
+              : undefined;
+          const subject =
+            typeof fact?.data.victim === "string"
+              ? fact.data.victim
+              : undefined;
+          return (
+            !!(subject && this.relation(id, subject, e.month)) ||
+            personalEmotions.some((x) => x.data.stimulusSource === e.id)
+          );
+        }
+        return true;
+      });
+  }
+  paragraphs(id: string) {
+    const birth = this.life(id),
+      result = [
+        { text: this.introduction(id), sources: birth ? [birth.source] : [] },
+      ];
+    const events = this.biography(id).filter((e) => e.id !== birth?.source);
+    for (let i = 0; i < events.length; i += 4) {
+      const group = events.slice(i, i + 4);
+      result.push({
+        text: group.map((e) => this.narrate(e)).join(" "),
+        sources: group.map((e) => e.id),
+      });
+    }
+    return result;
+  }
+  factDescription(e: SliceEvent, observer?: string) {
+    const subject =
+      typeof e.data.victim === "string"
+        ? e.data.victim
+        : typeof e.data.subject === "string"
+          ? e.data.subject
+          : e.participants.find((p) => p.role === "victim")?.id;
+    const relation =
+      observer && subject ? this.relation(observer, subject, e.month) : "";
+    if (e.type === "person.died")
+      return `a morte de ${this.name(subject)}${relation ? `, ${relation}` : ""}`;
+    if (e.type === "pregnancy.lost") return "a perda de uma gestação";
+    if (
+      [
+        "wound.created",
+        "injury.perceived",
+        "sequela.perceived",
+        "sequela.confirmed",
+      ].includes(e.type)
+    )
+      return `${e.type.startsWith("sequela") ? "a sequela" : "o ferimento"}${subject ? ` de ${this.name(subject)}` : ""}`;
+    return `o acontecimento “${eventLabel(e)}”`;
+  }
+  sourceDescription(e: SliceEvent) {
+    const source =
+      typeof e.data.source === "string" ? this.event(e.data.source) : undefined;
+    if (e.data.channel === "testemunho")
+      return "testemunho do acontecimento registrado";
+    if (
+      source?.type === "information.shared" &&
+      typeof source.data.sender === "string"
+    )
+      return `relato de ${this.name(source.data.sender)}, compartilhado no ${date(source.month)}`;
+    return source
+      ? `registro “${eventLabel(source)}”, no ${date(source.month)}`
+      : "fonte não especificada";
+  }
+  stimulusDescription(e: SliceEvent, observer?: string) {
+    if (e.type === "information.received") {
+      const fact =
+        typeof e.data.offense === "string"
+          ? this.event(e.data.offense)
+          : undefined;
+      return fact
+        ? `receber notícia sobre ${this.factDescription(fact, observer)} (fonte: ${this.sourceDescription(e)})`
+        : "uma notícia cujo conteúdo não foi registrado";
+    }
+    if (e.type === "family.loss.perceived")
+      return "a percepção registrada de uma perda gestacional";
+    return this.factDescription(e, observer);
+  }
+  causalPresentation(e: SliceEvent, limit = 24) {
+    const chain: SliceEvent[] = [],
+      routine = new Map<string, SliceEvent>(),
+      other = new Map<string, SliceEvent>(),
+      seen = new Set<string>();
+    let current: SliceEvent | undefined = e;
+    while (current && seen.size < limit && !seen.has(current.id)) {
+      seen.add(current.id);
+      if (routineTypes.has(current.type)) routine.set(current.id, current);
+      else chain.push(current);
+      const causes: SliceEvent[] = current.causes
+        .map((id) => this.event(id))
+        .filter((v): v is SliceEvent => !!v && v.seq < current!.seq);
+      for (const c of causes)
+        if (routineTypes.has(c.type)) routine.set(c.id, c);
+        else other.set(c.id, c);
+      const explicit = [
+        "emotion",
+        "stimulusSource",
+        "source",
+        "death",
+        "offense",
+      ]
+        .map((k) => current!.data[k])
+        .find((id) => typeof id === "string" && current!.causes.includes(id));
+      const preferred: SliceEvent | undefined =
+        typeof explicit === "string"
+          ? causes.find((c) => c.id === explicit)
+          : undefined;
+      const score = (c: SliceEvent) =>
+        routineTypes.has(c.type)
+          ? 0
+          : [
+                "world.created",
+                "people.created",
+                "family.founder.registered",
+              ].includes(c.type)
+            ? 1
+            : [
+                  "person.died",
+                  "information.received",
+                  "information.shared",
+                  "wound.created",
+                  "attack.contact",
+                  "sequela.confirmed",
+                  "emotion.felt",
+                  "family.loss.perceived",
+                ].includes(c.type)
+              ? 3
+              : 2;
+      const preferredTypes: Record<string, string[]> = {
+        "person.born": ["pregnancy.conceived"],
+        "pregnancy.conceived": ["partnership.formed"],
+        "sequela.confirmed": ["wound.created"],
+        "wound.created": ["attack.contact"],
+        "guardianship.decided": ["person.died"],
+        "person.died": ["body.death", "natural.death", "mortality.condition"],
+      };
+      const semantic: SliceEvent | undefined = (preferredTypes[current.type] || [])
+        .map((type) => causes.find((c) => c.type === type))
+        .find(Boolean);
+      current =
+        preferred ||
+        semantic ||
+        causes.sort((a, b) => score(b) - score(a) || b.seq - a.seq)[0];
+    }
+    for (const c of chain) other.delete(c.id);
+    return {
+      chain: chain.reverse(),
+      routine: [...routine.values()].sort((a, b) => a.seq - b.seq),
+      other: [...other.values()].sort((a, b) => a.seq - b.seq),
+      continuation: current?.id,
+    };
   }
   narrate(e: SliceEvent): string {
     const d = e.data,
@@ -202,9 +409,29 @@ export class Archive {
         : wound?.kind === "wound"
           ? wound.part
           : undefined;
-    const location = part ? ` em ${parts[part] || part}` : "";
+    const location = part
+      ? ` ${/^(head|hand|leg)/.test(part) ? "na" : "no"} ${parts[part] || "local corporal não identificado"}`
+      : "";
     let text: string;
     switch (e.type) {
+      case "information.received": {
+        const fact =
+          typeof d.offense === "string" ? this.event(d.offense) : undefined;
+        text = `${this.name(actor)} soube ${fact ? this.factDescription(fact, actor).replace(/^a /, "da ").replace(/^o /, "do ") : "de um fato cujo conteúdo não foi registrado"}. Fonte: ${this.sourceDescription(e)}.`;
+        break;
+      }
+      case "family.loss.perceived":
+        text = `${this.name(actor)} percebeu a perda de uma gestação registrada no arquivo.`;
+        break;
+      case "pregnancy.lost":
+        text = `Uma gestação foi encerrada por perda${typeof d.cause === "string" ? `; causa registrada: ${d.cause}` : ""}.`;
+        break;
+      case "duel.agreed":
+        text = `Foi avaliado um duelo entre ${names(e.participants.map((p) => p.id)) || "participantes não identificados"}${d.started === true ? "; o duelo foi iniciado" : d.started === false ? "; o duelo não foi iniciado" : ""}.`;
+        break;
+      case "duel.ended":
+        text = `O duelo terminou${typeof d.termination === "string" ? `; motivo registrado: ${d.termination}` : ""}.`;
+        break;
       case "family.founder.registered":
         text = `O arquivo incluiu ${this.name(e.participants[0]?.id)} no grupo fundador; a história anterior não foi simulada.`;
         break;
@@ -231,11 +458,23 @@ export class Archive {
         break;
       case "injury.perceived":
       case "sequela.perceived":
-        text = `${this.name(actor)} recebeu informação sobre ${e.type === "sequela.perceived" ? "a sequela" : "o ferimento"} de ${this.name(d.subject)}.`;
+        text = `${this.name(actor)} percebeu ${e.type === "sequela.perceived" ? "a sequela" : "o ferimento"}${d.subject === actor ? " no próprio corpo" : ` de ${this.name(d.subject)}`}.`;
         break;
-      case "emotion.felt":
-        text = `Foi registrada para ${this.name(actor)} uma emoção${typeof d.emotion === "string" ? `: “${d.emotion}”` : ""}.${typeof d.stressBefore === "number" && typeof d.stressAfter === "number" ? ` O estresse passou de ${d.stressBefore} para ${d.stressAfter}.` : ""}`;
+      case "emotion.felt": {
+        const source =
+          typeof d.stimulusSource === "string" &&
+          e.causes.includes(d.stimulusSource)
+            ? this.event(d.stimulusSource)
+            : undefined;
+        const trigger = source ? this.stimulusDescription(source, actor) : "";
+        const response = trigger.startsWith("a ")
+          ? `à ${trigger.slice(2)}`
+          : trigger.startsWith("o ")
+            ? `ao ${trigger.slice(2)}`
+            : `a ${trigger}`;
+        text = `Foi registrada para ${this.name(actor)} uma emoção${typeof d.emotion === "string" ? `: “${d.emotion}”` : ""}${source ? `, em resposta ${response}` : ""}.${typeof d.stressBefore === "number" && typeof d.stressAfter === "number" ? ` O estresse passou de ${d.stressBefore} para ${d.stressAfter}.` : ""}`;
         break;
+      }
       case "person.transformed": {
         const changes: string[] = [];
         for (const [key, before, after, dict] of [
@@ -257,11 +496,13 @@ export class Archive {
         break;
       }
       case "person.died":
-        text = `${this.name(d.victim ?? victim)} morreu${typeof d.cause === "string" ? `; causa registrada: ${d.cause}` : ""}${typeof d.killer === "string" ? `. A autoria da morte foi atribuída a ${this.name(d.killer)}` : ""}.`;
+        text = `${this.name(d.victim ?? victim)} morreu${this.family.age(String(d.victim ?? victim), e.month) === undefined ? "" : `, aos ${this.family.age(String(d.victim ?? victim), e.month)} anos`}${typeof d.cause === "string" ? `; causa registrada: ${d.cause}` : ""}${typeof d.killer === "string" ? `. A autoria da morte foi atribuída a ${this.name(d.killer)}` : ""}.`;
         break;
       default:
         text = `${eventLabel(e)}.${e.participants.length ? ` Participantes registrados: ${names(e.participants.map((p) => p.id))}.` : ""}`;
     }
-    return `No ${date(e.month)}: ${text}`;
+    return readable(
+      `No ${date(e.month)}, ${text.replace(/^(Nasceu|Foi|O arquivo|O duelo|Em|Terminou|Uma)\b/, (v) => v.toLocaleLowerCase("pt-BR"))}`,
+    );
   }
 }

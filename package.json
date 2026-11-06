@@ -30,7 +30,7 @@
     "ablate:m2c": "node scripts/report-marco2c-shadow.mjs",
     "benchmark:m2c:family": "node scripts/benchmark-marco2c-family.mjs",
     "test:ui": "vitest run src/ui/v2/model.test.ts --maxWorkers=1 --minWorkers=1",
-    "examples:ui": "node scripts/validate-ui-v2.mjs"
+    "examples:ui": "node scripts/validate-ui-feedback.mjs"
   },
   "devDependencies": {
     "typescript": "~5.9.3",

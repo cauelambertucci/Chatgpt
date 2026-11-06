@@ -1,0 +1,1921 @@
+{
+  "selection": "Três seeds reservadas com linhagens afetadas por sequela nos relatórios anteriores, ordenadas pelo número de eventos já medidos em 40 fundadores/100 anos/2c. Exemplos intencionalmente ricos; não estimam distribuição populacional. Nenhuma seed substituída.",
+  "ranking": "Pessoa por seed: presença de sequela 40, ferimento 10, viuvez até 3×8, perda de filho em vida até 3×15; desempate por fatos (até 1 ponto) e ID.",
+  "rows": [
+    {
+      "seed": "reservado-2b-006",
+      "reused": true,
+      "founders": 40,
+      "months": 1200,
+      "people": 105,
+      "events": 108575,
+      "errors": [],
+      "replayEqual": true,
+      "entityHash": "14c1f18fbcecdaed18c92a69a3dd8e75679bd6a7160baa1035c493b05bdcdb9f",
+      "usedTypes": [
+        "activity.period",
+        "attack.attempted",
+        "attack.contact",
+        "blood.interval",
+        "blood.stabilized",
+        "body.created",
+        "body.developed",
+        "care.compression",
+        "care.requested",
+        "development.period",
+        "duel.agreed",
+        "duel.choice",
+        "duel.ended",
+        "duel.observed",
+        "duel.summary",
+        "emotion.felt",
+        "family.founder.registered",
+        "family.loss.perceived",
+        "family.siblings.registered",
+        "information.received",
+        "information.shared",
+        "injury.news",
+        "injury.perceived",
+        "life.aged",
+        "life.ended",
+        "medical.stocked",
+        "mortality.condition",
+        "natural.death",
+        "needs.period",
+        "partnership.ended",
+        "partnership.formed",
+        "people.created",
+        "person.born",
+        "person.died",
+        "person.transformed",
+        "physicalGoal.adopted",
+        "physicalGoal.reassessed",
+        "population.balance",
+        "pregnancy.conceived",
+        "pregnancy.lost",
+        "sequela.confirmed",
+        "sequela.perceived",
+        "stress.response",
+        "world.created",
+        "wound.created"
+      ],
+      "chosen": {
+        "id": "person:01",
+        "name": "Mael",
+        "wounds": 1,
+        "sequelae": 1,
+        "widowhood": 0,
+        "childLosses": 0,
+        "score": 50.22
+      },
+      "ranking": [
+        {
+          "id": "person:01",
+          "name": "Mael",
+          "wounds": 1,
+          "sequelae": 1,
+          "widowhood": 0,
+          "childLosses": 0,
+          "score": 50.22
+        },
+        {
+          "id": "person:23",
+          "name": "Doran 2",
+          "wounds": 0,
+          "sequelae": 0,
+          "widowhood": 1,
+          "childLosses": 1,
+          "score": 23.15
+        },
+        {
+          "id": "person:17",
+          "name": "Alda",
+          "wounds": 0,
+          "sequelae": 0,
+          "widowhood": 2,
+          "childLosses": 0,
+          "score": 16.3
+        },
+        {
+          "id": "person:birth:person:32:10",
+          "name": "Tala 10",
+          "wounds": 0,
+          "sequelae": 0,
+          "widowhood": 2,
+          "childLosses": 0,
+          "score": 16.28
+        },
+        {
+          "id": "person:birth:person:18:2",
+          "name": "Iven 2 (registro 2917)",
+          "wounds": 0,
+          "sequelae": 0,
+          "widowhood": 2,
+          "childLosses": 0,
+          "score": 16.27
+        }
+      ],
+      "children": [
+        {
+          "id": "person:birth:person:01:2",
+          "name": "Bram 2 (registro 2915)",
+          "lifespan": "nascimento: ano 2 · morta: ano 75, aos 72 anos",
+          "birth": {
+            "id": "person:birth:person:01:2",
+            "month": 33,
+            "parents": [
+              "person:01",
+              "person:17"
+            ],
+            "founder": false,
+            "source": "event:2915"
+          },
+          "death": 901
+        },
+        {
+          "id": "person:birth:person:01:9",
+          "name": "Luma 9",
+          "lifespan": "nascimento: ano 9 · morta: ano 82, aos 72 anos",
+          "birth": {
+            "id": "person:birth:person:01:9",
+            "month": 117,
+            "parents": [
+              "person:01",
+              "person:17"
+            ],
+            "founder": false,
+            "source": "event:10410"
+          },
+          "death": 988
+        },
+        {
+          "id": "person:birth:person:01:14",
+          "name": "Neris 14",
+          "lifespan": "nascimento: ano 14 · morta: ano 85, aos 70 anos",
+          "birth": {
+            "id": "person:birth:person:01:14",
+            "month": 177,
+            "parents": [
+              "person:01",
+              "person:17"
+            ],
+            "founder": false,
+            "source": "event:15952"
+          },
+          "death": 1025
+        },
+        {
+          "id": "person:birth:person:01:17",
+          "name": "Doran 17",
+          "lifespan": "nascimento: ano 17 · viva",
+          "birth": {
+            "id": "person:birth:person:01:17",
+            "month": 213,
+            "parents": [
+              "person:01",
+              "person:17"
+            ],
+            "founder": false,
+            "source": "event:19305"
+          }
+        }
+      ],
+      "partnerships": [
+        {
+          "people": [
+            "person:01",
+            "person:17"
+          ],
+          "start": 0,
+          "source": "event:84",
+          "end": 642,
+          "endSource": "event:61103",
+          "reason": "morte"
+        }
+      ],
+      "paragraphs": [
+        {
+          "text": "Mael integrava o grupo fundador, com 27 anos no início. Não há infância simulada nem ancestrais registrados para os fundadores.",
+          "sources": [
+            "event:3"
+          ]
+        },
+        {
+          "text": "No ano 0, mês 1, Mael e Alda formaram parceria. No ano 2, mês 10, nasceu Bram 2 (registro 2915), com parentesco biológico registrado com Mael e Alda. No ano 5, mês 10, uma gestação foi encerrada por perda; causa registrada: complicação gestacional agendada. No ano 5, mês 10, Mael percebeu a perda de uma gestação registrada no arquivo.",
+          "sources": [
+            "event:84",
+            "event:2915",
+            "event:6100",
+            "event:6101"
+          ]
+        },
+        {
+          "text": "No ano 5, mês 10, foi registrada para Mael uma emoção: “luto temeroso”, em resposta à percepção registrada de uma perda gestacional. O estresse passou de 0 para 228. No ano 5, mês 10, em Mael, Cautela passou de 33 para 36; Paz passou de -22 para -19. No ano 9, mês 10, nasceu Luma 9, com parentesco biológico registrado com Mael e Alda. No ano 10, mês 10, foi avaliado um duelo entre Thorin e Mael; o duelo foi iniciado.",
+          "sources": [
+            "event:6102",
+            "event:6103",
+            "event:10410",
+            "event:11502"
+          ]
+        },
+        {
+          "text": "No ano 10, mês 10, Mael sofreu um ferimento na perna esquerda, com lesão nervosa registrada. No ano 10, mês 10, Mael percebeu o ferimento no próprio corpo. No ano 10, mês 10, foi registrada para Mael uma emoção: “medo”, em resposta ao ferimento de Mael. O estresse passou de 0 para 114. No ano 10, mês 10, em Mael, Cautela passou de 36 para 39; Paz passou de -19 para -16.",
+          "sources": [
+            "event:11507",
+            "event:11508",
+            "event:11509",
+            "event:11510"
+          ]
+        },
+        {
+          "text": "No ano 10, mês 10, o duelo terminou; motivo registrado: rendição. No ano 11, mês 4, foi confirmada uma sequela permanente de Mael na perna esquerda. No ano 11, mês 4, Mael percebeu a sequela no próprio corpo. No ano 11, mês 4, foi registrada para Mael uma emoção: “luto temeroso”, em resposta à sequela de Mael. O estresse passou de 0 para 228.",
+          "sources": [
+            "event:11526",
+            "event:12095",
+            "event:12096",
+            "event:12097"
+          ]
+        },
+        {
+          "text": "No ano 11, mês 4, em Mael, Cautela passou de 39 para 42; Paz passou de -16 para -13. No ano 14, mês 10, nasceu Neris 14, com parentesco biológico registrado com Mael e Alda. No ano 17, mês 10, nasceu Doran 17, com parentesco biológico registrado com Mael e Alda. No ano 53, mês 7, Mael morreu, aos 80 anos; causa registrada: morte natural: declínio fisiológico.",
+          "sources": [
+            "event:12098",
+            "event:15952",
+            "event:19305",
+            "event:61102"
+          ]
+        },
+        {
+          "text": "No ano 53, mês 7, terminou a parceria registrada entre Mael e Alda; motivo registrado: morte.",
+          "sources": [
+            "event:61103"
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "event:3",
+          "type": "family.founder.registered",
+          "month": 0,
+          "text": "No ano 0, mês 1, o arquivo incluiu Mael no grupo fundador; a história anterior não foi simulada.",
+          "causes": [
+            "event:1"
+          ]
+        },
+        {
+          "id": "event:84",
+          "type": "partnership.formed",
+          "month": 0,
+          "text": "No ano 0, mês 1, Mael e Alda formaram parceria.",
+          "causes": [
+            "event:1",
+            "event:3",
+            "event:19"
+          ]
+        },
+        {
+          "id": "event:2915",
+          "type": "person.born",
+          "month": 33,
+          "text": "No ano 2, mês 10, nasceu Bram 2 (registro 2915), com parentesco biológico registrado com Mael e Alda.",
+          "causes": [
+            "event:2140",
+            "event:2186"
+          ]
+        },
+        {
+          "id": "event:6100",
+          "type": "pregnancy.lost",
+          "month": 69,
+          "text": "No ano 5, mês 10, uma gestação foi encerrada por perda; causa registrada: complicação gestacional agendada.",
+          "causes": [
+            "event:5357"
+          ]
+        },
+        {
+          "id": "event:6101",
+          "type": "family.loss.perceived",
+          "month": 69,
+          "text": "No ano 5, mês 10, Mael percebeu a perda de uma gestação registrada no arquivo.",
+          "causes": [
+            "event:6100"
+          ]
+        },
+        {
+          "id": "event:6102",
+          "type": "emotion.felt",
+          "month": 69,
+          "text": "No ano 5, mês 10, foi registrada para Mael uma emoção: “luto temeroso”, em resposta à percepção registrada de uma perda gestacional. O estresse passou de 0 para 228.",
+          "causes": [
+            "event:1",
+            "event:6043",
+            "event:6101"
+          ]
+        },
+        {
+          "id": "event:6103",
+          "type": "person.transformed",
+          "month": 69,
+          "text": "No ano 5, mês 10, em Mael, Cautela passou de 33 para 36; Paz passou de -22 para -19.",
+          "causes": [
+            "event:1",
+            "event:6102"
+          ]
+        },
+        {
+          "id": "event:10410",
+          "type": "person.born",
+          "month": 117,
+          "text": "No ano 9, mês 10, nasceu Luma 9, com parentesco biológico registrado com Mael e Alda.",
+          "causes": [
+            "event:9610",
+            "event:9656"
+          ]
+        },
+        {
+          "id": "event:11502",
+          "type": "duel.agreed",
+          "month": 129,
+          "text": "No ano 10, mês 10, foi avaliado um duelo entre Thorin e Mael; o duelo foi iniciado.",
+          "causes": [
+            "event:1",
+            "event:6103",
+            "event:10654",
+            "event:10656",
+            "event:10658"
+          ]
+        },
+        {
+          "id": "event:11507",
+          "type": "wound.created",
+          "month": 129,
+          "text": "No ano 10, mês 10, Mael sofreu um ferimento na perna esquerda, com lesão nervosa registrada.",
+          "causes": [
+            "event:10656",
+            "event:11506"
+          ]
+        },
+        {
+          "id": "event:11508",
+          "type": "injury.perceived",
+          "month": 129,
+          "text": "No ano 10, mês 10, Mael percebeu o ferimento no próprio corpo.",
+          "causes": [
+            "event:1",
+            "event:11507"
+          ]
+        },
+        {
+          "id": "event:11509",
+          "type": "emotion.felt",
+          "month": 129,
+          "text": "No ano 10, mês 10, foi registrada para Mael uma emoção: “medo”, em resposta ao ferimento de Mael. O estresse passou de 0 para 114.",
+          "causes": [
+            "event:6103",
+            "event:11418",
+            "event:11508"
+          ]
+        },
+        {
+          "id": "event:11510",
+          "type": "person.transformed",
+          "month": 129,
+          "text": "No ano 10, mês 10, em Mael, Cautela passou de 36 para 39; Paz passou de -19 para -16.",
+          "causes": [
+            "event:6103",
+            "event:11509"
+          ]
+        },
+        {
+          "id": "event:11526",
+          "type": "duel.ended",
+          "month": 129,
+          "text": "No ano 10, mês 10, o duelo terminou; motivo registrado: rendição.",
+          "causes": [
+            "event:1",
+            "event:10654",
+            "event:11502",
+            "event:11517",
+            "event:11519",
+            "event:11524"
+          ]
+        },
+        {
+          "id": "event:12095",
+          "type": "sequela.confirmed",
+          "month": 135,
+          "text": "No ano 11, mês 4, foi confirmada uma sequela permanente de Mael na perna esquerda.",
+          "causes": [
+            "event:11507",
+            "event:11524"
+          ]
+        },
+        {
+          "id": "event:12096",
+          "type": "sequela.perceived",
+          "month": 135,
+          "text": "No ano 11, mês 4, Mael percebeu a sequela no próprio corpo.",
+          "causes": [
+            "event:1",
+            "event:11508",
+            "event:12095"
+          ]
+        },
+        {
+          "id": "event:12097",
+          "type": "emotion.felt",
+          "month": 135,
+          "text": "No ano 11, mês 4, foi registrada para Mael uma emoção: “luto temeroso”, em resposta à sequela de Mael. O estresse passou de 0 para 228.",
+          "causes": [
+            "event:11510",
+            "event:12056",
+            "event:12096"
+          ]
+        },
+        {
+          "id": "event:12098",
+          "type": "person.transformed",
+          "month": 135,
+          "text": "No ano 11, mês 4, em Mael, Cautela passou de 39 para 42; Paz passou de -16 para -13.",
+          "causes": [
+            "event:11510",
+            "event:12097"
+          ]
+        },
+        {
+          "id": "event:15952",
+          "type": "person.born",
+          "month": 177,
+          "text": "No ano 14, mês 10, nasceu Neris 14, com parentesco biológico registrado com Mael e Alda.",
+          "causes": [
+            "event:15140",
+            "event:15186"
+          ]
+        },
+        {
+          "id": "event:19305",
+          "type": "person.born",
+          "month": 213,
+          "text": "No ano 17, mês 10, nasceu Doran 17, com parentesco biológico registrado com Mael e Alda.",
+          "causes": [
+            "event:18471",
+            "event:18517"
+          ]
+        },
+        {
+          "id": "event:61102",
+          "type": "person.died",
+          "month": 642,
+          "text": "No ano 53, mês 7, Mael morreu, aos 80 anos; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:1",
+            "event:61101"
+          ]
+        },
+        {
+          "id": "event:61103",
+          "type": "partnership.ended",
+          "month": 642,
+          "text": "No ano 53, mês 7, terminou a parceria registrada entre Mael e Alda; motivo registrado: morte.",
+          "causes": [
+            "event:60542",
+            "event:60560",
+            "event:61102"
+          ]
+        }
+      ]
+    },
+    {
+      "seed": "reservado-2b-011",
+      "reused": true,
+      "founders": 40,
+      "months": 1200,
+      "people": 81,
+      "events": 83641,
+      "errors": [],
+      "replayEqual": true,
+      "entityHash": "153162df4628eb1a950eb6aff77e421ac79ff3fa05e32d11dedc860ace27137c",
+      "usedTypes": [
+        "activity.period",
+        "attack.attempted",
+        "attack.missed",
+        "body.created",
+        "body.developed",
+        "development.period",
+        "duel.agreed",
+        "duel.choice",
+        "duel.ended",
+        "duel.observed",
+        "duel.summary",
+        "emotion.felt",
+        "family.founder.registered",
+        "family.loss.perceived",
+        "family.siblings.registered",
+        "information.received",
+        "information.shared",
+        "life.aged",
+        "life.ended",
+        "medical.stocked",
+        "mortality.condition",
+        "natural.death",
+        "needs.period",
+        "partnership.ended",
+        "partnership.formed",
+        "people.created",
+        "person.born",
+        "person.died",
+        "person.transformed",
+        "physicalGoal.adopted",
+        "population.balance",
+        "pregnancy.conceived",
+        "pregnancy.lost",
+        "stress.response",
+        "world.created"
+      ],
+      "chosen": {
+        "id": "person:birth:person:23:0",
+        "name": "Orin 0 (registro 820)",
+        "wounds": 0,
+        "sequelae": 0,
+        "widowhood": 5,
+        "childLosses": 2,
+        "score": 54.56
+      },
+      "ranking": [
+        {
+          "id": "person:birth:person:23:0",
+          "name": "Orin 0 (registro 820)",
+          "wounds": 0,
+          "sequelae": 0,
+          "widowhood": 5,
+          "childLosses": 2,
+          "score": 54.56
+        },
+        {
+          "id": "person:birth:person:07:20",
+          "name": "Sora 20",
+          "wounds": 0,
+          "sequelae": 0,
+          "widowhood": 3,
+          "childLosses": 0,
+          "score": 24.36
+        },
+        {
+          "id": "person:08",
+          "name": "Alda",
+          "wounds": 0,
+          "sequelae": 0,
+          "widowhood": 3,
+          "childLosses": 0,
+          "score": 24.22
+        },
+        {
+          "id": "person:birth:person:01:14",
+          "name": "Vela 14",
+          "wounds": 0,
+          "sequelae": 0,
+          "widowhood": 2,
+          "childLosses": 0,
+          "score": 16.4
+        },
+        {
+          "id": "person:birth:person:16:13",
+          "name": "Doran 13",
+          "wounds": 0,
+          "sequelae": 0,
+          "widowhood": 1,
+          "childLosses": 0,
+          "score": 8.3
+        }
+      ],
+      "children": [
+        {
+          "id": "person:birth:person:birth:person:23:0:19",
+          "name": "Sora 19",
+          "lifespan": "nascimento: ano 19 · morta: ano 90, aos 70 anos",
+          "birth": {
+            "id": "person:birth:person:birth:person:23:0:19",
+            "month": 237,
+            "parents": [
+              "person:birth:person:23:0",
+              "person:birth:person:20:0"
+            ],
+            "founder": false,
+            "source": "event:21220"
+          },
+          "death": 1087
+        },
+        {
+          "id": "person:birth:person:birth:person:23:0:22",
+          "name": "Thorin 22",
+          "lifespan": "nascimento: ano 22 · morta: ano 91, aos 68 anos",
+          "birth": {
+            "id": "person:birth:person:birth:person:23:0:22",
+            "month": 273,
+            "parents": [
+              "person:birth:person:23:0",
+              "person:birth:person:20:0"
+            ],
+            "founder": false,
+            "source": "event:24833"
+          },
+          "death": 1096
+        },
+        {
+          "id": "person:birth:person:birth:person:23:0:25",
+          "name": "Skarn 25",
+          "lifespan": "nascimento: ano 25 · viva",
+          "birth": {
+            "id": "person:birth:person:birth:person:23:0:25",
+            "month": 309,
+            "parents": [
+              "person:birth:person:23:0",
+              "person:birth:person:20:0"
+            ],
+            "founder": false,
+            "source": "event:28685"
+          }
+        }
+      ],
+      "partnerships": [
+        {
+          "people": [
+            "person:birth:person:20:0",
+            "person:birth:person:23:0"
+          ],
+          "start": 228,
+          "source": "event:20409",
+          "end": 853,
+          "endSource": "event:68943",
+          "reason": "morte"
+        },
+        {
+          "people": [
+            "person:birth:person:01:0",
+            "person:birth:person:23:0"
+          ],
+          "start": 864,
+          "source": "event:69719",
+          "end": 942,
+          "endSource": "event:73687",
+          "reason": "morte"
+        },
+        {
+          "people": [
+            "person:birth:person:23:0",
+            "person:birth:person:16:5"
+          ],
+          "start": 960,
+          "source": "event:74648",
+          "end": 995,
+          "endSource": "event:76196",
+          "reason": "morte"
+        },
+        {
+          "people": [
+            "person:birth:person:23:0",
+            "person:birth:person:07:7"
+          ],
+          "start": 1008,
+          "source": "event:76793",
+          "end": 1037,
+          "endSource": "event:77888",
+          "reason": "morte"
+        },
+        {
+          "people": [
+            "person:birth:person:23:0",
+            "person:birth:person:20:3"
+          ],
+          "start": 1068,
+          "source": "event:79130",
+          "end": 1093,
+          "endSource": "event:80038",
+          "reason": "morte"
+        },
+        {
+          "people": [
+            "person:birth:person:23:0",
+            "person:birth:person:01:14"
+          ],
+          "start": 1104,
+          "source": "event:80501",
+          "end": 1123,
+          "endSource": "event:81133",
+          "reason": "morte"
+        }
+      ],
+      "paragraphs": [
+        {
+          "text": "Orin 0 (registro 820) nasceu no ano 0, mês 10, com parentesco biológico registrado com Luma 2 e Iria.",
+          "sources": [
+            "event:820"
+          ]
+        },
+        {
+          "text": "No ano 19, mês 1, Orin 0 (registro 818) e Orin 0 (registro 820) formaram parceria. No ano 19, mês 10, nasceu Sora 19, com parentesco biológico registrado com Orin 0 (registro 820) e Orin 0 (registro 818). No ano 22, mês 10, nasceu Thorin 22, com parentesco biológico registrado com Orin 0 (registro 820) e Orin 0 (registro 818). No ano 25, mês 10, nasceu Skarn 25, com parentesco biológico registrado com Orin 0 (registro 820) e Orin 0 (registro 818).",
+          "sources": [
+            "event:20409",
+            "event:21220",
+            "event:24833",
+            "event:28685"
+          ]
+        },
+        {
+          "text": "No ano 38, mês 11, Luma 2 morreu, aos 69 anos; causa registrada: morte natural: declínio fisiológico. No ano 38, mês 11, Orin 0 (registro 820) soube da morte de Luma 2, um de seus pais biológicos. Fonte: testemunho do acontecimento registrado. No ano 38, mês 11, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Luma 2, um de seus pais biológicos (fonte: testemunho do acontecimento registrado). O estresse passou de 0 para 204. No ano 38, mês 11, em Orin 0 (registro 820), Compaixão passou de 58 para 60; Solidariedade passou de 0 para 2.",
+          "sources": [
+            "event:43238",
+            "event:43296",
+            "event:43308",
+            "event:43309"
+          ]
+        },
+        {
+          "text": "No ano 43, mês 5, Iria morreu, aos 75 anos; causa registrada: morte natural: declínio fisiológico. No ano 43, mês 5, Orin 0 (registro 820) soube da morte de Iria, um de seus pais biológicos. Fonte: testemunho do acontecimento registrado. No ano 43, mês 5, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Iria, um de seus pais biológicos (fonte: testemunho do acontecimento registrado). O estresse passou de 343 para 547. No ano 43, mês 5, em Orin 0 (registro 820), Compaixão passou de 60 para 62; Solidariedade passou de 2 para 4.",
+          "sources": [
+            "event:46689",
+            "event:46744",
+            "event:46759",
+            "event:46760"
+          ]
+        },
+        {
+          "text": "No ano 71, mês 2, Orin 0 (registro 818) morreu, aos 70 anos; causa registrada: morte natural: declínio fisiológico. No ano 71, mês 2, terminou a parceria registrada entre Orin 0 (registro 818) e Orin 0 (registro 820); motivo registrado: morte. No ano 71, mês 2, Orin 0 (registro 820) soube da morte de Orin 0 (registro 818), com quem mantinha parceria. Fonte: testemunho do acontecimento registrado. No ano 71, mês 2, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Orin 0 (registro 818), com quem mantinha parceria (fonte: testemunho do acontecimento registrado). O estresse passou de 24 para 228.",
+          "sources": [
+            "event:68942",
+            "event:68943",
+            "event:68965",
+            "event:68988"
+          ]
+        },
+        {
+          "text": "No ano 71, mês 2, em Orin 0 (registro 820), Compaixão passou de 62 para 64; Solidariedade passou de 4 para 6. No ano 72, mês 1, Skarn 0 e Orin 0 (registro 820) formaram parceria. No ano 78, mês 7, Skarn 0 morreu, aos 77 anos; causa registrada: morte natural: declínio fisiológico. No ano 78, mês 7, terminou a parceria registrada entre Skarn 0 e Orin 0 (registro 820); motivo registrado: morte.",
+          "sources": [
+            "event:68989",
+            "event:69719",
+            "event:73686",
+            "event:73687"
+          ]
+        },
+        {
+          "text": "No ano 78, mês 7, Orin 0 (registro 820) soube da morte de Skarn 0, com quem mantinha parceria. Fonte: testemunho do acontecimento registrado. No ano 78, mês 7, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Skarn 0, com quem mantinha parceria (fonte: testemunho do acontecimento registrado). O estresse passou de 228 para 432. No ano 78, mês 7, em Orin 0 (registro 820), Compaixão passou de 64 para 66; Solidariedade passou de 6 para 8. No ano 80, mês 1, Orin 0 (registro 820) e Bram 5 formaram parceria.",
+          "sources": [
+            "event:73702",
+            "event:73736",
+            "event:73737",
+            "event:74648"
+          ]
+        },
+        {
+          "text": "No ano 82, mês 12, Bram 5 morreu, aos 77 anos; causa registrada: morte natural: declínio fisiológico. No ano 82, mês 12, terminou a parceria registrada entre Bram 5 e Orin 0 (registro 820); motivo registrado: morte. No ano 82, mês 12, Orin 0 (registro 820) soube da morte de Bram 5, com quem mantinha parceria. Fonte: testemunho do acontecimento registrado. No ano 82, mês 12, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Bram 5, com quem mantinha parceria (fonte: testemunho do acontecimento registrado). O estresse passou de 432 para 636.",
+          "sources": [
+            "event:76195",
+            "event:76196",
+            "event:76208",
+            "event:76234"
+          ]
+        },
+        {
+          "text": "No ano 82, mês 12, em Orin 0 (registro 820), Compaixão passou de 66 para 68; Solidariedade passou de 8 para 10. No ano 84, mês 1, Orin 0 (registro 820) e Orin 7 formaram parceria. No ano 86, mês 6, Orin 7 morreu, aos 78 anos; causa registrada: morte natural: declínio fisiológico. No ano 86, mês 6, terminou a parceria registrada entre Orin 7 e Orin 0 (registro 820); motivo registrado: morte.",
+          "sources": [
+            "event:76235",
+            "event:76793",
+            "event:77887",
+            "event:77888"
+          ]
+        },
+        {
+          "text": "No ano 86, mês 6, Orin 0 (registro 820) soube da morte de Orin 7, com quem mantinha parceria. Fonte: testemunho do acontecimento registrado. No ano 86, mês 6, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Orin 7, com quem mantinha parceria (fonte: testemunho do acontecimento registrado). O estresse passou de 636 para 840. No ano 86, mês 6, em Orin 0 (registro 820), Compaixão passou de 68 para 70; Solidariedade passou de 10 para 12. No ano 88, mês 8, Orin 0 (registro 820) soube da morte de Alda 4, alguém com quem compartilhava ao menos um progenitor. Fonte: testemunho do acontecimento registrado.",
+          "sources": [
+            "event:77898",
+            "event:77929",
+            "event:77930",
+            "event:78892"
+          ]
+        },
+        {
+          "text": "No ano 88, mês 8, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Alda 4, alguém com quem compartilhava ao menos um progenitor (fonte: testemunho do acontecimento registrado). O estresse passou de 840 para 1000. No ano 88, mês 8, em Orin 0 (registro 820), Compaixão passou de 70 para 72; Solidariedade passou de 12 para 14. No ano 89, mês 1, Orin 0 (registro 820) e Sora 3 formaram parceria. No ano 90, mês 8, Sora 19 morreu, aos 70 anos; causa registrada: morte natural: declínio fisiológico.",
+          "sources": [
+            "event:78918",
+            "event:78919",
+            "event:79130",
+            "event:79748"
+          ]
+        },
+        {
+          "text": "No ano 90, mês 8, Orin 0 (registro 820) soube da morte de Sora 19, um de seus descendentes diretos. Fonte: testemunho do acontecimento registrado. No ano 90, mês 8, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Sora 19, um de seus descendentes diretos (fonte: testemunho do acontecimento registrado). O estresse passou de 1000 para 1000. No ano 90, mês 8, em Orin 0 (registro 820), Compaixão passou de 72 para 74; Solidariedade passou de 14 para 16. No ano 91, mês 2, Sora 3 morreu, aos 87 anos; causa registrada: morte natural: declínio fisiológico.",
+          "sources": [
+            "event:79758",
+            "event:79783",
+            "event:79784",
+            "event:80037"
+          ]
+        },
+        {
+          "text": "No ano 91, mês 2, terminou a parceria registrada entre Sora 3 e Orin 0 (registro 820); motivo registrado: morte. No ano 91, mês 2, Orin 0 (registro 820) soube da morte de Sora 3, com quem mantinha parceria. Fonte: testemunho do acontecimento registrado. No ano 91, mês 2, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Sora 3, com quem mantinha parceria (fonte: testemunho do acontecimento registrado). O estresse passou de 1000 para 1000. No ano 91, mês 2, em Orin 0 (registro 820), Compaixão passou de 74 para 76; Solidariedade passou de 16 para 18.",
+          "sources": [
+            "event:80038",
+            "event:80046",
+            "event:80069",
+            "event:80070"
+          ]
+        },
+        {
+          "text": "No ano 91, mês 5, Thorin 22 morreu, aos 68 anos; causa registrada: morte natural: declínio fisiológico. No ano 91, mês 5, Orin 0 (registro 820) soube da morte de Thorin 22, um de seus descendentes diretos. Fonte: testemunho do acontecimento registrado. No ano 91, mês 5, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Thorin 22, um de seus descendentes diretos (fonte: testemunho do acontecimento registrado). O estresse passou de 1000 para 1000. No ano 91, mês 5, em Orin 0 (registro 820), Compaixão passou de 76 para 78; Solidariedade passou de 18 para 20.",
+          "sources": [
+            "event:80168",
+            "event:80177",
+            "event:80201",
+            "event:80202"
+          ]
+        },
+        {
+          "text": "No ano 92, mês 1, Orin 0 (registro 820) e Vela 14 formaram parceria. No ano 93, mês 8, Orin 0 (registro 820) morreu, aos 92 anos; causa registrada: morte natural: declínio fisiológico. No ano 93, mês 8, terminou a parceria registrada entre Orin 0 (registro 820) e Vela 14; motivo registrado: morte.",
+          "sources": [
+            "event:80501",
+            "event:81132",
+            "event:81133"
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "event:820",
+          "type": "person.born",
+          "month": 9,
+          "text": "No ano 0, mês 10, nasceu Orin 0 (registro 820), com parentesco biológico registrado com Luma 2 e Iria.",
+          "causes": [
+            "event:86",
+            "event:94"
+          ]
+        },
+        {
+          "id": "event:20409",
+          "type": "partnership.formed",
+          "month": 228,
+          "text": "No ano 19, mês 1, Orin 0 (registro 818) e Orin 0 (registro 820) formaram parceria.",
+          "causes": [
+            "event:18959",
+            "event:18961",
+            "event:20038",
+            "event:20040"
+          ]
+        },
+        {
+          "id": "event:21220",
+          "type": "person.born",
+          "month": 237,
+          "text": "No ano 19, mês 10, nasceu Sora 19, com parentesco biológico registrado com Orin 0 (registro 820) e Orin 0 (registro 818).",
+          "causes": [
+            "event:20410",
+            "event:21188",
+            "event:21190"
+          ]
+        },
+        {
+          "id": "event:24833",
+          "type": "person.born",
+          "month": 273,
+          "text": "No ano 22, mês 10, nasceu Thorin 22, com parentesco biológico registrado com Orin 0 (registro 820) e Orin 0 (registro 818).",
+          "causes": [
+            "event:23965",
+            "event:24797",
+            "event:24799"
+          ]
+        },
+        {
+          "id": "event:28685",
+          "type": "person.born",
+          "month": 309,
+          "text": "No ano 25, mês 10, nasceu Skarn 25, com parentesco biológico registrado com Orin 0 (registro 820) e Orin 0 (registro 818).",
+          "causes": [
+            "event:27775",
+            "event:28643",
+            "event:28645"
+          ]
+        },
+        {
+          "id": "event:43238",
+          "type": "person.died",
+          "month": 466,
+          "text": "No ano 38, mês 11, Luma 2 morreu, aos 69 anos; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:1",
+            "event:43237"
+          ]
+        },
+        {
+          "id": "event:43296",
+          "type": "information.received",
+          "month": 466,
+          "text": "No ano 38, mês 11, Orin 0 (registro 820) soube da morte de Luma 2, um de seus pais biológicos. Fonte: testemunho do acontecimento registrado.",
+          "causes": [
+            "event:820",
+            "event:43238"
+          ]
+        },
+        {
+          "id": "event:43308",
+          "type": "emotion.felt",
+          "month": 466,
+          "text": "No ano 38, mês 11, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Luma 2, um de seus pais biológicos (fonte: testemunho do acontecimento registrado). O estresse passou de 0 para 204.",
+          "causes": [
+            "event:18961",
+            "event:43233",
+            "event:43296"
+          ]
+        },
+        {
+          "id": "event:43309",
+          "type": "person.transformed",
+          "month": 466,
+          "text": "No ano 38, mês 11, em Orin 0 (registro 820), Compaixão passou de 58 para 60; Solidariedade passou de 0 para 2.",
+          "causes": [
+            "event:18961",
+            "event:43308"
+          ]
+        },
+        {
+          "id": "event:46689",
+          "type": "person.died",
+          "month": 520,
+          "text": "No ano 43, mês 5, Iria morreu, aos 75 anos; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:1",
+            "event:46688"
+          ]
+        },
+        {
+          "id": "event:46744",
+          "type": "information.received",
+          "month": 520,
+          "text": "No ano 43, mês 5, Orin 0 (registro 820) soube da morte de Iria, um de seus pais biológicos. Fonte: testemunho do acontecimento registrado.",
+          "causes": [
+            "event:820",
+            "event:46689"
+          ]
+        },
+        {
+          "id": "event:46759",
+          "type": "emotion.felt",
+          "month": 520,
+          "text": "No ano 43, mês 5, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Iria, um de seus pais biológicos (fonte: testemunho do acontecimento registrado). O estresse passou de 343 para 547.",
+          "causes": [
+            "event:43309",
+            "event:46682",
+            "event:46744"
+          ]
+        },
+        {
+          "id": "event:46760",
+          "type": "person.transformed",
+          "month": 520,
+          "text": "No ano 43, mês 5, em Orin 0 (registro 820), Compaixão passou de 60 para 62; Solidariedade passou de 2 para 4.",
+          "causes": [
+            "event:43309",
+            "event:46759"
+          ]
+        },
+        {
+          "id": "event:68942",
+          "type": "person.died",
+          "month": 853,
+          "text": "No ano 71, mês 2, Orin 0 (registro 818) morreu, aos 70 anos; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:818",
+            "event:68941"
+          ]
+        },
+        {
+          "id": "event:68943",
+          "type": "partnership.ended",
+          "month": 853,
+          "text": "No ano 71, mês 2, terminou a parceria registrada entre Orin 0 (registro 818) e Orin 0 (registro 820); motivo registrado: morte.",
+          "causes": [
+            "event:68632",
+            "event:68634",
+            "event:68942"
+          ]
+        },
+        {
+          "id": "event:68965",
+          "type": "information.received",
+          "month": 853,
+          "text": "No ano 71, mês 2, Orin 0 (registro 820) soube da morte de Orin 0 (registro 818), com quem mantinha parceria. Fonte: testemunho do acontecimento registrado.",
+          "causes": [
+            "event:820",
+            "event:68942"
+          ]
+        },
+        {
+          "id": "event:68988",
+          "type": "emotion.felt",
+          "month": 853,
+          "text": "No ano 71, mês 2, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Orin 0 (registro 818), com quem mantinha parceria (fonte: testemunho do acontecimento registrado). O estresse passou de 24 para 228.",
+          "causes": [
+            "event:46760",
+            "event:61203",
+            "event:68965"
+          ]
+        },
+        {
+          "id": "event:68989",
+          "type": "person.transformed",
+          "month": 853,
+          "text": "No ano 71, mês 2, em Orin 0 (registro 820), Compaixão passou de 62 para 64; Solidariedade passou de 4 para 6.",
+          "causes": [
+            "event:46760",
+            "event:68988"
+          ]
+        },
+        {
+          "id": "event:69719",
+          "type": "partnership.formed",
+          "month": 864,
+          "text": "No ano 72, mês 1, Skarn 0 e Orin 0 (registro 820) formaram parceria.",
+          "causes": [
+            "event:68989",
+            "event:69350",
+            "event:69478",
+            "event:69523"
+          ]
+        },
+        {
+          "id": "event:73686",
+          "type": "person.died",
+          "month": 942,
+          "text": "No ano 78, mês 7, Skarn 0 morreu, aos 77 anos; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:816",
+            "event:73685"
+          ]
+        },
+        {
+          "id": "event:73687",
+          "type": "partnership.ended",
+          "month": 942,
+          "text": "No ano 78, mês 7, terminou a parceria registrada entre Skarn 0 e Orin 0 (registro 820); motivo registrado: morte.",
+          "causes": [
+            "event:73247",
+            "event:73249",
+            "event:73686"
+          ]
+        },
+        {
+          "id": "event:73702",
+          "type": "information.received",
+          "month": 942,
+          "text": "No ano 78, mês 7, Orin 0 (registro 820) soube da morte de Skarn 0, com quem mantinha parceria. Fonte: testemunho do acontecimento registrado.",
+          "causes": [
+            "event:820",
+            "event:73686"
+          ]
+        },
+        {
+          "id": "event:73736",
+          "type": "emotion.felt",
+          "month": 942,
+          "text": "No ano 78, mês 7, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Skarn 0, com quem mantinha parceria (fonte: testemunho do acontecimento registrado). O estresse passou de 228 para 432.",
+          "causes": [
+            "event:68988",
+            "event:68989",
+            "event:73702"
+          ]
+        },
+        {
+          "id": "event:73737",
+          "type": "person.transformed",
+          "month": 942,
+          "text": "No ano 78, mês 7, em Orin 0 (registro 820), Compaixão passou de 64 para 66; Solidariedade passou de 6 para 8.",
+          "causes": [
+            "event:68989",
+            "event:73736"
+          ]
+        },
+        {
+          "id": "event:74648",
+          "type": "partnership.formed",
+          "month": 960,
+          "text": "No ano 80, mês 1, Orin 0 (registro 820) e Bram 5 formaram parceria.",
+          "causes": [
+            "event:73737",
+            "event:74380",
+            "event:74461",
+            "event:74469"
+          ]
+        },
+        {
+          "id": "event:76195",
+          "type": "person.died",
+          "month": 995,
+          "text": "No ano 82, mês 12, Bram 5 morreu, aos 77 anos; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:6096",
+            "event:76194"
+          ]
+        },
+        {
+          "id": "event:76196",
+          "type": "partnership.ended",
+          "month": 995,
+          "text": "No ano 82, mês 12, terminou a parceria registrada entre Bram 5 e Orin 0 (registro 820); motivo registrado: morte.",
+          "causes": [
+            "event:76053",
+            "event:76061",
+            "event:76195"
+          ]
+        },
+        {
+          "id": "event:76208",
+          "type": "information.received",
+          "month": 995,
+          "text": "No ano 82, mês 12, Orin 0 (registro 820) soube da morte de Bram 5, com quem mantinha parceria. Fonte: testemunho do acontecimento registrado.",
+          "causes": [
+            "event:820",
+            "event:76195"
+          ]
+        },
+        {
+          "id": "event:76234",
+          "type": "emotion.felt",
+          "month": 995,
+          "text": "No ano 82, mês 12, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Bram 5, com quem mantinha parceria (fonte: testemunho do acontecimento registrado). O estresse passou de 432 para 636.",
+          "causes": [
+            "event:73736",
+            "event:73737",
+            "event:76208"
+          ]
+        },
+        {
+          "id": "event:76235",
+          "type": "person.transformed",
+          "month": 995,
+          "text": "No ano 82, mês 12, em Orin 0 (registro 820), Compaixão passou de 66 para 68; Solidariedade passou de 8 para 10.",
+          "causes": [
+            "event:73737",
+            "event:76234"
+          ]
+        },
+        {
+          "id": "event:76793",
+          "type": "partnership.formed",
+          "month": 1008,
+          "text": "No ano 84, mês 1, Orin 0 (registro 820) e Orin 7 formaram parceria.",
+          "causes": [
+            "event:76235",
+            "event:76577",
+            "event:76714",
+            "event:76754"
+          ]
+        },
+        {
+          "id": "event:77887",
+          "type": "person.died",
+          "month": 1037,
+          "text": "No ano 86, mês 6, Orin 7 morreu, aos 78 anos; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:8269",
+            "event:77886"
+          ]
+        },
+        {
+          "id": "event:77888",
+          "type": "partnership.ended",
+          "month": 1037,
+          "text": "No ano 86, mês 6, terminou a parceria registrada entre Orin 7 e Orin 0 (registro 820); motivo registrado: morte.",
+          "causes": [
+            "event:77513",
+            "event:77521",
+            "event:77887"
+          ]
+        },
+        {
+          "id": "event:77898",
+          "type": "information.received",
+          "month": 1037,
+          "text": "No ano 86, mês 6, Orin 0 (registro 820) soube da morte de Orin 7, com quem mantinha parceria. Fonte: testemunho do acontecimento registrado.",
+          "causes": [
+            "event:820",
+            "event:77887"
+          ]
+        },
+        {
+          "id": "event:77929",
+          "type": "emotion.felt",
+          "month": 1037,
+          "text": "No ano 86, mês 6, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Orin 7, com quem mantinha parceria (fonte: testemunho do acontecimento registrado). O estresse passou de 636 para 840.",
+          "causes": [
+            "event:76234",
+            "event:76235",
+            "event:77898"
+          ]
+        },
+        {
+          "id": "event:77930",
+          "type": "person.transformed",
+          "month": 1037,
+          "text": "No ano 86, mês 6, em Orin 0 (registro 820), Compaixão passou de 68 para 70; Solidariedade passou de 10 para 12.",
+          "causes": [
+            "event:76235",
+            "event:77929"
+          ]
+        },
+        {
+          "id": "event:78892",
+          "type": "information.received",
+          "month": 1063,
+          "text": "No ano 88, mês 8, Orin 0 (registro 820) soube da morte de Alda 4, alguém com quem compartilhava ao menos um progenitor. Fonte: testemunho do acontecimento registrado.",
+          "causes": [
+            "event:820",
+            "event:78882"
+          ]
+        },
+        {
+          "id": "event:78918",
+          "type": "emotion.felt",
+          "month": 1063,
+          "text": "No ano 88, mês 8, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Alda 4, alguém com quem compartilhava ao menos um progenitor (fonte: testemunho do acontecimento registrado). O estresse passou de 840 para 1000.",
+          "causes": [
+            "event:77929",
+            "event:77930",
+            "event:78892"
+          ]
+        },
+        {
+          "id": "event:78919",
+          "type": "person.transformed",
+          "month": 1063,
+          "text": "No ano 88, mês 8, em Orin 0 (registro 820), Compaixão passou de 70 para 72; Solidariedade passou de 12 para 14.",
+          "causes": [
+            "event:77930",
+            "event:78918"
+          ]
+        },
+        {
+          "id": "event:79130",
+          "type": "partnership.formed",
+          "month": 1068,
+          "text": "No ano 89, mês 1, Orin 0 (registro 820) e Sora 3 formaram parceria.",
+          "causes": [
+            "event:78917",
+            "event:78919",
+            "event:78984",
+            "event:78986"
+          ]
+        },
+        {
+          "id": "event:79748",
+          "type": "person.died",
+          "month": 1087,
+          "text": "No ano 90, mês 8, Sora 19 morreu, aos 70 anos; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:21220",
+            "event:79747"
+          ]
+        },
+        {
+          "id": "event:79758",
+          "type": "information.received",
+          "month": 1087,
+          "text": "No ano 90, mês 8, Orin 0 (registro 820) soube da morte de Sora 19, um de seus descendentes diretos. Fonte: testemunho do acontecimento registrado.",
+          "causes": [
+            "event:820",
+            "event:79748"
+          ]
+        },
+        {
+          "id": "event:79783",
+          "type": "emotion.felt",
+          "month": 1087,
+          "text": "No ano 90, mês 8, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Sora 19, um de seus descendentes diretos (fonte: testemunho do acontecimento registrado). O estresse passou de 1000 para 1000.",
+          "causes": [
+            "event:78918",
+            "event:78919",
+            "event:79758"
+          ]
+        },
+        {
+          "id": "event:79784",
+          "type": "person.transformed",
+          "month": 1087,
+          "text": "No ano 90, mês 8, em Orin 0 (registro 820), Compaixão passou de 72 para 74; Solidariedade passou de 14 para 16.",
+          "causes": [
+            "event:78919",
+            "event:79783"
+          ]
+        },
+        {
+          "id": "event:80037",
+          "type": "person.died",
+          "month": 1093,
+          "text": "No ano 91, mês 2, Sora 3 morreu, aos 87 anos; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:3976",
+            "event:80036"
+          ]
+        },
+        {
+          "id": "event:80038",
+          "type": "partnership.ended",
+          "month": 1093,
+          "text": "No ano 91, mês 2, terminou a parceria registrada entre Sora 3 e Orin 0 (registro 820); motivo registrado: morte.",
+          "causes": [
+            "event:79855",
+            "event:79857",
+            "event:80037"
+          ]
+        },
+        {
+          "id": "event:80046",
+          "type": "information.received",
+          "month": 1093,
+          "text": "No ano 91, mês 2, Orin 0 (registro 820) soube da morte de Sora 3, com quem mantinha parceria. Fonte: testemunho do acontecimento registrado.",
+          "causes": [
+            "event:820",
+            "event:80037"
+          ]
+        },
+        {
+          "id": "event:80069",
+          "type": "emotion.felt",
+          "month": 1093,
+          "text": "No ano 91, mês 2, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Sora 3, com quem mantinha parceria (fonte: testemunho do acontecimento registrado). O estresse passou de 1000 para 1000.",
+          "causes": [
+            "event:79783",
+            "event:79784",
+            "event:80046"
+          ]
+        },
+        {
+          "id": "event:80070",
+          "type": "person.transformed",
+          "month": 1093,
+          "text": "No ano 91, mês 2, em Orin 0 (registro 820), Compaixão passou de 74 para 76; Solidariedade passou de 16 para 18.",
+          "causes": [
+            "event:79784",
+            "event:80069"
+          ]
+        },
+        {
+          "id": "event:80168",
+          "type": "person.died",
+          "month": 1096,
+          "text": "No ano 91, mês 5, Thorin 22 morreu, aos 68 anos; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:24833",
+            "event:80167"
+          ]
+        },
+        {
+          "id": "event:80177",
+          "type": "information.received",
+          "month": 1096,
+          "text": "No ano 91, mês 5, Orin 0 (registro 820) soube da morte de Thorin 22, um de seus descendentes diretos. Fonte: testemunho do acontecimento registrado.",
+          "causes": [
+            "event:820",
+            "event:80168"
+          ]
+        },
+        {
+          "id": "event:80201",
+          "type": "emotion.felt",
+          "month": 1096,
+          "text": "No ano 91, mês 5, foi registrada para Orin 0 (registro 820) uma emoção: “luto solidario”, em resposta a receber notícia sobre a morte de Thorin 22, um de seus descendentes diretos (fonte: testemunho do acontecimento registrado). O estresse passou de 1000 para 1000.",
+          "causes": [
+            "event:80069",
+            "event:80070",
+            "event:80177"
+          ]
+        },
+        {
+          "id": "event:80202",
+          "type": "person.transformed",
+          "month": 1096,
+          "text": "No ano 91, mês 5, em Orin 0 (registro 820), Compaixão passou de 76 para 78; Solidariedade passou de 18 para 20.",
+          "causes": [
+            "event:80070",
+            "event:80201"
+          ]
+        },
+        {
+          "id": "event:80501",
+          "type": "partnership.formed",
+          "month": 1104,
+          "text": "No ano 92, mês 1, Orin 0 (registro 820) e Vela 14 formaram parceria.",
+          "causes": [
+            "event:79782",
+            "event:80202",
+            "event:80355",
+            "event:80363"
+          ]
+        },
+        {
+          "id": "event:81132",
+          "type": "person.died",
+          "month": 1123,
+          "text": "No ano 93, mês 8, Orin 0 (registro 820) morreu, aos 92 anos; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:820",
+            "event:81131"
+          ]
+        },
+        {
+          "id": "event:81133",
+          "type": "partnership.ended",
+          "month": 1123,
+          "text": "No ano 93, mês 8, terminou a parceria registrada entre Orin 0 (registro 820) e Vela 14; motivo registrado: morte.",
+          "causes": [
+            "event:80774",
+            "event:80782",
+            "event:81132"
+          ]
+        }
+      ]
+    },
+    {
+      "seed": "reservado-2b-028",
+      "reused": true,
+      "founders": 40,
+      "months": 1200,
+      "people": 73,
+      "events": 74963,
+      "errors": [],
+      "replayEqual": true,
+      "entityHash": "0f3e2e8d7193d898d97d50b393edbe355032dffb71b58e6665a749d792e60bb8",
+      "usedTypes": [
+        "activity.period",
+        "attack.attempted",
+        "attack.contact",
+        "blood.interval",
+        "blood.stabilized",
+        "body.created",
+        "body.developed",
+        "care.compression",
+        "care.requested",
+        "development.period",
+        "duel.agreed",
+        "duel.choice",
+        "duel.ended",
+        "duel.observed",
+        "duel.summary",
+        "emotion.felt",
+        "equipment.dropped",
+        "family.founder.registered",
+        "family.loss.perceived",
+        "family.siblings.registered",
+        "information.received",
+        "information.shared",
+        "injury.perceived",
+        "life.aged",
+        "life.ended",
+        "medical.stocked",
+        "mortality.condition",
+        "natural.death",
+        "needs.period",
+        "partnership.ended",
+        "partnership.formed",
+        "people.created",
+        "person.born",
+        "person.died",
+        "person.transformed",
+        "physicalGoal.adopted",
+        "physicalGoal.reassessed",
+        "population.balance",
+        "pregnancy.conceived",
+        "pregnancy.lost",
+        "rehabilitation.period",
+        "sequela.confirmed",
+        "sequela.perceived",
+        "stress.response",
+        "world.created",
+        "wound.created"
+      ],
+      "chosen": {
+        "id": "person:01",
+        "name": "Syl",
+        "wounds": 1,
+        "sequelae": 1,
+        "widowhood": 0,
+        "childLosses": 0,
+        "score": 50.22
+      },
+      "ranking": [
+        {
+          "id": "person:01",
+          "name": "Syl",
+          "wounds": 1,
+          "sequelae": 1,
+          "widowhood": 0,
+          "childLosses": 0,
+          "score": 50.22
+        },
+        {
+          "id": "person:birth:person:birth:person:11:1:22",
+          "name": "Orin 22",
+          "wounds": 0,
+          "sequelae": 0,
+          "widowhood": 3,
+          "childLosses": 0,
+          "score": 24.28
+        },
+        {
+          "id": "person:birth:person:birth:person:06:11:37",
+          "name": "Mael 37",
+          "wounds": 0,
+          "sequelae": 0,
+          "widowhood": 3,
+          "childLosses": 0,
+          "score": 24.27
+        },
+        {
+          "id": "person:birth:person:birth:person:06:4:27",
+          "name": "Alda 27",
+          "wounds": 0,
+          "sequelae": 0,
+          "widowhood": 3,
+          "childLosses": 0,
+          "score": 24.27
+        },
+        {
+          "id": "person:birth:person:birth:person:06:11:31",
+          "name": "Elian 31",
+          "wounds": 0,
+          "sequelae": 0,
+          "widowhood": 2,
+          "childLosses": 0,
+          "score": 16.21
+        }
+      ],
+      "children": [
+        {
+          "id": "person:birth:person:13:4",
+          "name": "Alda 4",
+          "lifespan": "nascimento: ano 4 · morta: ano 74, aos 69 anos",
+          "birth": {
+            "id": "person:birth:person:13:4",
+            "month": 57,
+            "parents": [
+              "person:13",
+              "person:01"
+            ],
+            "founder": false,
+            "source": "event:5034"
+          },
+          "death": 890
+        },
+        {
+          "id": "person:birth:person:13:7",
+          "name": "Doran 7",
+          "lifespan": "nascimento: ano 7 · morta: ano 84, aos 76 anos",
+          "birth": {
+            "id": "person:birth:person:13:7",
+            "month": 93,
+            "parents": [
+              "person:13",
+              "person:01"
+            ],
+            "founder": false,
+            "source": "event:8211"
+          },
+          "death": 1013
+        },
+        {
+          "id": "person:birth:person:13:11",
+          "name": "Doran 11",
+          "lifespan": "nascimento: ano 11 · morta: ano 97, aos 85 anos",
+          "birth": {
+            "id": "person:birth:person:13:11",
+            "month": 141,
+            "parents": [
+              "person:13",
+              "person:01"
+            ],
+            "founder": false,
+            "source": "event:12493"
+          },
+          "death": 1166
+        },
+        {
+          "id": "person:birth:person:13:14",
+          "name": "Mira 14",
+          "lifespan": "nascimento: ano 14 · morta: ano 83, aos 68 anos",
+          "birth": {
+            "id": "person:birth:person:13:14",
+            "month": 177,
+            "parents": [
+              "person:13",
+              "person:01"
+            ],
+            "founder": false,
+            "source": "event:15711"
+          },
+          "death": 1003
+        }
+      ],
+      "partnerships": [
+        {
+          "people": [
+            "person:01",
+            "person:13"
+          ],
+          "start": 0,
+          "source": "event:84",
+          "end": 578,
+          "endSource": "event:47492",
+          "reason": "morte"
+        }
+      ],
+      "paragraphs": [
+        {
+          "text": "Syl integrava o grupo fundador, com 31 anos no início. Não há infância simulada nem ancestrais registrados para os fundadores.",
+          "sources": [
+            "event:3"
+          ]
+        },
+        {
+          "text": "No ano 0, mês 1, Syl e Orin formaram parceria. No ano 0, mês 10, uma gestação foi encerrada por perda; causa registrada: complicação gestacional agendada. No ano 0, mês 10, Syl percebeu a perda de uma gestação registrada no arquivo. No ano 0, mês 10, foi registrada para Syl uma emoção: “luto temeroso”, em resposta à percepção registrada de uma perda gestacional. O estresse passou de 0 para 176.",
+          "sources": [
+            "event:84",
+            "event:817",
+            "event:821",
+            "event:822"
+          ]
+        },
+        {
+          "text": "No ano 0, mês 10, em Syl, Cautela passou de 44 para 47; Paz passou de -21 para -18. No ano 4, mês 10, nasceu Alda 4, com parentesco biológico registrado com Orin e Syl. No ano 7, mês 10, nasceu Doran 7, com parentesco biológico registrado com Orin e Syl. No ano 11, mês 10, nasceu Doran 11, com parentesco biológico registrado com Orin e Syl.",
+          "sources": [
+            "event:823",
+            "event:5034",
+            "event:8211",
+            "event:12493"
+          ]
+        },
+        {
+          "text": "No ano 14, mês 10, nasceu Mira 14, com parentesco biológico registrado com Orin e Syl. No ano 19, mês 9, foi avaliado um duelo entre Zarek e Syl; o duelo foi iniciado. No ano 19, mês 9, Syl sofreu um ferimento no antebraço direito, com fratura registrada, com lesão nervosa registrada. No ano 19, mês 9, Syl percebeu o ferimento no próprio corpo.",
+          "sources": [
+            "event:15711",
+            "event:21037",
+            "event:21042",
+            "event:21043"
+          ]
+        },
+        {
+          "text": "No ano 19, mês 9, foi registrada para Syl uma emoção: “medo”, em resposta ao ferimento de Syl. O estresse passou de 0 para 88. No ano 19, mês 9, em Syl, Cautela passou de 47 para 50; Paz passou de -18 para -15. No ano 19, mês 9, o duelo terminou; motivo registrado: interrupção por terceiro. No ano 20, mês 3, foi confirmada uma sequela permanente de Syl no antebraço direito.",
+          "sources": [
+            "event:21044",
+            "event:21045",
+            "event:21081",
+            "event:21730"
+          ]
+        },
+        {
+          "text": "No ano 20, mês 3, Syl percebeu a sequela no próprio corpo. No ano 20, mês 3, foi registrada para Syl uma emoção: “luto temeroso”, em resposta à sequela de Syl. O estresse passou de 0 para 176. No ano 20, mês 3, em Syl, Cautela passou de 50 para 53; Paz passou de -15 para -12. No ano 48, mês 3, Syl morreu, aos 79 anos; causa registrada: morte natural: declínio fisiológico.",
+          "sources": [
+            "event:21731",
+            "event:21732",
+            "event:21733",
+            "event:47491"
+          ]
+        },
+        {
+          "text": "No ano 48, mês 3, terminou a parceria registrada entre Syl e Orin; motivo registrado: morte.",
+          "sources": [
+            "event:47492"
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "event:3",
+          "type": "family.founder.registered",
+          "month": 0,
+          "text": "No ano 0, mês 1, o arquivo incluiu Syl no grupo fundador; a história anterior não foi simulada.",
+          "causes": [
+            "event:1"
+          ]
+        },
+        {
+          "id": "event:84",
+          "type": "partnership.formed",
+          "month": 0,
+          "text": "No ano 0, mês 1, Syl e Orin formaram parceria.",
+          "causes": [
+            "event:1",
+            "event:3",
+            "event:15"
+          ]
+        },
+        {
+          "id": "event:817",
+          "type": "pregnancy.lost",
+          "month": 9,
+          "text": "No ano 0, mês 10, uma gestação foi encerrada por perda; causa registrada: complicação gestacional agendada.",
+          "causes": [
+            "event:92"
+          ]
+        },
+        {
+          "id": "event:821",
+          "type": "family.loss.perceived",
+          "month": 9,
+          "text": "No ano 0, mês 10, Syl percebeu a perda de uma gestação registrada no arquivo.",
+          "causes": [
+            "event:817"
+          ]
+        },
+        {
+          "id": "event:822",
+          "type": "emotion.felt",
+          "month": 9,
+          "text": "No ano 0, mês 10, foi registrada para Syl uma emoção: “luto temeroso”, em resposta à percepção registrada de uma perda gestacional. O estresse passou de 0 para 176.",
+          "causes": [
+            "event:1",
+            "event:776",
+            "event:821"
+          ]
+        },
+        {
+          "id": "event:823",
+          "type": "person.transformed",
+          "month": 9,
+          "text": "No ano 0, mês 10, em Syl, Cautela passou de 44 para 47; Paz passou de -21 para -18.",
+          "causes": [
+            "event:1",
+            "event:822"
+          ]
+        },
+        {
+          "id": "event:5034",
+          "type": "person.born",
+          "month": 57,
+          "text": "No ano 4, mês 10, nasceu Alda 4, com parentesco biológico registrado com Orin e Syl.",
+          "causes": [
+            "event:4217",
+            "event:4297"
+          ]
+        },
+        {
+          "id": "event:8211",
+          "type": "person.born",
+          "month": 93,
+          "text": "No ano 7, mês 10, nasceu Doran 7, com parentesco biológico registrado com Orin e Syl.",
+          "causes": [
+            "event:7395",
+            "event:7473"
+          ]
+        },
+        {
+          "id": "event:12493",
+          "type": "person.born",
+          "month": 141,
+          "text": "No ano 11, mês 10, nasceu Doran 11, com parentesco biológico registrado com Orin e Syl.",
+          "causes": [
+            "event:11657",
+            "event:11737"
+          ]
+        },
+        {
+          "id": "event:15711",
+          "type": "person.born",
+          "month": 177,
+          "text": "No ano 14, mês 10, nasceu Mira 14, com parentesco biológico registrado com Orin e Syl.",
+          "causes": [
+            "event:14881",
+            "event:14959"
+          ]
+        },
+        {
+          "id": "event:21037",
+          "type": "duel.agreed",
+          "month": 236,
+          "text": "No ano 19, mês 9, foi avaliado um duelo entre Zarek e Syl; o duelo foi iniciado.",
+          "causes": [
+            "event:1",
+            "event:823",
+            "event:20282",
+            "event:20284",
+            "event:20286"
+          ]
+        },
+        {
+          "id": "event:21042",
+          "type": "wound.created",
+          "month": 236,
+          "text": "No ano 19, mês 9, Syl sofreu um ferimento no antebraço direito, com fratura registrada, com lesão nervosa registrada.",
+          "causes": [
+            "event:20284",
+            "event:21041"
+          ]
+        },
+        {
+          "id": "event:21043",
+          "type": "injury.perceived",
+          "month": 236,
+          "text": "No ano 19, mês 9, Syl percebeu o ferimento no próprio corpo.",
+          "causes": [
+            "event:1",
+            "event:21042"
+          ]
+        },
+        {
+          "id": "event:21044",
+          "type": "emotion.felt",
+          "month": 236,
+          "text": "No ano 19, mês 9, foi registrada para Syl uma emoção: “medo”, em resposta ao ferimento de Syl. O estresse passou de 0 para 88.",
+          "causes": [
+            "event:823",
+            "event:20996",
+            "event:21043"
+          ]
+        },
+        {
+          "id": "event:21045",
+          "type": "person.transformed",
+          "month": 236,
+          "text": "No ano 19, mês 9, em Syl, Cautela passou de 47 para 50; Paz passou de -18 para -15.",
+          "causes": [
+            "event:823",
+            "event:21044"
+          ]
+        },
+        {
+          "id": "event:21081",
+          "type": "duel.ended",
+          "month": 236,
+          "text": "No ano 19, mês 9, o duelo terminou; motivo registrado: interrupção por terceiro.",
+          "causes": [
+            "event:1",
+            "event:20282",
+            "event:21037",
+            "event:21062",
+            "event:21074",
+            "event:21079"
+          ]
+        },
+        {
+          "id": "event:21730",
+          "type": "sequela.confirmed",
+          "month": 242,
+          "text": "No ano 20, mês 3, foi confirmada uma sequela permanente de Syl no antebraço direito.",
+          "causes": [
+            "event:21042",
+            "event:21641"
+          ]
+        },
+        {
+          "id": "event:21731",
+          "type": "sequela.perceived",
+          "month": 242,
+          "text": "No ano 20, mês 3, Syl percebeu a sequela no próprio corpo.",
+          "causes": [
+            "event:1",
+            "event:21043",
+            "event:21730"
+          ]
+        },
+        {
+          "id": "event:21732",
+          "type": "emotion.felt",
+          "month": 242,
+          "text": "No ano 20, mês 3, foi registrada para Syl uma emoção: “luto temeroso”, em resposta à sequela de Syl. O estresse passou de 0 para 176.",
+          "causes": [
+            "event:21045",
+            "event:21687",
+            "event:21731"
+          ]
+        },
+        {
+          "id": "event:21733",
+          "type": "person.transformed",
+          "month": 242,
+          "text": "No ano 20, mês 3, em Syl, Cautela passou de 50 para 53; Paz passou de -15 para -12.",
+          "causes": [
+            "event:21045",
+            "event:21732"
+          ]
+        },
+        {
+          "id": "event:47491",
+          "type": "person.died",
+          "month": 578,
+          "text": "No ano 48, mês 3, Syl morreu, aos 79 anos; causa registrada: morte natural: declínio fisiológico.",
+          "causes": [
+            "event:1",
+            "event:47490"
+          ]
+        },
+        {
+          "id": "event:47492",
+          "type": "partnership.ended",
+          "month": 578,
+          "text": "No ano 48, mês 3, terminou a parceria registrada entre Syl e Orin; motivo registrado: morte.",
+          "causes": [
+            "event:47341",
+            "event:47359",
+            "event:47491"
+          ]
+        }
+      ]
+    }
+  ]
+}

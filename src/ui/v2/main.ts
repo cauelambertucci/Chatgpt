@@ -6,6 +6,7 @@ import {
   eventLabel,
   type PeopleFilter,
 } from "./model";
+import { readable } from "./labels";
 import { immutable, type CompactWorld } from "../../engine/v2/compact-log";
 const root = document.querySelector<HTMLDivElement>("#app")!;
 const esc = (v: unknown) =>
@@ -24,11 +25,12 @@ let archive: Archive | undefined,
   timelinePage = 0,
   bioPage = 0,
   allEvents = false;
+let treeMode = "ancestors";
 let worker: Worker | undefined,
   run = 0;
 root.innerHTML = `<header><a class="brand" href="/">✧ CHRONICLE WORLD</a><span class="edition">Arquivo de vidas · motor v2</span></header>
 <main><section class="intro"><div><p class="eyebrow">CADA VIDA DEIXA UM REGISTRO</p><h1>Uma história, muitos caminhos.</h1><p>Explore pessoas, famílias e os acontecimentos que mudaram suas vidas.</p></div><span class="badge">Leve · 40 fundadores · 100 anos</span></section>
-<form id="generate"><label for="seed">Seed do mundo</label><div class="generation-row"><input id="seed" value="interface-2c-000" required maxlength="120" autocomplete="off"><button id="start" class="primary">Gerar história</button><button id="cancel" type="button" hidden>Cancelar</button></div><div class="progress-row"><progress id="progress" max="1200" value="0" aria-label="Progresso da geração"></progress><output id="status" role="status" aria-live="polite">Pronto para gerar. Tudo acontece neste navegador.</output></div></form>
+<form id="generate"><label for="seed">Seed do mundo</label><div class="generation-row"><input id="seed" value="reservado-2b-006" required maxlength="120" autocomplete="off"><button id="start" class="primary">Gerar história</button><button id="cancel" type="button" hidden>Cancelar</button></div><div class="progress-row"><progress id="progress" max="1200" value="0" aria-label="Progresso da geração"></progress><output id="status" role="status" aria-live="polite">Pronto para gerar. Tudo acontece neste navegador.</output></div></form>
 <section id="archive" hidden><div id="summary" class="summary"></div><nav aria-label="Explorar"><button id="people-tab" aria-pressed="true">Pessoas</button><button id="timeline-tab" aria-pressed="false">Linha do tempo</button></nav><div id="explore"></div></section><section id="empty" class="empty"><span>✧</span><h2>O arquivo ainda está em branco.</h2><p>Escolha uma seed e gere cem anos de história.<br>A mesma seed reproduz os mesmos acontecimentos.</p></section></main>
 <dialog id="why" aria-labelledby="why-title"><div class="dialog-head"><h2 id="why-title">Por que aconteceu?</h2><button id="close-why" aria-label="Fechar explicação">Fechar</button></div><div id="why-body"></div></dialog>`;
 const $ = <T extends HTMLElement>(s: string) => root.querySelector<T>(s)!;
@@ -148,9 +150,9 @@ function render() {
   if (!archive) return;
   $("#archive").hidden = false;
   $("#empty").hidden = true;
-  const alive = archive.people.filter((p) => p.alive).length;
+  const alive = archive.people.filter((p) => archive!.isAlive(p.id)).length;
   $("#summary").textContent =
-    `${archive.world.scenario.seed} · ${archive.people.length} pessoas registradas · ${alive} vivas · ${archive.people.length - alive} mortas · ${archive.world.log.rows.length.toLocaleString("pt-BR")} eventos`;
+    `${archive.world.scenario.seed} · ${archive.people.length} pessoas registradas · ${alive} vivas · ${archive.family.deaths.size} mortas · ${archive.world.log.rows.length.toLocaleString("pt-BR")} eventos`;
   $("#people-tab").setAttribute("aria-pressed", String(view === "people"));
   $("#timeline-tab").setAttribute("aria-pressed", String(view === "timeline"));
   if (view === "timeline") {
@@ -186,7 +188,7 @@ function list() {
   const found = archive!.filter(filters),
     items = found.slice(personPage * 30, (personPage + 1) * 30);
   $("#person-list").innerHTML =
-    `<p class="hint" role="status">${found.length} pessoas encontradas</p>${items.length ? items.map((p) => `<button class="person-row ${p.id === selected ? "selected" : ""}" data-person="${esc(p.id)}"><span><strong>${esc(p.name)}</strong><small>Geração ${archive!.generation(p.id) ?? "?"}${archive!.missing.has(p.id) ? " · Parte ausente" : ""}</small></span><span class="life-status">${p.alive ? "Viva" : "Morta"}</span></button>`).join("") : "<p>Nenhuma pessoa corresponde aos filtros.</p>"}<div class="pager"><button id="prev-person" ${personPage === 0 ? "disabled" : ""}>Anterior</button><span>${personPage + 1} / ${Math.max(1, Math.ceil(found.length / 30))}</span><button id="next-person" ${(personPage + 1) * 30 >= found.length ? "disabled" : ""}>Próxima</button></div>`;
+    `<p class="hint" role="status">${found.length} pessoas encontradas</p>${items.length ? items.map((p) => `<button class="person-row ${p.id === selected ? "selected" : ""}" data-person="${esc(p.id)}"><span><strong>${esc(archive!.name(p.id))}</strong><small>Geração ${archive!.generation(p.id) ?? "?"}${archive!.missing.has(p.id) ? " · Parte ausente" : ""}</small></span><span class="life-status">${archive!.isAlive(p.id) ? "Viva" : archive!.family.deaths.has(p.id) ? "Morta" : "Não registrada"}</span></button>`).join("") : "<p>Nenhuma pessoa corresponde aos filtros.</p>"}<div class="pager"><button id="prev-person" ${personPage === 0 ? "disabled" : ""}>Anterior</button><span>${personPage + 1} / ${Math.max(1, Math.ceil(found.length / 30))}</span><button id="next-person" ${(personPage + 1) * 30 >= found.length ? "disabled" : ""}>Próxima</button></div>`;
   $("#prev-person").onclick = () => {
     personPage--;
     list();
@@ -199,9 +201,36 @@ function list() {
 }
 function tree(id: string, path = new Set<string>(), depth = 0): string {
   if (path.has(id)) return "<li>Referência cíclica: árvore interrompida.</li>";
-  const l = archive!.life(id),
-    parents = l?.parents || [];
-  return `<li>${personLink(id)}${depth >= 3 ? (parents.length ? "<small> Abra esta pessoa para continuar a ascendência.</small>" : "") : parents.length ? `<ul>${parents.map((p) => tree(p, new Set(path).add(id), depth + 1)).join("")}</ul>` : "<small> Ascendência não registrada.</small>"}</li>`;
+  const a = archive!,
+    ids =
+      treeMode === "descendants"
+        ? a.children.get(id) || []
+        : a.family.parents(id);
+  return `<li>${personLink(id)} <small>${esc(a.lifeSpan(id))}</small>${depth >= 3 ? (ids.length ? "<small> Abra esta pessoa para continuar a árvore.</small>" : "") : ids.length ? `<ul>${ids.map((p) => tree(p, new Set(path).add(id), depth + 1)).join("")}</ul>` : `<small>${treeMode === "descendants" ? " Nenhum descendente direto registrado." : " Ascendência não registrada."}</small>`}</li>`;
+}
+function genealogy() {
+  const a = archive!;
+  if (treeMode === "relations") {
+    const siblings = a.family.siblings(selected),
+      partners = [
+        ...new Set(
+          a.family
+            .partners(selected)
+            .flatMap((p) => p.people.filter((id) => id !== selected)),
+        ),
+      ];
+    $("#genealogy-tree").innerHTML = [
+      ["Irmãos (ao menos um progenitor em comum)", siblings],
+      ["Parceiros de todo o histórico", partners],
+    ]
+      .map(
+        ([title, ids]) =>
+          `<h4>${title}</h4><ul>${(ids as string[]).length ? (ids as string[]).map((id) => `<li>${personLink(id)} <small>${esc(a.lifeSpan(id))}</small></li>`).join("") : "<li>Sem vínculo registrado nesta categoria.</li>"}</ul>`,
+      )
+      .join("");
+  } else
+    $("#genealogy-tree").innerHTML = `<ul class="tree">${tree(selected)}</ul>`;
+  bind($("#genealogy-tree"));
 }
 function detail() {
   const a = archive!,
@@ -210,12 +239,46 @@ function detail() {
     $("#person-detail").textContent = "Escolha uma pessoa.";
     return;
   }
-  const l = a.life(p.id),
+  const parents = a.family.parents(p.id),
+    custody = a.family.custody.get(p.id) || [],
     children = a.children.get(p.id) || [],
-    events = a.biography(p.id),
-    page = events.slice(bioPage * 20, (bioPage + 1) * 20);
+    partnerships = a.family.partners(p.id),
+    paragraphs = a.paragraphs(p.id),
+    page = paragraphs.slice(bioPage * 10, (bioPage + 1) * 10);
   $("#person-detail").innerHTML =
-    `<div class="eyebrow">FICHA PESSOAL · ${esc(p.id)}</div><h2>${esc(p.name)}</h2><p class="lead">${esc(a.introduction(p.id))}</p><div class="family"><div><h3>Responsáveis registrados</h3><p>${l?.guardians.length ? l.guardians.map(personLink).join(", ") : "Nenhum responsável registrado."}</p></div><div><h3>Parceria ao fim do período</h3><p>${l?.partner ? personLink(l.partner) : "Nenhuma parceria vigente registrada."}</p></div><div><h3>Filhos registrados (${children.length})</h3><p>${children.length ? children.map(personLink).join(", ") : "Nenhum filho registrado."}</p></div></div><details><summary>Árvore genealógica · ascendência</summary><ul class="tree">${tree(p.id)}</ul><p class="hint">Geração = maior distância até um fundador. Nenhum ancestral é criado para preencher lacunas.</p></details><h3>Biografia documentada</h3><p class="hint">Narrativa do arquivo, não uma reconstrução do que a pessoa sabia. Pode incluir registros de descendentes posteriores à sua morte. Cada trecho remete aos fatos e suas causas. ${events.length} registros; 20 por página.</p><div id="biography">${page.length ? page.map((e) => `<section class="bio-event"><p>${esc(a.narrate(e))}</p><button class="why" data-why="${e.id}">Por quê? <span>${e.id}</span></button></section>`).join("") : "<p>Não há eventos biográficos registrados.</p>"}</div><div class="pager"><button id="prev-bio" ${bioPage === 0 ? "disabled" : ""}>Trechos anteriores</button><span>${bioPage + 1} / ${Math.max(1, Math.ceil(events.length / 20))}</span><button id="next-bio" ${(bioPage + 1) * 20 >= events.length ? "disabled" : ""}>Próximos trechos</button></div>`;
+    `<div class="eyebrow">FICHA PESSOAL</div><h2>${esc(a.name(p.id))}</h2><p class="lead">${esc(a.lifeSpan(p.id))} · geração ${a.generation(p.id) ?? "não determinada"}</p>
+  <div class="family"><div><h3>Pais biológicos</h3><p>${parents.length ? parents.map(personLink).join(" e ") : "Ascendência não registrada; nenhum ancestral foi inventado."}</p></div><div><h3>Histórico de guarda</h3>${custody.length ? `<ul>${custody.map((c) => `<li>${date(c.month)}: ${c.guardians.length ? c.guardians.map(personLink).join(", ") : "guarda sem adulto indicado neste registro"} <button class="why" data-why="${c.source}">Por quê?</button></li>`).join("")}</ul>` : `<p>${parents.length ? "Os pais biológicos estão identificados acima; a guarda não foi especificada nos eventos." : "Guarda não documentada nos eventos."}</p>`}</div></div>
+  <h3>Todos os filhos biológicos (${children.length})</h3><div class="table-scroll"><table id="children-table"><thead><tr><th>Pessoa</th><th>Nascimento</th><th>Estado, morte e idade</th></tr></thead><tbody>${children
+    .map((id) => {
+      const b = a.life(id),
+        d = a.family.deaths.get(id),
+        age = d ? a.family.age(id, d.month) : undefined;
+      return `<tr><td>${personLink(id)}</td><td>${b?.month === undefined ? "Não registrado" : `Ano ${Math.floor(b.month / 12)}`}</td><td>${d ? `Morta · ano ${Math.floor(d.month / 12)}${age === undefined ? " · idade desconhecida" : ` · ${age} anos`}` : "Viva"}</td></tr>`;
+    })
+    .join(
+      "",
+    )}</tbody></table></div>${children.length ? "" : "<p>Nenhum nascimento com filiação biológica desta pessoa foi registrado.</p>"}
+  <h3>Todas as parcerias (${partnerships.length})</h3><div class="table-scroll"><table id="partnership-table"><thead><tr><th>Parceiro</th><th>Início</th><th>Fim</th><th>Motivo / situação</th></tr></thead><tbody>${partnerships
+    .map(
+      (q) =>
+        `<tr><td>${q.people
+          .filter((id) => id !== p.id)
+          .map(personLink)
+          .join(
+            ", ",
+          )}</td><td>${q.start === undefined ? "Não registrado" : date(q.start)}</td><td>${q.end === undefined ? "Sem término registrado" : date(q.end)}</td><td>${esc(a.partnershipReason(q))} <button class="why" data-why="${q.endSource || q.source}">Por quê?</button></td></tr>`,
+    )
+    .join(
+      "",
+    )}</tbody></table></div>${partnerships.length ? "" : "<p>Nenhuma parceria foi registrada.</p>"}
+  <section class="genealogy"><h3>Árvore genealógica</h3><label for="tree-mode">Explorar relações</label><select id="tree-mode"><option value="ancestors">Ascendência</option><option value="descendants">Descendência</option><option value="relations">Irmãos e parceiros</option></select><div id="genealogy-tree"></div><p class="hint">Datas e vínculos vêm dos eventos. Os fundadores permanecem raízes sem ancestrais inventados.</p></section>
+  <h3>Biografia</h3><p class="hint">Prosa baseada em fatos registrados. Conhecimento e emoção só aparecem quando há registro de percepção. Cada parágrafo permite consultar suas fontes.</p><div id="biography">${page.map((paragraph) => `<section class="bio-paragraph"><p>${esc(paragraph.text)}</p><div class="sources">${paragraph.sources.map((id) => `<button class="why" data-why="${id}">Por quê? · ${esc(eventLabel(a.event(id)!))}</button>`).join(" ")}</div></section>`).join("")}</div><div class="pager"><button id="prev-bio" ${bioPage === 0 ? "disabled" : ""}>Trechos anteriores</button><span>${bioPage + 1} / ${Math.max(1, Math.ceil(paragraphs.length / 10))}</span><button id="next-bio" ${(bioPage + 1) * 10 >= paragraphs.length ? "disabled" : ""}>Próximos trechos</button></div>`;
+  $<HTMLSelectElement>("#tree-mode").value = treeMode;
+  $("#tree-mode").onchange = () => {
+    treeMode = $<HTMLSelectElement>("#tree-mode").value;
+    genealogy();
+  };
+  genealogy();
   $("#prev-bio").onclick = () => {
     bioPage--;
     detail();
@@ -262,19 +325,32 @@ function why(id: string) {
     e = a.event(id),
     dialog = $<HTMLDialogElement>("#why");
   if (!e) return;
-  // Never touch e.effects: random effect expansion would replay a whole prefix.
+  const presentation = a.causalPresentation(e);
+  const entry = (c: NonNullable<ReturnType<Archive["event"]>>) =>
+    `<li><strong>${esc(eventLabel(c))}</strong><p>${esc(a.narrate(c))}</p><button class="why" data-why="${c.id}">Examinar esta causa</button></li>`;
   $("#why-body").innerHTML =
-    `<p class="eyebrow">${esc(e.id)} · ${date(e.month)}</p><p>${esc(a.narrate(e))}</p><h3>Participantes registrados</h3><ul>${e.participants.map((p) => `<li>${personLink(p.id)} · ${esc(({ actor: "agente", target: "alvo", victim: "vítima", witness: "testemunha", reference: "referência", beneficiary: "beneficiário" } as const)[p.role])}</li>`).join("")}</ul>${e.decision ? `<h3>Decisão registrada</h3><p>${esc(a.name(e.decision.actor))}: ${esc(e.decision.chosen)}. ${esc(e.decision.reason)}</p><details><summary>Alternativas e escores registrados</summary><pre>${esc(JSON.stringify(e.decision.candidates, null, 2))}</pre></details>` : ""}<h3>Causas diretas (${e.causes.length})</h3>${
-      e.causes.length
-        ? `<ul class="causes">${e.causes
-            .map((c) => {
-              const cause = a.event(c);
-              return `<li>${cause ? `<p>${esc(a.narrate(cause))}</p><button class="why" data-why="${esc(c)}">Examinar causa ${esc(c)}</button>` : `Referência não encontrada: ${esc(c)}`}</li>`;
-            })
-            .join("")}</ul>`
-        : "<p>Este registro não tem causas anteriores informadas.</p>"
-    }<details><summary>Campos originais do evento</summary><pre>${esc(JSON.stringify(e.data, null, 2))}</pre></details><p class="hint">As ligações são as causas gravadas pelo motor. A ordem temporal, sozinha, não estabelece causalidade.</p>`;
+    `<h3>${esc(eventLabel(e))}</h3><p>${esc(a.narrate(e))}</p><h3>Cadeia causal principal</h3><p class="hint">Percurso de apresentação entre causas registradas. Não representa uma causa única; outras ligações estão abaixo.</p><ol class="causes principal-chain">${presentation.chain.map(entry).join("")}</ol>${presentation.continuation ? `<button class="why" data-why="${presentation.continuation}">Continuar a cadeia anterior</button>` : ""}
+  <details class="routine-context"><summary>Contexto de rotina (${presentation.routine.length})</summary><ul>${presentation.routine.map(entry).join("")}</ul></details>
+  <details><summary>Outras causas registradas (${presentation.other.length})</summary><ul>${presentation.other.map(entry).join("")}</ul></details>
+  <h3>Participantes registrados</h3><ul>${e.participants.map((p) => `<li>${personLink(p.id)} · ${esc(({ actor: "agente", target: "alvo", victim: "vítima", witness: "testemunha", reference: "referência", beneficiary: "beneficiário" } as const)[p.role])}</li>`).join("")}</ul>
+  ${
+    e.decision
+      ? `<h3>Decisão registrada</h3><p>${esc(a.name(e.decision.actor))}: ${esc(e.decision.chosen.replaceAll("_", " "))}. ${esc(readable(e.decision.reason))}</p><details><summary>Alternativas e escores</summary><table><thead><tr><th>Ação</th><th>Escore</th><th>Evidências</th></tr></thead><tbody>${e.decision.candidates
+          .map(
+            (c) =>
+              `<tr><td>${esc(c.action.replaceAll("_", " "))}</td><td>${c.score}</td><td>${c.evidence
+                .map((id) => {
+                  const evidence = a.event(id);
+                  return evidence
+                    ? `<button class="why" data-why="${id}">${esc(eventLabel(evidence))}</button>`
+                    : "Referência não disponível";
+                })
+                .join(" ")}</td></tr>`,
+          )
+          .join("")}</tbody></table></details>`
+      : ""
+  }<p class="hint">A ordem temporal, sozinha, não estabelece causalidade. Os tipos de registro são apresentados em português.</p>`;
   bind($("#why-body"));
   if (!dialog.open) dialog.showModal();
-  $("#why-body").scrollTop = 0;
+  dialog.scrollTop = 0;
 }
