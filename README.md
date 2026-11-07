@@ -240,3 +240,7 @@ A avaliação completa executa 1.050 mundos e pode demorar horas. `npm run repor
 ## Revisão da interface após feedback
 
 [Correções e validação](docs/UI-V2-FEEDBACK-REPORT.md) · [três novas biografias](docs/UI-V2-FEEDBACK-BIOGRAFIAS.md). Filiação, anos de vida e parcerias vêm do log; pais e guarda estão separados. A árvore alterna ascendência/descendência/irmãos e parceiros. A explicação causal tem rótulos em português e contexto de rotina recolhido. O comando `examples:ui` usa somente as três seeds selecionadas e reaproveita os mundos locais já gravados; exclua `reports/ui-feedback/*.world.json` apenas se quiser repetir a simulação.
+
+## Marco 2d-1 — entrega atual
+
+A interface Leve agora usa `dailyScenario`: 40 fundadores, 100 anos, objetivos pessoais ligados e ofícios Criador/Cuidador. [Relatório, benchmark e limites](docs/MARCO2D1-REPORT.md) · [três biografias reais](docs/MARCO2D1-BIOGRAFIAS.md). Seeds: `reservado-2b-006`, `reservado-2b-011`, `reservado-2b-028`. `npm run test:2d1` roda testes pequenos; `npm run report:2d1` gera só esses três mundos. O 2d-2 não foi implementado.

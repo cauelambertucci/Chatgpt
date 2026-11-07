@@ -39,6 +39,10 @@ export const outcomes = [
 ] as const;
 export type Outcome = (typeof outcomes)[number];
 export interface Person {
+  blockedWritingStock?: string;
+  knownFactSources?: Record<string, string>;
+  occupation?: import("./daily").Occupation;
+  workedMonth?: number;
   id: string;
   kind: "person";
   name: string;
@@ -140,6 +144,7 @@ export interface PersonalGoal {
   estimate?: ProtectionEstimate;
   progress?: number;
   workStarted?: string;
+  knowledgeSource?: string;
   theme?: string;
   solicited?: Record<string, { month: number; event: string }>;
   lastMonitored?: string;
@@ -159,6 +164,10 @@ export interface Place {
   supplies?: { paper: number; ink: number };
 }
 export interface Work {
+  owner?: string;
+  ownerSource?: string;
+  ownerEstate?: boolean;
+  knowledgeSource?: string;
   id: string;
   kind: "work";
   name: string;
@@ -230,6 +239,7 @@ export interface Schedule {
   absentMonths: number;
 }
 export interface Scenario {
+  dailyLife?: import("./daily").DailyOptions;
   lifeSimulation?: LifeOptions;
   seed: string;
   mode: "free" | "fixture";
@@ -264,7 +274,8 @@ export interface SliceWorld {
     | "agents-slice-2a"
     | "agents-slice-2.1"
     | "agents-slice-2b"
-    | "agents-slice-2c";
+    | "agents-slice-2c"
+    | "agents-slice-2d1";
   scenario: Scenario;
   events: SliceEvent[];
   entities: Record<string, Entity>;

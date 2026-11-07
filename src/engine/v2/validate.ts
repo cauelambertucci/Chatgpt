@@ -29,6 +29,7 @@ export function validateSlice(w: SliceWorld): string[] {
         "agents-slice-2.1",
         "agents-slice-2b",
         "agents-slice-2c",
+        "agents-slice-2d1",
       ].includes(w.engine)
     )
       fail("Versão inválida");
@@ -182,7 +183,7 @@ export function validateSlice(w: SliceWorld): string[] {
       if (e.type === "leadership.changed") {
         const candidate = e.participants.find((p) => p.role === "actor")?.id,
           eligible = Object.values(state).filter(
-            (x): x is Person => x.kind === "person" && x.alive && x.present,
+            (x): x is Person => x.kind === "person" && x.alive && x.present && (!w.scenario.dailyLife || ["adult", "elder"].includes(x.lifeStage || "adult")),
           ),
           voters = eligible.filter((p) => p.supportFor === candidate);
         if (voters.length < Math.max(3, Math.floor(eligible.length / 2) + 1))

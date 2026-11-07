@@ -239,6 +239,7 @@ type Emit = (
   data?: Record<string, unknown>,
 ) => SliceEvent;
 export interface BodyContext {
+  caregiver?: (owner:string,fallback:string,source:string)=>string;
   world: () => SliceWorld;
   month: () => number;
   emit: Emit;
@@ -1052,6 +1053,7 @@ export class BodySystem {
     if (!this.person(owner).alive) return;
     wounds = this.woundList(owner).filter((w) => w.rate > 0);
     if (!wounds.length) return;
+    caregiver=this.c.caregiver?.(owner,caregiver,wounds[0].lastEvent) ?? caregiver;
     const h = this.person(caregiver),
       medical =
         h?.medicalSkill ??

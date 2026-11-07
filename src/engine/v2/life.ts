@@ -33,6 +33,8 @@ export interface Life {
   lastEvent: string;
 }
 export interface Household {
+  writingStock?: {paper:number;ink:number};
+  stockSource?: string;
   id: string;
   kind: "household";
   source: string;

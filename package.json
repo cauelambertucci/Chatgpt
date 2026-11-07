@@ -30,7 +30,11 @@
     "ablate:m2c": "node scripts/report-marco2c-shadow.mjs",
     "benchmark:m2c:family": "node scripts/benchmark-marco2c-family.mjs",
     "test:ui": "vitest run src/ui/v2/model.test.ts --maxWorkers=1 --minWorkers=1",
-    "examples:ui": "node scripts/validate-ui-feedback.mjs"
+    "examples:ui": "node scripts/report-marco2d1.mjs",
+    "test:2d1": "vitest run src/engine/v2/daily.test.ts src/ui/v2/model.test.ts --maxWorkers=1 --minWorkers=1",
+    "report:2d1": "node scripts/report-marco2d1.mjs",
+    "benchmark:2d1": "node scripts/benchmark-marco2d1.mjs",
+    "benchmark:2d1:browser": "node scripts/benchmark-marco2d1-browser.mjs"
   },
   "devDependencies": {
     "typescript": "~5.9.3",

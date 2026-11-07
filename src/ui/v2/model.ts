@@ -1,5 +1,5 @@
 import { CompactLog, type CompactWorld } from "../../engine/v2/compact-log";
-import { demographicScenario } from "../../engine/v2/demographic-scenario";
+import { dailyScenario } from "../../engine/v2/daily-scenario";
 import type { Person, SliceEvent } from "../../engine/v2/types";
 import {
   FamilyHistory,
@@ -10,9 +10,21 @@ import {
 import { eventLabel, eventLabels, routineTypes, readable } from "./labels";
 export { eventLabel } from "./labels";
 import { traits, values } from "../../data/v2/personality";
-export const lightScenario = (seed: string) =>
-  demographicScenario(seed.trim(), 40, true);
+export const lightScenario = (seed: string) => dailyScenario(seed.trim(), 40);
 const biographyTypes = new Set([
+  "occupation.changed",
+  "occupation.care.offered",
+  "care.requested",
+  "care.compression",
+  "care.controlled",
+  "work.started",
+  "work.created",
+  "work.blocked",
+  "work.transferred",
+  "work.estate.recorded",
+  "friendship.formed",
+  "leadership.changed",
+  "personalGoal.closed",
   "family.founder.registered",
   "person.born",
   "partnership.formed",
@@ -335,6 +347,7 @@ export class Archive {
       const explicit = [
         "emotion",
         "stimulusSource",
+        "knowledgeSource",
         "source",
         "death",
         "offense",
@@ -367,6 +380,7 @@ export class Archive {
               ? 3
               : 2;
       const preferredTypes: Record<string, string[]> = {
+        "work.created": ["work.started"],
         "person.born": ["pregnancy.conceived"],
         "pregnancy.conceived": ["partnership.formed"],
         "sequela.confirmed": ["wound.created"],
@@ -374,7 +388,9 @@ export class Archive {
         "guardianship.decided": ["person.died"],
         "person.died": ["body.death", "natural.death", "mortality.condition"],
       };
-      const semantic: SliceEvent | undefined = (preferredTypes[current.type] || [])
+      const semantic: SliceEvent | undefined = (
+        preferredTypes[current.type] || []
+      )
         .map((type) => causes.find((c) => c.type === type))
         .find(Boolean);
       current =
@@ -495,6 +511,42 @@ export class Archive {
           : `Foi registrada uma transformação de ${this.name(actor)}; os valores não estão informados.`;
         break;
       }
+      case "occupation.changed":
+        text = `${this.name(actor)} ${d.previous ? `deixou o ofício ${d.previous} e passou a` : "passou a"} ${d.occupation}. Motivo registrado: ${d.reason}`;
+        break;
+      case "occupation.care.offered":
+        text = `${this.name(actor)} ofereceu cuidado a ${this.name(d.patient)} após observar uma ferida; a avaliação de tratamento está ligada a este registro.`;
+        break;
+      case "care.requested":
+        text = `O tratamento de ${this.name(actor)} foi ${d.accepted ? "aceito" : "recusado ou inviável"} após avaliação de capacidade, consentimento e recursos.`;
+        break;
+      case "care.compression":
+      case "care.controlled":
+        text = `${this.name(actor)} ${e.type === "care.compression" ? "aplicou compressão à ferida de" : "controlou o sangramento de"} ${this.name(e.participants.find((p) => p.role === "beneficiary")?.id)}.`;
+        break;
+      case "work.started": {
+        const fact =
+          typeof d.theme === "string" ? this.event(d.theme) : undefined;
+        text = `${this.name(actor)} iniciou um livro${fact ? ` sobre ${this.factDescription(fact, actor)}` : ""}, consumindo ${d.paper} unidades de papel e ${d.ink} de tinta do domicílio. ${typeof d.knowledgeSource === "string" && this.event(d.knowledgeSource) ? "Fonte: " + this.sourceDescription(this.event(d.knowledgeSource)!) + "." : "A notícia que fundamenta o tema está nas causas."}`;
+        break;
+      }
+      case "work.created": {
+        const work = this.world.entities[String(d.work)];
+        text = `${this.name(actor)} concluiu ${work?.kind === "work" ? work.name : "um livro"}, com qualidade registrada ${d.quality}/100.${work?.kind === "work" && work.owner ? " A obra pertencia inicialmente ao criador." : ""}`;
+        break;
+      }
+      case "work.transferred":
+        text = `${this.name(d.from)} entregou a obra a ${this.name(d.to)}, que passou a ser seu dono. Motivo registrado: ${d.reason}`;
+        break;
+      case "work.estate.recorded":
+        text = `A obra passou ao espólio de ${this.name(d.owner)}, sem herdeiro definido.`;
+        break;
+      case "work.blocked":
+        text = `${this.name(actor)} tentou trabalhar em uma obra, mas não conseguiu: ${d.reason}`;
+        break;
+      case "personalGoal.closed":
+        text = `Um objetivo de ${this.name(actor ?? e.participants[0]?.id)} foi encerrado. Motivo registrado: ${d.reason}`;
+        break;
       case "person.died":
         text = `${this.name(d.victim ?? victim)} morreu${this.family.age(String(d.victim ?? victim), e.month) === undefined ? "" : `, aos ${this.family.age(String(d.victim ?? victim), e.month)} anos`}${typeof d.cause === "string" ? `; causa registrada: ${d.cause}` : ""}${typeof d.killer === "string" ? `. A autoria da morte foi atribuída a ${this.name(d.killer)}` : ""}.`;
         break;

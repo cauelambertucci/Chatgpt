@@ -1,3 +1,4 @@
+import { DailySystem, domainSeed } from "./daily";
 import { firstUnknownRecipient } from "./information";
 import type { ConceptionDiagnostic } from "./demography";
 import { LifeSystem } from "./life";
@@ -89,6 +90,12 @@ export class SliceSimulation {
   private log?: CompactLog;
   private anatomy?: BodySystem;
   private life?: LifeSystem;
+  private daily?: DailySystem;
+  private attachDaily(initialize=false){
+    if(!this.state.scenario.dailyLife)return;
+    this.daily=new DailySystem({world:()=>this.state,month:()=>this.month,body:()=>this.anatomy!,emit:(...args)=>this.emit(...args)});
+    if(initialize)this.daily.initialize();
+  }
   private observeConception?: (observation: ConceptionDiagnostic) => void;
   private attachLife(initialize = false) {
     if (!this.state.scenario.lifeSimulation) return;
@@ -133,6 +140,7 @@ export class SliceSimulation {
   private attachBody(initialize = false) {
     if (!this.state.scenario.bodySimulation) return;
     this.anatomy = new BodySystem({
+      caregiver: (owner,fallback,source)=>this.daily?.caregiver(owner,fallback,source) ?? fallback,
       world: () => this.state,
       month: () => this.month,
       emit: (...args) => this.emit(...args),
@@ -184,7 +192,7 @@ export class SliceSimulation {
   ) {
     this.observeConception = options.observeConception;
     if (restored) {
-      const expected = restored.scenario.lifeSimulation
+      const expected = restored.scenario.dailyLife ? "agents-slice-2d1" : restored.scenario.lifeSimulation
         ? restored.scenario.lifeSimulation.fertilityPolicy
           ? "agents-slice-2c"
           : "agents-slice-2b"
@@ -228,6 +236,7 @@ export class SliceSimulation {
       this.month = this.state.nextMonth;
       this.attachBody();
       this.attachLife();
+      this.attachDaily();
       return;
     }
     if (
@@ -237,7 +246,7 @@ export class SliceSimulation {
       throw Error("Horizon must be 1–240 months");
     this.state = {
       version: 2,
-      engine: scenario.lifeSimulation
+      engine: scenario.dailyLife ? "agents-slice-2d1" : scenario.lifeSimulation
         ? scenario.lifeSimulation.fertilityPolicy
           ? "agents-slice-2c"
           : "agents-slice-2b"
@@ -337,6 +346,7 @@ export class SliceSimulation {
     }
     this.attachLife(true);
     this.attachBody(true);
+    this.attachDaily(true);
   }
 
   private feel(person: Person, source: SliceEvent, stimulus: Stimulus) {
@@ -943,7 +953,7 @@ export class SliceSimulation {
       [
         {
           op: "replace",
-          entity: changed(p, { informed: [...p.informed, death.id] }, id),
+          entity: changed(p, { informed: [...p.informed, death.id], ...(this.daily?{knownFactSources:{...p.knownFactSources,[death.id]:id}}:{}) }, id),
         },
       ],
       {
@@ -970,7 +980,7 @@ export class SliceSimulation {
       return;
     }
     if (
-      (p.lifeStage && p.lifeStage !== "adult") ||
+      (p.lifeStage && p.lifeStage !== "adult" && !(this.daily && p.lifeStage==="elder")) ||
       !p.kin.includes(String(death.data.victim)) ||
       !death.data.killer ||
       death.data.killer === p.id ||
@@ -1147,7 +1157,7 @@ export class SliceSimulation {
     causes: string[],
     details: Partial<PersonalGoal> = {},
   ): PersonalGoal {
-    const id = `personal:${type}:${p.id}:${target.id}`,
+    const id = `personal:${type}:${p.id}:${target.id}${this.daily && type === "criar_obra" ? ":"+details.theme : ""}`,
       eid = this.nextId();
     const g: PersonalGoal = {
       id,
@@ -1247,13 +1257,13 @@ export class SliceSimulation {
       .sort(
         (a, b) =>
           sample(
-            this.state.scenario.seed,
+            this.daily ? domainSeed(this.state.scenario.seed,"friendship") : this.state.scenario.seed,
             `contact:${p.id}:${a.id}`,
             0,
             1000000,
           ) -
             sample(
-              this.state.scenario.seed,
+              this.daily ? domainSeed(this.state.scenario.seed,"friendship") : this.state.scenario.seed,
               `contact:${p.id}:${b.id}`,
               0,
               1000000,
@@ -1554,6 +1564,7 @@ export class SliceSimulation {
     );
   }
   private prepareAdvancedGoals(p: Person) {
+    const knownTheme=this.daily?.theme(p);
     if (
       (p.values.poder || 0) > 30 &&
       (p.traits.ambicao || 0) > 55 &&
@@ -1583,14 +1594,14 @@ export class SliceSimulation {
     if (
       (p.values.arte || 0) > 30 &&
       (p.traits.criatividade || 0) > 35 &&
-      !this.personalGoals(p).some((g) => g.type === "criar_obra")
+      (this.daily ? !!knownTheme && !this.personalGoals(p).some(g=>g.type==="criar_obra" && g.closed===undefined) : !this.personalGoals(p).some((g) => g.type === "criar_obra"))
     )
       this.adoptPersonalGoal(
         p,
         p,
         "criar_obra",
         [p.lastBy.values, p.lastBy.traits],
-        { progress: 0 },
+        { progress: 0, ...(knownTheme?{theme:knownTheme.fact,knowledgeSource:knownTheme.evidence}:{}) },
       );
   }
   private campaignContact(p: Person, g: PersonalGoal) {
@@ -1600,6 +1611,7 @@ export class SliceSimulation {
           q.alive &&
           q.present &&
           q.id !== p.id &&
+          (!this.daily || ["adult","elder"].includes(q.lifeStage||"adult")) &&
           q.supportFor !== p.id &&
           (!g.solicited?.[q.id] || this.month - g.solicited[q.id].month >= 12),
       )
@@ -1760,7 +1772,7 @@ export class SliceSimulation {
         { durationMonths: 12, promise: "Manter apoio por doze meses." },
       );
     }
-    const eligible = people(this.state).filter((q) => q.alive && q.present),
+    const eligible = people(this.state).filter((q) => q.alive && q.present && (!this.daily || ["adult","elder"].includes(q.lifeStage||"adult"))),
       votes = eligible.filter((q) => q.supportFor === p.id),
       majority = Math.max(3, Math.floor(eligible.length / 2) + 1),
       place = this.state.entities["place:void"] as Place;
@@ -1806,18 +1818,20 @@ export class SliceSimulation {
       (g) => g.type === "criar_obra" && g.closed === undefined,
     )!;
     let place = this.state.entities["place:void"] as Place;
+    const home=this.daily?.home(p.id);
+    const stock=home ? home.writingStock : place.supplies;
     if (!g.workStarted) {
       if (
-        !place.supplies ||
-        place.supplies.paper < 3 ||
-        place.supplies.ink < 2
+        !stock ||
+        stock.paper < 3 ||
+        stock.ink < 2
       ) {
         const refused = this.emit(
           "work.blocked",
           [{ id: p.id, role: "actor" }],
-          causes,
-          [],
-          { goal: g.id, reason: "Faltam papel ou tinta." },
+          [...causes,...(home?.stockSource?[home.stockSource]:[])],
+          home?[{op:"replace",entity:changed(p,{blockedWritingStock:home.stockSource},this.nextId())}]:[],
+          { goal: g.id, ...(home?{household:home.id}:{}), reason: "Faltam papel ou tinta." },
           decision,
         );
         this.finishPersonalGoal(
@@ -1828,7 +1842,7 @@ export class SliceSimulation {
         );
         return;
       }
-      const theme =
+      const theme = g.theme ||
         p.informed.at(-1) ||
         (p.acquaintances && Object.values(p.acquaintances)[0]);
       const started = this.emit(
@@ -1838,17 +1852,15 @@ export class SliceSimulation {
           ...causes,
           ...(theme ? [theme] : []),
           ...(theme && p.lastBy.informed ? [p.lastBy.informed] : []),
-          ...(place.suppliesSource ? [place.suppliesSource] : []),
+          ...(home?.stockSource ? [home.stockSource] : place.suppliesSource ? [place.suppliesSource] : []),
+          ...(g.knowledgeSource?[g.knowledgeSource]:[]),
         ],
         [
           {
             op: "replace",
-            entity: {
+            entity: home ? {...home,writingStock:{paper:stock!.paper-3,ink:stock!.ink-2},stockSource:this.nextId()} : {
               ...place,
-              supplies: {
-                paper: place.supplies.paper - 3,
-                ink: place.supplies.ink - 2,
-              },
+              supplies: {paper: stock!.paper - 3, ink: stock!.ink - 2},
               suppliesSource: this.nextId(),
             },
           },
@@ -1865,6 +1877,7 @@ export class SliceSimulation {
         {
           goal: g.id,
           theme: theme || null,
+          ...(home?{household:home.id,knowledgeSource:g.knowledgeSource}:{}),
           paper: 3,
           ink: 2,
           reason:
@@ -1893,7 +1906,7 @@ export class SliceSimulation {
     );
     if (progress >= 6) {
       p = getPerson(this.state, p.id);
-      const wid = `work:${p.id}`,
+      const wid = `work:${p.id}${this.daily?":"+g.id:""}`,
         source = this.nextId(),
         quality = Math.max(
           0,
@@ -1912,6 +1925,7 @@ export class SliceSimulation {
         kind: "work",
         name: `Caderno de ${p.name}`,
         creator: p.id,
+        ...(this.daily?{owner:p.id,ownerSource:source,knowledgeSource:g.knowledgeSource}:{}),
         goal: g.id,
         theme: g.theme,
         quality,
@@ -1932,6 +1946,7 @@ export class SliceSimulation {
         ],
         { goal: g.id, work: wid, quality },
       );
+      this.daily?.transfer(work);
       this.finishPersonalGoal(
         g,
         "completed",
@@ -2303,7 +2318,7 @@ export class SliceSimulation {
       if (this.state.scenario.advancedObjectives)
         factors = { ...factors, ...personalityFactors(p, action) };
       const base = Object.values(factors).reduce((a, b) => a + b, 0),
-        jitter = noise(this.state.scenario.seed, p.id, this.month, action);
+        jitter = noise(this.daily ? domainSeed(this.state.scenario.seed, "decisions:"+action) : this.state.scenario.seed, p.id, this.month, action);
       result.push({
         action,
         base,
@@ -2505,6 +2520,7 @@ export class SliceSimulation {
           continue;
         }
         if (pg.type === "criar_obra") {
+          if(this.daily && (p.occupation!=="criador" || this.daily.ability(p.id).write<0.5))continue;
           add(
             "escrever_obra",
             {
@@ -2602,9 +2618,17 @@ export class SliceSimulation {
       !p.alive ||
       !p.present ||
       this.reactedThisMonth.has(id) ||
-      (p.lifeStage && p.lifeStage !== "adult")
+      (this.daily && p.workedMonth===this.month) ||
+      (p.lifeStage && p.lifeStage !== "adult" && !(this.daily && p.lifeStage==="elder"))
     )
       return;
+    if(this.daily){
+      this.daily.choose(id);p=getPerson(this.state,id);
+      if(this.daily.ability(id).write<0.5)for(const g of this.personalGoals(p).filter(g=>g.type==='criar_obra' && g.closed===undefined && g.workStarted)){
+        const failure=this.emit('work.blocked',[{id,role:'actor'}],[g.lastEvent,...this.daily.ability(id).sources],[],{goal:g.id,reason:'Capacidade manual insuficiente para continuar a escrita.'});
+        this.finishPersonalGoal(g,'failed',[failure.id],'Projeto interrompido por limitação manual.');
+      }
+    }
     if (this.state.scenario.personalObjectives) {
       this.prepareFriendship(p);
       if (this.state.scenario.advancedObjectives)
@@ -3110,6 +3134,9 @@ export class SliceSimulation {
         [{ op: "replace", entity: changed(k, { remorse }, rid) }],
         { remorse, reason: "Avaliação da própria morte causada." },
       );
+    }
+    if(this.daily)for(const work of Object.values(this.state.entities).filter((e):e is Work=>e.kind==='work' && e.owner===p.id && !e.ownerEstate)){
+      this.emit('work.estate.recorded',[{id:p.id,role:'reference'}],[id,work.ownerSource||work.source],[{op:'replace',entity:{...work,ownerEstate:true,ownerSource:this.nextId()}}],{work:work.id,owner:p.id,reason:'Espólio registrado; sem herdeiro presumido.'});
     }
     this.life?.onDeath(p.id, id);
   }

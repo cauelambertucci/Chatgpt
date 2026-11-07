@@ -1,0 +1,32 @@
+{
+  "build": "passed",
+  "latestTests": {
+    "engine2d1": 9,
+    "ui": 18,
+    "passed": 27
+  },
+  "directedRegression": {
+    "passed": 76,
+    "largeBatchTestsSkipped": 3
+  },
+  "browserChecks": 39,
+  "freeSeeds": [
+    {
+      "seed": "reservado-2b-006",
+      "errors": [],
+      "replayEqual": true
+    },
+    {
+      "seed": "reservado-2b-011",
+      "errors": [],
+      "replayEqual": true
+    },
+    {
+      "seed": "reservado-2b-028",
+      "errors": [],
+      "replayEqual": true
+    }
+  ],
+  "knownScopeError": "A suíte ampla executou inadvertidamente um teste legado de 100 seeds do Marco 1c antes de ser interrompida; nenhum resultado usado na avaliação do 2d-1.",
+  "stage": "2d-1 only"
+}

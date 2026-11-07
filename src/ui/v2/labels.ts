@@ -1,5 +1,6 @@
 /** Presentation catalog only. No simulation rules or event payloads are changed. */
 export const eventLabels: Readonly<Record<string, string>> = {
+ "household.materials.declared":"Materiais iniciais do domicílio", "occupation.changed":"Mudança de ofício", "occupation.care.offered":"Oferta de cuidado", "work.transferred":"Transferência de obra", "work.estate.recorded":"Obra no espólio",
   "activity.period": "Atividade do período",
   "aggressor.consequence": "Consequência para o agressor",
   "agreement.offered": "Proposta de acordo",
