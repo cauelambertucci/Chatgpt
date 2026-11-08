@@ -39,6 +39,7 @@ export const outcomes = [
 ] as const;
 export type Outcome = (typeof outcomes)[number];
 export interface Person {
+  livedFacts?: Record<string,string>;
   hunger?: number;
   blockedWritingStock?: string;
   knownFactSources?: Record<string, string>;
@@ -145,6 +146,7 @@ export interface PersonalGoal {
   estimate?: ProtectionEstimate;
   progress?: number;
   workStarted?: string;
+  workLastMonth?: number;
   knowledgeSource?: string;
   theme?: string;
   solicited?: Record<string, { month: number; event: string }>;
@@ -279,7 +281,9 @@ export interface SliceWorld {
     | "agents-slice-2d1"
     | "agents-slice-2d1-emotion2"
     | "agents-slice-2d2"
-    | "agents-slice-2d2-economy2";
+    | "agents-slice-2d2-economy2"
+    | "agents-slice-2d2-writing2"
+    | "agents-slice-2d1-writing2";
   scenario: Scenario;
   events: SliceEvent[];
   entities: Record<string, Entity>;

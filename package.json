@@ -35,7 +35,8 @@
     "report:2d1": "node scripts/report-marco2d1.mjs",
     "benchmark:2d1": "node scripts/benchmark-marco2d1.mjs",
     "benchmark:2d1:browser": "node scripts/benchmark-marco2d1-browser.mjs",
-    "test:2d2": "vitest run src/engine/v2/livelihood.test.ts src/engine/v2/emotions.test.ts src/engine/v2/daily.test.ts src/ui/v2/model.test.ts --maxWorkers=1 --minWorkers=1"
+    "test:2d2": "vitest run src/engine/v2/livelihood.test.ts src/engine/v2/emotions.test.ts src/engine/v2/daily.test.ts src/ui/v2/model.test.ts --maxWorkers=1 --minWorkers=1",
+    "test:books": "vitest run src/engine/v2/writing.test.ts src/engine/v2/daily.test.ts src/engine/v2/livelihood.test.ts src/ui/v2/model.test.ts --maxWorkers=1 --minWorkers=1"
   },
   "devDependencies": {
     "typescript": "~5.9.3",

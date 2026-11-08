@@ -256,3 +256,7 @@ A interface Leve agora usa `dailyScenario`: 40 fundadores, 100 anos, objetivos p
 ### Correção econômica do 2d-2
 
 [Relatório de uma página](docs/ECONOMIA-CORRIGIDA-REPORT.md) · [Alda e Mael](docs/ECONOMIA-CORRIGIDA-BIOGRAFIAS.md). Três seeds fixas; fome evitada nos exemplos, meta de maioria dos domicílios ocupados ainda não atingida.
+
+## Livros: conservação, tempo e narração
+
+[Relatório em cinco linhas](docs/LIVROS-REPORT.md) · [dados antes/depois](docs/LIVROS-DADOS.json) · [narração comparada](docs/LIVROS-NARRACAO.md). Validação nas mesmas três seeds, sem novo lote. Marco 3 não iniciado.

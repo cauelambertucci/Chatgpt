@@ -1,0 +1,21 @@
+{
+  "method": "Dois mundos salvos; nenhuma seed extra.",
+  "checks": [
+    "before: métrica de crianças explícita",
+    "14 livros resumidos",
+    "só primeiro e último detalhados neste caso",
+    "sem dado desconhecido impresso",
+    "before: fontes de todos os livros preservadas",
+    "before: causas preservadas",
+    "before: móvel sem overflow",
+    "before: sem erro JS",
+    "after: métrica de crianças explícita",
+    "tema vivido: parceria",
+    "tema vivido: sequela",
+    "sem dado desconhecido impresso",
+    "after: fontes de todos os livros preservadas",
+    "after: causas preservadas",
+    "after: móvel sem overflow",
+    "after: sem erro JS"
+  ]
+}

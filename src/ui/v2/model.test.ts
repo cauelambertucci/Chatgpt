@@ -622,3 +622,23 @@ it("divide vida adulta por década preservando cronologia e resume mortes simult
 });
 
 it('narra colheitas antigas sem inventar desgaste que não foi registrado',()=>{const {w,transform}=fixture(),a=new Archive(w);const text=a.narrate({...transform,type:'livelihood.period',data:{task:'cultivar',food:24,toolsUsed:1}});expect(text).toContain('24');expect(text).not.toContain('undefined');expect(text).not.toContain('desgaste');});
+
+it('resume 14 livros repetidos e preserva primeiro, último, excepcional e todas as fontes',()=>{
+ const {w}=fixture(),log=CompactLog.from(w.log);const created:string[]=[];
+ const add=(type:string,month:number,data:Record<string,unknown>,actor:string)=>{const e:SliceEvent={id:`event:${log.length}`,seq:log.length,type,month,ano:Math.floor(month/12),dia:0,location:'place:void',causes:[],participants:[{id:actor,role:'actor'}],effects:[],data};log.append(log.encodeEvent(e,{}));return e;};
+ for(let i=0;i<14;i++){
+  const fact=add('person.died',60+i,{victim:`person:${String(i+10).padStart(2,'0')}`,cause:'morte natural'},`person:${String(i+10).padStart(2,'0')}`);
+  const wid=`work:summary:${i}`,goal=`goal:summary:${i}`,quality=i===6?100:60;
+  const event=add('work.created',80+i,{work:wid,goal,quality},'person:00');created.push(event.id);
+  w.entities[wid]={id:wid,kind:'work',name:'Caderno',creator:'person:00',owner:'person:00',goal,theme:fact.id,quality,source:event.id,created:event.month,material:'papel e tinta'};
+ }
+ w.log=log.snapshot();const a=new Archive(w),ps=a.paragraphs('person:00'),text=ps.map(p=>p.text).join(' ');
+ expect(text).toContain('escreveu 14 livros sobre mortes que conheceu');expect(text.match(/concluiu Caderno/g)).toHaveLength(3);
+ expect(ps.flatMap(p=>p.sources)).toEqual(expect.arrayContaining(created));
+});
+
+it('métrica final conta pessoas vivas e domicílios distintos com menores de 18',()=>{
+ const {w}=fixture();w.nextMonth=150;
+ const a=new Archive(w),expectedHomes=new Set(a.people.filter(p=>a.isAlive(p.id) && (a.family.age(p.id,150)??100)>=0 && (a.family.age(p.id,150)??100)<18).map(p=>(w.entities[`life:${p.id}`] as any).household));
+ expect(expectedHomes.size).toBeGreaterThan(0);expect(a.populationMetrics()).toEqual({alive:a.people.filter(p=>a.isAlive(p.id)).length,householdsWithChildren:expectedHomes.size});
+});

@@ -1,0 +1,5 @@
+1. Seed **006**: **112→33 livros**, média **1,35→0,40 por pessoa** (83→83 pessoas registradas).
+2. Seed **011**: **85→27 livros**, média **1,29→0,41 por pessoa** (66→66 pessoas registradas).
+3. Seed **028**: **109→14 livros**, média **1,79→0,23 por pessoa** (61→61 pessoas registradas).
+4. **Mael:** 14→5 livros. Antes: papel **6 + 42 produzidos − 42 usados = 6**; tinta **4 + 28 − 28 = 4**. Bram 2 fabricou o papel com fibras e Iven 2, a tinta com pigmentos; 48/32 eram a disponibilidade acumulada, não o consumo. Conservação confirmada nos três mundos, antes e depois.
+5. **Regras e métricas:** −180 de utilidade por livro concluído e −120 por repetição temática consecutiva, seis meses exclusivos por livro, temas vividos com prova de conhecimento; prosa detalha primeiro, último e exceções (família ou qualidade ≥95). Vivos/casas com menores de 18 anos ao final: **19/0; 9/0; 5/0**, na ordem acima. Build, 49 testes, 16 verificações no navegador e replay validados. [Dados](LIVROS-DADOS.json) · [Narração](LIVROS-NARRACAO.md). Marco 3 não iniciado.

@@ -1,3 +1,4 @@
+import {themeProof} from "./writing";
 import { auditLife } from "./life-audit";
 import { CompactLog, type CompactWorld } from "./compact-log";
 import {
@@ -33,6 +34,8 @@ export function validateSlice(w: SliceWorld): string[] {
         "agents-slice-2d1-emotion2",
         "agents-slice-2d2",
         "agents-slice-2d2-economy2",
+        "agents-slice-2d2-writing2",
+        "agents-slice-2d1-writing2",
       ].includes(w.engine)
     )
       fail("Versão inválida");
@@ -196,21 +199,15 @@ export function validateSlice(w: SliceWorld): string[] {
       if (e.type === "work.started") {
         const p = state[e.participants[0].id] as Person,
           theme = e.data.theme;
-        if (
-          theme &&
-          !p.informed.includes(String(theme)) &&
-          !Object.values(p.acquaintances || {}).includes(String(theme))
-        )
-          fail(`${e.id}: tema não conhecido`);
-        const place = state["place:void"];
-        if (
-          place?.kind !== "place" ||
-          !place.supplies ||
-          place.supplies.paper < 3 ||
-          place.supplies.ink < 2
-        )
-          fail(`${e.id}: obra sem materiais`);
+        const evidence=typeof e.data.knowledgeSource==='string'?w.events[Number(e.data.knowledgeSource.slice(6))]:undefined;
+        const life=state[`life:${p.id}`];
+        const lived=evidence && evidence.seq<e.seq && themeProof(p.id,String(theme),evidence) && (evidence.type==='information.received'?p.informed.includes(String(theme)):life?.kind!=='life'||evidence.month-life.birthMonth>=48);
+        if(theme && !(w.scenario.dailyLife?lived:p.informed.includes(String(theme))||Object.values(p.acquaintances||{}).includes(String(theme))))fail(`${e.id}: tema não conhecido`);
+        const holder=state[String(e.data.household||'place:void')];
+        const stock=holder?.kind==='household'?holder.writingStock:holder?.kind==='place'?holder.supplies:undefined;
+        if(!stock || stock.paper<3 || stock.ink<2)fail(`${e.id}: obra sem materiais`);
       }
+
       if (w.scenario.emotionalDynamics) {
         if (e.type === "emotion.felt") {
           const p = state[e.participants[0].id] as Person;

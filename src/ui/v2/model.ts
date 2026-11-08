@@ -154,6 +154,17 @@ export class Archive {
       return "ruptura";
     return p.reason ? readable(p.reason) : "motivo não registrado";
   }
+  populationMetrics() {
+    const alive = this.people.filter((p) => this.isAlive(p.id)),
+      homes = new Set<string>();
+    for (const p of alive) {
+      const age = this.family.age(p.id, this.world.nextMonth),
+        life = this.world.entities[`life:${p.id}`];
+      if (age !== undefined && age < 18 && life?.kind === "life")
+        homes.add(life.household);
+    }
+    return { alive: alive.length, householdsWithChildren: homes.size };
+  }
   event(id: string | number) {
     const n =
       typeof id === "number"
@@ -293,6 +304,58 @@ export class Archive {
           ? "Velhice"
           : "Vida adulta";
     };
+    const hiddenBookGoals = new Set<string>(),
+      bookSummaries = new Map<string, string>();
+    const books = Object.values(this.world.entities)
+      .filter(
+        (w): w is import("../../engine/v2/types").Work =>
+          w.kind === "work" && w.creator === id,
+      )
+      .sort(
+        (a, b) =>
+          a.created - b.created ||
+          Number(a.source.slice(6)) - Number(b.source.slice(6)),
+      );
+    const runs: (typeof books)[] = [];
+    for (const book of books) {
+      const last = runs.at(-1),
+        type = book.theme ? this.event(book.theme)?.type : undefined;
+      if (!last || !type || this.event(last[0].theme!)?.type !== type)
+        runs.push([book]);
+      else last.push(book);
+    }
+    for (const run of runs) {
+      if (run.length < 3) continue;
+      const type = this.event(run[0].theme!)?.type;
+      for (const book of run.slice(1, -1)) {
+        const fact = this.event(book.theme!)!,
+          subject = String(fact.data.victim || fact.data.subject || "");
+        const unusual =
+          book.quality >= 95 ||
+          !!this.relation(id, subject, fact.month) ||
+          type !== "person.died";
+        if (!unusual) hiddenBookGoals.add(book.goal);
+      }
+      if (run.some((b) => hiddenBookGoals.has(b.goal))) {
+        const last = run.at(-1)!;
+        bookSummaries.set(
+          last.source,
+          `Entre os anos ${Math.floor(run[0].created / 12)} e ${Math.floor(last.created / 12)}, ${this.name(id)} escreveu ${run.length} livros sobre mortes que conheceu.`,
+        );
+      }
+    }
+    const associatedGoal = (e: SliceEvent, depth = 0): string | undefined => {
+      if (typeof e.data.goal === "string") return e.data.goal;
+      if (typeof e.data.work === "string") {
+        const w = this.world.entities[e.data.work];
+        if (w?.kind === "work") return w.goal;
+      }
+      if (depth < 3 && typeof e.data.stimulusSource === "string") {
+        const source = this.event(e.data.stimulusSource);
+        if (source) return associatedGoal(source, depth + 1);
+      }
+      return undefined;
+    };
     const allMoments = new Map<number, SliceEvent[]>();
     for (const e of this.biography(id).filter((e) => e.id !== birth?.source)) {
       if (!allMoments.has(e.month)) allMoments.set(e.month, []);
@@ -331,6 +394,18 @@ export class Archive {
           const sentences = events
             .filter((e) => {
               if (e.type === "person.transformed") return false;
+              if (
+                [
+                  "work.started",
+                  "work.created",
+                  "work.transferred",
+                  "work.estate.recorded",
+                  "personalGoal.closed",
+                  "emotion.felt",
+                ].includes(e.type) &&
+                hiddenBookGoals.has(associatedGoal(e) || "")
+              )
+                return false;
               if (
                 e.type === "person.died" &&
                 typeof e.data.cause === "string"
@@ -416,6 +491,8 @@ export class Archive {
             })
             .map((e) => {
               let text = withoutDate(this.narrate(e));
+              if (bookSummaries.has(e.id))
+                text += " " + bookSummaries.get(e.id);
               if (
                 e.type === "person.died" &&
                 typeof e.data.cause === "string"
@@ -586,6 +663,22 @@ export class Archive {
           : e.participants.find((p) => p.role === "victim")?.id;
     const relation =
       observer && subject ? this.relation(observer, subject, e.month) : "";
+    if (e.type === "person.born")
+      return `o nascimento de ${this.name(e.participants[0]?.id)}`;
+    if (e.type === "partnership.formed")
+      return `a parceria entre ${e.participants
+        .slice(0, 2)
+        .map((p) => this.name(p.id))
+        .join(" e ")}`;
+    if (e.type === "friendship.formed")
+      return `a amizade entre ${e.participants
+        .slice(0, 2)
+        .map((p) => this.name(p.id))
+        .join(" e ")}`;
+    if (e.type === "care.controlled")
+      return `o cuidado prestado a ${this.name(e.participants.find((p) => p.role === "beneficiary")?.id || e.data.patient)}`;
+    if (e.type === "leadership.changed")
+      return `a escolha de ${this.name(e.participants.find((p) => p.role === "actor")?.id)} para coordenar o grupo`;
     if (e.type === "personalGoal.closed") {
       const g = this.world.entities[String(e.data.goal)];
       if (g?.kind === "personalGoal") {
@@ -604,7 +697,8 @@ export class Archive {
     }
     if (e.type === "person.died")
       return `a morte de ${this.name(subject)}${relation ? `, ${relation}` : ""}`;
-    if (e.type === "pregnancy.lost") return "a perda de uma gestação";
+    if (["pregnancy.lost", "family.loss.perceived"].includes(e.type))
+      return "a perda de uma gestação";
     if (
       [
         "wound.created",
@@ -617,6 +711,11 @@ export class Archive {
     return `o acontecimento “${eventLabel(e)}”`;
   }
   sourceDescription(e: SliceEvent) {
+    if (
+      Array.isArray(e.data.personalWitnesses) &&
+      e.data.personalWitnesses.length
+    )
+      return `experiência ou percepção registrada no ${date(e.month)}`;
     const source =
       typeof e.data.source === "string" ? this.event(e.data.source) : undefined;
     if (e.data.channel === "testemunho")

@@ -1,3 +1,4 @@
+import {experienceParticipants} from "./writing";
 import { DailySystem, domainSeed } from "./daily";
 import { firstUnknownRecipient } from "./information";
 import type { ConceptionDiagnostic } from "./demography";
@@ -193,7 +194,7 @@ export class SliceSimulation {
   ) {
     this.observeConception = options.observeConception;
     if (restored) {
-      const expected = restored.scenario.dailyLife ? (restored.scenario.dailyLife.economy ? "agents-slice-2d2-economy2" : "agents-slice-2d1-emotion2") : restored.scenario.lifeSimulation
+      const expected = restored.scenario.dailyLife ? (restored.scenario.dailyLife.economy ? "agents-slice-2d2-writing2" : "agents-slice-2d1-writing2") : restored.scenario.lifeSimulation
         ? restored.scenario.lifeSimulation.fertilityPolicy
           ? "agents-slice-2c"
           : "agents-slice-2b"
@@ -247,7 +248,7 @@ export class SliceSimulation {
       throw Error("Horizon must be 1–240 months");
     this.state = {
       version: 2,
-      engine: scenario.dailyLife ? (scenario.dailyLife.economy ? "agents-slice-2d2-economy2" : "agents-slice-2d1-emotion2") : scenario.lifeSimulation
+      engine: scenario.dailyLife ? (scenario.dailyLife.economy ? "agents-slice-2d2-writing2" : "agents-slice-2d1-writing2") : scenario.lifeSimulation
         ? scenario.lifeSimulation.fertilityPolicy
           ? "agents-slice-2c"
           : "agents-slice-2b"
@@ -743,6 +744,21 @@ export class SliceSimulation {
         : rules.maxEvents)
     )
       throw Error("budget_exceeded: event safety limit");
+    const experiences=this.state.scenario.dailyLife?experienceParticipants(type,participants,data):[];
+    if(experiences.length){
+      effects=[...effects];causes=[...causes];
+      for(const id of new Set(experiences)){
+        const old=this.state.entities[id];if(old?.kind!=='person' || !old.alive)continue;
+        if(type==='person.born' && id!==(data.parents as string[])[0] && !old.present)continue;
+        const life=this.state.entities[`life:${id}`];if(life?.kind==='life' && this.month-life.birthMonth<48)continue;
+        const index=effects.findIndex(f=>f.entity.id===id),current=index>=0?effects[index].entity:old;
+        if(current.kind!=='person')continue;
+        data={...data,personalWitnesses:[...((data.personalWitnesses as string[])||[]),id]};
+        if(old.lastBy.livedFacts)causes.push(old.lastBy.livedFacts);
+        const effect:Effect={op:'replace',entity:changed(current,{livedFacts:{...current.livedFacts,[type]:this.nextId()}},this.nextId())};
+        if(index>=0)effects[index]=effect;else effects.push(effect);
+      }
+    }
     const e: SliceEvent = freeze({
       id: this.nextId(),
       seq: this.state.events.length,
@@ -1566,7 +1582,7 @@ export class SliceSimulation {
     );
   }
   private prepareAdvancedGoals(p: Person) {
-    const knownTheme=this.daily?.theme(p);
+    const knownTheme=this.personalGoals(p).some(g=>g.type==="criar_obra" && g.closed===undefined)?undefined:this.daily?.theme(p);
     if (
       (p.values.poder || 0) > 30 &&
       (p.traits.ambicao || 0) > 55 &&
@@ -1602,7 +1618,7 @@ export class SliceSimulation {
         p,
         p,
         "criar_obra",
-        [p.lastBy.values, p.lastBy.traits],
+        [p.lastBy.values, p.lastBy.traits,...(knownTheme?[knownTheme.fact,knownTheme.evidence]:[])],
         { progress: 0, ...(knownTheme?{theme:knownTheme.fact,knowledgeSource:knownTheme.evidence}:{}) },
       );
   }
@@ -1819,6 +1835,10 @@ export class SliceSimulation {
     let g = this.personalGoals(p).find(
       (g) => g.type === "criar_obra" && g.closed === undefined,
     )!;
+    if(this.daily && (p.workedMonth===this.month || g.workLastMonth===this.month))return;
+    if(this.daily && (!g.theme || !g.knowledgeSource || !this.daily.knows(p,g.theme,g.knowledgeSource))){
+      const refused=this.emit('work.blocked',[{id:p.id,role:'actor'}],causes,[],{goal:g.id,reason:'Tema sem experiência ou notícia conhecida.'},decision);this.finishPersonalGoal(g,'failed',[refused.id],'Tema desconhecido.');return;
+    }
     let place = this.state.entities["place:void"] as Place;
     const home=this.daily?.home(p.id);
     const stock=home ? home.writingStock : place.supplies;
@@ -1900,10 +1920,10 @@ export class SliceSimulation {
       [{ id: p.id, role: "actor" }],
       [...causes, g.lastEvent, p.lastBy.skills],
       [
-        { op: "replace", entity: { ...g, progress, lastEvent: eid } },
-        { op: "replace", entity: changed(p, { skills }, eid) },
+        { op: "replace", entity: { ...g, progress, ...(this.daily?{workLastMonth:this.month}:{}), lastEvent: eid } },
+        { op: "replace", entity: changed(p, { skills, ...(this.daily?{workedMonth:this.month}:{}) }, eid) },
       ],
-      { goal: g.id, action: "escrever_obra", periodMonths: 1, progress },
+      { goal: g.id, action: "escrever_obra", periodMonths: 1, progress, ...(this.daily?{occupiedMonth:this.month}:{}) },
       decision,
     );
     if (progress >= 6) {
@@ -2523,16 +2543,19 @@ export class SliceSimulation {
         }
         if (pg.type === "criar_obra") {
           if(this.daily && (p.occupation!=="criador" || this.daily.ability(p.id).write<0.5))continue;
+          const saturation=this.daily?.saturation(p,pg.theme);
           add(
             "escrever_obra",
             {
               arte: (p.values.arte || 0) * 6,
               criatividade: (p.traits.criatividade || 0) * 3,
               projeto: 350,
+              saturacaoFormato: -(saturation?.formatPenalty||0),
+              repeticaoTema: -(saturation?.topicPenalty||0),
               perseveranca: (p.traits.perseveranca || 0) * 2,
             },
             p.id,
-            [pg.source, pg.lastEvent, p.lastBy.skills].filter(Boolean),
+            [pg.source, pg.lastEvent, p.lastBy.skills,...(p.works||[]).map(id=>(this.state.entities[id] as Work).source)].filter(Boolean),
           );
           continue;
         }

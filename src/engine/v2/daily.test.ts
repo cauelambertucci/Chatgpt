@@ -1,3 +1,4 @@
+import {themeProof} from "./writing";
 import { auditDailyCompact } from "./daily-audit";
 import { it, expect } from "vitest";
 import { dailyScenario } from "./daily-scenario";
@@ -45,8 +46,7 @@ it("livro conserva insumos, referencia notícia anterior, dono e replay", () => 
   expect(book.owner).toBeTruthy();
   expect(book.knowledgeSource).toBeTruthy();
   const receipt = ev.find((e) => e.id === book.knowledgeSource)!;
-  expect(receipt.type).toBe("information.received");
-  expect(receipt.data.offense).toBe(book.theme);
+  expect(themeProof(book.creator,book.theme!,receipt)).toBe(true);
   expect(receipt.seq).toBeLessThan(made[0].seq);
   const h = Object.values(w.entities).filter((e) => e.kind === "household");
   expect(
@@ -69,7 +69,7 @@ it("notícia bloqueada impede tema sobre a morte", () => {
   const w = run(s);
   expect(
     Object.values(w.entities).some(
-      (e) => e.kind === "work" && e.creator === s.people[0].id,
+      (e) => e.kind === "work" && e.creator === s.people[0].id && evType(w,e.theme)==="person.died",
     ),
   ).toBe(false);
 });
@@ -185,3 +185,5 @@ it("proteção continua alcançável no mundo de linhagens quando há ameaça co
   ).toBe(true);
   expect(validateCompact(w)).toEqual([]);
 });
+
+function evType(w:ReturnType<typeof run>,id?:string){return id?CompactLog.from(w.log).event(Number(id.slice(6))).type:undefined;}

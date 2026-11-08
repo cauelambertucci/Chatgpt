@@ -1,3 +1,4 @@
+import { themeProof, writingSaturation } from "./writing";
 /** Monthly occupations and minimal household economy; fictional design assumptions. */
 import {
   foodNeed,
@@ -107,13 +108,57 @@ export class DailySystem {
       .map((id) => this.w.entities[id])
       .filter((e) => e.kind === "personalGoal" && e.type === "criar_obra")
       .map((e) => (e.kind === "personalGoal" ? e.theme : undefined));
-    for (const fact of [...p.informed].reverse()) {
-      if (previous.includes(fact)) continue;
-      const event = this.w.events[Number(fact.slice(6))];
-      const evidence = p.knownFactSources?.[fact];
-      if (event?.type === "person.died" && evidence) return { fact, evidence };
+    const works = (p.works || [])
+      .map((id) => this.w.entities[id])
+      .filter((e): e is Work => e?.kind === "work");
+    const candidates = [
+      ...p.informed.map((fact) => ({
+        fact,
+        evidence: p.knownFactSources?.[fact],
+      })),
+      ...Object.values(p.livedFacts || {}).map((fact) => ({
+        fact,
+        evidence: fact,
+      })),
+    ].filter(
+      (x): x is { fact: string; evidence: string } =>
+        !!x.evidence &&
+        !previous.includes(x.fact) &&
+        this.knows(p, x.fact, x.evidence),
+    );
+    const counts = new Map<string, number>();
+    for (const w of works) {
+      const t = w.theme ? this.eventType(w.theme) : "unknown";
+      counts.set(t, (counts.get(t) || 0) + 1);
     }
+    candidates.sort(
+      (a, b) =>
+        (counts.get(this.eventType(a.fact)) || 0) -
+          (counts.get(this.eventType(b.fact)) || 0) ||
+        Number(b.fact.slice(6)) - Number(a.fact.slice(6)),
+    );
+    return candidates[0];
   }
+  private eventType(id: string) {
+    return this.w.events[Number(id.slice(6))]?.type || "unknown";
+  }
+  knows(p: Person, fact: string, evidence: string) {
+    const e = this.w.events[Number(evidence.slice(6))];
+    if (!e || !themeProof(p.id, fact, e)) return false;
+    if (e.type === "information.received") return p.informed.includes(fact);
+    const life = this.w.entities[`life:${p.id}`] as Life | undefined;
+    return !life || e.month - life.birthMonth >= 48;
+  }
+  saturation(p: Person, theme?: string) {
+    return writingSaturation(
+      (p.works || [])
+        .map((id) => this.w.entities[id])
+        .filter((e): e is Work => e?.kind === "work"),
+      (id) => this.eventType(id),
+      theme ? this.eventType(theme) : "unknown",
+    );
+  }
+
   ability(id: string) {
     const b = this.c.body(),
       body = b.body(id),

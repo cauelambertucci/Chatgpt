@@ -150,9 +150,9 @@ function render() {
   if (!archive) return;
   $("#archive").hidden = false;
   $("#empty").hidden = true;
-  const alive = archive.people.filter((p) => archive!.isAlive(p.id)).length;
+  const {alive,householdsWithChildren}=archive.populationMetrics();
   $("#summary").textContent =
-    `${archive.world.scenario.seed} · ${archive.people.length} pessoas registradas · ${alive} vivas · ${archive.family.deaths.size} mortas · ${archive.world.log.rows.length.toLocaleString("pt-BR")} eventos`;
+    `${archive.world.scenario.seed} · ${archive.people.length} pessoas registradas · ${alive} vivas · ${householdsWithChildren} domicílios com menores de 18 anos · ${archive.family.deaths.size} mortas · ${archive.world.log.rows.length.toLocaleString("pt-BR")} eventos`;
   $("#people-tab").setAttribute("aria-pressed", String(view === "people"));
   $("#timeline-tab").setAttribute("aria-pressed", String(view === "timeline"));
   if (view === "timeline") {

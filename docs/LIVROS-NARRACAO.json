@@ -1,0 +1,416 @@
+[
+  {
+    "mode": "before",
+    "person": "person:01",
+    "name": "Mael",
+    "paragraphs": [
+      {
+        "phase": "Origem",
+        "text": "Mael integrava o grupo fundador, com 27 anos no início. Não há infância simulada nem ancestrais registrados para os fundadores.",
+        "sources": [
+          "event:3"
+        ]
+      },
+      {
+        "phase": "Vida adulta",
+        "text": "No ano 0, no mês 1, Mael e Alda formaram parceria. Mael adotou o ofício de criador. No ano 2, no mês 10, nasceu Bram 2 (registro 4559), tendo como pais biológicos Mael e Alda. No ano 5, no mês 10, uma gestação foi encerrada por perda; causa registrada: complicação gestacional agendada. Mael teve uma reação de luto temeroso, em resposta à percepção registrada de uma perda gestacional. O estresse aumentou. No ano 9, mês 10, nasceu Luma 9, tendo como pais biológicos Mael e Alda.",
+        "sources": [
+          "event:124",
+          "event:137",
+          "event:4559",
+          "event:9268",
+          "event:9269",
+          "event:9270",
+          "event:9271",
+          "event:15622"
+        ]
+      },
+      {
+        "text": "No mês 10 do ano 10, foi avaliado um duelo entre Thorin e Mael; o duelo foi iniciado. Mael sofreu um ferimento na perna esquerda, com lesão nervosa registrada. Mael sentiu medo, em resposta ao ferimento de Mael. O estresse aumentou. Alda aplicou compressão à ferida de Mael na perna esquerda. Controlou o sangramento de Mael na perna esquerda. O duelo terminou; motivo registrado: rendição. No mês 4 do ano 11, foi confirmada uma sequela permanente de Mael na perna esquerda. Sentiu luto temeroso, em resposta à sequela de Mael. O estresse aumentou. No ano 16, mês 1, Mael passou de criador a artesão.",
+        "sources": [
+          "event:17223",
+          "event:17228",
+          "event:17229",
+          "event:17230",
+          "event:17231",
+          "event:17242",
+          "event:17243",
+          "event:17244",
+          "event:17246",
+          "event:17247",
+          "event:18077",
+          "event:18078",
+          "event:18079",
+          "event:18080",
+          "event:25782",
+          "event:25907"
+        ]
+      },
+      {
+        "text": "Ao longo desta fase, Mael passou a agir com mais cautela; passou a valorizar mais a paz.",
+        "sources": [
+          "event:32514",
+          "event:32646"
+        ]
+      },
+      {
+        "phase": "Velhice",
+        "text": "No ano 36, aos 63 anos, Mael iniciou um livro sobre a morte de Runa, consumindo 3 unidades de papel e 2 de tinta do domicílio. No ano 36, mês 10, Mael concluiu Caderno sobre a morte de Runa, com qualidade registrada 88/100. A obra pertencia inicialmente ao criador. Teve uma reação de orgulho, em resposta à conclusão de uma obra.",
+        "sources": [
+          "event:64388",
+          "event:65283",
+          "event:65284",
+          "event:65285",
+          "event:65286",
+          "event:67463",
+          "event:68365",
+          "event:68366",
+          "event:68367",
+          "event:68368"
+        ]
+      },
+      {
+        "text": "",
+        "sources": [
+          "event:72261",
+          "event:73167",
+          "event:73168",
+          "event:73169",
+          "event:73170",
+          "event:73351",
+          "event:74247",
+          "event:74248",
+          "event:74249",
+          "event:74250",
+          "event:76386",
+          "event:77370",
+          "event:77371",
+          "event:77372",
+          "event:77373",
+          "event:77546",
+          "event:78433",
+          "event:78434",
+          "event:78435",
+          "event:78436",
+          "event:81417",
+          "event:82229",
+          "event:82230",
+          "event:82231",
+          "event:82232",
+          "event:82554",
+          "event:83486",
+          "event:83487",
+          "event:83488",
+          "event:83489",
+          "event:83658",
+          "event:84508",
+          "event:84509",
+          "event:84510",
+          "event:84511",
+          "event:84754",
+          "event:85602",
+          "event:85603",
+          "event:85604",
+          "event:85605",
+          "event:86000",
+          "event:86856",
+          "event:86857",
+          "event:86858",
+          "event:86859"
+        ]
+      },
+      {
+        "text": "No ano 52, aos 79 anos, Mael iniciou um livro sobre a morte de Thorin 2, consumindo 3 unidades de papel e 2 de tinta do domicílio. No mês 5 do ano 53, Mael concluiu Caderno sobre a morte de Thorin 2, com qualidade registrada 92/100. A obra pertencia inicialmente ao criador. Entre os anos 36 e 53, Mael escreveu 14 livros sobre mortes que conheceu. Também sentiu orgulho, em resposta à conclusão de uma obra. O estresse diminuiu. No ano 53, mês 7, Mael morreu, aos 80 anos, por declínio fisiológico natural. A obra passou ao espólio de Mael, sem herdeiro definido. Ao longo desta fase, Mael ganhou esperança; passou a valorizar mais a honra.",
+        "sources": [
+          "event:95868",
+          "event:96677",
+          "event:96678",
+          "event:96679",
+          "event:96680",
+          "event:98325",
+          "event:99286",
+          "event:99287",
+          "event:99288",
+          "event:99289",
+          "event:99457",
+          "event:100303",
+          "event:100304",
+          "event:100305",
+          "event:100306",
+          "event:100629",
+          "event:100630",
+          "event:100631",
+          "event:100632",
+          "event:100633",
+          "event:100634",
+          "event:100635",
+          "event:100636",
+          "event:100637",
+          "event:100638",
+          "event:100639",
+          "event:100640",
+          "event:100641",
+          "event:100642",
+          "event:100643",
+          "event:100644"
+        ]
+      }
+    ],
+    "books": [
+      {
+        "id": "work:person:01:personal:criar_obra:person:01:person:01:event:64302",
+        "title": "Caderno sobre a morte de Runa",
+        "theme": "event:64302",
+        "type": "person.died",
+        "source": "event:65283"
+      },
+      {
+        "id": "work:person:01:personal:criar_obra:person:01:person:01:event:67316",
+        "title": "Caderno sobre a morte de Bram",
+        "theme": "event:67316",
+        "type": "person.died",
+        "source": "event:68365"
+      },
+      {
+        "id": "work:person:01:personal:criar_obra:person:01:person:01:event:72149",
+        "title": "Caderno sobre a morte de Bram 2 (registro 27)",
+        "theme": "event:72149",
+        "type": "person.died",
+        "source": "event:73167"
+      },
+      {
+        "id": "work:person:01:personal:criar_obra:person:01:person:01:event:72772",
+        "title": "Caderno sobre a morte de Tala 2",
+        "theme": "event:72772",
+        "type": "person.died",
+        "source": "event:74247"
+      },
+      {
+        "id": "work:person:01:personal:criar_obra:person:01:person:01:event:76311",
+        "title": "Caderno sobre a morte de Sora",
+        "theme": "event:76311",
+        "type": "person.died",
+        "source": "event:77370"
+      },
+      {
+        "id": "work:person:01:personal:criar_obra:person:01:person:01:event:77286",
+        "title": "Caderno sobre a morte de Vela",
+        "theme": "event:77286",
+        "type": "person.died",
+        "source": "event:78433"
+      },
+      {
+        "id": "work:person:01:personal:criar_obra:person:01:person:01:event:81341",
+        "title": "Caderno sobre a morte de Orin",
+        "theme": "event:81341",
+        "type": "person.died",
+        "source": "event:82229"
+      },
+      {
+        "id": "work:person:01:personal:criar_obra:person:01:person:01:event:82408",
+        "title": "Caderno sobre a morte de Doran",
+        "theme": "event:82408",
+        "type": "person.died",
+        "source": "event:83486"
+      },
+      {
+        "id": "work:person:01:personal:criar_obra:person:01:person:01:event:82730",
+        "title": "Caderno sobre a morte de Skarn",
+        "theme": "event:82730",
+        "type": "person.died",
+        "source": "event:84508"
+      },
+      {
+        "id": "work:person:01:personal:criar_obra:person:01:person:01:event:83827",
+        "title": "Caderno sobre a morte de Iven",
+        "theme": "event:83827",
+        "type": "person.died",
+        "source": "event:85602"
+      },
+      {
+        "id": "work:person:01:personal:criar_obra:person:01:person:01:event:85927",
+        "title": "Caderno sobre a morte de Sora 2",
+        "theme": "event:85927",
+        "type": "person.died",
+        "source": "event:86856"
+      },
+      {
+        "id": "work:person:01:personal:criar_obra:person:01:person:01:event:95790",
+        "title": "Caderno sobre a morte de Skarn 2",
+        "theme": "event:95790",
+        "type": "person.died",
+        "source": "event:96677"
+      },
+      {
+        "id": "work:person:01:personal:criar_obra:person:01:person:01:event:98248",
+        "title": "Caderno sobre a morte de Orin 2",
+        "theme": "event:98248",
+        "type": "person.died",
+        "source": "event:99286"
+      },
+      {
+        "id": "work:person:01:personal:criar_obra:person:01:person:01:event:98663",
+        "title": "Caderno sobre a morte de Thorin 2",
+        "theme": "event:98663",
+        "type": "person.died",
+        "source": "event:100303"
+      }
+    ]
+  },
+  {
+    "mode": "after",
+    "person": "person:01",
+    "name": "Mael",
+    "paragraphs": [
+      {
+        "phase": "Origem",
+        "text": "Mael integrava o grupo fundador, com 27 anos no início. Não há infância simulada nem ancestrais registrados para os fundadores.",
+        "sources": [
+          "event:3"
+        ]
+      },
+      {
+        "phase": "Vida adulta",
+        "text": "No ano 0, no mês 1, Mael e Alda formaram parceria. Mael adotou o ofício de criador. Também iniciou um livro sobre a parceria entre Mael e Alda, consumindo 3 unidades de papel e 2 de tinta do domicílio. No ano 0, aos 27 anos, Mael concluiu Caderno sobre a parceria entre Mael e Alda, com qualidade registrada 88/100. A obra pertencia inicialmente ao criador. Sentiu orgulho, em resposta à conclusão de uma obra. No ano 2, no mês 10, nasceu Bram 2 (registro 4613), tendo como pais biológicos Mael e Alda. Mael iniciou um livro sobre o nascimento de Bram 2 (registro 4613), consumindo 3 unidades de papel e 2 de tinta do domicílio. No ano 3, mês 3, Mael concluiu Caderno sobre o nascimento de Bram 2 (registro 4613), com qualidade registrada 92/100. A obra pertencia inicialmente ao criador. Teve uma reação de orgulho, em resposta à conclusão de uma obra. No ano 5, mês 10, uma gestação foi encerrada por perda; causa registrada: complicação gestacional agendada. Mael sentiu luto temeroso, em resposta à percepção registrada de uma perda gestacional. O estresse aumentou. Tentou trabalhar em uma obra, mas não conseguiu: Faltam papel ou tinta. Teve uma reação de medo, em resposta a uma tentativa frustrada de criar uma obra. O estresse aumentou. No mês 11 do ano 5, Mael passou de criador a artesão. No ano 9, mês 10, nasceu Luma 9, tendo como pais biológicos Mael e Alda. Mael tentou trabalhar em uma obra, mas não conseguiu: Faltam papel ou tinta. Teve uma reação de medo, em resposta a uma tentativa frustrada de criar uma obra. O estresse aumentou.",
+        "sources": [
+          "event:124",
+          "event:137",
+          "event:139",
+          "event:924",
+          "event:925",
+          "event:926",
+          "event:927",
+          "event:4613",
+          "event:4619",
+          "event:5300",
+          "event:5301",
+          "event:5302",
+          "event:5303",
+          "event:9345",
+          "event:9346",
+          "event:9347",
+          "event:9348",
+          "event:9366",
+          "event:9367",
+          "event:9368",
+          "event:9369",
+          "event:9490",
+          "event:9610",
+          "event:15734",
+          "event:15739",
+          "event:15740",
+          "event:15741",
+          "event:15742",
+          "event:15860",
+          "event:15983"
+        ]
+      },
+      {
+        "text": "No ano 10, no mês 10, foi avaliado um duelo entre Thorin e Mael; o duelo foi iniciado. Mael sofreu um ferimento na perna esquerda, com lesão nervosa registrada. Mael teve uma reação de medo, em resposta ao ferimento de Mael. O estresse aumentou. Alda aplicou compressão à ferida de Mael na perna esquerda. Controlou o sangramento de Mael na perna esquerda. O duelo terminou; motivo registrado: rendição. Mael tentou trabalhar em uma obra, mas não conseguiu: Faltam papel ou tinta. Sentiu medo, em resposta a uma tentativa frustrada de criar uma obra. O estresse aumentou. No ano 10, mês 11, Mael passou de criador a cultivador. No mês 4 do ano 11, foi confirmada uma sequela permanente de Mael na perna esquerda. Teve uma reação de luto temeroso, em resposta à sequela de Mael. O estresse aumentou. Iniciou um livro sobre a sequela de Mael, consumindo 3 unidades de papel e 2 de tinta do domicílio. No ano 11, aos 38 anos, Mael concluiu Caderno sobre a sequela de Mael, com qualidade registrada 92/100. A obra pertencia inicialmente ao criador. Teve uma reação de orgulho, em resposta à conclusão de uma obra. O estresse diminuiu.",
+        "sources": [
+          "event:17343",
+          "event:17348",
+          "event:17349",
+          "event:17350",
+          "event:17351",
+          "event:17362",
+          "event:17363",
+          "event:17364",
+          "event:17366",
+          "event:17367",
+          "event:17371",
+          "event:17372",
+          "event:17373",
+          "event:17374",
+          "event:17496",
+          "event:17616",
+          "event:17821",
+          "event:18212",
+          "event:18213",
+          "event:18214",
+          "event:18215",
+          "event:18228",
+          "event:18856",
+          "event:18857",
+          "event:18858",
+          "event:18859",
+          "event:25927",
+          "event:26052"
+        ]
+      },
+      {
+        "text": "Ao longo desta fase, Mael ganhou esperança; passou a valorizar mais a honra; passou a agir com mais cautela; passou a valorizar mais a paz.",
+        "sources": [
+          "event:32523",
+          "event:32656"
+        ]
+      },
+      {
+        "phase": "Velhice",
+        "text": "No mês 11 do ano 41, Mael iniciou um livro sobre a morte de Runa, consumindo 3 unidades de papel e 2 de tinta do domicílio. No ano 42, aos 69 anos, Mael concluiu Caderno sobre a morte de Runa, com qualidade registrada 92/100. A obra pertencia inicialmente ao criador. Sentiu orgulho, em resposta à conclusão de uma obra. O estresse diminuiu. No ano 42, mês 6, Mael iniciou um livro sobre a morte de Vela, consumindo 3 unidades de papel e 2 de tinta do domicílio. No ano 42, mês 11, Mael concluiu Caderno sobre a morte de Vela, com qualidade registrada 92/100. A obra pertencia inicialmente ao criador. Teve uma reação de orgulho, em resposta à conclusão de uma obra. O estresse diminuiu.",
+        "sources": [
+          "event:76091",
+          "event:77054",
+          "event:77055",
+          "event:77056",
+          "event:77057",
+          "event:77467",
+          "event:78338",
+          "event:78339",
+          "event:78340",
+          "event:78341"
+        ]
+      },
+      {
+        "text": "No ano 53, mês 7, Mael morreu, aos 80 anos, por declínio fisiológico natural. A obra passou ao espólio de Mael, sem herdeiro definido. Ao longo desta fase, Mael ganhou esperança; passou a valorizar mais a honra.",
+        "sources": [
+          "event:100038",
+          "event:100039",
+          "event:100040",
+          "event:100041",
+          "event:100042",
+          "event:100043",
+          "event:100044",
+          "event:100045"
+        ]
+      }
+    ],
+    "books": [
+      {
+        "id": "work:person:01:personal:criar_obra:person:01:person:01:event:124",
+        "title": "Caderno sobre a parceria entre Mael e Alda",
+        "theme": "event:124",
+        "type": "partnership.formed",
+        "source": "event:924"
+      },
+      {
+        "id": "work:person:01:personal:criar_obra:person:01:person:01:event:4613",
+        "title": "Caderno sobre o nascimento de Bram 2 (registro 4613)",
+        "theme": "event:4613",
+        "type": "person.born",
+        "source": "event:5300"
+      },
+      {
+        "id": "work:person:01:personal:criar_obra:person:01:person:01:event:18213",
+        "title": "Caderno sobre a sequela de Mael",
+        "theme": "event:18213",
+        "type": "sequela.perceived",
+        "source": "event:18856"
+      },
+      {
+        "id": "work:person:01:personal:criar_obra:person:01:person:01:event:64439",
+        "title": "Caderno sobre a morte de Runa",
+        "theme": "event:64439",
+        "type": "person.died",
+        "source": "event:77054"
+      },
+      {
+        "id": "work:person:01:personal:criar_obra:person:01:person:01:event:77224",
+        "title": "Caderno sobre a morte de Vela",
+        "theme": "event:77224",
+        "type": "person.died",
+        "source": "event:78338"
+      }
+    ]
+  }
+]
