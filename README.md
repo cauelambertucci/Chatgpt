@@ -244,3 +244,7 @@ A avaliação completa executa 1.050 mundos e pode demorar horas. `npm run repor
 ## Marco 2d-1 — entrega atual
 
 A interface Leve agora usa `dailyScenario`: 40 fundadores, 100 anos, objetivos pessoais ligados e ofícios Criador/Cuidador. [Relatório, benchmark e limites](docs/MARCO2D1-REPORT.md) · [três biografias reais](docs/MARCO2D1-BIOGRAFIAS.md). Seeds: `reservado-2b-006`, `reservado-2b-011`, `reservado-2b-028`. `npm run test:2d1` roda testes pequenos; `npm run report:2d1` gera só esses três mundos. O 2d-2 não foi implementado.
+
+### Revisão da narração após o 2d-1
+
+[Diagnóstico emocional em 10 seeds](docs/SATURACAO-2D1-REPORT.md) · [Três biografias reescritas](docs/BIOGRAFIAS-2D1-REESCRITAS.md). Motor inalterado; propostas de ajuste ainda não aplicadas.

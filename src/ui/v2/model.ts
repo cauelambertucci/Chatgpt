@@ -1,3 +1,11 @@
+import {
+  chooseText,
+  capital,
+  withoutDate,
+  momentLead,
+  qualitative,
+  notableChange,
+} from "./prose";
 import { CompactLog, type CompactWorld } from "../../engine/v2/compact-log";
 import { dailyScenario } from "../../engine/v2/daily-scenario";
 import type { Person, SliceEvent } from "../../engine/v2/types";
@@ -263,19 +271,248 @@ export class Archive {
       });
   }
   paragraphs(id: string) {
-    const birth = this.life(id),
-      result = [
-        { text: this.introduction(id), sources: birth ? [birth.source] : [] },
-      ];
-    const events = this.biography(id).filter((e) => e.id !== birth?.source);
-    for (let i = 0; i < events.length; i += 4) {
-      const group = events.slice(i, i + 4);
-      result.push({
-        text: group.map((e) => this.narrate(e)).join(" "),
-        sources: group.map((e) => e.id),
-      });
+    const birth = this.life(id);
+    const result: { text: string; sources: string[]; phase?: string }[] = [
+      {
+        phase: "Origem",
+        text: this.introduction(id),
+        sources: birth ? [birth.source] : [],
+      },
+    ];
+    const phases = [
+      "Juventude",
+      "Ofício e obras",
+      "Família",
+      "Perdas e ferimentos",
+      "Velhice",
+    ];
+    const groups = new Map<string, Map<number, SliceEvent[]>>(
+      phases.map((p) => [p, new Map()]),
+    );
+    const phaseFor = (e: SliceEvent, depth = 0): string => {
+      const age = this.family.age(id, e.month);
+      if (age !== undefined && age < 18) return "Juventude";
+      if (age !== undefined && age >= 60) return "Velhice";
+      if (
+        depth < 4 &&
+        ["person.transformed", "emotion.felt", "personalGoal.closed"].includes(
+          e.type,
+        )
+      ) {
+        const source = e.data.emotion || e.data.stimulusSource;
+        if (typeof source === "string" && e.causes.includes(source)) {
+          const prior = this.event(source);
+          if (prior) return phaseFor(prior, depth + 1);
+        }
+        const goal = this.world.entities[String(e.data.goal)];
+        if (
+          goal?.kind === "personalGoal" &&
+          ["criar_obra", "governar"].includes(goal.type)
+        )
+          return "Ofício e obras";
+      }
+      if (/^(work\.|occupation\.|care\.|leadership\.)/.test(e.type))
+        return "Ofício e obras";
+      if (
+        [
+          "person.born",
+          "partnership.formed",
+          "partnership.ended",
+          "guardianship.decided",
+          "friendship.formed",
+        ].includes(e.type)
+      )
+        return "Família";
+      return "Perdas e ferimentos";
+    };
+    const allMoments = new Map<number, SliceEvent[]>();
+    for (const e of this.biography(id).filter((e) => e.id !== birth?.source)) {
+      if (!allMoments.has(e.month)) allMoments.set(e.month, []);
+      allMoments.get(e.month)!.push(e);
+    }
+    for (const [month, events] of allMoments) {
+      const categories = events.map((e) => phaseFor(e));
+      const phase = [
+        "Juventude",
+        "Velhice",
+        "Ofício e obras",
+        "Perdas e ferimentos",
+        "Família",
+      ].find((p) => categories.includes(p))!;
+      groups.get(phase)!.set(month, events);
+    }
+    for (const phase of phases) {
+      const moments = [...groups.get(phase)!.entries()].sort(
+        (a, b) => a[0] - b[0],
+      );
+      for (let i = 0; i < moments.length; i += 2) {
+        const section = moments.slice(i, i + 2),
+          texts: string[] = [],
+          sources: string[] = [];
+        for (const [month, events] of section) {
+          sources.push(...events.map((e) => e.id));
+          let previousActor: string | undefined;
+          const sentences = events
+            .filter((e) => {
+              // The event remains a clickable source; don't narrate the same outcome twice.
+              if (
+                e.type === "personalGoal.closed" &&
+                events.some(
+                  (q) => q.type === "person.died" && q.data.victim === id,
+                )
+              )
+                return false;
+              if (
+                e.type === "personalGoal.closed" &&
+                events.some(
+                  (q) =>
+                    ["work.created", "work.blocked"].includes(q.type) &&
+                    q.data.goal === e.data.goal,
+                )
+              )
+                return false;
+              if (
+                e.type === "information.received" &&
+                events.some(
+                  (q) =>
+                    q.type === "emotion.felt" && q.data.stimulusSource === e.id,
+                )
+              )
+                return false;
+              if (
+                ["care.requested", "occupation.care.offered"].includes(
+                  e.type,
+                ) &&
+                events.some((q) => q.type === "care.compression")
+              )
+                return false;
+              if (
+                e.type === "partnership.ended" &&
+                e.data.cause === "morte" &&
+                events.some(
+                  (q) => q.type === "person.died" && e.data.death === q.id,
+                )
+              )
+                return false;
+              if (
+                ["injury.perceived", "sequela.perceived"].includes(e.type) &&
+                events.some(
+                  (q) =>
+                    q.type === "emotion.felt" && q.data.stimulusSource === e.id,
+                )
+              )
+                return false;
+              if (
+                e.type === "family.loss.perceived" &&
+                events.some(
+                  (q) =>
+                    q.type === "emotion.felt" && q.data.stimulusSource === e.id,
+                )
+              )
+                return false;
+              return true;
+            })
+            .map((e) => {
+              let text = withoutDate(this.narrate(e));
+              // Prose keeps direction; exact notable stress values remain in the explanation.
+              text = text.replace(
+                /O estresse passou de (\d+) para (\d+)\./g,
+                (_, before, after) =>
+                  `O estresse ${Number(after) > Number(before) ? "aumentou" : "diminuiu"}.`,
+              );
+              if (e.type === "occupation.changed")
+                text = text.replace(/ Motivo registrado:.*$/, "");
+              if (
+                e.type === "work.created" &&
+                events.some(
+                  (q) =>
+                    q.type === "work.transferred" &&
+                    q.data.work === e.data.work,
+                )
+              )
+                text = text.replace(
+                  " A obra pertencia inicialmente ao criador.",
+                  "",
+                );
+              if (e.type === "emotion.felt" || e.type === "work.started")
+                text = text
+                  .replace(/ Fonte:.*$/, "")
+                  .replace(/ \(fonte: [^)]+\)/g, "");
+              text = text
+                .replace(
+                  "com parentesco biológico registrado com",
+                  "tendo como pais biológicos",
+                )
+                .replace(
+                  "; causa registrada: morte natural: declínio fisiológico.",
+                  ", por declínio fisiológico natural.",
+                );
+              const actors = e.participants.filter((p) => p.role === "actor");
+              const actor = actors.length === 1 ? actors[0].id : undefined;
+              const name = actor ? this.name(actor) : "";
+              if (
+                actor &&
+                actor === previousActor &&
+                text.startsWith(name + " ")
+              )
+                text = chooseText(e.id, [
+                  capital(text.slice(name.length + 1)),
+                  capital(text.slice(name.length + 1)),
+                  `Também${text.slice(name.length)}`,
+                ]);
+              previousActor = actor;
+              return text;
+            });
+          if (sentences.length) {
+            const first = sentences.shift()!;
+            texts.push(
+              `${momentLead(events[0].id, month, first.startsWith(this.name(id) + " ") && events[0].participants.filter((p) => p.role === "actor").length === 1 && events[0].participants.some((p) => p.id === id && p.role === "actor") ? this.family.age(id, month) : undefined)} ${first.replace(/^(Foi|O |A |Ao |Um |Uma |Em |Nasceu|Terminou)/, (x) => x.toLocaleLowerCase("pt-BR"))} ${sentences.join(" ")}`.trim(),
+            );
+          }
+        }
+        result.push({
+          phase: i === 0 ? phase : undefined,
+          text: texts.join(" "),
+          sources,
+        });
+      }
     }
     return result;
+  }
+  workTitle(id: unknown) {
+    const work = this.world.entities[String(id)];
+    if (work?.kind !== "work") return "Obra registrada";
+    const fact = work.theme ? this.event(work.theme) : undefined;
+    return fact
+      ? `Caderno sobre ${this.factDescription(fact)}`
+      : "Caderno de tema não registrado";
+  }
+  careLocation(e: SliceEvent, patient: string | undefined) {
+    const pending = [...e.causes],
+      seen = new Set<string>(),
+      locations = new Set<string>();
+    while (pending.length && seen.size < 200) {
+      const id = pending.pop()!;
+      if (seen.has(id)) continue;
+      seen.add(id);
+      const source = this.event(id);
+      if (!source) continue;
+      if (
+        source.type === "wound.created" &&
+        source.participants.some(
+          (p) => p.id === patient && p.role === "victim",
+        ) &&
+        typeof source.data.part === "string"
+      )
+        locations.add(source.data.part);
+      if (source.month === e.month) pending.push(...source.causes);
+    }
+    return [...locations]
+      .map(
+        (key) =>
+          `${/^(head|hand|leg)/.test(key) ? "na" : "no"} ${parts[key] || "local não identificado"}`,
+      )
+      .join(" e ");
   }
   factDescription(e: SliceEvent, observer?: string) {
     const subject =
@@ -286,6 +523,22 @@ export class Archive {
           : e.participants.find((p) => p.role === "victim")?.id;
     const relation =
       observer && subject ? this.relation(observer, subject, e.month) : "";
+    if (e.type === "personalGoal.closed") {
+      const g = this.world.entities[String(e.data.goal)];
+      if (g?.kind === "personalGoal") {
+        if (g.type === "criar_obra")
+          return e.data.status === "completed"
+            ? "a conclusão de uma obra"
+            : e.data.status === "failed"
+              ? "uma tentativa frustrada de criar uma obra"
+              : "o encerramento de um projeto de obra";
+        if (g.type === "amizade")
+          return "o encerramento de uma tentativa de amizade";
+        if (g.type === "governar")
+          return "o desfecho da busca pela coordenação do grupo";
+        if (g.type === "proteger") return "o desfecho do objetivo de proteção";
+      }
+    }
     if (e.type === "person.died")
       return `a morte de ${this.name(subject)}${relation ? `, ${relation}` : ""}`;
     if (e.type === "pregnancy.lost") return "a perda de uma gestação";
@@ -488,7 +741,34 @@ export class Archive {
           : trigger.startsWith("o ")
             ? `ao ${trigger.slice(2)}`
             : `a ${trigger}`;
-        text = `Foi registrada para ${this.name(actor)} uma emoção${typeof d.emotion === "string" ? `: “${d.emotion}”` : ""}${source ? `, em resposta ${response}` : ""}.${typeof d.stressBefore === "number" && typeof d.stressAfter === "number" ? ` O estresse passou de ${d.stressBefore} para ${d.stressAfter}.` : ""}`;
+        const feeling =
+          typeof d.emotion === "string"
+            ? String(d.emotion).replace("solidario", "solidário")
+            : "uma emoção sem descrição";
+        text =
+          chooseText(e.id, [
+            `${this.name(actor)} sentiu ${feeling}`,
+            `${this.name(actor)} teve uma reação de ${feeling}`,
+          ]) + `${source ? `, em resposta ${response}` : ""}.`;
+        if (
+          source?.type === "information.received" &&
+          typeof source.data.offense === "string"
+        ) {
+          const fact = this.event(source.data.offense);
+          if (fact)
+            text = `Ao saber ${this.factDescription(fact, actor).replace(/^a /, "da ").replace(/^o /, "do ")}, ${this.name(actor)} sentiu ${feeling}. Fonte: ${this.sourceDescription(source)}.`;
+        }
+        if (
+          typeof d.stressBefore === "number" &&
+          typeof d.stressAfter === "number" &&
+          d.stressBefore !== d.stressAfter
+        ) {
+          const delta = d.stressAfter - d.stressBefore;
+          text +=
+            Math.abs(delta) >= notableChange.stress
+              ? ` O estresse passou de ${d.stressBefore} para ${d.stressAfter}.`
+              : ` O estresse ${delta > 0 ? "aumentou" : "diminuiu"}.`;
+        }
         break;
       }
       case "person.transformed": {
@@ -502,17 +782,34 @@ export class Archive {
             typeof d[before] === "number" &&
             typeof d[after] === "number"
           )
-            changes.push(
-              `${(dict as Record<string, string>)[d[key] as string] || d[key]} passou de ${d[before]} para ${d[after]}`,
-            );
+            if (d[before] !== d[after]) {
+              const label =
+                (dict as Record<string, string>)[d[key] as string] ||
+                String(d[key]);
+              const notable =
+                Math.abs(Number(d[after]) - Number(d[before])) >=
+                (key === "facet" ? notableChange.facet : notableChange.value);
+              changes.push(
+                notable
+                  ? `${label} passou de ${d[before]} para ${d[after]}`
+                  : qualitative(
+                      String(d[key]),
+                      label,
+                      Number(d[before]),
+                      Number(d[after]),
+                    ),
+              );
+            }
         }
         text = changes.length
-          ? `Em ${this.name(actor)}, ${changes.join("; ")}.`
-          : `Foi registrada uma transformação de ${this.name(actor)}; os valores não estão informados.`;
+          ? changes.some((change) => change.includes(" passou de "))
+            ? `${this.name(actor)}: ${changes.join("; ")}.`
+            : `${this.name(actor)} ${changes.join(" e ")}.`
+          : `Não houve mudança adicional registrada nas facetas ou valores de ${this.name(actor)}.`;
         break;
       }
       case "occupation.changed":
-        text = `${this.name(actor)} ${d.previous ? `deixou o ofício ${d.previous} e passou a` : "passou a"} ${d.occupation}. Motivo registrado: ${d.reason}`;
+        text = `${this.name(actor)} ${d.occupation === "sem ofício" ? `deixou o ofício ${d.previous} e ficou sem ofício` : d.previous ? `passou de ${d.previous} a ${d.occupation}` : `adotou o ofício de ${d.occupation}`}. Motivo registrado: ${d.reason}`;
         break;
       case "occupation.care.offered":
         text = `${this.name(actor)} ofereceu cuidado a ${this.name(d.patient)} após observar uma ferida; a avaliação de tratamento está ligada a este registro.`;
@@ -521,9 +818,14 @@ export class Archive {
         text = `O tratamento de ${this.name(actor)} foi ${d.accepted ? "aceito" : "recusado ou inviável"} após avaliação de capacidade, consentimento e recursos.`;
         break;
       case "care.compression":
-      case "care.controlled":
-        text = `${this.name(actor)} ${e.type === "care.compression" ? "aplicou compressão à ferida de" : "controlou o sangramento de"} ${this.name(e.participants.find((p) => p.role === "beneficiary")?.id)}.`;
+      case "care.controlled": {
+        const patient = e.participants.find(
+          (p) => p.role === "beneficiary",
+        )?.id;
+        const treated = this.careLocation(e, patient);
+        text = `${this.name(actor)} ${e.type === "care.compression" ? "aplicou compressão à ferida de" : "controlou o sangramento de"} ${this.name(patient)}${treated ? ` ${treated}` : ""}.`;
         break;
+      }
       case "work.started": {
         const fact =
           typeof d.theme === "string" ? this.event(d.theme) : undefined;
@@ -532,11 +834,11 @@ export class Archive {
       }
       case "work.created": {
         const work = this.world.entities[String(d.work)];
-        text = `${this.name(actor)} concluiu ${work?.kind === "work" ? work.name : "um livro"}, com qualidade registrada ${d.quality}/100.${work?.kind === "work" && work.owner ? " A obra pertencia inicialmente ao criador." : ""}`;
+        text = `${this.name(actor)} concluiu ${this.workTitle(d.work)}, com qualidade registrada ${d.quality}/100.${work?.kind === "work" && work.owner ? " A obra pertencia inicialmente ao criador." : ""}`;
         break;
       }
       case "work.transferred":
-        text = `${this.name(d.from)} entregou a obra a ${this.name(d.to)}, que passou a ser seu dono. Motivo registrado: ${d.reason}`;
+        text = `${this.name(d.from)} entregou ${this.workTitle(d.work)} a ${this.name(d.to)}, que passou a ser seu dono. Motivo registrado: ${d.reason}`;
         break;
       case "work.estate.recorded":
         text = `A obra passou ao espólio de ${this.name(d.owner)}, sem herdeiro definido.`;
@@ -544,14 +846,30 @@ export class Archive {
       case "work.blocked":
         text = `${this.name(actor)} tentou trabalhar em uma obra, mas não conseguiu: ${d.reason}`;
         break;
-      case "personalGoal.closed":
-        text = `Um objetivo de ${this.name(actor ?? e.participants[0]?.id)} foi encerrado. Motivo registrado: ${d.reason}`;
+      case "personalGoal.closed": {
+        const goal = this.world.entities[String(d.goal)],
+          label =
+            goal?.kind === "personalGoal"
+              ? {
+                  amizade: "A tentativa de amizade",
+                  governar: "A busca pela coordenação",
+                  criar_obra: "O projeto de obra",
+                  proteger: "O objetivo de proteção",
+                }[goal.type]
+              : "Um objetivo";
+        text = `${label} de ${this.name(actor ?? e.participants[0]?.id)} chegou ao fim: ${typeof d.reason === "string" ? d.reason : "motivo não informado"}`;
+        break;
+      }
+      case "leadership.changed":
+        text = actor
+          ? `${this.name(actor)} foi escolhido para coordenar o grupo.`
+          : "Foi escolhido um novo coordenador do grupo.";
         break;
       case "person.died":
         text = `${this.name(d.victim ?? victim)} morreu${this.family.age(String(d.victim ?? victim), e.month) === undefined ? "" : `, aos ${this.family.age(String(d.victim ?? victim), e.month)} anos`}${typeof d.cause === "string" ? `; causa registrada: ${d.cause}` : ""}${typeof d.killer === "string" ? `. A autoria da morte foi atribuída a ${this.name(d.killer)}` : ""}.`;
         break;
       default:
-        text = `${eventLabel(e)}.${e.participants.length ? ` Participantes registrados: ${names(e.participants.map((p) => p.id))}.` : ""}`;
+        text = `${eventLabel(e)}.`;
     }
     return readable(
       `No ${date(e.month)}, ${text.replace(/^(Nasceu|Foi|O arquivo|O duelo|Em|Terminou|Uma)\b/, (v) => v.toLocaleLowerCase("pt-BR"))}`,

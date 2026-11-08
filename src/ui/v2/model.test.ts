@@ -305,8 +305,9 @@ describe("arquivo v2: histórico familiar e narrativa", () => {
   it("só atribui emoção a um estímulo explicitamente registrado como causa", () => {
     const { w, emotion } = fixture(),
       a = new Archive(w);
-    expect(a.narrate(emotion)).toContain("receber notícia sobre a morte");
-    expect(a.narrate(emotion)).toContain("de 10 para 40");
+    expect(a.narrate(emotion)).toContain("Ao saber da morte");
+    expect(a.narrate(emotion)).toContain("O estresse aumentou");
+    expect(a.narrate(emotion)).not.toContain("de 10 para 40");
     expect(a.narrate({ ...emotion, causes: [] })).not.toContain(
       "em resposta a",
     );
@@ -440,5 +441,105 @@ describe("catálogo obrigatório de tipos do motor", () => {
     expect(eventLabel({ type: "new.unknown.event" })).toBe(
       "Acontecimento sem descrição disponível",
     );
+  });
+});
+
+describe("prosa por fases, sem alterar fatos", () => {
+  it("agrupa cada momento, conserva todas as fontes e é determinística", () => {
+    const { w, news, emotion, transform } = fixture(),
+      a = new Archive(w),
+      first = a.paragraphs("person:00");
+    expect(a.paragraphs("person:00")).toEqual(first);
+    expect(first[0].phase).toBe("Origem");
+    const episode = first.find((p) => p.sources.includes(news.id))!;
+    expect(episode.sources).toEqual(
+      expect.arrayContaining([emotion.id, transform.id]),
+    );
+    expect(first.filter((p) => p.sources.includes(news.id))).toHaveLength(1);
+    expect(first.flatMap((p) => p.sources).sort()).toEqual(
+      a
+        .biography("person:00")
+        .map((e) => e.id)
+        .sort(),
+    );
+    expect(
+      episode.text.match(/No ano 5, mês 2,/g)?.length || 0,
+    ).toBeLessThanOrEqual(1);
+  });
+  it("oculta números pequenos e mudanças nulas; mantém mudanças notáveis no Por quê", () => {
+    const { w, emotion, transform } = fixture(),
+      a = new Archive(w);
+    expect(
+      a.narrate({
+        ...emotion,
+        data: { ...emotion.data, stressBefore: 0, stressAfter: 0 },
+      }),
+    ).not.toContain("estresse");
+    expect(
+      a.narrate({
+        ...emotion,
+        data: { ...emotion.data, stressBefore: 1000, stressAfter: 1000 },
+      }),
+    ).not.toContain("1000");
+    expect(
+      a.narrate({
+        ...emotion,
+        data: { ...emotion.data, stressBefore: 0, stressAfter: 200 },
+      }),
+    ).toContain("de 0 para 200");
+    const small = {
+      ...transform,
+      data: {
+        ...transform.data,
+        facet: "rancor",
+        facetBefore: 50,
+        facetAfter: 53,
+      },
+    };
+    expect(a.narrate(small)).toContain("mais rancor");
+    expect(a.narrate(small)).not.toContain("53");
+    expect(
+      a.narrate({ ...small, data: { ...small.data, facetAfter: 65 } }),
+    ).toContain("50 para 65");
+  });
+  it("resume eleição sem despejar testemunhas na prosa", () => {
+    const { w, emotion } = fixture(),
+      a = new Archive(w);
+    const e = {
+      ...emotion,
+      type: "leadership.changed",
+      data: {},
+      participants: [
+        { id: "person:00", role: "actor" as const },
+        ...a.people
+          .slice(1, 30)
+          .map((p) => ({ id: p.id, role: "witness" as const })),
+      ],
+    };
+    const text = a.narrate(e);
+    expect(text).toContain("coordenar o grupo");
+    expect(text).not.toContain(a.name("person:01"));
+    expect(e.participants).toHaveLength(30);
+  });
+  it("título vem do tema e não reescreve nome histórico ou entidades", () => {
+    const { w, death } = fixture();
+    w.entities["work:test"] = {
+      id: "work:test",
+      kind: "work",
+      name: "Caderno de autor",
+      creator: "person:00",
+      goal: "test",
+      theme: death.id,
+      quality: 50,
+      source: death.id,
+      created: 100,
+      material: "papel e tinta",
+    };
+    const a = new Archive(w),
+      before = JSON.stringify(w);
+    expect(a.workTitle("work:test")).toBe(
+      `Caderno sobre a morte de ${a.name("person:02")}`,
+    );
+    expect(JSON.stringify(w)).toBe(before);
   });
 });
