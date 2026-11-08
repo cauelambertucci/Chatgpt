@@ -39,6 +39,7 @@ export const outcomes = [
 ] as const;
 export type Outcome = (typeof outcomes)[number];
 export interface Person {
+  hunger?: number;
   blockedWritingStock?: string;
   knownFactSources?: Record<string, string>;
   occupation?: import("./daily").Occupation;
@@ -275,7 +276,9 @@ export interface SliceWorld {
     | "agents-slice-2.1"
     | "agents-slice-2b"
     | "agents-slice-2c"
-    | "agents-slice-2d1";
+    | "agents-slice-2d1"
+    | "agents-slice-2d1-emotion2"
+    | "agents-slice-2d2";
   scenario: Scenario;
   events: SliceEvent[];
   entities: Record<string, Entity>;

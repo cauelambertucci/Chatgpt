@@ -7,7 +7,7 @@ import {
   notableChange,
 } from "./prose";
 import { CompactLog, type CompactWorld } from "../../engine/v2/compact-log";
-import { dailyScenario } from "../../engine/v2/daily-scenario";
+import { livelihoodScenario } from "../../engine/v2/daily-scenario";
 import type { Person, SliceEvent } from "../../engine/v2/types";
 import {
   FamilyHistory,
@@ -18,8 +18,10 @@ import {
 import { eventLabel, eventLabels, routineTypes, readable } from "./labels";
 export { eventLabel } from "./labels";
 import { traits, values } from "../../data/v2/personality";
-export const lightScenario = (seed: string) => dailyScenario(seed.trim(), 40);
+export const lightScenario = (seed: string) =>
+  livelihoodScenario(seed.trim(), 40);
 const biographyTypes = new Set([
+  "hunger.changed",
   "occupation.changed",
   "occupation.care.offered",
   "care.requested",
@@ -279,51 +281,17 @@ export class Archive {
         sources: birth ? [birth.source] : [],
       },
     ];
-    const phases = [
-      "Juventude",
-      "Ofício e obras",
-      "Família",
-      "Perdas e ferimentos",
-      "Velhice",
-    ];
+    const phases = ["Juventude", "Vida adulta", "Velhice"];
     const groups = new Map<string, Map<number, SliceEvent[]>>(
       phases.map((p) => [p, new Map()]),
     );
-    const phaseFor = (e: SliceEvent, depth = 0): string => {
-      const age = this.family.age(id, e.month);
-      if (age !== undefined && age < 18) return "Juventude";
-      if (age !== undefined && age >= 60) return "Velhice";
-      if (
-        depth < 4 &&
-        ["person.transformed", "emotion.felt", "personalGoal.closed"].includes(
-          e.type,
-        )
-      ) {
-        const source = e.data.emotion || e.data.stimulusSource;
-        if (typeof source === "string" && e.causes.includes(source)) {
-          const prior = this.event(source);
-          if (prior) return phaseFor(prior, depth + 1);
-        }
-        const goal = this.world.entities[String(e.data.goal)];
-        if (
-          goal?.kind === "personalGoal" &&
-          ["criar_obra", "governar"].includes(goal.type)
-        )
-          return "Ofício e obras";
-      }
-      if (/^(work\.|occupation\.|care\.|leadership\.)/.test(e.type))
-        return "Ofício e obras";
-      if (
-        [
-          "person.born",
-          "partnership.formed",
-          "partnership.ended",
-          "guardianship.decided",
-          "friendship.formed",
-        ].includes(e.type)
-      )
-        return "Família";
-      return "Perdas e ferimentos";
+    const phaseFor = (month: number) => {
+      const age = this.family.age(id, month);
+      return age !== undefined && age < 18
+        ? "Juventude"
+        : age !== undefined && age >= 60
+          ? "Velhice"
+          : "Vida adulta";
     };
     const allMoments = new Map<number, SliceEvent[]>();
     for (const e of this.biography(id).filter((e) => e.id !== birth?.source)) {
@@ -331,29 +299,43 @@ export class Archive {
       allMoments.get(e.month)!.push(e);
     }
     for (const [month, events] of allMoments) {
-      const categories = events.map((e) => phaseFor(e));
-      const phase = [
-        "Juventude",
-        "Velhice",
-        "Ofício e obras",
-        "Perdas e ferimentos",
-        "Família",
-      ].find((p) => categories.includes(p))!;
+      const phase = phaseFor(month);
       groups.get(phase)!.set(month, events);
     }
     for (const phase of phases) {
       const moments = [...groups.get(phase)!.entries()].sort(
         (a, b) => a[0] - b[0],
       );
-      for (let i = 0; i < moments.length; i += 2) {
-        const section = moments.slice(i, i + 2),
+      for (let i = 0; i < moments.length; i += Math.max(1, moments.length)) {
+        const section = moments.slice(i),
           texts: string[] = [],
           sources: string[] = [];
+        const seenJobs = new Set<string>(),
+          seenHunger = new Set<boolean>();
+        let jobChanges = 0,
+          hungerEpisodes = 0;
         for (const [month, events] of section) {
           sources.push(...events.map((e) => e.id));
           let previousActor: string | undefined;
+          const seenSentences = new Set<string>();
           const sentences = events
             .filter((e) => {
+              if (e.type === "person.transformed") return false;
+              if (e.type === "occupation.changed") {
+                jobChanges++;
+                const job = String(e.data.occupation);
+                const relevant = events.some((q) =>
+                  ["wound.created", "sequela.confirmed"].includes(q.type),
+                );
+                if (seenJobs.has(job) && !relevant) return false;
+                seenJobs.add(job);
+              }
+              if (e.type === "hunger.changed") {
+                const hungry = Number(e.data.after) >= 40;
+                if (hungry) hungerEpisodes++;
+                if (seenHunger.has(hungry)) return false;
+                seenHunger.add(hungry);
+              }
               // The event remains a clickable source; don't narrate the same outcome twice.
               if (
                 e.type === "personalGoal.closed" &&
@@ -414,6 +396,8 @@ export class Archive {
             })
             .map((e) => {
               let text = withoutDate(this.narrate(e));
+              if (seenSentences.has(text)) return "";
+              seenSentences.add(text);
               // Prose keeps direction; exact notable stress values remain in the explanation.
               text = text.replace(
                 /O estresse passou de (\d+) para (\d+)\./g,
@@ -462,7 +446,8 @@ export class Archive {
                 ]);
               previousActor = actor;
               return text;
-            });
+            })
+            .filter(Boolean);
           if (sentences.length) {
             const first = sentences.shift()!;
             texts.push(
@@ -470,6 +455,47 @@ export class Archive {
             );
           }
         }
+
+        if (hungerEpisodes > 1)
+          texts.push(
+            `Nesta fase, a fome atingiu o limiar registrado em ${hungerEpisodes} episódios.`,
+          );
+        const changes = new Map<string, { before: number; after: number }>();
+        for (const [, events] of section)
+          for (const e of events)
+            if (e.type === "person.transformed") {
+              for (const [key, before, after] of [
+                ["facet", "facetBefore", "facetAfter"],
+                ["value", "valueBefore", "valueAfter"],
+              ]) {
+                const k = String(e.data[key]),
+                  prior = changes.get(k);
+                if (
+                  typeof e.data[before] === "number" &&
+                  typeof e.data[after] === "number"
+                )
+                  changes.set(k, {
+                    before: prior?.before ?? Number(e.data[before]),
+                    after: Number(e.data[after]),
+                  });
+              }
+            }
+        const summary = [...changes]
+          .filter(([, v]) => v.before !== v.after)
+          .map(([k, v]) =>
+            qualitative(
+              k,
+              (traits as Record<string, string>)[k] ||
+                (values as Record<string, string>)[k] ||
+                k,
+              v.before,
+              v.after,
+            ),
+          );
+        if (summary.length)
+          texts.push(
+            `Ao longo desta fase, ${this.name(id)} ${summary.join("; ")}.`,
+          );
         result.push({
           phase: i === 0 ? phase : undefined,
           text: texts.join(" "),
@@ -808,6 +834,21 @@ export class Archive {
           : `Não houve mudança adicional registrada nas facetas ou valores de ${this.name(actor)}.`;
         break;
       }
+      case "hunger.changed":
+        text = `${this.name(e.participants[0]?.id)} ${Number(d.after) >= 40 ? "passou a sofrer fome por falta de alimento no domicílio" : "deixou a faixa de fome após receber alimento"}.`;
+        break;
+      case "household.consumption":
+        text = `O domicílio consumiu ${d.consumed} de ${d.required} unidades de alimento necessárias no período.`;
+        break;
+      case "livelihood.period":
+        text =
+          d.task === "cultivar"
+            ? `${this.name(actor)} colheu ${d.food} unidades de alimento, consumindo uma ferramenta.`
+            : `${this.name(actor)} fabricou ${(d.recipe as { item?: string })?.item || "material registrado"} com os insumos do domicílio.`;
+        break;
+      case "hunger.death":
+        text = `${this.name(e.participants[0]?.id)} morreu por inanição prolongada.`;
+        break;
       case "occupation.changed":
         text = `${this.name(actor)} ${d.occupation === "sem ofício" ? `deixou o ofício ${d.previous} e ficou sem ofício` : d.previous ? `passou de ${d.previous} a ${d.occupation}` : `adotou o ofício de ${d.occupation}`}. Motivo registrado: ${d.reason}`;
         break;

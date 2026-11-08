@@ -1,5 +1,6 @@
 /** Presentation catalog only. No simulation rules or event payloads are changed. */
 export const eventLabels: Readonly<Record<string, string>> = {
+ "livelihood.period":"Produção do período", "household.consumption":"Consumo do domicílio", "hunger.changed":"Mudança na alimentação", "hunger.death":"Morte por inanição",
  "household.materials.declared":"Materiais iniciais do domicílio", "occupation.changed":"Mudança de ofício", "occupation.care.offered":"Oferta de cuidado", "work.transferred":"Transferência de obra", "work.estate.recorded":"Obra no espólio",
   "activity.period": "Atividade do período",
   "aggressor.consequence": "Consequência para o agressor",
@@ -113,6 +114,7 @@ export const eventLabels: Readonly<Record<string, string>> = {
 export const eventLabel = (e: { type: string }) =>
   eventLabels[e.type] || "Acontecimento sem descrição disponível";
 export const routineTypes = new Set([
+ "livelihood.period", "household.consumption",
   "development.period",
   "needs.period",
   "activity.period",

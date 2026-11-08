@@ -1,0 +1,11 @@
+import {build} from 'esbuild';
+import {spawn} from 'node:child_process';
+import {readFileSync,writeFileSync} from 'node:fs';
+await build({entryPoints:['scripts/emotional-diagnostic-case.ts'],outfile:'/tmp/compare-emotions-2d2-case.mjs',bundle:true,platform:'node',format:'esm'});
+const seeds=Array.from({length:10},(_,i)=>`saturacao-2d1-${String(i).padStart(3,'0')}`);
+for(const seed of seeds)await new Promise((resolve,reject)=>{const p=spawn(process.execPath,['/tmp/compare-emotions-2d2-case.mjs',seed],{env:{...process.env,CHRONICLE_DIAGNOSTIC_DIR:'reports/emotions-2d2'},stdio:'inherit'});p.on('error',reject);p.on('close',code=>code===0?resolve():reject(Error(String(code))));});
+const before=JSON.parse(readFileSync('docs/SATURACAO-2D1-DADOS.json','utf8')).rows.flatMap(r=>r.people);
+const after=seeds.flatMap(s=>JSON.parse(readFileSync(`reports/emotions-2d2/${s}.json`,'utf8')).people);
+const metric=ps=>({people:ps.length,affected:ps.filter(p=>p.stress1000.longest>=120).length,percent:100*ps.filter(p=>p.stress1000.longest>=120).length/ps.length});
+const result={method:'Mesmas dez seeds, 40 fundadores/100 anos; comparação dos dois ajustes emocionais antes de habilitar economia; 120 meses contínuos enquanto vivo no teto 1000; todos os nascidos/fundadores no denominador.',seeds,before:metric(before),after:metric(after)};
+writeFileSync('docs/EMOCOES-2D2-COMPARACAO.json',JSON.stringify(result,null,2));console.log(result);

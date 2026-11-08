@@ -543,3 +543,22 @@ describe("prosa por fases, sem alterar fatos", () => {
     expect(JSON.stringify(w)).toBe(before);
   });
 });
+
+it("cronologia global, anos completos e velhice só após os 60",()=>{
+ const {w}=fixture(),a=new Archive(w),ps=a.paragraphs('person:00');
+ const months=ps.flatMap(p=>p.sources.map(id=>a.event(id)!.month));expect(months).toEqual([...months].sort((a,b)=>a-b));
+ expect(ps.map(p=>p.text).join(' ')).not.toMatch(/Em \d+,/);
+ for(const p of ps.filter(p=>p.phase==='Velhice'))for(const id of p.sources)expect(a.family.age('person:00',a.event(id)!.month)).toBeGreaterThanOrEqual(60);
+ for(const p of ps)expect((p.text.match(/Ao longo desta fase/g)||[]).length).toBeLessThanOrEqual(1);
+});
+
+it('separa a passagem dos 59 para os 60 sem puxar causas antigas para a velhice',()=>{
+ const {w,events,transform}=fixture(),log=CompactLog.from(w.log);
+ for(const month of [383,384]){
+  const e:SliceEvent={...transform,id:`event:${log.length}`,seq:log.length,month,ano:Math.floor(month/12),participants:[{id:'person:04',role:'actor'}],data:{...transform.data,facetBefore:40,facetAfter:42}};
+  log.append(log.encodeEvent(e,{}));
+ }
+ w.log=log.snapshot();const a=new Archive(w),ps=a.paragraphs('person:04');
+ const elder=ps.find(p=>p.phase==='Velhice')!;expect(elder).toBeDefined();expect(elder.sources.map(id=>a.event(id)!.month)).toEqual([384]);
+ expect(ps.find(p=>p.phase==='Vida adulta')!.sources.map(id=>a.event(id)!.month)).toContain(383);
+});

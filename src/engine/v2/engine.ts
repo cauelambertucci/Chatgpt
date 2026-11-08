@@ -6,6 +6,7 @@ import { BodySystem } from "./body";
 import { CompactLog, type CompactWorld } from "./compact-log";
 import {
   appraise,
+  knowsExpectedLoss,
   bounded,
   initialPsychology,
   type Stimulus,
@@ -93,7 +94,7 @@ export class SliceSimulation {
   private daily?: DailySystem;
   private attachDaily(initialize=false){
     if(!this.state.scenario.dailyLife)return;
-    this.daily=new DailySystem({world:()=>this.state,month:()=>this.month,body:()=>this.anatomy!,emit:(...args)=>this.emit(...args)});
+    this.daily=new DailySystem({die:(id,source)=>{const body=this.anatomy!.body(id);const e=this.emit("hunger.death",[{id,role:"reference"}],[source,body.lastEvent],[{op:"replace",entity:{...body,conscious:false,weapon:undefined,lastEvent:this.nextId()}}],{cause:"inanição prolongada"});this.die(getPerson(this.state,id),undefined,e.id,{cause:"inanição prolongada",natural:false});},world:()=>this.state,month:()=>this.month,body:()=>this.anatomy!,emit:(...args)=>this.emit(...args)});
     if(initialize)this.daily.initialize();
   }
   private observeConception?: (observation: ConceptionDiagnostic) => void;
@@ -192,7 +193,7 @@ export class SliceSimulation {
   ) {
     this.observeConception = options.observeConception;
     if (restored) {
-      const expected = restored.scenario.dailyLife ? "agents-slice-2d1" : restored.scenario.lifeSimulation
+      const expected = restored.scenario.dailyLife ? (restored.scenario.dailyLife.economy ? "agents-slice-2d2" : "agents-slice-2d1-emotion2") : restored.scenario.lifeSimulation
         ? restored.scenario.lifeSimulation.fertilityPolicy
           ? "agents-slice-2c"
           : "agents-slice-2b"
@@ -246,7 +247,7 @@ export class SliceSimulation {
       throw Error("Horizon must be 1–240 months");
     this.state = {
       version: 2,
-      engine: scenario.dailyLife ? "agents-slice-2d1" : scenario.lifeSimulation
+      engine: scenario.dailyLife ? (scenario.dailyLife.economy ? "agents-slice-2d2" : "agents-slice-2d1-emotion2") : scenario.lifeSimulation
         ? scenario.lifeSimulation.fertilityPolicy
           ? "agents-slice-2c"
           : "agents-slice-2b"
@@ -352,7 +353,7 @@ export class SliceSimulation {
   private feel(person: Person, source: SliceEvent, stimulus: Stimulus) {
     let p = getPerson(this.state, person.id);
     const psy = p.psychology!;
-    const response = appraise(p, stimulus);
+    const response = appraise(p, stimulus, knowsExpectedLoss(p, source));
     const emotion = this.emit(
       "emotion.felt",
       [{ id: p.id, role: "actor" }],
@@ -493,7 +494,7 @@ export class SliceSimulation {
         previous.set(e.decision.actor, e.id);
     }
     for (const p of people(this.state).filter(
-      (p) => p.alive && (!p.lifeStage || p.lifeStage === "adult"),
+      (p) => p.alive && (!p.lifeStage || p.lifeStage === "adult" || p.lifeStage === "elder"),
     )) {
       const psy = p.psychology!,
         n = psy.needs;
@@ -958,6 +959,7 @@ export class SliceSimulation {
       ],
       {
         offense: death.id,
+        knownDeath: { natural: death.data.natural === true, ageYears: death.data.ageYears },
         channel: source === death.id ? "testemunho" : "relato",
         source,
       },
@@ -2624,6 +2626,7 @@ export class SliceSimulation {
       return;
     if(this.daily){
       this.daily.choose(id);p=getPerson(this.state,id);
+      if(this.daily.work(id))return;
       if(this.daily.ability(id).write<0.5)for(const g of this.personalGoals(p).filter(g=>g.type==='criar_obra' && g.closed===undefined && g.workStarted)){
         const failure=this.emit('work.blocked',[{id,role:'actor'}],[g.lastEvent,...this.daily.ability(id).sources],[],{goal:g.id,reason:'Capacidade manual insuficiente para continuar a escrita.'});
         this.finishPersonalGoal(g,'failed',[failure.id],'Projeto interrompido por limitação manual.');
@@ -3090,6 +3093,7 @@ export class SliceSimulation {
       ],
       {
         victim: p.id,
+        ageYears: this.life?.get(p.id) ? Math.floor((this.month-this.life.get(p.id)!.birthMonth)/12) : undefined,
         killer: killer || null,
         killerSkill: killer ? getPerson(this.state, killer).skill : null,
         cause: "confronto abstrato",
@@ -3191,6 +3195,8 @@ export class SliceSimulation {
         this.act(id, roster);
         this.drain();
       }
+      this.daily?.consume();
+      this.drain();
       this.state.nextMonth = this.month + 1;
     }
     if (

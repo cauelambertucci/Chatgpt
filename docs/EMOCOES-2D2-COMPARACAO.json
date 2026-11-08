@@ -1,0 +1,25 @@
+{
+  "method": "Mesmas dez seeds, 40 fundadores/100 anos; comparação dos dois ajustes emocionais antes de habilitar economia; 120 meses contínuos enquanto vivo no teto 1000; todos os nascidos/fundadores no denominador.",
+  "seeds": [
+    "saturacao-2d1-000",
+    "saturacao-2d1-001",
+    "saturacao-2d1-002",
+    "saturacao-2d1-003",
+    "saturacao-2d1-004",
+    "saturacao-2d1-005",
+    "saturacao-2d1-006",
+    "saturacao-2d1-007",
+    "saturacao-2d1-008",
+    "saturacao-2d1-009"
+  ],
+  "before": {
+    "people": 783,
+    "affected": 19,
+    "percent": 2.426564495530013
+  },
+  "after": {
+    "people": 780,
+    "affected": 17,
+    "percent": 2.1794871794871793
+  }
+}

@@ -30,6 +30,8 @@ export function validateSlice(w: SliceWorld): string[] {
         "agents-slice-2b",
         "agents-slice-2c",
         "agents-slice-2d1",
+        "agents-slice-2d1-emotion2",
+        "agents-slice-2d2",
       ].includes(w.engine)
     )
       fail("Versão inválida");
@@ -113,6 +115,7 @@ export function validateSlice(w: SliceWorld): string[] {
               "external.incident",
               "natural.death",
               "body.death",
+              "hunger.death",
             ].includes(w.events[Number(id.split(":")[1])]?.type),
           )
         )

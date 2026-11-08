@@ -1,0 +1,16 @@
+{
+  "method": "Mundo de exemplo já gerado; nenhuma seed nova.",
+  "checks": [
+    "person:17: ano completo",
+    "person:17: sem variação nula",
+    "person:17: causas acessíveis",
+    "person:17: fome explicada",
+    "person:17: layout móvel",
+    "person:01: ano completo",
+    "person:01: sem variação nula",
+    "person:01: causas acessíveis",
+    "person:01: fome explicada",
+    "person:01: layout móvel",
+    "sem erros JavaScript"
+  ]
+}

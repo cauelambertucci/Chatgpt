@@ -248,3 +248,7 @@ A interface Leve agora usa `dailyScenario`: 40 fundadores, 100 anos, objetivos p
 ### Revisão da narração após o 2d-1
 
 [Diagnóstico emocional em 10 seeds](docs/SATURACAO-2D1-REPORT.md) · [Três biografias reescritas](docs/BIOGRAFIAS-2D1-REESCRITAS.md). Motor inalterado; propostas de ajuste ainda não aplicadas.
+
+### Marco 2d-2
+
+[Relatório curto](docs/MARCO2D2-REPORT.md) · [Duas biografias](docs/MARCO2D2-BIOGRAFIAS.md). Perfil Leve com estoque, alimentação, Cultivador e Artesão; `npm run test:2d2` verifica esta etapa.

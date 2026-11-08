@@ -18,7 +18,7 @@ export const initialPsychology = (): Psychology => ({
   needs: { seguranca: 0, descanso: 0, vinculo: 0, expressao: 0 },
 });
 /** Fictional appraisal rules, not a clinical model. Same stimulus, personality-dependent response. */
-export function appraise(p: Person, stimulus: Stimulus) {
+export function appraise(p: Person, stimulus: Stimulus, expectedNaturalLoss = false) {
   const t = p.traits,
     v = p.values;
   const anger = t.rancor + (t.agressividade || 0) + Math.max(0, v.vinganca);
@@ -58,10 +58,17 @@ export function appraise(p: Person, stimulus: Stimulus) {
     stimulus,
     emotion,
     intensity,
-    stressDelta: delta,
+    stressDelta: expectedNaturalLoss && stimulus === "perda" ? Math.round(delta / 2) : delta,
     facet,
     belief,
-    change,
+    change: expectedNaturalLoss && stimulus === "perda" ? 1 : change,
+    expectedNaturalLoss,
     appraisal: { anger, care, anxiety },
   };
+}
+
+/** Only explicit received details qualify; no inference from global victim state. */
+export function knowsExpectedLoss(p: Person, source: import('./types').SliceEvent) {
+ const d=source.data.knownDeath as {natural?:boolean;ageYears?:number}|undefined;
+ return source.type==='information.received' && p.informed.includes(String(source.data.offense)) && d?.natural===true && typeof d.ageYears==='number' && d.ageYears>=60;
 }

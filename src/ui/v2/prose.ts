@@ -16,7 +16,9 @@ export function momentLead(id: string, month: number, age?: number) {
   return chooseText(id, [
     `No ano ${y}, mês ${m},`,
     `No mês ${m} do ano ${y},`,
-    ...(age !== undefined ? [`Aos ${age} anos,`] : [`Em ${y}, no mês ${m},`]),
+    ...(age !== undefined
+      ? [`No ano ${y}, aos ${age} anos,`]
+      : [`No ano ${y}, no mês ${m},`]),
   ]);
 }
 export function qualitative(

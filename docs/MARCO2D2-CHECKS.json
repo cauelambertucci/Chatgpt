@@ -1,0 +1,13 @@
+{
+  "seed": "reservado-2b-006",
+  "founders": 40,
+  "years": 100,
+  "coreMs": 18489.919154000003,
+  "coreRSS": 362196992,
+  "coreHeap": 167612416,
+  "jsonBytes": 24438334,
+  "gzipBytes": 3983913,
+  "events": 85743,
+  "errors": [],
+  "replayEqual": true
+}

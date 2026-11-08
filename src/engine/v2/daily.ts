@@ -1,16 +1,26 @@
 /** 2d-1 only. Design assumptions: monthly occupations, no economy or teaching. */
+import {
+  foodNeed,
+  ration,
+  hungerAfter,
+  recipe,
+  type EconomyOptions,
+} from "./economy";
 import type { BodySystem } from "./body";
 import type { Household, Life } from "./life";
 import type { Effect, Person, SliceEvent, SliceWorld, Work } from "./types";
 import { sample } from "./rules";
-export type Occupation = "criador" | "cuidador" | "sem ofício";
+export type Occupation =
+  "criador" | "cuidador" | "cultivador" | "artesão" | "sem ofício";
 export interface DailyOptions {
+  economy?: EconomyOptions;
   initialPaper: number;
   initialInk: number;
 }
 export const domainSeed = (seed: string, domain: string) =>
   `${seed}|2d1:${domain}`;
 interface Context {
+  die: (id: string, source: string) => void;
   world: () => SliceWorld;
   month: () => number;
   body: () => BodySystem;
@@ -66,14 +76,23 @@ export class DailySystem {
               ...h,
               writingStock: { paper: o.initialPaper, ink: o.initialInk },
               stockSource: this.next(),
+              ...(o.economy
+                ? {
+                    inventory: { ...o.economy.initial },
+                    inventorySource: this.next(),
+                  }
+                : {}),
             },
           },
         ],
         {
           household: h.id,
+          inventory: o.economy?.initial,
           paper: o.initialPaper,
           ink: o.initialInk,
-          reason: "Estoque inicial declarado; sem reposição.",
+          reason: o.economy
+            ? "Estoque inicial declarado; receitas e colheitas mensais explícitas."
+            : "Estoque inicial declarado; sem reposição.",
         },
       );
   }
@@ -97,10 +116,39 @@ export class DailySystem {
       right = b.grip(id, "right"),
       left = b.grip(id, "left");
     return {
-      write: body.conscious ? 0.75 * right + 0.25 * left : 0,
-      care: body.conscious ? Math.max(right, left) : 0,
+      farm: body.conscious
+        ? Math.max(right, left) *
+          ((["left", "right"] as const).reduce(
+            (sum, side) =>
+              sum +
+              (b.present(id, `leg.${side}`)
+                ? Math.min(
+                    b.part(id, `leg.${side}`).bone,
+                    b.part(id, `leg.${side}`).nerve,
+                  )
+                : 0),
+            0,
+          ) /
+            2) *
+          Math.max(0.2, 1 - (this.person(id).hunger || 0) / 125)
+        : 0,
+      craft: body.conscious
+        ? Math.min(right, left) *
+          Math.max(0.2, 1 - (this.person(id).hunger || 0) / 125)
+        : 0,
+      write: body.conscious
+        ? (0.75 * right + 0.25 * left) *
+          Math.max(0.2, 1 - (this.person(id).hunger || 0) / 125)
+        : 0,
+      care: body.conscious
+        ? Math.max(right, left) *
+          Math.max(0.2, 1 - (this.person(id).hunger || 0) / 125)
+        : 0,
       sources: [
         body.lastEvent,
+        ...(this.person(id).lastBy.hunger
+          ? [this.person(id).lastBy.hunger]
+          : []),
         ...(
           [
             "hand.left",
@@ -109,6 +157,8 @@ export class DailySystem {
             "forearm.right",
             "arm.left",
             "arm.right",
+            "leg.left",
+            "leg.right",
           ] as const
         ).map((k) => b.part(id, k).lastEvent),
       ],
@@ -125,7 +175,17 @@ export class DailySystem {
     const a = this.ability(id),
       art = p.values.arte || 0,
       solidarity = p.values.solidariedade || 0;
-    const scores = {
+    const h = this.home(id),
+      economy = this.w.scenario.dailyLife?.economy;
+    const residents = Object.values(this.w.entities).filter(
+      (q): q is Person =>
+        q.kind === "person" && q.alive && this.home(q.id).id === h.id,
+    );
+    const demand = residents.reduce((n, q) => n + foodNeed(q.lifeStage), 0);
+    const craft =
+      h.inventory &&
+      recipe(h.inventory, h.writingStock?.paper || 0, h.writingStock?.ink || 0);
+    const scores: Record<Occupation, number> = {
       criador:
         a.write < 0.5
           ? -10000
@@ -144,6 +204,28 @@ export class DailySystem {
                 (p.medicalSkill || 0) * 2 -
                 180 * (1 - a.care) +
                 (urgent ? 500 : 0),
+            ),
+      cultivador:
+        !economy ||
+        !h.inventory ||
+        a.farm < 0.3 ||
+        h.inventory.tools < 1 ||
+        economy.harvest <= 0
+          ? -10000
+          : Math.round(
+              (h.inventory.food < demand * 3 ? 750 : 0) +
+                (p.traits.disciplina || 0) +
+                this.aptitude(id, "cultivo") -
+                200 * (1 - a.farm),
+            ),
+      artesão:
+        !economy || !craft || a.craft < 0.5
+          ? -10000
+          : Math.round(
+              (h.inventory!.tools < 2 ? 800 : 250) +
+                (p.traits.criatividade || 0) +
+                this.aptitude(id, "artesanato") -
+                200 * (1 - a.craft),
             ),
       "sem ofício": 90,
     };
@@ -174,6 +256,10 @@ export class DailySystem {
       [{ id, role: "actor" }],
       [
         ...a.sources,
+        ...(h.inventorySource ? [h.inventorySource] : []),
+        ...residents.map(
+          (q) => (this.w.entities[`life:${q.id}`] as Life).lastEvent,
+        ),
         p.lastBy.traits,
         p.lastBy.values,
         ...(p.lastBy.occupation ? [p.lastBy.occupation] : []),
@@ -184,12 +270,175 @@ export class DailySystem {
         previous: p.occupation || null,
         occupation: chosen,
         capacity: a,
+        aptitude: {
+          cultivo: this.aptitude(id, "cultivo"),
+          artesanato: this.aptitude(id, "artesanato"),
+        },
         options,
         reason: urgent
           ? "Ferimento presente criou oportunidade de cuidado."
           : "Habilidade, personalidade, valores e capacidade por tarefa; custo de trocar incluído.",
       },
     );
+  }
+  aptitude(id: string, task: string) {
+    return sample(
+      domainSeed(this.w.scenario.seed, "livelihood"),
+      `${id}:${task}`,
+      20,
+      80,
+    );
+  }
+  work(id: string): boolean {
+    const p = this.person(id),
+      o = this.w.scenario.dailyLife?.economy;
+    if (
+      !o ||
+      !p.alive ||
+      !p.present ||
+      (p.psychology?.stress || 0) >= 800 ||
+      p.workedMonth === this.month
+    )
+      return false;
+    const h = this.home(id),
+      stock = h.inventory;
+    if (!stock) return false;
+    const a = this.ability(id),
+      next = { ...stock },
+      writing = { ...h.writingStock! };
+    let data: Record<string, unknown>;
+    if (
+      p.occupation === "cultivador" &&
+      a.farm >= 0.3 &&
+      stock.tools >= 1 &&
+      o.harvest > 0
+    ) {
+      const amount = Math.floor(o.harvest * a.farm);
+      if (!amount) return false;
+      next.food += amount;
+      next.tools -= 1;
+      data = {
+        task: "cultivar",
+        food: amount,
+        toolsUsed: 1,
+        environmentalInput: amount,
+        reason:
+          "Colheita de crescimento renovável declarado; uma ferramenta consumida por período.",
+      };
+    } else if (p.occupation === "artesão" && a.craft >= 0.5) {
+      const r = recipe(stock, writing.paper, writing.ink);
+      if (!r) return false;
+      for (const [k, v] of Object.entries(r.take))
+        next[k as keyof typeof next] -= v;
+      for (const [k, v] of Object.entries(r.give))
+        next[k as keyof typeof next] += v;
+      writing.paper += r.paper;
+      writing.ink += r.ink;
+      data = {
+        task: "fabricar",
+        recipe: r,
+        reason:
+          "Conversão explícita de material inicial; sem reposição de matéria-prima.",
+      };
+    } else return false;
+    this.c.emit(
+      "livelihood.period",
+      [{ id, role: "actor" }],
+      [p.lastBy.occupation, h.inventorySource!, h.stockSource!, ...a.sources],
+      [
+        {
+          op: "replace",
+          entity: {
+            ...h,
+            inventory: next,
+            inventorySource: this.next(),
+            writingStock: writing,
+            stockSource:
+              writing.paper !== h.writingStock!.paper ||
+              writing.ink !== h.writingStock!.ink
+                ? this.next()
+                : h.stockSource,
+          },
+        },
+        { op: "replace", entity: this.patch(p, { workedMonth: this.month }) },
+      ],
+      { household: h.id, periodMonths: 1, ...data },
+    );
+    return true;
+  }
+  consume() {
+    if (!this.w.scenario.dailyLife?.economy) return;
+    const homes = new Map<string, Person[]>();
+    for (const p of Object.values(this.w.entities))
+      if (p.kind === "person" && p.alive) {
+        const h = this.home(p.id);
+        if (!homes.has(h.id)) homes.set(h.id, []);
+        homes.get(h.id)!.push(p);
+      }
+    for (const [hid, residents] of homes) {
+      const h = this.w.entities[hid] as Household;
+      if (!h.inventory) continue;
+      const needs = residents.map((p) => foodNeed(p.lifeStage)),
+        r = ration(h.inventory.food, needs);
+      const starving: string[] = [],
+        effects: Effect[] = [
+          {
+            op: "replace",
+            entity: {
+              ...h,
+              inventory: {
+                ...h.inventory,
+                food: h.inventory.food - r.consumed,
+              },
+              inventorySource: this.next(),
+            },
+          },
+        ];
+      const transitions: { id: string; before: number; after: number }[] = [];
+      for (const p of residents) {
+        const before = p.hunger || 0,
+          after = hungerAfter(before, r.coverage);
+        if (after >= 100) starving.push(p.id);
+        if (before >= 40 !== after >= 40)
+          transitions.push({ id: p.id, before, after });
+        const fields: Partial<Person> = { hunger: after };
+        if (after > 0 && p.psychology)
+          fields.psychology = {
+            ...p.psychology,
+            stress: Math.min(1000, p.psychology.stress + Math.ceil(after / 5)),
+          };
+        if (after !== before || fields.psychology)
+          effects.push({ op: "replace", entity: this.patch(p, fields) });
+      }
+      const e = this.c.emit(
+        "household.consumption",
+        [],
+        [
+          h.inventorySource!,
+          ...residents.map(
+            (p) => (this.w.entities[`life:${p.id}`] as Life).lastEvent,
+          ),
+        ],
+        effects,
+        {
+          household: hid,
+          periodMonths: 1,
+          required: needs.reduce((a, b) => a + b, 0),
+          consumed: r.consumed,
+          coverage: r.coverage,
+          residents: residents.map((p) => p.id),
+        },
+      );
+      for (const t of transitions)
+        this.c.emit(
+          "hunger.changed",
+          [{ id: t.id, role: "reference" }],
+          [e.id],
+          [],
+          t,
+        );
+      for (const id of starving) this.c.die(id, e.id);
+    }
   }
   caregiver(owner: string, fallback: string, source: string): string {
     const candidates = Object.values(this.w.entities).filter(
