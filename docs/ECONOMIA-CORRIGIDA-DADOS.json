@@ -1,0 +1,1444 @@
+{
+  "method": "Três seeds fixas antes/depois; meses contados desde 1; média mensal sobre 1200 meses, incluindo meses vazios. Cultivadores únicos e períodos efetivamente trabalhados são distintos. Domicílio sobrevivente significa ainda ocupado aos 100 anos, sem redefinir o denominador.",
+  "rows": [
+    {
+      "before": {
+        "seed": "reservado-2b-006",
+        "mode": "before",
+        "firstHungerMonth": 140,
+        "uniqueCultivators": 43,
+        "cultivatorsPerCalendarMonth": 3.8641666666666667,
+        "productiveCultivatorsPerCalendarMonth": 3.8158333333333334,
+        "foodPerCultivatorWorkMonth": 23.052849967241755,
+        "requiredPerCalendarMonth": 89.08666666666667,
+        "producedPerCalendarMonth": 87.96583333333334,
+        "consumedPerCalendarMonth": 88.28333333333333,
+        "occupiedInitially": 30,
+        "everOccupied": 30,
+        "hungryHouseholds": 11,
+        "occupiedAt100": 0,
+        "initialOccupiedStillAt100": 0,
+        "living": 0,
+        "ms": null,
+        "rss": 92082176,
+        "jsonBytes": 24438334,
+        "errors": [],
+        "replayEqual": true
+      },
+      "after": {
+        "seed": "reservado-2b-006",
+        "mode": "after",
+        "firstHungerMonth": null,
+        "uniqueCultivators": 65,
+        "cultivatorsPerCalendarMonth": 14.4375,
+        "productiveCultivatorsPerCalendarMonth": 14.4375,
+        "foodPerCultivatorWorkMonth": 31.88126984126984,
+        "requiredPerCalendarMonth": 200.33333333333334,
+        "producedPerCalendarMonth": 460.28583333333336,
+        "consumedPerCalendarMonth": 200.33333333333334,
+        "occupiedInitially": 30,
+        "everOccupied": 30,
+        "hungryHouseholds": 0,
+        "occupiedAt100": 6,
+        "initialOccupiedStillAt100": 6,
+        "living": 19,
+        "ms": 33255.987645,
+        "rss": 450367488,
+        "jsonBytes": 42554437,
+        "errors": [],
+        "replayEqual": true
+      }
+    },
+    {
+      "before": {
+        "seed": "reservado-2b-011",
+        "mode": "before",
+        "firstHungerMonth": 158,
+        "uniqueCultivators": 39,
+        "cultivatorsPerCalendarMonth": 4.335,
+        "productiveCultivatorsPerCalendarMonth": 4.2925,
+        "foodPerCultivatorWorkMonth": 23.252572316055137,
+        "requiredPerCalendarMonth": 93.7,
+        "producedPerCalendarMonth": 99.81166666666667,
+        "consumedPerCalendarMonth": 93.0625,
+        "occupiedInitially": 31,
+        "everOccupied": 31,
+        "hungryHouseholds": 9,
+        "occupiedAt100": 0,
+        "initialOccupiedStillAt100": 0,
+        "living": 0,
+        "ms": 16196.850216,
+        "rss": 362274816,
+        "jsonBytes": 23991598,
+        "errors": [],
+        "replayEqual": true
+      },
+      "after": {
+        "seed": "reservado-2b-011",
+        "mode": "after",
+        "firstHungerMonth": null,
+        "uniqueCultivators": 51,
+        "cultivatorsPerCalendarMonth": 8.411666666666667,
+        "productiveCultivatorsPerCalendarMonth": 8.411666666666667,
+        "foodPerCultivatorWorkMonth": 34.03130572617396,
+        "requiredPerCalendarMonth": 161.25333333333333,
+        "producedPerCalendarMonth": 286.26,
+        "consumedPerCalendarMonth": 161.25333333333333,
+        "occupiedInitially": 31,
+        "everOccupied": 31,
+        "hungryHouseholds": 0,
+        "occupiedAt100": 4,
+        "initialOccupiedStillAt100": 4,
+        "living": 9,
+        "ms": 22598.862096999997,
+        "rss": 408580096,
+        "jsonBytes": 34122068,
+        "errors": [],
+        "replayEqual": true
+      }
+    },
+    {
+      "before": {
+        "seed": "reservado-2b-028",
+        "mode": "before",
+        "firstHungerMonth": 98,
+        "uniqueCultivators": 45,
+        "cultivatorsPerCalendarMonth": 3.9558333333333335,
+        "productiveCultivatorsPerCalendarMonth": 3.908333333333333,
+        "foodPerCultivatorWorkMonth": 23.148400852878463,
+        "requiredPerCalendarMonth": 87.37,
+        "producedPerCalendarMonth": 90.47166666666666,
+        "consumedPerCalendarMonth": 86.7975,
+        "occupiedInitially": 32,
+        "everOccupied": 32,
+        "hungryHouseholds": 8,
+        "occupiedAt100": 0,
+        "initialOccupiedStillAt100": 0,
+        "living": 0,
+        "ms": 17239.445016,
+        "rss": 362479616,
+        "jsonBytes": 23852385,
+        "errors": [],
+        "replayEqual": true
+      },
+      "after": {
+        "seed": "reservado-2b-028",
+        "mode": "after",
+        "firstHungerMonth": null,
+        "uniqueCultivators": 49,
+        "cultivatorsPerCalendarMonth": 10.305833333333334,
+        "productiveCultivatorsPerCalendarMonth": 10.305833333333334,
+        "foodPerCultivatorWorkMonth": 32.00630710762513,
+        "requiredPerCalendarMonth": 142.68666666666667,
+        "producedPerCalendarMonth": 329.8516666666667,
+        "consumedPerCalendarMonth": 142.68666666666667,
+        "occupiedInitially": 32,
+        "everOccupied": 32,
+        "hungryHouseholds": 0,
+        "occupiedAt100": 4,
+        "initialOccupiedStillAt100": 4,
+        "living": 5,
+        "ms": 21990.474109000002,
+        "rss": 373108736,
+        "jsonBytes": 30686245,
+        "errors": [],
+        "replayEqual": true
+      }
+    }
+  ],
+  "closures": [
+    {
+      "seed": "reservado-2b-006",
+      "vacant": [
+        {
+          "home": "home:person:02",
+          "lastOccupiedMonth": 502,
+          "lastConsumption": "event:76223",
+          "residents": [
+            {
+              "id": "person:02",
+              "death": {
+                "month": 503,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:76311"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:03",
+          "lastOccupiedMonth": 543,
+          "lastConsumption": "event:83745",
+          "residents": [
+            {
+              "id": "person:03",
+              "death": {
+                "month": 544,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:83827"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:05",
+          "lastOccupiedMonth": 995,
+          "lastConsumption": "event:143401",
+          "residents": [
+            {
+              "id": "person:birth:person:birth:person:birth:person:32:3:23:43",
+              "diedAtClosure": false
+            }
+          ]
+        },
+        {
+          "home": "home:person:06",
+          "lastOccupiedMonth": 537,
+          "lastConsumption": "event:82648",
+          "residents": [
+            {
+              "id": "person:06",
+              "death": {
+                "month": 538,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:82730"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:07",
+          "lastOccupiedMonth": 643,
+          "lastConsumption": "event:100956",
+          "residents": [
+            {
+              "id": "person:07",
+              "death": {
+                "month": 644,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:101038"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:08",
+          "lastOccupiedMonth": 530,
+          "lastConsumption": "event:81257",
+          "residents": [
+            {
+              "id": "person:08",
+              "death": {
+                "month": 531,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:81341"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:11",
+          "lastOccupiedMonth": 536,
+          "lastConsumption": "event:82327",
+          "residents": [
+            {
+              "id": "person:11",
+              "death": {
+                "month": 537,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:82408"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:12",
+          "lastOccupiedMonth": 652,
+          "lastConsumption": "event:102663",
+          "residents": [
+            {
+              "id": "person:12",
+              "death": {
+                "month": 653,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:102739"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:13",
+          "lastOccupiedMonth": 452,
+          "lastConsumption": "event:67236",
+          "residents": [
+            {
+              "id": "person:13",
+              "death": {
+                "month": 453,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:67316"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:14",
+          "lastOccupiedMonth": 666,
+          "lastConsumption": "event:104880",
+          "residents": [
+            {
+              "id": "person:14",
+              "death": {
+                "month": 667,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:104953"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:15",
+          "lastOccupiedMonth": 852,
+          "lastConsumption": "event:129197",
+          "residents": [
+            {
+              "id": "person:15",
+              "death": {
+                "month": 853,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:129251"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:16",
+          "lastOccupiedMonth": 671,
+          "lastConsumption": "event:105796",
+          "residents": [
+            {
+              "id": "person:16",
+              "death": {
+                "month": 672,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:105876"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:18",
+          "lastOccupiedMonth": 647,
+          "lastConsumption": "event:101799",
+          "residents": [
+            {
+              "id": "person:18",
+              "death": {
+                "month": 671,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:105649"
+              },
+              "diedAtClosure": false
+            }
+          ]
+        },
+        {
+          "home": "home:person:22",
+          "lastOccupiedMonth": 752,
+          "lastConsumption": "event:117352",
+          "residents": [
+            {
+              "id": "person:22",
+              "death": {
+                "month": 753,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:117412"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:23",
+          "lastOccupiedMonth": 983,
+          "lastConsumption": "event:142321",
+          "residents": [
+            {
+              "id": "person:birth:person:18:8",
+              "death": {
+                "month": 1094,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:151289"
+              },
+              "diedAtClosure": false
+            }
+          ]
+        },
+        {
+          "home": "home:person:25",
+          "lastOccupiedMonth": 1130,
+          "lastConsumption": "event:153797",
+          "residents": [
+            {
+              "id": "person:birth:person:35:5",
+              "death": {
+                "month": 1131,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:153829"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:26",
+          "lastOccupiedMonth": 815,
+          "lastConsumption": "event:125038",
+          "residents": [
+            {
+              "id": "person:26",
+              "death": {
+                "month": 816,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:125096"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:27",
+          "lastOccupiedMonth": 721,
+          "lastConsumption": "event:113462",
+          "residents": [
+            {
+              "id": "person:27",
+              "death": {
+                "month": 722,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:113521"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:28",
+          "lastOccupiedMonth": 688,
+          "lastConsumption": "event:108344",
+          "residents": [
+            {
+              "id": "person:28",
+              "death": {
+                "month": 689,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:108407"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:29",
+          "lastOccupiedMonth": 798,
+          "lastConsumption": "event:123064",
+          "residents": [
+            {
+              "id": "person:29",
+              "death": {
+                "month": 799,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:123117"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:30",
+          "lastOccupiedMonth": 769,
+          "lastConsumption": "event:119561",
+          "residents": [
+            {
+              "id": "person:30",
+              "death": {
+                "month": 770,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:119617"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:31",
+          "lastOccupiedMonth": 659,
+          "lastConsumption": "event:103852",
+          "residents": [
+            {
+              "id": "person:36",
+              "death": {
+                "month": 718,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:112796"
+              },
+              "diedAtClosure": false
+            }
+          ]
+        },
+        {
+          "home": "home:person:33",
+          "lastOccupiedMonth": 774,
+          "lastConsumption": "event:120218",
+          "residents": [
+            {
+              "id": "person:33",
+              "death": {
+                "month": 775,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:120270"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:39",
+          "lastOccupiedMonth": 772,
+          "lastConsumption": "event:119948",
+          "residents": [
+            {
+              "id": "person:39",
+              "death": {
+                "month": 773,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:120001"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": "reservado-2b-011",
+      "vacant": [
+        {
+          "home": "home:person:00",
+          "lastOccupiedMonth": 863,
+          "lastConsumption": "event:116606",
+          "residents": [
+            {
+              "id": "person:00",
+              "death": {
+                "month": 864,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:116643"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:02",
+          "lastOccupiedMonth": 768,
+          "lastConsumption": "event:108375",
+          "residents": [
+            {
+              "id": "person:02",
+              "death": {
+                "month": 769,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:108423"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:06",
+          "lastOccupiedMonth": 536,
+          "lastConsumption": "event:78459",
+          "residents": [
+            {
+              "id": "person:06",
+              "death": {
+                "month": 537,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:78540"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:08",
+          "lastOccupiedMonth": 863,
+          "lastConsumption": "event:116610",
+          "residents": [
+            {
+              "id": "person:birth:person:07:1",
+              "death": {
+                "month": 1044,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:126730"
+              },
+              "diedAtClosure": false
+            }
+          ]
+        },
+        {
+          "home": "home:person:09",
+          "lastOccupiedMonth": 725,
+          "lastConsumption": "event:103806",
+          "residents": [
+            {
+              "id": "person:09",
+              "death": {
+                "month": 726,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:103858"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:10",
+          "lastOccupiedMonth": 647,
+          "lastConsumption": "event:94883",
+          "residents": [
+            {
+              "id": "person:35",
+              "death": {
+                "month": 660,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:96357"
+              },
+              "diedAtClosure": false
+            }
+          ]
+        },
+        {
+          "home": "home:person:11",
+          "lastOccupiedMonth": 743,
+          "lastConsumption": "event:105808",
+          "residents": [
+            {
+              "id": "person:11",
+              "death": {
+                "month": 744,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:105867"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:12",
+          "lastOccupiedMonth": 849,
+          "lastConsumption": "event:115363",
+          "residents": [
+            {
+              "id": "person:12",
+              "death": {
+                "month": 850,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:115402"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:13",
+          "lastOccupiedMonth": 556,
+          "lastConsumption": "event:81754",
+          "residents": [
+            {
+              "id": "person:13",
+              "death": {
+                "month": 557,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:81827"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:14",
+          "lastOccupiedMonth": 743,
+          "lastConsumption": "event:105810",
+          "residents": [
+            {
+              "id": "person:14",
+              "death": {
+                "month": 757,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:107202"
+              },
+              "diedAtClosure": false
+            }
+          ]
+        },
+        {
+          "home": "home:person:15",
+          "lastOccupiedMonth": 871,
+          "lastConsumption": "event:117122",
+          "residents": [
+            {
+              "id": "person:15",
+              "death": {
+                "month": 872,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:117155"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:16",
+          "lastOccupiedMonth": 1095,
+          "lastConsumption": "event:128909",
+          "residents": [
+            {
+              "id": "person:birth:person:birth:person:23:0:22",
+              "death": {
+                "month": 1096,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:128926"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:17",
+          "lastOccupiedMonth": 671,
+          "lastConsumption": "event:97795",
+          "residents": [
+            {
+              "id": "person:17",
+              "death": {
+                "month": 811,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:112160"
+              },
+              "diedAtClosure": false
+            }
+          ]
+        },
+        {
+          "home": "home:person:18",
+          "lastOccupiedMonth": 819,
+          "lastConsumption": "event:112926",
+          "residents": [
+            {
+              "id": "person:18",
+              "death": {
+                "month": 820,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:112965"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:21",
+          "lastOccupiedMonth": 481,
+          "lastConsumption": "event:69078",
+          "residents": [
+            {
+              "id": "person:21",
+              "death": {
+                "month": 482,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:69150"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:22",
+          "lastOccupiedMonth": 947,
+          "lastConsumption": "event:121788",
+          "residents": [
+            {
+              "id": "person:birth:person:birth:person:16:8:27",
+              "diedAtClosure": false
+            }
+          ]
+        },
+        {
+          "home": "home:person:24",
+          "lastOccupiedMonth": 626,
+          "lastConsumption": "event:92137",
+          "residents": [
+            {
+              "id": "person:24",
+              "death": {
+                "month": 627,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:92191"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:25",
+          "lastOccupiedMonth": 576,
+          "lastConsumption": "event:84962",
+          "residents": [
+            {
+              "id": "person:25",
+              "death": {
+                "month": 577,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:85023"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:26",
+          "lastOccupiedMonth": 624,
+          "lastConsumption": "event:91833",
+          "residents": [
+            {
+              "id": "person:26",
+              "death": {
+                "month": 625,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:91888"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:28",
+          "lastOccupiedMonth": 672,
+          "lastConsumption": "event:97943",
+          "residents": [
+            {
+              "id": "person:28",
+              "death": {
+                "month": 673,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:97991"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:30",
+          "lastOccupiedMonth": 756,
+          "lastConsumption": "event:107159",
+          "residents": [
+            {
+              "id": "person:30",
+              "death": {
+                "month": 757,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:107246"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:32",
+          "lastOccupiedMonth": 557,
+          "lastConsumption": "event:81973",
+          "residents": [
+            {
+              "id": "person:32",
+              "death": {
+                "month": 558,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:82033"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:33",
+          "lastOccupiedMonth": 637,
+          "lastConsumption": "event:93582",
+          "residents": [
+            {
+              "id": "person:33",
+              "death": {
+                "month": 638,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:93632"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:34",
+          "lastOccupiedMonth": 547,
+          "lastConsumption": "event:80279",
+          "residents": [
+            {
+              "id": "person:34",
+              "death": {
+                "month": 548,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:80339"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:36",
+          "lastOccupiedMonth": 567,
+          "lastConsumption": "event:83568",
+          "residents": [
+            {
+              "id": "person:36",
+              "death": {
+                "month": 568,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:83625"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:38",
+          "lastOccupiedMonth": 785,
+          "lastConsumption": "event:109902",
+          "residents": [
+            {
+              "id": "person:38",
+              "death": {
+                "month": 786,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:109941"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:39",
+          "lastOccupiedMonth": 583,
+          "lastConsumption": "event:85958",
+          "residents": [
+            {
+              "id": "person:39",
+              "death": {
+                "month": 584,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:86011"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": "reservado-2b-028",
+      "vacant": [
+        {
+          "home": "home:person:00",
+          "lastOccupiedMonth": 623,
+          "lastConsumption": "event:92592",
+          "residents": [
+            {
+              "id": "person:20",
+              "death": {
+                "month": 749,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:105137"
+              },
+              "diedAtClosure": false
+            }
+          ]
+        },
+        {
+          "home": "home:person:02",
+          "lastOccupiedMonth": 677,
+          "lastConsumption": "event:98796",
+          "residents": [
+            {
+              "id": "person:02",
+              "death": {
+                "month": 678,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:98848"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:03",
+          "lastOccupiedMonth": 735,
+          "lastConsumption": "event:104168",
+          "residents": [
+            {
+              "id": "person:03",
+              "death": {
+                "month": 736,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:104205"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:04",
+          "lastOccupiedMonth": 505,
+          "lastConsumption": "event:75224",
+          "residents": [
+            {
+              "id": "person:04",
+              "death": {
+                "month": 506,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:75299"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:05",
+          "lastOccupiedMonth": 421,
+          "lastConsumption": "event:61422",
+          "residents": [
+            {
+              "id": "person:05",
+              "death": {
+                "month": 422,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:61505"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:07",
+          "lastOccupiedMonth": 800,
+          "lastConsumption": "event:108298",
+          "residents": [
+            {
+              "id": "person:07",
+              "death": {
+                "month": 801,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:108329"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:08",
+          "lastOccupiedMonth": 1139,
+          "lastConsumption": "event:121531",
+          "residents": [
+            {
+              "id": "person:birth:person:11:15",
+              "death": {
+                "month": 1190,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:122519"
+              },
+              "diedAtClosure": false
+            }
+          ]
+        },
+        {
+          "home": "home:person:10",
+          "lastOccupiedMonth": 699,
+          "lastConsumption": "event:100931",
+          "residents": [
+            {
+              "id": "person:10",
+              "death": {
+                "month": 700,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:100978"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:12",
+          "lastOccupiedMonth": 727,
+          "lastConsumption": "event:103469",
+          "residents": [
+            {
+              "id": "person:12",
+              "death": {
+                "month": 728,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:103510"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:14",
+          "lastOccupiedMonth": 630,
+          "lastConsumption": "event:93431",
+          "residents": [
+            {
+              "id": "person:14",
+              "death": {
+                "month": 631,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:93487"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:15",
+          "lastOccupiedMonth": 614,
+          "lastConsumption": "event:91399",
+          "residents": [
+            {
+              "id": "person:15",
+              "death": {
+                "month": 615,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:91458"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:16",
+          "lastOccupiedMonth": 636,
+          "lastConsumption": "event:94233",
+          "residents": [
+            {
+              "id": "person:16",
+              "death": {
+                "month": 637,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:94287"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:18",
+          "lastOccupiedMonth": 665,
+          "lastConsumption": "event:97498",
+          "residents": [
+            {
+              "id": "person:18",
+              "death": {
+                "month": 666,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:97548"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:19",
+          "lastOccupiedMonth": 730,
+          "lastConsumption": "event:103793",
+          "residents": [
+            {
+              "id": "person:19",
+              "death": {
+                "month": 731,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:103830"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:22",
+          "lastOccupiedMonth": 425,
+          "lastConsumption": "event:62125",
+          "residents": [
+            {
+              "id": "person:22",
+              "death": {
+                "month": 426,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:62194"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:23",
+          "lastOccupiedMonth": 746,
+          "lastConsumption": "event:104956",
+          "residents": [
+            {
+              "id": "person:23",
+              "death": {
+                "month": 747,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:104989"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:24",
+          "lastOccupiedMonth": 727,
+          "lastConsumption": "event:103473",
+          "residents": [
+            {
+              "id": "person:24",
+              "death": {
+                "month": 728,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:103542"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:26",
+          "lastOccupiedMonth": 550,
+          "lastConsumption": "event:82021",
+          "residents": [
+            {
+              "id": "person:26",
+              "death": {
+                "month": 551,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:82080"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:27",
+          "lastOccupiedMonth": 525,
+          "lastConsumption": "event:78236",
+          "residents": [
+            {
+              "id": "person:27",
+              "death": {
+                "month": 526,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:78295"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:28",
+          "lastOccupiedMonth": 668,
+          "lastConsumption": "event:97842",
+          "residents": [
+            {
+              "id": "person:28",
+              "death": {
+                "month": 669,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:97886"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:29",
+          "lastOccupiedMonth": 485,
+          "lastConsumption": "event:71909",
+          "residents": [
+            {
+              "id": "person:29",
+              "death": {
+                "month": 486,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:71971"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:30",
+          "lastOccupiedMonth": 806,
+          "lastConsumption": "event:108678",
+          "residents": [
+            {
+              "id": "person:30",
+              "death": {
+                "month": 807,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:108707"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:31",
+          "lastOccupiedMonth": 679,
+          "lastConsumption": "event:99030",
+          "residents": [
+            {
+              "id": "person:31",
+              "death": {
+                "month": 680,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:99070"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:32",
+          "lastOccupiedMonth": 550,
+          "lastConsumption": "event:82025",
+          "residents": [
+            {
+              "id": "person:32",
+              "death": {
+                "month": 551,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:82134"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:34",
+          "lastOccupiedMonth": 707,
+          "lastConsumption": "event:101736",
+          "residents": [
+            {
+              "id": "person:34",
+              "death": {
+                "month": 708,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:101794"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:35",
+          "lastOccupiedMonth": 487,
+          "lastConsumption": "event:72272",
+          "residents": [
+            {
+              "id": "person:35",
+              "death": {
+                "month": 488,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:72328"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:37",
+          "lastOccupiedMonth": 504,
+          "lastConsumption": "event:75034",
+          "residents": [
+            {
+              "id": "person:37",
+              "death": {
+                "month": 505,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:75089"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        },
+        {
+          "home": "home:person:39",
+          "lastOccupiedMonth": 613,
+          "lastConsumption": "event:91247",
+          "residents": [
+            {
+              "id": "person:39",
+              "death": {
+                "month": 614,
+                "cause": "morte natural: declínio fisiológico",
+                "source": "event:91294"
+              },
+              "diedAtClosure": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "alda": {
+    "before": {
+      "birth": {
+        "id": "person:17",
+        "month": -216,
+        "parents": [],
+        "founder": true,
+        "source": "event:19"
+      },
+      "death": 143,
+      "age": 29
+    },
+    "after": {
+      "birth": {
+        "id": "person:17",
+        "month": -216,
+        "parents": [],
+        "founder": true,
+        "source": "event:19"
+      },
+      "death": 883,
+      "age": 91
+    }
+  }
+}

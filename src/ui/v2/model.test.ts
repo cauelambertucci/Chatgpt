@@ -544,21 +544,81 @@ describe("prosa por fases, sem alterar fatos", () => {
   });
 });
 
-it("cronologia global, anos completos e velhice só após os 60",()=>{
- const {w}=fixture(),a=new Archive(w),ps=a.paragraphs('person:00');
- const months=ps.flatMap(p=>p.sources.map(id=>a.event(id)!.month));expect(months).toEqual([...months].sort((a,b)=>a-b));
- expect(ps.map(p=>p.text).join(' ')).not.toMatch(/Em \d+,/);
- for(const p of ps.filter(p=>p.phase==='Velhice'))for(const id of p.sources)expect(a.family.age('person:00',a.event(id)!.month)).toBeGreaterThanOrEqual(60);
- for(const p of ps)expect((p.text.match(/Ao longo desta fase/g)||[]).length).toBeLessThanOrEqual(1);
+it("cronologia global, anos completos e velhice só após os 60", () => {
+  const { w } = fixture(),
+    a = new Archive(w),
+    ps = a.paragraphs("person:00");
+  const months = ps.flatMap((p) => p.sources.map((id) => a.event(id)!.month));
+  expect(months).toEqual([...months].sort((a, b) => a - b));
+  expect(ps.map((p) => p.text).join(" ")).not.toMatch(/Em \d+,/);
+  for (const p of ps.filter((p) => p.phase === "Velhice"))
+    for (const id of p.sources)
+      expect(
+        a.family.age("person:00", a.event(id)!.month),
+      ).toBeGreaterThanOrEqual(60);
+  for (const p of ps)
+    expect(
+      (p.text.match(/Ao longo desta fase/g) || []).length,
+    ).toBeLessThanOrEqual(1);
 });
 
-it('separa a passagem dos 59 para os 60 sem puxar causas antigas para a velhice',()=>{
- const {w,events,transform}=fixture(),log=CompactLog.from(w.log);
- for(const month of [383,384]){
-  const e:SliceEvent={...transform,id:`event:${log.length}`,seq:log.length,month,ano:Math.floor(month/12),participants:[{id:'person:04',role:'actor'}],data:{...transform.data,facetBefore:40,facetAfter:42}};
-  log.append(log.encodeEvent(e,{}));
- }
- w.log=log.snapshot();const a=new Archive(w),ps=a.paragraphs('person:04');
- const elder=ps.find(p=>p.phase==='Velhice')!;expect(elder).toBeDefined();expect(elder.sources.map(id=>a.event(id)!.month)).toEqual([384]);
- expect(ps.find(p=>p.phase==='Vida adulta')!.sources.map(id=>a.event(id)!.month)).toContain(383);
+it("separa a passagem dos 59 para os 60 sem puxar causas antigas para a velhice", () => {
+  const { w, events, transform } = fixture(),
+    log = CompactLog.from(w.log);
+  for (const month of [383, 384]) {
+    const e: SliceEvent = {
+      ...transform,
+      id: `event:${log.length}`,
+      seq: log.length,
+      month,
+      ano: Math.floor(month / 12),
+      participants: [{ id: "person:04", role: "actor" }],
+      data: { ...transform.data, facetBefore: 40, facetAfter: 42 },
+    };
+    log.append(log.encodeEvent(e, {}));
+  }
+  w.log = log.snapshot();
+  const a = new Archive(w),
+    ps = a.paragraphs("person:04");
+  const elder = ps.find((p) => p.phase === "Velhice")!;
+  expect(elder).toBeDefined();
+  expect(elder.sources.map((id) => a.event(id)!.month)).toEqual([384]);
+  let phase = "";
+  const adultSources = ps.flatMap((p) => {
+    phase = p.phase || phase;
+    return phase === "Vida adulta" ? p.sources : [];
+  });
+  expect(adultSources.map((id) => a.event(id)!.month)).toContain(383);
 });
+
+it("divide vida adulta por década preservando cronologia e resume mortes simultâneas", () => {
+  const { w, death } = fixture(),
+    log = CompactLog.from(w.log);
+  const e: SliceEvent = {
+    ...death,
+    id: `event:${log.length}`,
+    seq: log.length,
+    month: 120,
+    ano: 10,
+    participants: [{ id: "person:03", role: "victim" }],
+    data: { victim: "person:03", cause: "morte natural", killer: null },
+  };
+  log.append(log.encodeEvent(e, {}));
+  w.log = log.snapshot();
+  const a = new Archive(w),
+    ps = a.paragraphs("person:00");
+  expect(ps.length).toBeGreaterThan(3);
+  for (const p of ps.slice(1)) {
+    const decades = new Set(
+      p.sources.map((id) => Math.floor(a.event(id)!.month / 120)),
+    );
+    expect(decades.size).toBe(1);
+  }
+  const text = ps.map((p) => p.text).join(" ");
+  expect(text).toContain("morreram no mesmo mês por morte natural");
+  expect(text).toContain("(35 anos)");
+  expect(text).toContain("(7 anos)");
+  expect(ps.flatMap((p) => p.sources)).toContain(e.id);
+});
+
+it('narra colheitas antigas sem inventar desgaste que não foi registrado',()=>{const {w,transform}=fixture(),a=new Archive(w);const text=a.narrate({...transform,type:'livelihood.period',data:{task:'cultivar',food:24,toolsUsed:1}});expect(text).toContain('24');expect(text).not.toContain('undefined');expect(text).not.toContain('desgaste');});

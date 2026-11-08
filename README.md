@@ -252,3 +252,7 @@ A interface Leve agora usa `dailyScenario`: 40 fundadores, 100 anos, objetivos p
 ### Marco 2d-2
 
 [Relatório curto](docs/MARCO2D2-REPORT.md) · [Duas biografias](docs/MARCO2D2-BIOGRAFIAS.md). Perfil Leve com estoque, alimentação, Cultivador e Artesão; `npm run test:2d2` verifica esta etapa.
+
+### Correção econômica do 2d-2
+
+[Relatório de uma página](docs/ECONOMIA-CORRIGIDA-REPORT.md) · [Alda e Mael](docs/ECONOMIA-CORRIGIDA-BIOGRAFIAS.md). Três seeds fixas; fome evitada nos exemplos, meta de maioria dos domicílios ocupados ainda não atingida.

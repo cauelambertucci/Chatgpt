@@ -3,7 +3,13 @@ import { livelihoodScenario, dailyScenario } from "./daily-scenario";
 import { SliceSimulation } from "./engine";
 import { CompactLog, replayCompact } from "./compact-log";
 import { validateCompact } from "./validate";
-import { ration, hungerAfter } from "./economy";
+import {
+  ration,
+  hungerAfter,
+  lightEconomy,
+  cultivationYield,
+  cultivationNeed,
+} from "./economy";
 import { appraise, knowsExpectedLoss } from "./emotions";
 import type { SliceEvent } from "./types";
 const fixture = (food = 24, harvest = 24) => {
@@ -83,8 +89,9 @@ it("ração conserva alimento e fome responde à cobertura; fome prolongada mata
   expect(events(fed).some((e) => e.type === "hunger.death")).toBe(false);
 });
 it("produção e consumo conservam estoques; período não é gasto duas vezes; retomada mantém replay", () => {
-  const s = fixture(),
-    sim = new SliceSimulation(s),
+  const s = fixture();
+  s.dailyLife!.economy!.initial.tools = 1;
+  const sim = new SliceSimulation(s),
     mid = sim.runCompact(5),
     w = new SliceSimulation(s, mid).runCompact(),
     ev = events(w);
@@ -184,4 +191,36 @@ it("perder uma perna reduz capacidade de cultivo, sem impedir escrita pela mesma
     b = after.data.capacity as any;
   expect(b.farm).toBeLessThan(a.farm);
   expect(b.write).toBe(a.write);
+});
+
+it("reserva de casal cobre 12 meses; produção e prioridade antecipam a necessidade", () => {
+  const o = lightEconomy();
+  expect(o.initial.food / 8).toBe(12);
+  expect(cultivationYield(o.harvest, 1, 0, true) / 4).toBeGreaterThanOrEqual(4);
+  expect(cultivationNeed(8 * 6, 8)).toBeGreaterThan(cultivationNeed(8 * 9, 8));
+  expect(cultivationNeed(8 * 9, 8)).toBeGreaterThan(0);
+  expect(cultivationYield(o.harvest, 1, 1000, true)).toBeGreaterThan(0);
+  expect(cultivationYield(o.harvest, 1, 0, false)).toBeGreaterThan(0);
+  expect(cultivationYield(o.harvest, 1, 0, false)).toBeLessThan(
+    cultivationYield(o.harvest, 1, 0, true),
+  );
+});
+it("ferramentas duram doze períodos de cultivo; desgaste e estoque são reconstituídos", () => {
+  const s = fixture(0, 48);
+  s.months = 36;
+  const w = new SliceSimulation(s).runCompact(),
+    ev = events(w),
+    wear = new Map<string, number>();
+  for (const e of ev.filter(
+    (e) => e.type === "livelihood.period" && e.data.task === "cultivar",
+  )) {
+    const h = String(e.data.household),
+      previous = wear.get(h) || 0;
+    if (!e.data.manual) {
+      expect(e.data.toolsUsed).toBe(previous === 11 ? 1 : 0);
+      wear.set(h, (previous + 1) % 12);
+    }
+    expect(e.data.toolWear).toBe(wear.get(h) || 0);
+  }
+  expect(replayCompact(w)).toEqual(w.entities);
 });

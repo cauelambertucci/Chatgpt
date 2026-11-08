@@ -278,7 +278,8 @@ export interface SliceWorld {
     | "agents-slice-2c"
     | "agents-slice-2d1"
     | "agents-slice-2d1-emotion2"
-    | "agents-slice-2d2";
+    | "agents-slice-2d2"
+    | "agents-slice-2d2-economy2";
   scenario: Scenario;
   events: SliceEvent[];
   entities: Record<string, Entity>;

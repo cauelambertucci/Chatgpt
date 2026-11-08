@@ -33,6 +33,7 @@ export interface Life {
   lastEvent: string;
 }
 export interface Household {
+  toolWear?: number;
   inventory?: import("./economy").Stock;
   inventorySource?: string;
   writingStock?: {paper:number;ink:number};

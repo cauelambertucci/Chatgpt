@@ -193,7 +193,7 @@ export class SliceSimulation {
   ) {
     this.observeConception = options.observeConception;
     if (restored) {
-      const expected = restored.scenario.dailyLife ? (restored.scenario.dailyLife.economy ? "agents-slice-2d2" : "agents-slice-2d1-emotion2") : restored.scenario.lifeSimulation
+      const expected = restored.scenario.dailyLife ? (restored.scenario.dailyLife.economy ? "agents-slice-2d2-economy2" : "agents-slice-2d1-emotion2") : restored.scenario.lifeSimulation
         ? restored.scenario.lifeSimulation.fertilityPolicy
           ? "agents-slice-2c"
           : "agents-slice-2b"
@@ -247,7 +247,7 @@ export class SliceSimulation {
       throw Error("Horizon must be 1–240 months");
     this.state = {
       version: 2,
-      engine: scenario.dailyLife ? (scenario.dailyLife.economy ? "agents-slice-2d2" : "agents-slice-2d1-emotion2") : scenario.lifeSimulation
+      engine: scenario.dailyLife ? (scenario.dailyLife.economy ? "agents-slice-2d2-economy2" : "agents-slice-2d1-emotion2") : scenario.lifeSimulation
         ? scenario.lifeSimulation.fertilityPolicy
           ? "agents-slice-2c"
           : "agents-slice-2b"

@@ -306,14 +306,24 @@ export class Archive {
       const moments = [...groups.get(phase)!.entries()].sort(
         (a, b) => a[0] - b[0],
       );
-      for (let i = 0; i < moments.length; i += Math.max(1, moments.length)) {
-        const section = moments.slice(i),
+      const sections: (typeof moments)[] = [];
+      for (const moment of moments) {
+        const last = sections.at(-1);
+        if (
+          !last ||
+          Math.floor(last[0][0] / 120) !== Math.floor(moment[0] / 120)
+        )
+          sections.push([moment]);
+        else last.push(moment);
+      }
+      const seenJobs = new Set<string>(),
+        seenHunger = new Set<boolean>();
+      let jobChanges = 0,
+        hungerEpisodes = 0;
+      for (let i = 0; i < sections.length; i++) {
+        const section = sections[i],
           texts: string[] = [],
           sources: string[] = [];
-        const seenJobs = new Set<string>(),
-          seenHunger = new Set<boolean>();
-        let jobChanges = 0,
-          hungerEpisodes = 0;
         for (const [month, events] of section) {
           sources.push(...events.map((e) => e.id));
           let previousActor: string | undefined;
@@ -321,6 +331,16 @@ export class Archive {
           const sentences = events
             .filter((e) => {
               if (e.type === "person.transformed") return false;
+              if (
+                e.type === "person.died" &&
+                typeof e.data.cause === "string"
+              ) {
+                const similar = events.filter(
+                  (q) =>
+                    q.type === "person.died" && q.data.cause === e.data.cause,
+                );
+                if (similar[0].id !== e.id) return false;
+              }
               if (e.type === "occupation.changed") {
                 jobChanges++;
                 const job = String(e.data.occupation);
@@ -396,6 +416,23 @@ export class Archive {
             })
             .map((e) => {
               let text = withoutDate(this.narrate(e));
+              if (
+                e.type === "person.died" &&
+                typeof e.data.cause === "string"
+              ) {
+                const similar = events.filter(
+                  (q) =>
+                    q.type === "person.died" && q.data.cause === e.data.cause,
+                );
+                if (similar.length > 1) {
+                  const victims = similar.map((q) => {
+                    const victim = String(q.data.victim),
+                      age = this.family.age(victim, month);
+                    return `${this.name(victim)}${age === undefined ? "" : ` (${age} anos)`}`;
+                  });
+                  text = `${victims.join(", ")} morreram no mesmo mês por ${e.data.cause}.`;
+                }
+              }
               if (seenSentences.has(text)) return "";
               seenSentences.add(text);
               // Prose keeps direction; exact notable stress values remain in the explanation.
@@ -456,12 +493,12 @@ export class Archive {
           }
         }
 
-        if (hungerEpisodes > 1)
+        if (i === sections.length - 1 && hungerEpisodes > 1)
           texts.push(
             `Nesta fase, a fome atingiu o limiar registrado em ${hungerEpisodes} episódios.`,
           );
         const changes = new Map<string, { before: number; after: number }>();
-        for (const [, events] of section)
+        for (const [, events] of moments)
           for (const e of events)
             if (e.type === "person.transformed") {
               for (const [key, before, after] of [
@@ -492,7 +529,7 @@ export class Archive {
               v.after,
             ),
           );
-        if (summary.length)
+        if (i === sections.length - 1 && summary.length)
           texts.push(
             `Ao longo desta fase, ${this.name(id)} ${summary.join("; ")}.`,
           );
@@ -843,7 +880,7 @@ export class Archive {
       case "livelihood.period":
         text =
           d.task === "cultivar"
-            ? `${this.name(actor)} colheu ${d.food} unidades de alimento, consumindo uma ferramenta.`
+            ? `${this.name(actor)} colheu ${d.food} unidades de alimento, com ${d.manual ? "trabalho manual" : `${d.toolsUsed} ferramenta(s) gasta(s)${typeof d.toolWear === "number" ? ` e desgaste acumulado de ${d.toolWear}/12` : ""}`}.`
             : `${this.name(actor)} fabricou ${(d.recipe as { item?: string })?.item || "material registrado"} com os insumos do domicílio.`;
         break;
       case "hunger.death":

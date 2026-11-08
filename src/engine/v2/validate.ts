@@ -32,6 +32,7 @@ export function validateSlice(w: SliceWorld): string[] {
         "agents-slice-2d1",
         "agents-slice-2d1-emotion2",
         "agents-slice-2d2",
+        "agents-slice-2d2-economy2",
       ].includes(w.engine)
     )
       fail("Versão inválida");

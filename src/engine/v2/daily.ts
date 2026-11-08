@@ -1,6 +1,10 @@
-/** 2d-1 only. Design assumptions: monthly occupations, no economy or teaching. */
+/** Monthly occupations and minimal household economy; fictional design assumptions. */
 import {
   foodNeed,
+  reserveMonths,
+  cultivationNeed,
+  cultivationYield,
+  toolLifetime,
   ration,
   hungerAfter,
   recipe,
@@ -130,19 +134,19 @@ export class DailySystem {
             0,
           ) /
             2) *
-          Math.max(0.2, 1 - (this.person(id).hunger || 0) / 125)
+          Math.max(0.4, 1 - (this.person(id).hunger || 0) / 125)
         : 0,
       craft: body.conscious
         ? Math.min(right, left) *
-          Math.max(0.2, 1 - (this.person(id).hunger || 0) / 125)
+          Math.max(0.4, 1 - (this.person(id).hunger || 0) / 125)
         : 0,
       write: body.conscious
         ? (0.75 * right + 0.25 * left) *
-          Math.max(0.2, 1 - (this.person(id).hunger || 0) / 125)
+          Math.max(0.4, 1 - (this.person(id).hunger || 0) / 125)
         : 0,
       care: body.conscious
         ? Math.max(right, left) *
-          Math.max(0.2, 1 - (this.person(id).hunger || 0) / 125)
+          Math.max(0.4, 1 - (this.person(id).hunger || 0) / 125)
         : 0,
       sources: [
         body.lastEvent,
@@ -206,14 +210,10 @@ export class DailySystem {
                 (urgent ? 500 : 0),
             ),
       cultivador:
-        !economy ||
-        !h.inventory ||
-        a.farm < 0.3 ||
-        h.inventory.tools < 1 ||
-        economy.harvest <= 0
+        !economy || !h.inventory || a.farm < 0.1 || economy.harvest <= 0
           ? -10000
           : Math.round(
-              (h.inventory.food < demand * 3 ? 750 : 0) +
+              cultivationNeed(h.inventory.food, demand) +
                 (p.traits.disciplina || 0) +
                 this.aptitude(id, "cultivo") -
                 200 * (1 - a.farm),
@@ -270,6 +270,10 @@ export class DailySystem {
         previous: p.occupation || null,
         occupation: chosen,
         capacity: a,
+        foodReserveMonths: h.inventory
+          ? reserveMonths(h.inventory.food, demand)
+          : undefined,
+        foodDemand: demand,
         aptitude: {
           cultivo: this.aptitude(id, "cultivo"),
           artesanato: this.aptitude(id, "artesanato"),
@@ -292,13 +296,7 @@ export class DailySystem {
   work(id: string): boolean {
     const p = this.person(id),
       o = this.w.scenario.dailyLife?.economy;
-    if (
-      !o ||
-      !p.alive ||
-      !p.present ||
-      (p.psychology?.stress || 0) >= 800 ||
-      p.workedMonth === this.month
-    )
+    if (!o || !p.alive || !p.present || p.workedMonth === this.month)
       return false;
     const h = this.home(id),
       stock = h.inventory;
@@ -306,24 +304,33 @@ export class DailySystem {
     const a = this.ability(id),
       next = { ...stock },
       writing = { ...h.writingStock! };
-    let data: Record<string, unknown>;
-    if (
-      p.occupation === "cultivador" &&
-      a.farm >= 0.3 &&
-      stock.tools >= 1 &&
-      o.harvest > 0
-    ) {
-      const amount = Math.floor(o.harvest * a.farm);
+    let data: Record<string, unknown>,
+      toolWear = h.toolWear || 0;
+    if (p.occupation === "cultivador" && a.farm >= 0.1 && o.harvest > 0) {
+      const amount = cultivationYield(
+        o.harvest,
+        a.farm,
+        p.psychology?.stress || 0,
+        stock.tools >= 1,
+      );
       if (!amount) return false;
       next.food += amount;
-      next.tools -= 1;
+      const hasTool = stock.tools >= 1;
+      const wearAfter = toolWear + (hasTool ? 1 : 0),
+        used = wearAfter >= toolLifetime ? 1 : 0;
+      toolWear = used ? 0 : wearAfter;
+      next.tools -= used;
       data = {
         task: "cultivar",
         food: amount,
-        toolsUsed: 1,
+        toolsUsed: used,
+        toolWear,
+        manual: !hasTool,
+        capacity: a.farm,
+        stress: p.psychology?.stress || 0,
         environmentalInput: amount,
         reason:
-          "Colheita de crescimento renovável declarado; uma ferramenta consumida por período.",
+          "Colheita renovável declarada; ferramenta dura 12 períodos; trabalho manual rende 60%; estresse reduz rendimento, sem proibição absoluta.",
       };
     } else if (p.occupation === "artesão" && a.craft >= 0.5) {
       const r = recipe(stock, writing.paper, writing.ink);
@@ -344,13 +351,20 @@ export class DailySystem {
     this.c.emit(
       "livelihood.period",
       [{ id, role: "actor" }],
-      [p.lastBy.occupation, h.inventorySource!, h.stockSource!, ...a.sources],
+      [
+        p.lastBy.occupation,
+        p.lastBy.psychology,
+        h.inventorySource!,
+        h.stockSource!,
+        ...a.sources,
+      ],
       [
         {
           op: "replace",
           entity: {
             ...h,
             inventory: next,
+            toolWear,
             inventorySource: this.next(),
             writingStock: writing,
             stockSource:
