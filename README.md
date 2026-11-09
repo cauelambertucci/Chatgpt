@@ -268,3 +268,7 @@ A interface Leve agora usa `dailyScenario`: 40 fundadores, 100 anos, objetivos p
 ## Marco 3 — escassez, roubo e desempenho
 
 [Relatório curto e diagnóstico em 3 linhas](docs/MARCO3-REVISAO-REPORT.md) · [duas biografias livres](docs/MARCO3-REVISAO-BIOGRAFIAS.md) · [dados das 10 seeds](docs/MARCO3-REVISAO-DADOS.json). Experimente `marco3-livre-005` na interface. `npm run test:m3-review` verifica a revisão; `npm run report:m3-review` reproduz o lote fixo; `npm run benchmark:m3-review` compara o motor anterior às otimizações e falha se os hashes divergirem.
+
+## Interface do mundo — Marco 5 antecipado
+
+Mapa abstrato, assentamentos e lideranças, cronologia filtrável com causas, obras e custódia, e crônicas Markdown. Perfis Leve/Padrão/Épico alteram somente fundadores (40/70/100), por 100 anos; estimativas são extrapolações. [Relatório e capturas](docs/MARCO5-UI-REPORT.md). Motor do Marco 3 preservado.

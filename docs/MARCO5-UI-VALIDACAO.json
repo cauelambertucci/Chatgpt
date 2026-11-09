@@ -1,0 +1,29 @@
+[
+  {
+    "seed": "marco3-livre-001",
+    "seconds": 12.968,
+    "wars": 2,
+    "works": 12,
+    "summary": "marco3-livre-001 · 58 pessoas registradas · 12 vivas · 1 domicílios com menores de 18 anos · 46 mortas · 76.357 eventos",
+    "checks": "Worker real, mapa, assentamentos, relações, filtros, causalidade, custódia, exports, perfis, mobile",
+    "errors": []
+  },
+  {
+    "seed": "marco3-livre-005",
+    "seconds": 12.104,
+    "wars": 7,
+    "works": 17,
+    "summary": "marco3-livre-005 · 65 pessoas registradas · 17 vivas · 0 domicílios com menores de 18 anos · 48 mortas · 65.597 eventos",
+    "checks": "Worker real, mapa, assentamentos, relações, filtros, causalidade, custódia, exports, perfis, mobile",
+    "errors": []
+  },
+  {
+    "seed": "marco3-livre-008",
+    "seconds": 13.734,
+    "wars": 3,
+    "works": 30,
+    "summary": "marco3-livre-008 · 55 pessoas registradas · 5 vivas · 0 domicílios com menores de 18 anos · 50 mortas · 89.353 eventos",
+    "checks": "Worker real, mapa, assentamentos, relações, filtros, causalidade, custódia, exports, perfis, mobile",
+    "errors": []
+  }
+]

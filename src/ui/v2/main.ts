@@ -1,13 +1,23 @@
 import "./style.css";
-import {
-  Archive,
-  lightScenario,
-  date,
-  eventLabel,
-  type PeopleFilter,
-} from "./model";
+import { Archive, date, eventLabel, type PeopleFilter } from "./model";
 import { readable } from "./labels";
 import { immutable, type CompactWorld } from "../../engine/v2/compact-log";
+import {
+  profiles,
+  profileScenario,
+  estimateProfile,
+  type ProfileId,
+} from "./profiles";
+import {
+  WorldArchive,
+  categories,
+  worldMarkdown,
+  personMarkdown,
+  type WorldFilter,
+} from "./world-model";
+import { mapHTML, settlementsHTML, worksHTML } from "./world-view";
+let worldView: WorldArchive | undefined;
+let worldFilters: WorldFilter = {};
 const root = document.querySelector<HTMLDivElement>("#app")!;
 const esc = (v: unknown) =>
   String(v ?? "").replace(
@@ -28,12 +38,36 @@ let archive: Archive | undefined,
 let treeMode = "ancestors";
 let worker: Worker | undefined,
   run = 0;
-root.innerHTML = `<header><a class="brand" href="/">✧ CHRONICLE WORLD</a><span class="edition">Arquivo de vidas · Marco 3 mínimo</span></header>
-<main><section class="intro"><div><p class="eyebrow">CADA VIDA DEIXA UM REGISTRO</p><h1>Uma história, muitos caminhos.</h1><p>Explore pessoas, famílias e os acontecimentos que mudaram suas vidas.</p></div><span class="badge">Leve · 40 fundadores · 100 anos</span></section>
-<form id="generate"><label for="seed">Seed do mundo</label><div class="generation-row"><input id="seed" value="reservado-2b-006" required maxlength="120" autocomplete="off"><button id="start" class="primary">Gerar história</button><button id="cancel" type="button" hidden>Cancelar</button></div><div class="progress-row"><progress id="progress" max="1200" value="0" aria-label="Progresso da geração"></progress><output id="status" role="status" aria-live="polite">Pronto para gerar. Tudo acontece neste navegador.</output></div></form>
-<section id="archive" hidden><div id="summary" class="summary"></div><div id="settlements"></div><nav aria-label="Explorar"><button id="people-tab" aria-pressed="true">Pessoas</button><button id="timeline-tab" aria-pressed="false">Linha do tempo</button></nav><div id="explore"></div></section><section id="empty" class="empty"><span>✧</span><h2>O arquivo ainda está em branco.</h2><p>Escolha uma seed e gere cem anos de história.<br>A mesma seed reproduz os mesmos acontecimentos.</p></section></main>
+root.innerHTML = `<header><a class="brand" href="/">✧ CHRONICLE WORLD</a><span class="edition">Arquivo de vidas · Atlas e crônicas</span></header>
+<main><section class="intro"><div><p class="eyebrow">CADA VIDA DEIXA UM REGISTRO</p><h1>Uma história, muitos caminhos.</h1><p>Explore pessoas, famílias e os acontecimentos que mudaram suas vidas.</p></div><span class="badge">VIDAS · LUGARES · MEMÓRIAS</span></section>
+<form id="generate"><label for="seed">Seed do mundo</label><div class="generation-row"><input id="seed" value="reservado-2b-006" required maxlength="120" autocomplete="off"><select id="profile" aria-label="Perfil de execução"><option value="leve">Leve</option><option value="padrao">Padrão</option><option value="epico">Épico</option></select><button id="start" class="primary">Gerar história</button><button id="cancel" type="button" hidden>Cancelar</button></div><p id="estimate" class="hint"></p><div class="progress-row"><progress id="progress" max="1200" value="0" aria-label="Progresso da geração"></progress><output id="status" role="status" aria-live="polite">Pronto para gerar. Tudo acontece neste navegador.</output></div></form>
+<section id="archive" hidden><div id="summary" class="summary"></div><nav aria-label="Explorar"><button id="map-tab" aria-pressed="false">Mapa</button><button id="settlements-tab" aria-pressed="false">Assentamentos</button><button id="people-tab" aria-pressed="false">Pessoas</button><button id="timeline-tab" aria-pressed="false">Linha do tempo</button><button id="works-tab" aria-pressed="false">Obras</button><button id="export-world">Exportar crônica .md</button></nav><div id="explore"></div></section><section id="empty" class="empty"><span>✧</span><h2>O arquivo ainda está em branco.</h2><p>Escolha uma seed e gere cem anos de história.<br>A mesma seed reproduz os mesmos acontecimentos.</p></section></main>
 <dialog id="why" aria-labelledby="why-title"><div class="dialog-head"><h2 id="why-title">Por que aconteceu?</h2><button id="close-why" aria-label="Fechar explicação">Fechar</button></div><div id="why-body"></div></dialog>`;
 const $ = <T extends HTMLElement>(s: string) => root.querySelector<T>(s)!;
+function estimates() {
+  const id = $<HTMLSelectElement>("#profile").value as ProfileId,
+    p = profiles[id],
+    e = estimateProfile(id);
+  $("#estimate").textContent =
+    `${p.founders} fundadores · ${p.years} anos · EXTRAPOLAÇÃO: ${e.seconds.map((n) => n.toFixed(1)).join("–")} s; ${e.memoryGB.map((n) => n.toFixed(2)).join("–")} GB. ${e.source}`;
+}
+$("#profile").onchange = estimates;
+estimates();
+function download(parts: Iterable<string>, name: string) {
+  const url = URL.createObjectURL(
+    new Blob([...parts], { type: "text/markdown;charset=utf-8" }),
+  );
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = name.replace(/[^a-zA-Z0-9._-]/g, "_") + ".md";
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+$("#export-world").onclick = () =>
+  download(
+    worldMarkdown(worldView!),
+    `cronica-${archive!.world.scenario.seed}`,
+  );
 function status(s: string) {
   $("#status").textContent = s;
 }
@@ -41,6 +75,7 @@ function busy(value: boolean) {
   $<HTMLButtonElement>("#start").disabled = value;
   $<HTMLInputElement>("#seed").disabled = value;
   $("#cancel").hidden = !value;
+  $<HTMLSelectElement>("#profile").disabled = value;
 }
 function stop() {
   run++;
@@ -98,11 +133,14 @@ $("#generate").onsubmit = (e) => {
           status("Organizando o arquivo…");
           const next = new Archive(immutable(e.data.world as CompactWorld));
           $<HTMLDialogElement>("#why").close();
+          const projection = new WorldArchive(next);
           archive = next;
+          worldView = projection;
+          worldFilters = {};
           selected = next.people[0]?.id || "";
           filters = {};
           personPage = timelinePage = bioPage = 0;
-          view = "people";
+          view = "map";
           allEvents = false;
           $<HTMLProgressElement>("#progress").value = 1200;
           busy(false);
@@ -113,19 +151,22 @@ $("#generate").onsubmit = (e) => {
         }
       }
     };
-    task.postMessage({ ...lightScenario(seed), output: "compact" });
+    task.postMessage({
+      ...profileScenario(
+        seed,
+        $<HTMLSelectElement>("#profile").value as ProfileId,
+      ),
+      output: "compact",
+    });
   } catch (error) {
     fail(error instanceof Error ? error.message : String(error));
   }
 };
-$("#people-tab").onclick = () => {
-  view = "people";
-  render();
-};
-$("#timeline-tab").onclick = () => {
-  view = "timeline";
-  render();
-};
+for (const tab of ["map", "settlements", "people", "timeline", "works"])
+  $("#" + tab + "-tab").onclick = () => {
+    view = tab;
+    render();
+  };
 $("#close-why").onclick = () => $<HTMLDialogElement>("#why").close();
 const personLink = (id: string) =>
   archive!.world.entities[id]?.kind !== "person"
@@ -150,13 +191,35 @@ function render() {
   if (!archive) return;
   $("#archive").hidden = false;
   $("#empty").hidden = true;
-  const {alive,householdsWithChildren}=archive.populationMetrics();
+  const { alive, householdsWithChildren } = archive.populationMetrics();
   $("#summary").textContent =
-    `${archive.world.scenario.seed} · ${archive.people.length} pessoas registradas · ${alive} vivas · ${householdsWithChildren} domicílios com menores de 18 anos · ${archive.family.deaths.size} mortas · ${archive.world.log.rows.length.toLocaleString("pt-BR")} eventos`;
-  $("#settlements").innerHTML=Object.values(archive.world.entities).filter(e=>e.kind==='settlement').map(s=>s.kind==='settlement'?`<p><strong>${esc(s.name)}</strong> · ${s.leader?`${esc(s.office)}: ${personLink(s.leader)} · mandato até o ano ${Math.floor(s.termEnd/12)}`:'cargo vago: sem adulto elegível registrado'}</p>`:'').join('');
-  bind($("#settlements"));
-  $("#people-tab").setAttribute("aria-pressed", String(view === "people"));
-  $("#timeline-tab").setAttribute("aria-pressed", String(view === "timeline"));
+    `${archive.world.scenario.seed} · ${archive.world.scenario.people.length} fundadores · ${archive.people.length} pessoas registradas · ${alive} vivas · ${householdsWithChildren} domicílios com menores de 18 anos · ${archive.family.deaths.size} mortas · ${archive.world.log.rows.length.toLocaleString("pt-BR")} eventos`;
+  for (const tab of ["map", "settlements", "people", "timeline", "works"])
+    $("#" + tab + "-tab").setAttribute("aria-pressed", String(view === tab));
+  if (["map", "settlements", "works"].includes(view)) {
+    $("#explore").innerHTML =
+      view === "map"
+        ? mapHTML(worldView!, esc)
+        : view === "settlements"
+          ? settlementsHTML(worldView!, esc, personLink)
+          : worksHTML(worldView!, esc, personLink);
+    bind($("#explore"));
+    $("#explore")
+      .querySelectorAll<HTMLButtonElement>("[data-map-settlement]")
+      .forEach(
+        (b) =>
+          (b.onclick = () => {
+            worldFilters = {
+              settlement: b.dataset.mapSettlement,
+              category: b.dataset.category as WorldFilter["category"],
+            };
+            timelinePage = 0;
+            view = "timeline";
+            render();
+          }),
+      );
+    return;
+  }
   if (view === "timeline") {
     timeline();
     return;
@@ -249,8 +312,17 @@ function detail() {
     page = paragraphs.slice(bioPage * 10, (bioPage + 1) * 10);
   $("#person-detail").innerHTML =
     `<div class="eyebrow">FICHA PESSOAL</div><h2>${esc(a.name(p.id))}</h2><p class="lead">${esc(a.lifeSpan(p.id))} · geração ${a.generation(p.id) ?? "não determinada"}</p>
-  ${p.occupation ? `<p><strong>${a.isAlive(p.id)?'Ofício registrado':'Último ofício registrado'}:</strong> ${esc(p.occupation)} <button class="why" data-why="${p.lastBy.occupation}">Por quê?</button></p>` : ''}
-  ${Object.values(a.world.entities).filter(e=>e.kind==='work'&&(e.creator===p.id||e.owner===p.id)).map(e=>e.kind==='work'?`<p><strong>${esc(a.workTitle(e.id))}</strong> · qualidade ${e.quality}/100 · criador: ${personLink(e.creator)} · dono: ${e.ownerEstate?'espólio de ':''}${personLink(e.owner||e.creator)} <button class="why" data-why="${e.source}">Por quê? Criação</button>${e.ownerSource&&e.ownerSource!==e.source?` <button class="why" data-why="${e.ownerSource}">Por quê? Propriedade</button>`:''}</p>`:'').join('')}
+  ${p.occupation ? `<p><strong>${a.isAlive(p.id) ? "Ofício registrado" : "Último ofício registrado"}:</strong> ${esc(p.occupation)} <button class="why" data-why="${p.lastBy.occupation}">Por quê?</button></p>` : ""}
+  ${Object.values(a.world.entities)
+    .filter(
+      (e) => e.kind === "work" && (e.creator === p.id || e.owner === p.id),
+    )
+    .map((e) =>
+      e.kind === "work"
+        ? `<p><strong>${esc(a.workTitle(e.id))}</strong> · qualidade ${e.quality}/100 · criador: ${personLink(e.creator)} · dono: ${e.ownerEstate ? "espólio de " : ""}${personLink(e.owner || e.creator)} <button class="why" data-why="${e.source}">Por quê? Criação</button>${e.ownerSource && e.ownerSource !== e.source ? ` <button class="why" data-why="${e.ownerSource}">Por quê? Propriedade</button>` : ""}</p>`
+        : "",
+    )
+    .join("")}
   <div class="family"><div><h3>Pais biológicos</h3><p>${parents.length ? parents.map(personLink).join(" e ") : "Ascendência não registrada; nenhum ancestral foi inventado."}</p></div><div><h3>Histórico de guarda</h3>${custody.length ? `<ul>${custody.map((c) => `<li>${date(c.month)}: ${c.guardians.length ? c.guardians.map(personLink).join(", ") : "guarda sem adulto indicado neste registro"} <button class="why" data-why="${c.source}">Por quê?</button></li>`).join("")}</ul>` : `<p>${parents.length ? "Os pais biológicos estão identificados acima; a guarda não foi especificada nos eventos." : "Guarda não documentada nos eventos."}</p>`}</div></div>
   <h3>Todos os filhos biológicos (${children.length})</h3><div class="table-scroll"><table id="children-table"><thead><tr><th>Pessoa</th><th>Nascimento</th><th>Estado, morte e idade</th></tr></thead><tbody>${children
     .map((id) => {
@@ -276,13 +348,15 @@ function detail() {
       "",
     )}</tbody></table></div>${partnerships.length ? "" : "<p>Nenhuma parceria foi registrada.</p>"}
   <section class="genealogy"><h3>Árvore genealógica</h3><label for="tree-mode">Explorar relações</label><select id="tree-mode"><option value="ancestors">Ascendência</option><option value="descendants">Descendência</option><option value="relations">Irmãos e parceiros</option></select><div id="genealogy-tree"></div><p class="hint">Datas e vínculos vêm dos eventos. Os fundadores permanecem raízes sem ancestrais inventados.</p></section>
-  <h3>Biografia</h3><p class="hint">Prosa baseada em fatos registrados. Conhecimento e emoção só aparecem quando há registro de percepção. Cada parágrafo permite consultar suas fontes.</p><div id="biography">${page.map((paragraph) => `<section class="bio-paragraph">${paragraph.phase?`<h4>${esc(paragraph.phase)}</h4>`:""}<p>${esc(paragraph.text)}</p><div class="sources">${paragraph.sources.map((id, index) => `${index===4?`<details><summary>Mais fontes deste trecho (${paragraph.sources.length-4})</summary>`:""}<button class="why" data-why="${id}">Por quê? · ${esc(eventLabel(a.event(id)!))}</button>${index===paragraph.sources.length-1 && index>=4?"</details>":""}`).join(" ")}</div></section>`).join("")}</div><div class="pager"><button id="prev-bio" ${bioPage === 0 ? "disabled" : ""}>Trechos anteriores</button><span>${bioPage + 1} / ${Math.max(1, Math.ceil(paragraphs.length / 10))}</span><button id="next-bio" ${(bioPage + 1) * 10 >= paragraphs.length ? "disabled" : ""}>Próximos trechos</button></div>`;
+  <h3>Biografia</h3><button id="export-person">Exportar crônica desta pessoa .md</button><p class="hint">Prosa baseada em fatos registrados. Conhecimento e emoção só aparecem quando há registro de percepção. Cada parágrafo permite consultar suas fontes.</p><div id="biography">${page.map((paragraph) => `<section class="bio-paragraph">${paragraph.phase ? `<h4>${esc(paragraph.phase)}</h4>` : ""}<p>${esc(paragraph.text)}</p><div class="sources">${paragraph.sources.map((id, index) => `${index === 4 ? `<details><summary>Mais fontes deste trecho (${paragraph.sources.length - 4})</summary>` : ""}<button class="why" data-why="${id}">Por quê? · ${esc(eventLabel(a.event(id)!))}</button>${index === paragraph.sources.length - 1 && index >= 4 ? "</details>" : ""}`).join(" ")}</div></section>`).join("")}</div><div class="pager"><button id="prev-bio" ${bioPage === 0 ? "disabled" : ""}>Trechos anteriores</button><span>${bioPage + 1} / ${Math.max(1, Math.ceil(paragraphs.length / 10))}</span><button id="next-bio" ${(bioPage + 1) * 10 >= paragraphs.length ? "disabled" : ""}>Próximos trechos</button></div>`;
   $<HTMLSelectElement>("#tree-mode").value = treeMode;
   $("#tree-mode").onchange = () => {
     treeMode = $<HTMLSelectElement>("#tree-mode").value;
     genealogy();
   };
   genealogy();
+  $("#export-person").onclick = () =>
+    download(personMarkdown(a, p.id), `pessoa-${p.id}`);
   $("#prev-bio").onclick = () => {
     bioPage--;
     detail();
@@ -295,13 +369,32 @@ function detail() {
 }
 function timeline() {
   const a = archive!,
-    count = allEvents ? a.world.log.rows.length : a.highlights.length,
-    start = timelinePage * 40;
-  const ids = allEvents
-    ? Array.from({ length: Math.min(40, count - start) }, (_, i) => start + i)
-    : a.highlights.slice(start, start + 40);
+    v = worldView!,
+    found = v.filter({ ...worldFilters, all: allEvents }),
+    count = found.length,
+    start = timelinePage * 40,
+    ids = found.slice(start, start + 40);
+  const options = (items: string[][], value?: string) =>
+    '<option value="">Todos</option>' +
+    items
+      .map(
+        ([id, label]) =>
+          `<option value="${esc(id)}" ${id === value ? "selected" : ""}>${esc(label)}</option>`,
+      )
+      .join("");
   $("#explore").innerHTML =
-    `<section class="timeline"><h2>Linha do tempo do mundo</h2><label class="check"><input id="all-events" type="checkbox" ${allEvents ? "checked" : ""}> Incluir todos os eventos, inclusive rotina mensal</label><p class="hint">${count.toLocaleString("pt-BR")} eventos · ordem cronológica e de resolução · 40 por página</p>${ids
+    `<section class="timeline"><h2>Linha do tempo do mundo</h2><div class="world-filters"><label>Assentamento<select id="world-settlement">${options(
+      v.settlements.map((s) => [s.id, s.name]),
+      worldFilters.settlement,
+    )}</select></label><label>Pessoa<select id="world-person">${options(
+      a.people.map((p) => [p.id, a.name(p.id)]),
+      worldFilters.person,
+    )}</select></label><label>Tipo de evento<select id="world-type">${options(
+      [...v.byType.keys()]
+        .map((t) => [t, eventLabel(a.event(v.byType.get(t)![0])!)])
+        .sort((a, b) => a[1].localeCompare(b[1])),
+      worldFilters.type,
+    )}</select></label><label>Marcador<select id="world-category">${options(Object.entries(categories), worldFilters.category)}</select></label></div><label class="check"><input id="all-events" type="checkbox" ${allEvents ? "checked" : ""}> Incluir todos os eventos, inclusive rotina mensal</label><p class="hint">${count.toLocaleString("pt-BR")} eventos · ordem cronológica e de resolução · 40 por página</p>${ids
       .map((i) => {
         const e = a.event(i)!;
         return `<article class="timeline-event"><time>${date(e.month)}</time><div><h3>${esc(eventLabel(e))}</h3><p>${esc(a.narrate(e))}</p><button class="why" data-why="${e.id}">Por quê? <span>${e.id}</span></button></div></article>`;
@@ -309,6 +402,14 @@ function timeline() {
       .join(
         "",
       )}<div class="pager"><button id="prev-time" ${timelinePage === 0 ? "disabled" : ""}>Anterior</button><span>${timelinePage + 1} / ${Math.max(1, Math.ceil(count / 40))}</span><button id="next-time" ${(timelinePage + 1) * 40 >= count ? "disabled" : ""}>Próxima</button></div></section>`;
+  for (const key of ["settlement", "person", "type", "category"] as const)
+    $("#world-" + key).onchange = () => {
+      (worldFilters as Record<string, string>)[key] = $<HTMLSelectElement>(
+        "#world-" + key,
+      ).value;
+      timelinePage = 0;
+      timeline();
+    };
   $("#all-events").onchange = () => {
     allEvents = $<HTMLInputElement>("#all-events").checked;
     timelinePage = 0;

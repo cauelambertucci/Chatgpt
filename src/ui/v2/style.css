@@ -499,3 +499,139 @@ th {
   padding: 0.7rem;
   border-radius: 8px;
 }
+.world-map {
+  width: 100%;
+  max-height: 480px;
+  background: #edf1e8;
+  border: 1px solid #d0dacf;
+  border-radius: 16px;
+  margin: 16px 0;
+}
+.world-map text {
+  font: 14px system-ui;
+}
+.world-map .map-name {
+  font: bold 19px Georgia;
+}
+.world-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.world-card {
+  padding: 24px;
+  background: #fffefa;
+  border: 1px solid #deded1;
+  border-radius: 12px;
+  min-width: 0;
+}
+.world-card h3 {
+  font: 24px Georgia;
+  color: #234e43;
+  margin: 8px 0 18px;
+}
+.world-card p,
+.world-card li {
+  overflow-wrap: anywhere;
+}
+.world-card details {
+  margin: 18px 0;
+}
+.world-card li {
+  margin: 16px 0;
+}
+.markers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
+}
+.markers button {
+  font-size: 13px;
+  padding: 8px 10px;
+}
+.markers strong {
+  margin-left: 8px;
+}
+.section-heading,
+.relation {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: space-between;
+}
+.relation {
+  justify-content: flex-start;
+  border-top: 1px solid #d8ded2;
+  padding: 18px 0;
+}
+.world-filters {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+.world-filters select {
+  width: 100%;
+}
+nav {
+  flex-wrap: wrap;
+}
+#export-world {
+  margin-left: auto;
+}
+.generation-row select {
+  min-width: 110px;
+}
+.works-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+#estimate {
+  max-width: 1050px;
+  line-height: 1.6;
+}
+button[aria-pressed="true"] {
+  background: #234e43;
+  color: white;
+}
+.world-card summary {
+  cursor: pointer;
+  color: #234e43;
+}
+@media (max-width: 760px) {
+  .world-cards,
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+  .world-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+  .generation-row {
+    flex-wrap: wrap;
+  }
+  .generation-row input {
+    min-width: 0;
+    width: 100%;
+  }
+  #export-world {
+    margin-left: 0;
+  }
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .world-map text {
+    font-size: 17px;
+  }
+  .world-map .map-name {
+    font-size: 21px;
+  }
+  nav button {
+    padding: 9px 12px;
+  }
+  .relation {
+    align-items: flex-start;
+  }
+}
+
+nav button[aria-pressed="true"]:hover { background: #234e43; color: white; }
