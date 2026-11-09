@@ -1,3 +1,4 @@
+import {politicalGate,type Settlement} from "./politics";
 import {themeProof} from "./writing";
 import { auditLife } from "./life-audit";
 import { CompactLog, type CompactWorld } from "./compact-log";
@@ -36,6 +37,8 @@ export function validateSlice(w: SliceWorld): string[] {
         "agents-slice-2d2-economy2",
         "agents-slice-2d2-writing2",
         "agents-slice-2d1-writing2",
+        "agents-slice-3-min",
+        "agents-slice-2d2-recovery3",
       ].includes(w.engine)
     )
       fail("Versão inválida");
@@ -108,6 +111,13 @@ export function validateSlice(w: SliceWorld): string[] {
         )
           fail(`${e.id}: treino sem acesso`);
       }
+      if(e.type==='war.declared'){
+        const settlement=state[String(e.data.from)] as Settlement;
+        const actor=e.participants.find(p=>p.role==='actor')?.id||'';
+        const incident=w.events[Number(String(e.data.incident).slice(6))];
+        const notice=e.causes.map(id=>w.events[Number(id.slice(6))]).find(x=>x?.type==='political.notice.received');
+        if(!settlement||settlement.kind!=='settlement'||politicalGate({...w,entities:state},settlement,actor,incident,notice,e.month)||!e.causes.includes(settlement.mandate!)||e.data.mandate!==settlement.mandate)fail(`${e.id}: guerra sem causa conhecida ou autoridade`);
+      }
       if (e.type === "person.died") {
         const p = state[String(e.data.victim)];
         if (p?.kind !== "person" || !p.alive)
@@ -120,6 +130,7 @@ export function validateSlice(w: SliceWorld): string[] {
               "natural.death",
               "body.death",
               "hunger.death",
+              "conflict.death",
             ].includes(w.events[Number(id.split(":")[1])]?.type),
           )
         )

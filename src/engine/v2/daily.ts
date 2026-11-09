@@ -338,6 +338,11 @@ export class DailySystem {
       80,
     );
   }
+  urgentFood(id:string){
+    const h=this.home(id),p=this.person(id);
+    const demand=Object.values(this.w.entities).filter((q):q is Person=>q.kind==='person'&&q.alive&&this.home(q.id).id===h.id).reduce((n,q)=>n+foodNeed(q.lifeStage),0);
+    return p.occupation==='cultivador' && !!h.inventory && reserveMonths(h.inventory.food,demand)<2;
+  }
   work(id: string): boolean {
     const p = this.person(id),
       o = this.w.scenario.dailyLife?.economy;

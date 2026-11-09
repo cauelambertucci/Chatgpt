@@ -7,7 +7,7 @@ import {
   notableChange,
 } from "./prose";
 import { CompactLog, type CompactWorld } from "../../engine/v2/compact-log";
-import { livelihoodScenario } from "../../engine/v2/daily-scenario";
+import { settlementScenario, politicalTypes } from "../../engine/v2/politics";
 import type { Person, SliceEvent } from "../../engine/v2/types";
 import {
   FamilyHistory,
@@ -19,8 +19,9 @@ import { eventLabel, eventLabels, routineTypes, readable } from "./labels";
 export { eventLabel } from "./labels";
 import { traits, values } from "../../data/v2/personality";
 export const lightScenario = (seed: string) =>
-  livelihoodScenario(seed.trim(), 40);
+  settlementScenario(seed.trim(), 40);
 const biographyTypes = new Set([
+  ...politicalTypes,
   "hunger.changed",
   "occupation.changed",
   "occupation.care.offered",
@@ -663,6 +664,7 @@ export class Archive {
           : e.participants.find((p) => p.role === "victim")?.id;
     const relation =
       observer && subject ? this.relation(observer, subject, e.month) : "";
+    if (e.type === "attack.attempted") return `a tentativa de golpe de ${this.name(e.participants.find(p=>p.role==='actor')?.id)} contra ${this.name(e.participants.find(p=>p.role==='target')?.id)}`;
     if (e.type === "person.born")
       return `o nascimento de ${this.name(e.participants[0]?.id)}`;
     if (e.type === "partnership.formed")
@@ -1037,6 +1039,22 @@ export class Archive {
         text = `${label} de ${this.name(actor ?? e.participants[0]?.id)} chegou ao fim: ${typeof d.reason === "string" ? d.reason : "motivo não informado"}`;
         break;
       }
+      case "office.appointed":
+        text = `${this.name(d.leader)} assumiu o cargo de ${d.office} de ${d.name}, por ${d.reason}, com mandato até o ano ${Math.floor(Number(d.termEnd)/12)}.`; break;
+      case "office.vacated":
+        text = `${this.name(e.participants[0]?.id)} deixou o cargo de ${d.office} de ${d.name}; motivo: ${d.reason}.`; break;
+      case "political.notice.sent":
+        text = `${this.name(d.source)} enviou um relato sobre ${this.factDescription(this.event(String(d.incident))!)}; a mensagem levou ${d.travelMonths} mês(es).`; break;
+      case "political.notice.received":
+        text = `${this.name(actor)} recebeu de ${this.name(d.witness)} o relato sobre ${this.factDescription(this.event(String(d.incident))!)}.`; break;
+      case "war.declared":
+        text = `${this.name(actor)} declarou conflito de ${d.name} contra ${d.targetName}; ${d.reason}.`; break;
+      case "war.rejected":
+        text = `A declaração de guerra de ${d.name} foi rejeitada: ${d.reason}.`; break;
+      case "campaign.resolved":
+        text = `O confronto entre ${d.name} e ${d.targetName} causou ${(d.casualties as string[]).length} morte(s).`; break;
+      case "campaign.ended":
+        text = `A campanha terminou: ${d.reason}.`; break;
       case "leadership.changed":
         text = actor
           ? `${this.name(actor)} foi escolhido para coordenar o grupo.`

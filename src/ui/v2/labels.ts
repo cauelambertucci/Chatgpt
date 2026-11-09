@@ -1,5 +1,7 @@
 /** Presentation catalog only. No simulation rules or event payloads are changed. */
 export const eventLabels: Readonly<Record<string, string>> = {
+ "settlement.founded":"Fundação do assentamento", "office.appointed":"Posse no cargo", "office.vacated":"Fim do mandato", "political.notice.sent":"Envio de relato ao assentamento", "political.notice.received":"Relato recebido pelo líder", "war.rejected":"Guerra rejeitada", "war.declared":"Declaração de conflito", "campaign.resolved":"Confronto entre assentamentos", "campaign.ended":"Fim da campanha", "conflict.death":"Morte em conflito",
+
  "livelihood.period":"Produção do período", "household.consumption":"Consumo do domicílio", "hunger.changed":"Mudança na alimentação", "hunger.death":"Morte por inanição",
  "household.materials.declared":"Materiais iniciais do domicílio", "occupation.changed":"Mudança de ofício", "occupation.care.offered":"Oferta de cuidado", "work.transferred":"Transferência de obra", "work.estate.recorded":"Obra no espólio",
   "activity.period": "Atividade do período",

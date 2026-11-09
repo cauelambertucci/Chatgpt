@@ -1,0 +1,2095 @@
+{
+  "seed": "marco3-fixture-guerra",
+  "mode": "fixture",
+  "coreMs": 6352.412713000001,
+  "coreRss": 299507712,
+  "exportRss": 313380864,
+  "jsonBytes": 6668421,
+  "gzipBytes": 1086015,
+  "events": 22956,
+  "metrics": {
+    "alive": 73,
+    "householdsWithChildren": 13
+  },
+  "births": 38,
+  "declarations": 1,
+  "rejections": [],
+  "conflictDeaths": 5,
+  "warWidows": 4,
+  "warCustody": 8,
+  "fullOrphans": 2,
+  "politicalEvents": [
+    {
+      "id": "event:15778",
+      "month": 120,
+      "type": "political.notice.sent",
+      "participants": [
+        {
+          "id": "person:01",
+          "role": "actor"
+        }
+      ],
+      "causes": [
+        "event:123",
+        "event:124",
+        "event:15682"
+      ],
+      "data": {
+        "incident": "event:15682",
+        "from": "settlement:1",
+        "to": "settlement:0",
+        "distanceKm": 60,
+        "travelMonths": 1,
+        "source": "person:01"
+      }
+    },
+    {
+      "id": "event:15896",
+      "month": 121,
+      "type": "war.declared",
+      "participants": [
+        {
+          "id": "person:07",
+          "role": "actor"
+        }
+      ],
+      "causes": [
+        "event:1",
+        "event:15682",
+        "event:15775",
+        "event:15786",
+        "event:15895"
+      ],
+      "data": {
+        "from": "settlement:1",
+        "to": "settlement:0",
+        "name": "Porto das Pedras",
+        "targetName": "Vale do Cedro",
+        "incident": "event:15682",
+        "mandate": "event:15775",
+        "utilities": {
+          "guerra": 541.9,
+          "acordo": 100
+        },
+        "reason": "utilidade de confronto supera a de acordo",
+        "arrival": 123,
+        "distanceKm": 60
+      }
+    },
+    {
+      "id": "event:16134",
+      "month": 123,
+      "type": "campaign.resolved",
+      "participants": [
+        {
+          "id": "person:01",
+          "role": "reference"
+        },
+        {
+          "id": "person:04",
+          "role": "reference"
+        },
+        {
+          "id": "person:07",
+          "role": "reference"
+        },
+        {
+          "id": "person:10",
+          "role": "reference"
+        },
+        {
+          "id": "person:13",
+          "role": "reference"
+        },
+        {
+          "id": "person:16",
+          "role": "reference"
+        },
+        {
+          "id": "person:18",
+          "role": "reference"
+        },
+        {
+          "id": "person:19",
+          "role": "reference"
+        },
+        {
+          "id": "person:21",
+          "role": "reference"
+        },
+        {
+          "id": "person:25",
+          "role": "reference"
+        },
+        {
+          "id": "person:28",
+          "role": "reference"
+        },
+        {
+          "id": "person:34",
+          "role": "reference"
+        },
+        {
+          "id": "person:39",
+          "role": "reference"
+        },
+        {
+          "id": "person:00",
+          "role": "reference"
+        },
+        {
+          "id": "person:06",
+          "role": "reference"
+        },
+        {
+          "id": "person:09",
+          "role": "reference"
+        },
+        {
+          "id": "person:12",
+          "role": "reference"
+        },
+        {
+          "id": "person:15",
+          "role": "reference"
+        },
+        {
+          "id": "person:22",
+          "role": "reference"
+        },
+        {
+          "id": "person:24",
+          "role": "reference"
+        },
+        {
+          "id": "person:26",
+          "role": "reference"
+        },
+        {
+          "id": "person:27",
+          "role": "reference"
+        },
+        {
+          "id": "person:33",
+          "role": "reference"
+        },
+        {
+          "id": "person:37",
+          "role": "reference"
+        }
+      ],
+      "causes": [
+        "event:1",
+        "event:15775",
+        "event:15896"
+      ],
+      "data": {
+        "conflict": "dispute:duel:person:00:person:01:120:0",
+        "from": "settlement:1",
+        "to": "settlement:0",
+        "name": "Porto das Pedras",
+        "targetName": "Vale do Cedro",
+        "casualties": [
+          "person:04",
+          "person:10",
+          "person:16",
+          "person:39",
+          "person:33"
+        ],
+        "rolls": [
+          {
+            "id": "person:01",
+            "draw": 32,
+            "threshold": 25
+          },
+          {
+            "id": "person:04",
+            "draw": 3,
+            "threshold": 6
+          },
+          {
+            "id": "person:07",
+            "draw": 77,
+            "threshold": 28
+          },
+          {
+            "id": "person:10",
+            "draw": 21,
+            "threshold": 27
+          },
+          {
+            "id": "person:13",
+            "draw": 60,
+            "threshold": 27
+          },
+          {
+            "id": "person:16",
+            "draw": 7,
+            "threshold": 28
+          },
+          {
+            "id": "person:18",
+            "draw": 42,
+            "threshold": 15
+          },
+          {
+            "id": "person:19",
+            "draw": 84,
+            "threshold": 27
+          },
+          {
+            "id": "person:21",
+            "draw": 33,
+            "threshold": 28
+          },
+          {
+            "id": "person:25",
+            "draw": 80,
+            "threshold": 20
+          },
+          {
+            "id": "person:28",
+            "draw": 32,
+            "threshold": 27
+          },
+          {
+            "id": "person:34",
+            "draw": 85,
+            "threshold": 25
+          },
+          {
+            "id": "person:39",
+            "draw": 20,
+            "threshold": 27
+          },
+          {
+            "id": "person:00",
+            "draw": 69,
+            "threshold": 23
+          },
+          {
+            "id": "person:06",
+            "draw": 53,
+            "threshold": 27
+          },
+          {
+            "id": "person:09",
+            "draw": 74,
+            "threshold": 28
+          },
+          {
+            "id": "person:12",
+            "draw": 39,
+            "threshold": 20
+          },
+          {
+            "id": "person:15",
+            "draw": 61,
+            "threshold": 19
+          },
+          {
+            "id": "person:22",
+            "draw": 35,
+            "threshold": 18
+          },
+          {
+            "id": "person:24",
+            "draw": 8,
+            "threshold": 8
+          },
+          {
+            "id": "person:26",
+            "draw": 72,
+            "threshold": 18
+          },
+          {
+            "id": "person:27",
+            "draw": 45,
+            "threshold": 20
+          },
+          {
+            "id": "person:33",
+            "draw": 9,
+            "threshold": 25
+          },
+          {
+            "id": "person:37",
+            "draw": 45,
+            "threshold": 19
+          }
+        ],
+        "reason": "encontro armado após viagem; exposição dos adultos presentes",
+        "assumption": "Conflito abstrato: sem executor individual presumido; crianças não combatem."
+      }
+    },
+    {
+      "id": "event:16136",
+      "month": 123,
+      "type": "person.died",
+      "participants": [
+        {
+          "id": "person:04",
+          "role": "victim"
+        }
+      ],
+      "causes": [
+        "event:1",
+        "event:16135"
+      ],
+      "data": {
+        "victim": "person:04",
+        "ageYears": 35,
+        "killer": null,
+        "killerSkill": null,
+        "cause": "morte em conflito entre assentamentos",
+        "weapon": null,
+        "bodyPart": null,
+        "conflict": "dispute:duel:person:00:person:01:120:0",
+        "natural": false
+      }
+    },
+    {
+      "id": "event:16137",
+      "month": 123,
+      "type": "partnership.ended",
+      "participants": [
+        {
+          "id": "person:04",
+          "role": "reference"
+        },
+        {
+          "id": "person:39",
+          "role": "reference"
+        }
+      ],
+      "causes": [
+        "event:15603",
+        "event:15673",
+        "event:16136"
+      ],
+      "data": {
+        "cause": "morte",
+        "death": "event:16136"
+      }
+    },
+    {
+      "id": "event:16138",
+      "month": 123,
+      "type": "guardianship.decided",
+      "participants": [
+        {
+          "id": "person:birth:person:39:6",
+          "role": "beneficiary"
+        },
+        {
+          "id": "person:39",
+          "role": "actor"
+        }
+      ],
+      "causes": [
+        "event:1",
+        "event:967",
+        "event:6751",
+        "event:11288",
+        "event:14414",
+        "event:15223",
+        "event:16136"
+      ],
+      "data": {
+        "child": "person:birth:person:39:6",
+        "candidates": [
+          {
+            "id": "person:16",
+            "utility": 60
+          },
+          {
+            "id": "person:25",
+            "utility": 60
+          },
+          {
+            "id": "person:37",
+            "utility": 60
+          },
+          {
+            "id": "person:39",
+            "utility": 60
+          },
+          {
+            "id": "person:27",
+            "utility": 59.900000000000006
+          },
+          {
+            "id": "person:15",
+            "utility": 59.599999999999994
+          },
+          {
+            "id": "person:36",
+            "utility": 59.599999999999994
+          },
+          {
+            "id": "person:30",
+            "utility": 59.5
+          },
+          {
+            "id": "person:12",
+            "utility": 40
+          },
+          {
+            "id": "person:05",
+            "utility": 38.2
+          },
+          {
+            "id": "person:19",
+            "utility": 30.25
+          },
+          {
+            "id": "person:20",
+            "utility": 30.25
+          },
+          {
+            "id": "person:22",
+            "utility": 30.25
+          },
+          {
+            "id": "person:29",
+            "utility": 30.25
+          },
+          {
+            "id": "person:34",
+            "utility": 30.25
+          },
+          {
+            "id": "person:32",
+            "utility": 20
+          },
+          {
+            "id": "person:33",
+            "utility": 20
+          },
+          {
+            "id": "person:10",
+            "utility": 19.9
+          },
+          {
+            "id": "person:13",
+            "utility": 19.9
+          },
+          {
+            "id": "person:18",
+            "utility": 19.9
+          },
+          {
+            "id": "person:24",
+            "utility": 19.5
+          },
+          {
+            "id": "person:26",
+            "utility": 19.200000000000003
+          },
+          {
+            "id": "person:28",
+            "utility": 5.450000000000003
+          },
+          {
+            "id": "person:38",
+            "utility": 1.6499999999999986
+          },
+          {
+            "id": "person:14",
+            "utility": 0
+          },
+          {
+            "id": "person:17",
+            "utility": -0.29999999999999716
+          },
+          {
+            "id": "person:35",
+            "utility": -0.29999999999999716
+          },
+          {
+            "id": "person:06",
+            "utility": -3.549999999999997
+          },
+          {
+            "id": "person:02",
+            "utility": -9.75
+          },
+          {
+            "id": "person:03",
+            "utility": -9.75
+          },
+          {
+            "id": "person:08",
+            "utility": -9.75
+          },
+          {
+            "id": "person:09",
+            "utility": -9.75
+          },
+          {
+            "id": "person:07",
+            "utility": -29.75
+          },
+          {
+            "id": "person:11",
+            "utility": -29.75
+          },
+          {
+            "id": "person:21",
+            "utility": -29.75
+          },
+          {
+            "id": "person:23",
+            "utility": -29.75
+          },
+          {
+            "id": "person:31",
+            "utility": -29.75
+          },
+          {
+            "id": "person:01",
+            "utility": -140.2
+          },
+          {
+            "id": "person:00",
+            "utility": -140.4
+          }
+        ],
+        "chosen": "person:39",
+        "guardians": [
+          "person:39"
+        ],
+        "reason": "responsável sobrevivente mantém guarda",
+        "orphan": false
+      }
+    },
+    {
+      "id": "event:16139",
+      "month": 123,
+      "type": "guardianship.decided",
+      "participants": [
+        {
+          "id": "person:birth:person:39:9",
+          "role": "beneficiary"
+        },
+        {
+          "id": "person:39",
+          "role": "actor"
+        }
+      ],
+      "causes": [
+        "event:1",
+        "event:967",
+        "event:6751",
+        "event:11288",
+        "event:14414",
+        "event:15243",
+        "event:16136"
+      ],
+      "data": {
+        "child": "person:birth:person:39:9",
+        "candidates": [
+          {
+            "id": "person:16",
+            "utility": 60
+          },
+          {
+            "id": "person:25",
+            "utility": 60
+          },
+          {
+            "id": "person:37",
+            "utility": 60
+          },
+          {
+            "id": "person:39",
+            "utility": 60
+          },
+          {
+            "id": "person:27",
+            "utility": 59.900000000000006
+          },
+          {
+            "id": "person:15",
+            "utility": 59.599999999999994
+          },
+          {
+            "id": "person:36",
+            "utility": 59.599999999999994
+          },
+          {
+            "id": "person:30",
+            "utility": 59.5
+          },
+          {
+            "id": "person:12",
+            "utility": 40
+          },
+          {
+            "id": "person:05",
+            "utility": 38.2
+          },
+          {
+            "id": "person:19",
+            "utility": 30.25
+          },
+          {
+            "id": "person:20",
+            "utility": 30.25
+          },
+          {
+            "id": "person:22",
+            "utility": 30.25
+          },
+          {
+            "id": "person:29",
+            "utility": 30.25
+          },
+          {
+            "id": "person:34",
+            "utility": 30.25
+          },
+          {
+            "id": "person:32",
+            "utility": 20
+          },
+          {
+            "id": "person:33",
+            "utility": 20
+          },
+          {
+            "id": "person:10",
+            "utility": 19.9
+          },
+          {
+            "id": "person:13",
+            "utility": 19.9
+          },
+          {
+            "id": "person:18",
+            "utility": 19.9
+          },
+          {
+            "id": "person:24",
+            "utility": 19.5
+          },
+          {
+            "id": "person:26",
+            "utility": 19.200000000000003
+          },
+          {
+            "id": "person:28",
+            "utility": 5.450000000000003
+          },
+          {
+            "id": "person:38",
+            "utility": 1.6499999999999986
+          },
+          {
+            "id": "person:14",
+            "utility": 0
+          },
+          {
+            "id": "person:17",
+            "utility": -0.29999999999999716
+          },
+          {
+            "id": "person:35",
+            "utility": -0.29999999999999716
+          },
+          {
+            "id": "person:06",
+            "utility": -3.549999999999997
+          },
+          {
+            "id": "person:02",
+            "utility": -9.75
+          },
+          {
+            "id": "person:03",
+            "utility": -9.75
+          },
+          {
+            "id": "person:08",
+            "utility": -9.75
+          },
+          {
+            "id": "person:09",
+            "utility": -9.75
+          },
+          {
+            "id": "person:07",
+            "utility": -29.75
+          },
+          {
+            "id": "person:11",
+            "utility": -29.75
+          },
+          {
+            "id": "person:21",
+            "utility": -29.75
+          },
+          {
+            "id": "person:23",
+            "utility": -29.75
+          },
+          {
+            "id": "person:31",
+            "utility": -29.75
+          },
+          {
+            "id": "person:01",
+            "utility": -140.2
+          },
+          {
+            "id": "person:00",
+            "utility": -140.4
+          }
+        ],
+        "chosen": "person:39",
+        "guardians": [
+          "person:39"
+        ],
+        "reason": "responsável sobrevivente mantém guarda",
+        "orphan": false
+      }
+    },
+    {
+      "id": "event:16142",
+      "month": 123,
+      "type": "person.died",
+      "participants": [
+        {
+          "id": "person:10",
+          "role": "victim"
+        }
+      ],
+      "causes": [
+        "event:1",
+        "event:16141"
+      ],
+      "data": {
+        "victim": "person:10",
+        "ageYears": 35,
+        "killer": null,
+        "killerSkill": null,
+        "cause": "morte em conflito entre assentamentos",
+        "weapon": null,
+        "bodyPart": null,
+        "conflict": "dispute:duel:person:00:person:01:120:0",
+        "natural": false
+      }
+    },
+    {
+      "id": "event:16144",
+      "month": 123,
+      "type": "partnership.ended",
+      "participants": [
+        {
+          "id": "person:10",
+          "role": "reference"
+        },
+        {
+          "id": "person:28",
+          "role": "reference"
+        }
+      ],
+      "causes": [
+        "event:15615",
+        "event:15676",
+        "event:16142"
+      ],
+      "data": {
+        "cause": "morte",
+        "death": "event:16142"
+      }
+    },
+    {
+      "id": "event:16145",
+      "month": 123,
+      "type": "guardianship.decided",
+      "participants": [
+        {
+          "id": "person:birth:person:28:4",
+          "role": "beneficiary"
+        },
+        {
+          "id": "person:28",
+          "role": "actor"
+        }
+      ],
+      "causes": [
+        "event:1",
+        "event:967",
+        "event:6751",
+        "event:11288",
+        "event:14414",
+        "event:15207",
+        "event:16142"
+      ],
+      "data": {
+        "child": "person:birth:person:28:4",
+        "candidates": [
+          {
+            "id": "person:16",
+            "utility": 60
+          },
+          {
+            "id": "person:25",
+            "utility": 60
+          },
+          {
+            "id": "person:37",
+            "utility": 60
+          },
+          {
+            "id": "person:27",
+            "utility": 59.900000000000006
+          },
+          {
+            "id": "person:15",
+            "utility": 59.599999999999994
+          },
+          {
+            "id": "person:36",
+            "utility": 59.599999999999994
+          },
+          {
+            "id": "person:30",
+            "utility": 59.5
+          },
+          {
+            "id": "person:28",
+            "utility": 45.45
+          },
+          {
+            "id": "person:12",
+            "utility": 40
+          },
+          {
+            "id": "person:05",
+            "utility": 38.2
+          },
+          {
+            "id": "person:19",
+            "utility": 30.25
+          },
+          {
+            "id": "person:20",
+            "utility": 30.25
+          },
+          {
+            "id": "person:22",
+            "utility": 30.25
+          },
+          {
+            "id": "person:29",
+            "utility": 30.25
+          },
+          {
+            "id": "person:34",
+            "utility": 30.25
+          },
+          {
+            "id": "person:32",
+            "utility": 20
+          },
+          {
+            "id": "person:33",
+            "utility": 20
+          },
+          {
+            "id": "person:39",
+            "utility": 20
+          },
+          {
+            "id": "person:13",
+            "utility": 19.9
+          },
+          {
+            "id": "person:18",
+            "utility": 19.9
+          },
+          {
+            "id": "person:24",
+            "utility": 19.5
+          },
+          {
+            "id": "person:26",
+            "utility": 19.200000000000003
+          },
+          {
+            "id": "person:38",
+            "utility": 1.6499999999999986
+          },
+          {
+            "id": "person:14",
+            "utility": 0
+          },
+          {
+            "id": "person:17",
+            "utility": -0.29999999999999716
+          },
+          {
+            "id": "person:35",
+            "utility": -0.29999999999999716
+          },
+          {
+            "id": "person:06",
+            "utility": -3.549999999999997
+          },
+          {
+            "id": "person:02",
+            "utility": -9.75
+          },
+          {
+            "id": "person:03",
+            "utility": -9.75
+          },
+          {
+            "id": "person:08",
+            "utility": -9.75
+          },
+          {
+            "id": "person:09",
+            "utility": -9.75
+          },
+          {
+            "id": "person:07",
+            "utility": -29.75
+          },
+          {
+            "id": "person:11",
+            "utility": -29.75
+          },
+          {
+            "id": "person:21",
+            "utility": -29.75
+          },
+          {
+            "id": "person:23",
+            "utility": -29.75
+          },
+          {
+            "id": "person:31",
+            "utility": -29.75
+          },
+          {
+            "id": "person:01",
+            "utility": -140.2
+          },
+          {
+            "id": "person:00",
+            "utility": -140.4
+          }
+        ],
+        "chosen": "person:28",
+        "guardians": [
+          "person:28"
+        ],
+        "reason": "responsável sobrevivente mantém guarda",
+        "orphan": false
+      }
+    },
+    {
+      "id": "event:16146",
+      "month": 123,
+      "type": "guardianship.decided",
+      "participants": [
+        {
+          "id": "person:birth:person:28:7",
+          "role": "beneficiary"
+        },
+        {
+          "id": "person:28",
+          "role": "actor"
+        }
+      ],
+      "causes": [
+        "event:1",
+        "event:967",
+        "event:6751",
+        "event:11288",
+        "event:14414",
+        "event:15227",
+        "event:16142"
+      ],
+      "data": {
+        "child": "person:birth:person:28:7",
+        "candidates": [
+          {
+            "id": "person:16",
+            "utility": 60
+          },
+          {
+            "id": "person:25",
+            "utility": 60
+          },
+          {
+            "id": "person:37",
+            "utility": 60
+          },
+          {
+            "id": "person:27",
+            "utility": 59.900000000000006
+          },
+          {
+            "id": "person:15",
+            "utility": 59.599999999999994
+          },
+          {
+            "id": "person:36",
+            "utility": 59.599999999999994
+          },
+          {
+            "id": "person:30",
+            "utility": 59.5
+          },
+          {
+            "id": "person:28",
+            "utility": 45.45
+          },
+          {
+            "id": "person:12",
+            "utility": 40
+          },
+          {
+            "id": "person:05",
+            "utility": 38.2
+          },
+          {
+            "id": "person:19",
+            "utility": 30.25
+          },
+          {
+            "id": "person:20",
+            "utility": 30.25
+          },
+          {
+            "id": "person:22",
+            "utility": 30.25
+          },
+          {
+            "id": "person:29",
+            "utility": 30.25
+          },
+          {
+            "id": "person:34",
+            "utility": 30.25
+          },
+          {
+            "id": "person:32",
+            "utility": 20
+          },
+          {
+            "id": "person:33",
+            "utility": 20
+          },
+          {
+            "id": "person:39",
+            "utility": 20
+          },
+          {
+            "id": "person:13",
+            "utility": 19.9
+          },
+          {
+            "id": "person:18",
+            "utility": 19.9
+          },
+          {
+            "id": "person:24",
+            "utility": 19.5
+          },
+          {
+            "id": "person:26",
+            "utility": 19.200000000000003
+          },
+          {
+            "id": "person:38",
+            "utility": 1.6499999999999986
+          },
+          {
+            "id": "person:14",
+            "utility": 0
+          },
+          {
+            "id": "person:17",
+            "utility": -0.29999999999999716
+          },
+          {
+            "id": "person:35",
+            "utility": -0.29999999999999716
+          },
+          {
+            "id": "person:06",
+            "utility": -3.549999999999997
+          },
+          {
+            "id": "person:02",
+            "utility": -9.75
+          },
+          {
+            "id": "person:03",
+            "utility": -9.75
+          },
+          {
+            "id": "person:08",
+            "utility": -9.75
+          },
+          {
+            "id": "person:09",
+            "utility": -9.75
+          },
+          {
+            "id": "person:07",
+            "utility": -29.75
+          },
+          {
+            "id": "person:11",
+            "utility": -29.75
+          },
+          {
+            "id": "person:21",
+            "utility": -29.75
+          },
+          {
+            "id": "person:23",
+            "utility": -29.75
+          },
+          {
+            "id": "person:31",
+            "utility": -29.75
+          },
+          {
+            "id": "person:01",
+            "utility": -140.2
+          },
+          {
+            "id": "person:00",
+            "utility": -140.4
+          }
+        ],
+        "chosen": "person:28",
+        "guardians": [
+          "person:28"
+        ],
+        "reason": "responsável sobrevivente mantém guarda",
+        "orphan": false
+      }
+    },
+    {
+      "id": "event:16149",
+      "month": 123,
+      "type": "person.died",
+      "participants": [
+        {
+          "id": "person:16",
+          "role": "victim"
+        }
+      ],
+      "causes": [
+        "event:1",
+        "event:16148"
+      ],
+      "data": {
+        "victim": "person:16",
+        "ageYears": 35,
+        "killer": null,
+        "killerSkill": null,
+        "cause": "morte em conflito entre assentamentos",
+        "weapon": null,
+        "bodyPart": null,
+        "conflict": "dispute:duel:person:00:person:01:120:0",
+        "natural": false
+      }
+    },
+    {
+      "id": "event:16150",
+      "month": 123,
+      "type": "partnership.ended",
+      "participants": [
+        {
+          "id": "person:16",
+          "role": "reference"
+        },
+        {
+          "id": "person:34",
+          "role": "reference"
+        }
+      ],
+      "causes": [
+        "event:15627",
+        "event:15663",
+        "event:16149"
+      ],
+      "data": {
+        "cause": "morte",
+        "death": "event:16149"
+      }
+    },
+    {
+      "id": "event:16153",
+      "month": 123,
+      "type": "person.died",
+      "participants": [
+        {
+          "id": "person:39",
+          "role": "victim"
+        }
+      ],
+      "causes": [
+        "event:1",
+        "event:16152"
+      ],
+      "data": {
+        "victim": "person:39",
+        "ageYears": 35,
+        "killer": null,
+        "killerSkill": null,
+        "cause": "morte em conflito entre assentamentos",
+        "weapon": null,
+        "bodyPart": null,
+        "conflict": "dispute:duel:person:00:person:01:120:0",
+        "natural": false
+      }
+    },
+    {
+      "id": "event:16154",
+      "month": 123,
+      "type": "guardianship.decided",
+      "participants": [
+        {
+          "id": "person:birth:person:39:6",
+          "role": "beneficiary"
+        },
+        {
+          "id": "person:25",
+          "role": "actor"
+        }
+      ],
+      "causes": [
+        "event:1",
+        "event:6751",
+        "event:11288",
+        "event:14414",
+        "event:16138",
+        "event:16153"
+      ],
+      "data": {
+        "child": "person:birth:person:39:6",
+        "candidates": [
+          {
+            "id": "person:25",
+            "utility": 60
+          },
+          {
+            "id": "person:37",
+            "utility": 60
+          },
+          {
+            "id": "person:27",
+            "utility": 59.900000000000006
+          },
+          {
+            "id": "person:15",
+            "utility": 59.599999999999994
+          },
+          {
+            "id": "person:36",
+            "utility": 59.599999999999994
+          },
+          {
+            "id": "person:30",
+            "utility": 59.5
+          },
+          {
+            "id": "person:12",
+            "utility": 40
+          },
+          {
+            "id": "person:05",
+            "utility": 38.2
+          },
+          {
+            "id": "person:19",
+            "utility": 30.25
+          },
+          {
+            "id": "person:20",
+            "utility": 30.25
+          },
+          {
+            "id": "person:22",
+            "utility": 30.25
+          },
+          {
+            "id": "person:29",
+            "utility": 30.25
+          },
+          {
+            "id": "person:34",
+            "utility": 30.25
+          },
+          {
+            "id": "person:32",
+            "utility": 20
+          },
+          {
+            "id": "person:33",
+            "utility": 20
+          },
+          {
+            "id": "person:13",
+            "utility": 19.9
+          },
+          {
+            "id": "person:18",
+            "utility": 19.9
+          },
+          {
+            "id": "person:24",
+            "utility": 19.5
+          },
+          {
+            "id": "person:26",
+            "utility": 19.200000000000003
+          },
+          {
+            "id": "person:28",
+            "utility": 5.450000000000003
+          },
+          {
+            "id": "person:38",
+            "utility": 1.6499999999999986
+          },
+          {
+            "id": "person:14",
+            "utility": 0
+          },
+          {
+            "id": "person:17",
+            "utility": -0.29999999999999716
+          },
+          {
+            "id": "person:35",
+            "utility": -0.29999999999999716
+          },
+          {
+            "id": "person:06",
+            "utility": -3.549999999999997
+          },
+          {
+            "id": "person:02",
+            "utility": -9.75
+          },
+          {
+            "id": "person:03",
+            "utility": -9.75
+          },
+          {
+            "id": "person:08",
+            "utility": -9.75
+          },
+          {
+            "id": "person:09",
+            "utility": -9.75
+          },
+          {
+            "id": "person:07",
+            "utility": -29.75
+          },
+          {
+            "id": "person:11",
+            "utility": -29.75
+          },
+          {
+            "id": "person:21",
+            "utility": -29.75
+          },
+          {
+            "id": "person:23",
+            "utility": -29.75
+          },
+          {
+            "id": "person:31",
+            "utility": -29.75
+          },
+          {
+            "id": "person:01",
+            "utility": -140.2
+          },
+          {
+            "id": "person:00",
+            "utility": -140.4
+          }
+        ],
+        "chosen": "person:25",
+        "guardians": [
+          "person:25"
+        ],
+        "reason": "adulto presente aceita guarda por utilidade",
+        "orphan": true
+      }
+    },
+    {
+      "id": "event:16155",
+      "month": 123,
+      "type": "guardianship.decided",
+      "participants": [
+        {
+          "id": "person:birth:person:39:9",
+          "role": "beneficiary"
+        },
+        {
+          "id": "person:25",
+          "role": "actor"
+        }
+      ],
+      "causes": [
+        "event:1",
+        "event:6751",
+        "event:11288",
+        "event:14414",
+        "event:16139",
+        "event:16153"
+      ],
+      "data": {
+        "child": "person:birth:person:39:9",
+        "candidates": [
+          {
+            "id": "person:25",
+            "utility": 60
+          },
+          {
+            "id": "person:37",
+            "utility": 60
+          },
+          {
+            "id": "person:27",
+            "utility": 59.900000000000006
+          },
+          {
+            "id": "person:15",
+            "utility": 59.599999999999994
+          },
+          {
+            "id": "person:36",
+            "utility": 59.599999999999994
+          },
+          {
+            "id": "person:30",
+            "utility": 59.5
+          },
+          {
+            "id": "person:12",
+            "utility": 40
+          },
+          {
+            "id": "person:05",
+            "utility": 38.2
+          },
+          {
+            "id": "person:19",
+            "utility": 30.25
+          },
+          {
+            "id": "person:20",
+            "utility": 30.25
+          },
+          {
+            "id": "person:22",
+            "utility": 30.25
+          },
+          {
+            "id": "person:29",
+            "utility": 30.25
+          },
+          {
+            "id": "person:34",
+            "utility": 30.25
+          },
+          {
+            "id": "person:32",
+            "utility": 20
+          },
+          {
+            "id": "person:33",
+            "utility": 20
+          },
+          {
+            "id": "person:13",
+            "utility": 19.9
+          },
+          {
+            "id": "person:18",
+            "utility": 19.9
+          },
+          {
+            "id": "person:24",
+            "utility": 19.5
+          },
+          {
+            "id": "person:26",
+            "utility": 19.200000000000003
+          },
+          {
+            "id": "person:28",
+            "utility": 5.450000000000003
+          },
+          {
+            "id": "person:38",
+            "utility": 1.6499999999999986
+          },
+          {
+            "id": "person:14",
+            "utility": 0
+          },
+          {
+            "id": "person:17",
+            "utility": -0.29999999999999716
+          },
+          {
+            "id": "person:35",
+            "utility": -0.29999999999999716
+          },
+          {
+            "id": "person:06",
+            "utility": -3.549999999999997
+          },
+          {
+            "id": "person:02",
+            "utility": -9.75
+          },
+          {
+            "id": "person:03",
+            "utility": -9.75
+          },
+          {
+            "id": "person:08",
+            "utility": -9.75
+          },
+          {
+            "id": "person:09",
+            "utility": -9.75
+          },
+          {
+            "id": "person:07",
+            "utility": -29.75
+          },
+          {
+            "id": "person:11",
+            "utility": -29.75
+          },
+          {
+            "id": "person:21",
+            "utility": -29.75
+          },
+          {
+            "id": "person:23",
+            "utility": -29.75
+          },
+          {
+            "id": "person:31",
+            "utility": -29.75
+          },
+          {
+            "id": "person:01",
+            "utility": -140.2
+          },
+          {
+            "id": "person:00",
+            "utility": -140.4
+          }
+        ],
+        "chosen": "person:25",
+        "guardians": [
+          "person:25"
+        ],
+        "reason": "adulto presente aceita guarda por utilidade",
+        "orphan": true
+      }
+    },
+    {
+      "id": "event:16158",
+      "month": 123,
+      "type": "person.died",
+      "participants": [
+        {
+          "id": "person:33",
+          "role": "victim"
+        }
+      ],
+      "causes": [
+        "event:1",
+        "event:16157"
+      ],
+      "data": {
+        "victim": "person:33",
+        "ageYears": 35,
+        "killer": null,
+        "killerSkill": null,
+        "cause": "morte em conflito entre assentamentos",
+        "weapon": null,
+        "bodyPart": null,
+        "conflict": "dispute:duel:person:00:person:01:120:0",
+        "natural": false
+      }
+    },
+    {
+      "id": "event:16159",
+      "month": 123,
+      "type": "partnership.ended",
+      "participants": [
+        {
+          "id": "person:33",
+          "role": "reference"
+        },
+        {
+          "id": "person:24",
+          "role": "reference"
+        }
+      ],
+      "causes": [
+        "event:15643",
+        "event:15661",
+        "event:16158"
+      ],
+      "data": {
+        "cause": "morte",
+        "death": "event:16158"
+      }
+    },
+    {
+      "id": "event:16160",
+      "month": 123,
+      "type": "guardianship.decided",
+      "participants": [
+        {
+          "id": "person:birth:person:24:2",
+          "role": "beneficiary"
+        },
+        {
+          "id": "person:24",
+          "role": "actor"
+        }
+      ],
+      "causes": [
+        "event:1",
+        "event:6751",
+        "event:11288",
+        "event:14414",
+        "event:15199",
+        "event:16158"
+      ],
+      "data": {
+        "child": "person:birth:person:24:2",
+        "candidates": [
+          {
+            "id": "person:25",
+            "utility": 60
+          },
+          {
+            "id": "person:37",
+            "utility": 60
+          },
+          {
+            "id": "person:27",
+            "utility": 59.900000000000006
+          },
+          {
+            "id": "person:15",
+            "utility": 59.599999999999994
+          },
+          {
+            "id": "person:36",
+            "utility": 59.599999999999994
+          },
+          {
+            "id": "person:24",
+            "utility": 59.5
+          },
+          {
+            "id": "person:30",
+            "utility": 59.5
+          },
+          {
+            "id": "person:12",
+            "utility": 40
+          },
+          {
+            "id": "person:05",
+            "utility": 38.2
+          },
+          {
+            "id": "person:19",
+            "utility": 30.25
+          },
+          {
+            "id": "person:20",
+            "utility": 30.25
+          },
+          {
+            "id": "person:22",
+            "utility": 30.25
+          },
+          {
+            "id": "person:29",
+            "utility": 30.25
+          },
+          {
+            "id": "person:34",
+            "utility": 30.25
+          },
+          {
+            "id": "person:32",
+            "utility": 20
+          },
+          {
+            "id": "person:13",
+            "utility": 19.9
+          },
+          {
+            "id": "person:18",
+            "utility": 19.9
+          },
+          {
+            "id": "person:26",
+            "utility": 19.200000000000003
+          },
+          {
+            "id": "person:28",
+            "utility": 5.450000000000003
+          },
+          {
+            "id": "person:38",
+            "utility": 1.6499999999999986
+          },
+          {
+            "id": "person:14",
+            "utility": 0
+          },
+          {
+            "id": "person:17",
+            "utility": -0.29999999999999716
+          },
+          {
+            "id": "person:35",
+            "utility": -0.29999999999999716
+          },
+          {
+            "id": "person:06",
+            "utility": -3.549999999999997
+          },
+          {
+            "id": "person:02",
+            "utility": -9.75
+          },
+          {
+            "id": "person:03",
+            "utility": -9.75
+          },
+          {
+            "id": "person:08",
+            "utility": -9.75
+          },
+          {
+            "id": "person:09",
+            "utility": -9.75
+          },
+          {
+            "id": "person:07",
+            "utility": -29.75
+          },
+          {
+            "id": "person:11",
+            "utility": -29.75
+          },
+          {
+            "id": "person:21",
+            "utility": -29.75
+          },
+          {
+            "id": "person:23",
+            "utility": -29.75
+          },
+          {
+            "id": "person:31",
+            "utility": -29.75
+          },
+          {
+            "id": "person:01",
+            "utility": -140.2
+          },
+          {
+            "id": "person:00",
+            "utility": -140.4
+          }
+        ],
+        "chosen": "person:24",
+        "guardians": [
+          "person:24"
+        ],
+        "reason": "responsável sobrevivente mantém guarda",
+        "orphan": false
+      }
+    },
+    {
+      "id": "event:16161",
+      "month": 123,
+      "type": "guardianship.decided",
+      "participants": [
+        {
+          "id": "person:birth:person:24:7",
+          "role": "beneficiary"
+        },
+        {
+          "id": "person:24",
+          "role": "actor"
+        }
+      ],
+      "causes": [
+        "event:1",
+        "event:6751",
+        "event:11288",
+        "event:14414",
+        "event:15225",
+        "event:16158"
+      ],
+      "data": {
+        "child": "person:birth:person:24:7",
+        "candidates": [
+          {
+            "id": "person:25",
+            "utility": 60
+          },
+          {
+            "id": "person:37",
+            "utility": 60
+          },
+          {
+            "id": "person:27",
+            "utility": 59.900000000000006
+          },
+          {
+            "id": "person:15",
+            "utility": 59.599999999999994
+          },
+          {
+            "id": "person:36",
+            "utility": 59.599999999999994
+          },
+          {
+            "id": "person:24",
+            "utility": 59.5
+          },
+          {
+            "id": "person:30",
+            "utility": 59.5
+          },
+          {
+            "id": "person:12",
+            "utility": 40
+          },
+          {
+            "id": "person:05",
+            "utility": 38.2
+          },
+          {
+            "id": "person:19",
+            "utility": 30.25
+          },
+          {
+            "id": "person:20",
+            "utility": 30.25
+          },
+          {
+            "id": "person:22",
+            "utility": 30.25
+          },
+          {
+            "id": "person:29",
+            "utility": 30.25
+          },
+          {
+            "id": "person:34",
+            "utility": 30.25
+          },
+          {
+            "id": "person:32",
+            "utility": 20
+          },
+          {
+            "id": "person:13",
+            "utility": 19.9
+          },
+          {
+            "id": "person:18",
+            "utility": 19.9
+          },
+          {
+            "id": "person:26",
+            "utility": 19.200000000000003
+          },
+          {
+            "id": "person:28",
+            "utility": 5.450000000000003
+          },
+          {
+            "id": "person:38",
+            "utility": 1.6499999999999986
+          },
+          {
+            "id": "person:14",
+            "utility": 0
+          },
+          {
+            "id": "person:17",
+            "utility": -0.29999999999999716
+          },
+          {
+            "id": "person:35",
+            "utility": -0.29999999999999716
+          },
+          {
+            "id": "person:06",
+            "utility": -3.549999999999997
+          },
+          {
+            "id": "person:02",
+            "utility": -9.75
+          },
+          {
+            "id": "person:03",
+            "utility": -9.75
+          },
+          {
+            "id": "person:08",
+            "utility": -9.75
+          },
+          {
+            "id": "person:09",
+            "utility": -9.75
+          },
+          {
+            "id": "person:07",
+            "utility": -29.75
+          },
+          {
+            "id": "person:11",
+            "utility": -29.75
+          },
+          {
+            "id": "person:21",
+            "utility": -29.75
+          },
+          {
+            "id": "person:23",
+            "utility": -29.75
+          },
+          {
+            "id": "person:31",
+            "utility": -29.75
+          },
+          {
+            "id": "person:01",
+            "utility": -140.2
+          },
+          {
+            "id": "person:00",
+            "utility": -140.4
+          }
+        ],
+        "chosen": "person:24",
+        "guardians": [
+          "person:24"
+        ],
+        "reason": "responsável sobrevivente mantém guarda",
+        "orphan": false
+      }
+    },
+    {
+      "id": "event:16163",
+      "month": 123,
+      "type": "campaign.ended",
+      "participants": [],
+      "causes": [
+        "event:16134",
+        "event:16136",
+        "event:16142",
+        "event:16149",
+        "event:16153",
+        "event:16158"
+      ],
+      "data": {
+        "conflict": "dispute:duel:person:00:person:01:120:0",
+        "reason": "encontro encerrado; sem guerra automática recorrente",
+        "deaths": 5
+      }
+    }
+  ],
+  "biographies": [
+    {
+      "id": "person:07",
+      "name": "Zarek",
+      "paragraphs": [
+        {
+          "phase": "Origem",
+          "text": "Zarek integrava o grupo fundador, com 25 anos no início. Não há infância simulada nem ancestrais registrados para os fundadores.",
+          "sources": [
+            "event:9"
+          ]
+        },
+        {
+          "phase": "Vida adulta",
+          "text": "No ano 0, no mês 1, Zarek e Thorin 2 formaram parceria. Zarek adotou o ofício de criador. No ano 0, mês 9, a tentativa de amizade de Doran 2 chegou ao fim: Três convites recusados; respeitou a recusa. No ano 0, mês 10, nasceu Sora 0, tendo como pais biológicos Zarek e Thorin 2. No ano 5, no mês 10, nasceu Neris 5, tendo como pais biológicos Zarek e Thorin 2. No ano 9, no mês 10, nasceu Iven 9, tendo como pais biológicos Zarek e Thorin 2.",
+          "sources": [
+            "event:133",
+            "event:189",
+            "event:1397",
+            "event:1471",
+            "event:9089",
+            "event:15239"
+          ]
+        },
+        {
+          "text": "No ano 10, mês 1, Zarek assumiu o cargo de coordenador de Porto das Pedras, por parentesco e apoio dos residentes, com mandato até o ano 15. No ano 10, mês 2, Zarek recebeu de Tala o relato sobre a tentativa de golpe de Orin contra Tala. Declarou conflito de Porto das Pedras contra Vale do Cedro; utilidade de confronto supera a de acordo. No ano 10, no mês 4, o confronto entre Porto das Pedras e Vale do Cedro causou 5 morte(s). No mês 12 do ano 14, a busca pela coordenação de Zarek chegou ao fim: Horizonte encerrado sem satisfazer o objetivo. O projeto de obra de Zarek chegou ao fim: Horizonte encerrado sem satisfazer o objetivo. Sentiu raiva, em resposta ao desfecho da busca pela coordenação do grupo. O estresse aumentou. Teve uma reação de raiva, em resposta a uma tentativa frustrada de criar uma obra.",
+          "sources": [
+            "event:15775",
+            "event:15895",
+            "event:15896",
+            "event:16134",
+            "event:22902",
+            "event:22903",
+            "event:22931",
+            "event:22932"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "person:birth:person:39:6",
+      "name": "Alda 6",
+      "paragraphs": [
+        {
+          "phase": "Origem",
+          "text": "Alda 6 nasceu no ano 6, mês 10, com parentesco biológico registrado com Corin 2 e Luma.",
+          "sources": [
+            "event:10595"
+          ]
+        },
+        {
+          "phase": "Juventude",
+          "text": "No ano 10, mês 4, Luma (35 anos), Corin 2 (35 anos) morreram no mesmo mês por morte em conflito entre assentamentos. Foi decidida a guarda de Alda 6; responsáveis registrados: Corin 2. Motivo: responsável sobrevivente mantém guarda. Foi decidida a guarda de Alda 6; responsáveis registrados: Runa 2. Motivo: adulto presente aceita guarda por utilidade.",
+          "sources": [
+            "event:16136",
+            "event:16138",
+            "event:16153",
+            "event:16154"
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

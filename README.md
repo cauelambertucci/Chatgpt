@@ -260,3 +260,7 @@ A interface Leve agora usa `dailyScenario`: 40 fundadores, 100 anos, objetivos p
 ## Livros: conservação, tempo e narração
 
 [Relatório em cinco linhas](docs/LIVROS-REPORT.md) · [dados antes/depois](docs/LIVROS-DADOS.json) · [narração comparada](docs/LIVROS-NARRACAO.md). Validação nas mesmas três seeds, sem novo lote. Marco 3 não iniciado.
+
+## Marco 3 mínimo — assentamentos e conflitos
+
+[Diagnóstico demográfico (5 linhas)](docs/MARCO3-DEMOGRAFIA.md) · [relatório curto](docs/MARCO3-REPORT.md) · [duas biografias da fixture](docs/MARCO3-BIOGRAFIAS.md). A interface Leve usa três assentamentos, 40 fundadores e 100 anos. As três seeds livres preferiram acordo; os exemplos de guerra são explicitamente controlados. `npm run test:m3` verifica causalidade, autoridade, sucessão, replay e consequências familiares. Nenhuma etapa posterior foi iniciada.

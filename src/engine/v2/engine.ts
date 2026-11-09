@@ -1,3 +1,4 @@
+import {PoliticsSystem} from "./politics";
 import {experienceParticipants} from "./writing";
 import { DailySystem, domainSeed } from "./daily";
 import { firstUnknownRecipient } from "./information";
@@ -93,6 +94,15 @@ export class SliceSimulation {
   private anatomy?: BodySystem;
   private life?: LifeSystem;
   private daily?: DailySystem;
+  private politics?: PoliticsSystem;
+  private attachPolitics(initialize=false){
+    if(!this.state.scenario.politics)return;
+    this.politics=new PoliticsSystem({world:()=>this.state,month:()=>this.month,emit:(...args)=>this.emit(...args),die:(id,source,conflict)=>{
+      const body=this.anatomy!.body(id);
+      const e=this.emit('conflict.death',[{id,role:'reference'}],[source,body.lastEvent],[{op:'replace',entity:{...body,conscious:false,weapon:undefined,lastEvent:this.nextId()}}],{conflict,cause:'morte em conflito entre assentamentos'});
+      this.die(getPerson(this.state,id),undefined,e.id,{conflict,cause:'morte em conflito entre assentamentos',natural:false});
+    }});if(initialize)this.politics.initialize();
+  }
   private attachDaily(initialize=false){
     if(!this.state.scenario.dailyLife)return;
     this.daily=new DailySystem({die:(id,source)=>{const body=this.anatomy!.body(id);const e=this.emit("hunger.death",[{id,role:"reference"}],[source,body.lastEvent],[{op:"replace",entity:{...body,conscious:false,weapon:undefined,lastEvent:this.nextId()}}],{cause:"inanição prolongada"});this.die(getPerson(this.state,id),undefined,e.id,{cause:"inanição prolongada",natural:false});},world:()=>this.state,month:()=>this.month,body:()=>this.anatomy!,emit:(...args)=>this.emit(...args)});
@@ -194,7 +204,7 @@ export class SliceSimulation {
   ) {
     this.observeConception = options.observeConception;
     if (restored) {
-      const expected = restored.scenario.dailyLife ? (restored.scenario.dailyLife.economy ? "agents-slice-2d2-writing2" : "agents-slice-2d1-writing2") : restored.scenario.lifeSimulation
+      const expected = restored.scenario.politics ? "agents-slice-3-min" : restored.scenario.dailyLife ? (restored.scenario.dailyLife.economy ? "agents-slice-2d2-recovery3" : "agents-slice-2d1-writing2") : restored.scenario.lifeSimulation
         ? restored.scenario.lifeSimulation.fertilityPolicy
           ? "agents-slice-2c"
           : "agents-slice-2b"
@@ -239,6 +249,7 @@ export class SliceSimulation {
       this.attachBody();
       this.attachLife();
       this.attachDaily();
+      this.attachPolitics();
       return;
     }
     if (
@@ -248,7 +259,7 @@ export class SliceSimulation {
       throw Error("Horizon must be 1–240 months");
     this.state = {
       version: 2,
-      engine: scenario.dailyLife ? (scenario.dailyLife.economy ? "agents-slice-2d2-writing2" : "agents-slice-2d1-writing2") : scenario.lifeSimulation
+      engine: scenario.politics ? "agents-slice-3-min" : scenario.dailyLife ? (scenario.dailyLife.economy ? "agents-slice-2d2-recovery3" : "agents-slice-2d1-writing2") : scenario.lifeSimulation
         ? scenario.lifeSimulation.fertilityPolicy
           ? "agents-slice-2c"
           : "agents-slice-2b"
@@ -349,6 +360,7 @@ export class SliceSimulation {
     this.attachLife(true);
     this.attachBody(true);
     this.attachDaily(true);
+    this.attachPolitics(true);
   }
 
   private feel(person: Person, source: SliceEvent, stimulus: Stimulus) {
@@ -2649,7 +2661,10 @@ export class SliceSimulation {
       return;
     if(this.daily){
       this.daily.choose(id);p=getPerson(this.state,id);
-      if(this.daily.work(id))return;
+      // Work must not bypass a recovery decision; preserve urgent food production.
+      const preferred=this.candidates(id,roster)[0].action;
+      const recovery=["recuperar","isolar","abandonar_posto"].includes(preferred);
+      if((!recovery || this.daily.urgentFood(id)) && this.daily.work(id))return;
       if(this.daily.ability(id).write<0.5)for(const g of this.personalGoals(p).filter(g=>g.type==='criar_obra' && g.closed===undefined && g.workStarted)){
         const failure=this.emit('work.blocked',[{id,role:'actor'}],[g.lastEvent,...this.daily.ability(id).sources],[],{goal:g.id,reason:'Capacidade manual insuficiente para continuar a escrita.'});
         this.finishPersonalGoal(g,'failed',[failure.id],'Projeto interrompido por limitação manual.');
@@ -3219,6 +3234,7 @@ export class SliceSimulation {
         this.drain();
       }
       this.daily?.consume();
+      this.politics?.monthly();
       this.drain();
       this.state.nextMonth = this.month + 1;
     }

@@ -28,10 +28,10 @@ let archive: Archive | undefined,
 let treeMode = "ancestors";
 let worker: Worker | undefined,
   run = 0;
-root.innerHTML = `<header><a class="brand" href="/">✧ CHRONICLE WORLD</a><span class="edition">Arquivo de vidas · motor v2</span></header>
+root.innerHTML = `<header><a class="brand" href="/">✧ CHRONICLE WORLD</a><span class="edition">Arquivo de vidas · Marco 3 mínimo</span></header>
 <main><section class="intro"><div><p class="eyebrow">CADA VIDA DEIXA UM REGISTRO</p><h1>Uma história, muitos caminhos.</h1><p>Explore pessoas, famílias e os acontecimentos que mudaram suas vidas.</p></div><span class="badge">Leve · 40 fundadores · 100 anos</span></section>
 <form id="generate"><label for="seed">Seed do mundo</label><div class="generation-row"><input id="seed" value="reservado-2b-006" required maxlength="120" autocomplete="off"><button id="start" class="primary">Gerar história</button><button id="cancel" type="button" hidden>Cancelar</button></div><div class="progress-row"><progress id="progress" max="1200" value="0" aria-label="Progresso da geração"></progress><output id="status" role="status" aria-live="polite">Pronto para gerar. Tudo acontece neste navegador.</output></div></form>
-<section id="archive" hidden><div id="summary" class="summary"></div><nav aria-label="Explorar"><button id="people-tab" aria-pressed="true">Pessoas</button><button id="timeline-tab" aria-pressed="false">Linha do tempo</button></nav><div id="explore"></div></section><section id="empty" class="empty"><span>✧</span><h2>O arquivo ainda está em branco.</h2><p>Escolha uma seed e gere cem anos de história.<br>A mesma seed reproduz os mesmos acontecimentos.</p></section></main>
+<section id="archive" hidden><div id="summary" class="summary"></div><div id="settlements"></div><nav aria-label="Explorar"><button id="people-tab" aria-pressed="true">Pessoas</button><button id="timeline-tab" aria-pressed="false">Linha do tempo</button></nav><div id="explore"></div></section><section id="empty" class="empty"><span>✧</span><h2>O arquivo ainda está em branco.</h2><p>Escolha uma seed e gere cem anos de história.<br>A mesma seed reproduz os mesmos acontecimentos.</p></section></main>
 <dialog id="why" aria-labelledby="why-title"><div class="dialog-head"><h2 id="why-title">Por que aconteceu?</h2><button id="close-why" aria-label="Fechar explicação">Fechar</button></div><div id="why-body"></div></dialog>`;
 const $ = <T extends HTMLElement>(s: string) => root.querySelector<T>(s)!;
 function status(s: string) {
@@ -153,6 +153,8 @@ function render() {
   const {alive,householdsWithChildren}=archive.populationMetrics();
   $("#summary").textContent =
     `${archive.world.scenario.seed} · ${archive.people.length} pessoas registradas · ${alive} vivas · ${householdsWithChildren} domicílios com menores de 18 anos · ${archive.family.deaths.size} mortas · ${archive.world.log.rows.length.toLocaleString("pt-BR")} eventos`;
+  $("#settlements").innerHTML=Object.values(archive.world.entities).filter(e=>e.kind==='settlement').map(s=>s.kind==='settlement'?`<p><strong>${esc(s.name)}</strong> · ${s.leader?`${esc(s.office)}: ${personLink(s.leader)} · mandato até o ano ${Math.floor(s.termEnd/12)}`:'cargo vago: sem adulto elegível registrado'}</p>`:'').join('');
+  bind($("#settlements"));
   $("#people-tab").setAttribute("aria-pressed", String(view === "people"));
   $("#timeline-tab").setAttribute("aria-pressed", String(view === "timeline"));
   if (view === "timeline") {

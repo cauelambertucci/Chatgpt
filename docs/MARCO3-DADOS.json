@@ -1,0 +1,7562 @@
+{
+  "method": "40 fundadores, 100 anos. Mesmas três seeds. Um processo por seed; aquecimento de 12 meses; GC antes do motor; construção e avanço cronometrados sem validação ou relatório concorrentes. RSS Node é distinto de memória de aba. Validação, replay, biografia e gzip fora do cronômetro.",
+  "node": "v24.19.0",
+  "rows": [
+    {
+      "seed": "reservado-2b-006",
+      "coreMs": 71681.538562,
+      "coreRss": 544346112,
+      "exportRss": 649781248,
+      "jsonBytes": 51346504,
+      "gzipBytes": 8731160,
+      "events": 175415,
+      "metrics": {
+        "alive": 39,
+        "householdsWithChildren": 2
+      },
+      "births": 64,
+      "declarations": 0,
+      "rejections": [
+        "utilidade de acordo supera a guerra"
+      ],
+      "conflictDeaths": 0,
+      "warWidows": 0,
+      "warCustody": 0,
+      "fullOrphans": 0,
+      "politicalEvents": [
+        {
+          "id": "event:17486",
+          "month": 129,
+          "type": "political.notice.sent",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "causes": [
+            "event:123",
+            "event:124",
+            "event:17378"
+          ],
+          "data": {
+            "incident": "event:17378",
+            "from": "settlement:1",
+            "to": "settlement:0",
+            "distanceKm": 60,
+            "travelMonths": 1,
+            "source": "person:01"
+          }
+        },
+        {
+          "id": "event:17608",
+          "month": 130,
+          "type": "war.rejected",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:16295",
+            "event:17486",
+            "event:17607"
+          ],
+          "data": {
+            "from": "settlement:1",
+            "to": "settlement:0",
+            "name": "Porto das Pedras",
+            "reason": "utilidade de acordo supera a guerra",
+            "utilities": {
+              "guerra": 197.3,
+              "acordo": 253
+            },
+            "incident": "event:17378"
+          }
+        },
+        {
+          "id": "event:64945",
+          "month": 436,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:04",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:64944"
+          ],
+          "data": {
+            "victim": "person:04",
+            "ageYears": 71,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:64950",
+          "month": 436,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:04",
+              "role": "reference"
+            },
+            {
+              "id": "person:10",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:64187",
+            "event:64201",
+            "event:64945"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:64945"
+          }
+        },
+        {
+          "id": "event:68007",
+          "month": 453,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:13",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:68006"
+          ],
+          "data": {
+            "victim": "person:13",
+            "ageYears": 71,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:72944",
+          "month": 480,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:25",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:72943"
+          ],
+          "data": {
+            "victim": "person:25",
+            "ageYears": 74,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:72945",
+          "month": 480,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:25",
+              "role": "reference"
+            },
+            {
+              "id": "person:34",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:70820",
+            "event:70839",
+            "event:72944"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:72944"
+          }
+        },
+        {
+          "id": "event:73562",
+          "month": 483,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:21",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:73561"
+          ],
+          "data": {
+            "victim": "person:21",
+            "ageYears": 72,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:73564",
+          "month": 483,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:21",
+              "role": "reference"
+            },
+            {
+              "id": "person:37",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:72935",
+            "event:73054",
+            "event:73562"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:73562"
+          }
+        },
+        {
+          "id": "event:77141",
+          "month": 503,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:02",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:77140"
+          ],
+          "data": {
+            "victim": "person:02",
+            "ageYears": 73,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:78138",
+          "month": 508,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:19",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:78137"
+          ],
+          "data": {
+            "victim": "person:19",
+            "ageYears": 70,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:78144",
+          "month": 508,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:19",
+              "role": "reference"
+            },
+            {
+              "id": "person:32",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:77429",
+            "event:77452",
+            "event:78138"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:78138"
+          }
+        },
+        {
+          "id": "event:82236",
+          "month": 531,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:08",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:82235"
+          ],
+          "data": {
+            "victim": "person:08",
+            "ageYears": 68,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:83273",
+          "month": 537,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:11",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:83272"
+          ],
+          "data": {
+            "victim": "person:11",
+            "ageYears": 75,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:83605",
+          "month": 538,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:06",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:83604"
+          ],
+          "data": {
+            "victim": "person:06",
+            "ageYears": 68,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:84674",
+          "month": 544,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:84673"
+          ],
+          "data": {
+            "victim": "person:03",
+            "ageYears": 76,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:86749",
+          "month": 556,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:34",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:86748"
+          ],
+          "data": {
+            "victim": "person:34",
+            "ageYears": 79,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:86750",
+          "month": 556,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:34",
+              "role": "reference"
+            },
+            {
+              "id": "person:37",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:86112",
+            "event:86118",
+            "event:86749"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:86749"
+          }
+        },
+        {
+          "id": "event:97069",
+          "month": 615,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:38",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:97068"
+          ],
+          "data": {
+            "victim": "person:38",
+            "ageYears": 86,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:97070",
+          "month": 615,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:38",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:24:0",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:95890",
+            "event:96557",
+            "event:97069"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:97069"
+          }
+        },
+        {
+          "id": "event:99662",
+          "month": 629,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:20",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:99661"
+          ],
+          "data": {
+            "victim": "person:20",
+            "ageYears": 71,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:99664",
+          "month": 629,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:20",
+              "role": "reference"
+            },
+            {
+              "id": "person:18",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:98787",
+            "event:98789",
+            "event:99662"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:99662"
+          }
+        },
+        {
+          "id": "event:100075",
+          "month": 631,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:32",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:100074"
+          ],
+          "data": {
+            "victim": "person:32",
+            "ageYears": 72,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:100077",
+          "month": 631,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:32",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:24:0:25",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:98211",
+            "event:98809",
+            "event:100075"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:100075"
+          }
+        },
+        {
+          "id": "event:102122",
+          "month": 642,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:102121"
+          ],
+          "data": {
+            "victim": "person:01",
+            "ageYears": 80,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:102128",
+          "month": 642,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "reference"
+            },
+            {
+              "id": "person:17",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:101083",
+            "event:101101",
+            "event:102122"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:102122"
+          }
+        },
+        {
+          "id": "event:102534",
+          "month": 644,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:07",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:102533"
+          ],
+          "data": {
+            "victim": "person:07",
+            "ageYears": 87,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:102770",
+          "month": 645,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:31",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:102769"
+          ],
+          "data": {
+            "victim": "person:31",
+            "ageYears": 75,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:102771",
+          "month": 645,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:31",
+              "role": "reference"
+            },
+            {
+              "id": "person:36",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:101121",
+            "event:101127",
+            "event:102770"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:102770"
+          }
+        },
+        {
+          "id": "event:103953",
+          "month": 651,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:35",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:103952"
+          ],
+          "data": {
+            "victim": "person:35",
+            "ageYears": 79,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:103955",
+          "month": 651,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:35",
+              "role": "reference"
+            },
+            {
+              "id": "person:00",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:103431",
+            "event:103469",
+            "event:103953"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:103953"
+          }
+        },
+        {
+          "id": "event:104356",
+          "month": 653,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:12",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:104355"
+          ],
+          "data": {
+            "victim": "person:12",
+            "ageYears": 77,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:106728",
+          "month": 667,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:14",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:106727"
+          ],
+          "data": {
+            "victim": "person:14",
+            "ageYears": 86,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:107521",
+          "month": 671,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:18",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:107520"
+          ],
+          "data": {
+            "victim": "person:18",
+            "ageYears": 89,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:107522",
+          "month": 671,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:18",
+              "role": "reference"
+            },
+            {
+              "id": "person:17",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:105623",
+            "event:105625",
+            "event:107521"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:107521"
+          }
+        },
+        {
+          "id": "event:107764",
+          "month": 672,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:16",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:107763"
+          ],
+          "data": {
+            "victim": "person:16",
+            "ageYears": 83,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:110553",
+          "month": 689,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:28",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:110552"
+          ],
+          "data": {
+            "victim": "person:28",
+            "ageYears": 87,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:111752",
+          "month": 696,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:09",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:111751"
+          ],
+          "data": {
+            "victim": "person:09",
+            "ageYears": 86,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:111759",
+          "month": 696,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:09",
+              "role": "reference"
+            },
+            {
+              "id": "person:05",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:109764",
+            "event:111749",
+            "event:111752"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:111752"
+          }
+        },
+        {
+          "id": "event:112581",
+          "month": 701,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:24",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:112580"
+          ],
+          "data": {
+            "victim": "person:24",
+            "ageYears": 77,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:112583",
+          "month": 701,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:24",
+              "role": "reference"
+            },
+            {
+              "id": "person:23",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:111844",
+            "event:111846",
+            "event:112581"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:112581"
+          }
+        },
+        {
+          "id": "event:115323",
+          "month": 718,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:36",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:115322"
+          ],
+          "data": {
+            "victim": "person:36",
+            "ageYears": 77,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:115324",
+          "month": 718,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:36",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:04:10:35",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:113784",
+            "event:115151",
+            "event:115323"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:115323"
+          }
+        },
+        {
+          "id": "event:115535",
+          "month": 719,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:10",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:115534"
+          ],
+          "data": {
+            "victim": "person:10",
+            "ageYears": 90,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:115537",
+          "month": 719,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:10",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:24:0:20",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:113764",
+            "event:115117",
+            "event:115535"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:115535"
+          }
+        },
+        {
+          "id": "event:115920",
+          "month": 721,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:37",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:115919"
+          ],
+          "data": {
+            "victim": "person:37",
+            "ageYears": 80,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:115921",
+          "month": 721,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:37",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:04:10:29",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:115135",
+            "event:115771",
+            "event:115920"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:115920"
+          }
+        },
+        {
+          "id": "event:116132",
+          "month": 722,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:27",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:116131"
+          ],
+          "data": {
+            "victim": "person:27",
+            "ageYears": 81,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:116466",
+          "month": 724,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:05",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:116465"
+          ],
+          "data": {
+            "victim": "person:05",
+            "ageYears": 91,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:116468",
+          "month": 724,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:05",
+              "role": "reference"
+            },
+            {
+              "id": "person:23",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:115751",
+            "event:115759",
+            "event:116466"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:116466"
+          }
+        },
+        {
+          "id": "event:120627",
+          "month": 753,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:22",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:120626"
+          ],
+          "data": {
+            "victim": "person:22",
+            "ageYears": 87,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:123248",
+          "month": 770,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:30",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:123247"
+          ],
+          "data": {
+            "victim": "person:30",
+            "ageYears": 87,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:123705",
+          "month": 773,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:39",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:123704"
+          ],
+          "data": {
+            "victim": "person:39",
+            "ageYears": 85,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:124028",
+          "month": 775,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:33",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:124027"
+          ],
+          "data": {
+            "victim": "person:33",
+            "ageYears": 88,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:127165",
+          "month": 796,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:127164"
+          ],
+          "data": {
+            "victim": "person:00",
+            "ageYears": 91,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:127171",
+          "month": 796,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "reference"
+            },
+            {
+              "id": "person:17",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:126532",
+            "event:126536",
+            "event:127165"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:127165"
+          }
+        },
+        {
+          "id": "event:127638",
+          "month": 799,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:29",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:127637"
+          ],
+          "data": {
+            "victim": "person:29",
+            "ageYears": 91,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:130027",
+          "month": 816,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:26",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:130026"
+          ],
+          "data": {
+            "victim": "person:26",
+            "ageYears": 88,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:134221",
+          "month": 848,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:24:0",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1471",
+            "event:134220"
+          ],
+          "data": {
+            "victim": "person:birth:person:24:0",
+            "ageYears": 69,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:134222",
+          "month": 848,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:24:0",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:04:10:32",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:132746",
+            "event:132823",
+            "event:134221"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:134221"
+          }
+        },
+        {
+          "id": "event:135019",
+          "month": 853,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:15",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:135018"
+          ],
+          "data": {
+            "victim": "person:15",
+            "ageYears": 92,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:135080",
+          "month": 853,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:23",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:135079"
+          ],
+          "data": {
+            "victim": "person:23",
+            "ageYears": 89,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:135081",
+          "month": 853,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:23",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:04:10:29",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:134476",
+            "event:134893",
+            "event:135080"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:135080"
+          }
+        },
+        {
+          "id": "event:138821",
+          "month": 883,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:17",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:138820"
+          ],
+          "data": {
+            "victim": "person:17",
+            "ageYears": 91,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:138823",
+          "month": 883,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:17",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:birth:person:24:7:27:47",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:137638",
+            "event:138006",
+            "event:138821"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:138821"
+          }
+        },
+        {
+          "id": "event:141180",
+          "month": 901,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:01:2",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:4625",
+            "event:141179"
+          ],
+          "data": {
+            "victim": "person:birth:person:01:2",
+            "ageYears": 72,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:141181",
+          "month": 901,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:01:2",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:18:2",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:140606",
+            "event:140608",
+            "event:141180"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:141180"
+          }
+        },
+        {
+          "id": "event:145144",
+          "month": 932,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:32:3",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:6196",
+            "event:145143"
+          ],
+          "data": {
+            "victim": "person:birth:person:32:3",
+            "ageYears": 73,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:145145",
+          "month": 932,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:32:3",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:21:4",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:143636",
+            "event:143640",
+            "event:145144"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:145144"
+          }
+        },
+        {
+          "id": "event:146235",
+          "month": 940,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:05:7",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:12546",
+            "event:146234"
+          ],
+          "data": {
+            "victim": "person:birth:person:05:7",
+            "ageYears": 70,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:146236",
+          "month": 940,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:05:7",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:04:7",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:145339",
+            "event:145341",
+            "event:146235"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:146235"
+          }
+        },
+        {
+          "id": "event:150580",
+          "month": 975,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:04:10",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:17364",
+            "event:150579"
+          ],
+          "data": {
+            "victim": "person:birth:person:04:10",
+            "ageYears": 70,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:150581",
+          "month": 975,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:04:10",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:32:10",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:149808",
+            "event:149812",
+            "event:150580"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:150580"
+          }
+        },
+        {
+          "id": "event:151204",
+          "month": 980,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:21:4",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:7772",
+            "event:151203"
+          ],
+          "data": {
+            "victim": "person:birth:person:21:4",
+            "ageYears": 76,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:151205",
+          "month": 980,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:21:4",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:birth:person:04:4:25:59",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:149790",
+            "event:149881",
+            "event:151204"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:151204"
+          }
+        },
+        {
+          "id": "event:151603",
+          "month": 982,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:24:7",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:12548",
+            "event:151602"
+          ],
+          "data": {
+            "victim": "person:birth:person:24:7",
+            "ageYears": 74,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:151604",
+          "month": 982,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:24:7",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:18:8",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:151395",
+            "event:151397",
+            "event:151603"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:151603"
+          }
+        },
+        {
+          "id": "event:152315",
+          "month": 988,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:35:1",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:3052",
+            "event:152314"
+          ],
+          "data": {
+            "victim": "person:birth:person:35:1",
+            "ageYears": 80,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:152316",
+          "month": 988,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:35:1",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:04:1",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:151379",
+            "event:151381",
+            "event:152315"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:152315"
+          }
+        },
+        {
+          "id": "event:152381",
+          "month": 988,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:01:9",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:15759",
+            "event:152380"
+          ],
+          "data": {
+            "victim": "person:birth:person:01:9",
+            "ageYears": 72,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:152382",
+          "month": 988,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:01:9",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:35:8",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:151399",
+            "event:151401",
+            "event:152381"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:152381"
+          }
+        },
+        {
+          "id": "event:156995",
+          "month": 1029,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:18:2",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:4627",
+            "event:156994"
+          ],
+          "data": {
+            "victim": "person:birth:person:18:2",
+            "ageYears": 83,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:156996",
+          "month": 1029,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:18:2",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:04:10:29",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:155650",
+            "event:155694",
+            "event:156995"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:156995"
+          }
+        },
+        {
+          "id": "event:157416",
+          "month": 1031,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:04:1",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:3050",
+            "event:157415"
+          ],
+          "data": {
+            "victim": "person:birth:person:04:1",
+            "ageYears": 84,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:157417",
+          "month": 1031,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:04:1",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:birth:person:24:7:27:47",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:156992",
+            "event:157137",
+            "event:157416"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:157416"
+          }
+        },
+        {
+          "id": "event:160826",
+          "month": 1061,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:32:10",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:17372",
+            "event:160825"
+          ],
+          "data": {
+            "victim": "person:birth:person:32:10",
+            "ageYears": 77,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:160827",
+          "month": 1061,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:32:10",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:18:8",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:159892",
+            "event:159898",
+            "event:160826"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:160826"
+          }
+        },
+        {
+          "id": "event:163446",
+          "month": 1084,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:21:10",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:17369",
+            "event:163445"
+          ],
+          "data": {
+            "victim": "person:birth:person:21:10",
+            "ageYears": 79,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:163447",
+          "month": 1084,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:21:10",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:35:11",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:162637",
+            "event:162639",
+            "event:163446"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:163446"
+          }
+        },
+        {
+          "id": "event:164521",
+          "month": 1093,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:birth:person:24:0:20",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:33703",
+            "event:164520"
+          ],
+          "data": {
+            "victim": "person:birth:person:birth:person:24:0:20",
+            "ageYears": 70,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:164522",
+          "month": 1093,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:birth:person:24:0:20",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:04:10:35",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:164024",
+            "event:164061",
+            "event:164521"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:164521"
+          }
+        },
+        {
+          "id": "event:164680",
+          "month": 1094,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:18:8",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:14148",
+            "event:164679"
+          ],
+          "data": {
+            "victim": "person:birth:person:18:8",
+            "ageYears": 82,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:164681",
+          "month": 1094,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:18:8",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:35:11",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:164416",
+            "event:164680"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:164680"
+          }
+        },
+        {
+          "id": "event:165428",
+          "month": 1101,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:35:8",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:14151",
+            "event:165427"
+          ],
+          "data": {
+            "victim": "person:birth:person:35:8",
+            "ageYears": 83,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:165429",
+          "month": 1101,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:35:8",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:birth:person:04:7:30:54",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:164016",
+            "event:164083",
+            "event:165428"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:165428"
+          }
+        },
+        {
+          "id": "event:166049",
+          "month": 1106,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:birth:person:18:2:21",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:35436",
+            "event:166048"
+          ],
+          "data": {
+            "victim": "person:birth:person:birth:person:18:2:21",
+            "ageYears": 70,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:166050",
+          "month": 1106,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:birth:person:18:2:21",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:32:3:23",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:165491",
+            "event:165493",
+            "event:166049"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:166049"
+          }
+        },
+        {
+          "id": "event:167511",
+          "month": 1120,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:25:5",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:9379",
+            "event:167510"
+          ],
+          "data": {
+            "victim": "person:birth:person:25:5",
+            "ageYears": 87,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:167512",
+          "month": 1120,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:25:5",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:35:5",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:166760",
+            "event:166762",
+            "event:167511"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:167511"
+          }
+        },
+        {
+          "id": "event:168653",
+          "month": 1131,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:35:5",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:9381",
+            "event:168652"
+          ],
+          "data": {
+            "victim": "person:birth:person:35:5",
+            "ageYears": 88,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:168654",
+          "month": 1131,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:35:5",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:04:10:35",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:168380",
+            "event:168653"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:168653"
+          }
+        },
+        {
+          "id": "event:169067",
+          "month": 1135,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:04:4",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:7769",
+            "event:169066"
+          ],
+          "data": {
+            "victim": "person:birth:person:04:4",
+            "ageYears": 89,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:169068",
+          "month": 1135,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:04:4",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:24:4",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:168013",
+            "event:168015",
+            "event:169067"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:169067"
+          }
+        },
+        {
+          "id": "event:169124",
+          "month": 1135,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:24:4",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:7774",
+            "event:169123"
+          ],
+          "data": {
+            "victim": "person:birth:person:24:4",
+            "ageYears": 89,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:169259",
+          "month": 1136,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:35:14",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:23929",
+            "event:169258"
+          ],
+          "data": {
+            "victim": "person:birth:person:35:14",
+            "ageYears": 79,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:169260",
+          "month": 1136,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:35:14",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:05:14",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:168023",
+            "event:168025",
+            "event:169259"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:169259"
+          }
+        },
+        {
+          "id": "event:171528",
+          "month": 1159,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:05:14",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:23926",
+            "event:171527"
+          ],
+          "data": {
+            "victim": "person:birth:person:05:14",
+            "ageYears": 81,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:171529",
+          "month": 1159,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:05:14",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:birth:person:04:4:25:59",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:170593",
+            "event:170652",
+            "event:171528"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:171528"
+          }
+        },
+        {
+          "id": "event:174941",
+          "month": 1196,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:04:7",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:12542",
+            "event:174940"
+          ],
+          "data": {
+            "victim": "person:birth:person:04:7",
+            "ageYears": 91,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:174942",
+          "month": 1196,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:04:7",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:birth:person:24:7:27:50",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:173926",
+            "event:173978",
+            "event:174941"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:174941"
+          }
+        },
+        {
+          "id": "event:174991",
+          "month": 1196,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:birth:person:04:7:30",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:52886",
+            "event:174990"
+          ],
+          "data": {
+            "victim": "person:birth:person:birth:person:04:7:30",
+            "ageYears": 68,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:174992",
+          "month": 1196,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:birth:person:04:7:30",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:18:2:29",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:173942",
+            "event:173946",
+            "event:174991"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:174991"
+          }
+        }
+      ],
+      "biographies": [],
+      "errors": []
+    },
+    {
+      "seed": "reservado-2b-011",
+      "coreMs": 53339.018732000004,
+      "coreRss": 491405312,
+      "exportRss": 577228800,
+      "jsonBytes": 41108136,
+      "gzipBytes": 6523458,
+      "events": 146446,
+      "metrics": {
+        "alive": 23,
+        "householdsWithChildren": 0
+      },
+      "births": 40,
+      "declarations": 0,
+      "rejections": [
+        "utilidade de acordo supera a guerra"
+      ],
+      "conflictDeaths": 0,
+      "warWidows": 0,
+      "warCustody": 0,
+      "fullOrphans": 0,
+      "politicalEvents": [
+        {
+          "id": "event:9239",
+          "month": 69,
+          "type": "political.notice.sent",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "causes": [
+            "event:123",
+            "event:124",
+            "event:9111"
+          ],
+          "data": {
+            "incident": "event:9111",
+            "from": "settlement:1",
+            "to": "settlement:0",
+            "distanceKm": 60,
+            "travelMonths": 1,
+            "source": "person:01"
+          }
+        },
+        {
+          "id": "event:9357",
+          "month": 70,
+          "type": "war.rejected",
+          "participants": [
+            {
+              "id": "person:25",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:8067",
+            "event:9239",
+            "event:9356"
+          ],
+          "data": {
+            "from": "settlement:1",
+            "to": "settlement:0",
+            "name": "Porto das Pedras",
+            "reason": "utilidade de acordo supera a guerra",
+            "utilities": {
+              "guerra": 256,
+              "acordo": 409
+            },
+            "incident": "event:9111"
+          }
+        },
+        {
+          "id": "event:66722",
+          "month": 466,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:23",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:66721"
+          ],
+          "data": {
+            "victim": "person:23",
+            "ageYears": 69,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:66723",
+          "month": 466,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:23",
+              "role": "reference"
+            },
+            {
+              "id": "person:05",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:65019",
+            "event:65056",
+            "event:66722"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:66722"
+          }
+        },
+        {
+          "id": "event:69542",
+          "month": 482,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:21",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:69541"
+          ],
+          "data": {
+            "victim": "person:21",
+            "ageYears": 68,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:75525",
+          "month": 517,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:75524"
+          ],
+          "data": {
+            "victim": "person:01",
+            "ageYears": 69,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:75527",
+          "month": 517,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "reference"
+            },
+            {
+              "id": "person:31",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:75289",
+            "event:75345",
+            "event:75525"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:75525"
+          }
+        },
+        {
+          "id": "event:76102",
+          "month": 520,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:05",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:76101"
+          ],
+          "data": {
+            "victim": "person:05",
+            "ageYears": 75,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:76103",
+          "month": 520,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:05",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:01:17",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:74774",
+            "event:75297",
+            "event:76102"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:76102"
+          }
+        },
+        {
+          "id": "event:76970",
+          "month": 525,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:20",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:76969"
+          ],
+          "data": {
+            "victim": "person:20",
+            "ageYears": 69,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:76971",
+          "month": 525,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:20",
+              "role": "reference"
+            },
+            {
+              "id": "person:08",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:75303",
+            "event:75327",
+            "event:76970"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:76970"
+          }
+        },
+        {
+          "id": "event:77277",
+          "month": 526,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:16",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:77276"
+          ],
+          "data": {
+            "victim": "person:16",
+            "ageYears": 75,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:77278",
+          "month": 526,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:16",
+              "role": "reference"
+            },
+            {
+              "id": "person:27",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:75319",
+            "event:75337",
+            "event:77277"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:77277"
+          }
+        },
+        {
+          "id": "event:79140",
+          "month": 537,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:06",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:79139"
+          ],
+          "data": {
+            "victim": "person:06",
+            "ageYears": 73,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:81025",
+          "month": 548,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:34",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:81024"
+          ],
+          "data": {
+            "victim": "person:34",
+            "ageYears": 71,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:82591",
+          "month": 557,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:13",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:82590"
+          ],
+          "data": {
+            "victim": "person:13",
+            "ageYears": 69,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:82805",
+          "month": 558,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:32",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:82804"
+          ],
+          "data": {
+            "victim": "person:32",
+            "ageYears": 70,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:84445",
+          "month": 568,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:36",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:84444"
+          ],
+          "data": {
+            "victim": "person:36",
+            "ageYears": 68,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:85901",
+          "month": 577,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:25",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:85900"
+          ],
+          "data": {
+            "victim": "person:25",
+            "ageYears": 82,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:86919",
+          "month": 584,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:39",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:86918"
+          ],
+          "data": {
+            "victim": "person:39",
+            "ageYears": 83,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:90455",
+          "month": 608,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:19",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:90454"
+          ],
+          "data": {
+            "victim": "person:19",
+            "ageYears": 76,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:90457",
+          "month": 608,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:19",
+              "role": "reference"
+            },
+            {
+              "id": "person:17",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:89353",
+            "event:89357",
+            "event:90455"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:90455"
+          }
+        },
+        {
+          "id": "event:91125",
+          "month": 612,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:07",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:91124"
+          ],
+          "data": {
+            "victim": "person:07",
+            "ageYears": 73,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:91127",
+          "month": 612,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:07",
+              "role": "reference"
+            },
+            {
+              "id": "person:03",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:89337",
+            "event:91120",
+            "event:91125"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:91125"
+          }
+        },
+        {
+          "id": "event:92405",
+          "month": 621,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:27",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:92404"
+          ],
+          "data": {
+            "victim": "person:27",
+            "ageYears": 85,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:92406",
+          "month": 621,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:27",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:23:0:25",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:90695",
+            "event:91220",
+            "event:92405"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:92405"
+          }
+        },
+        {
+          "id": "event:93119",
+          "month": 625,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:26",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:93118"
+          ],
+          "data": {
+            "victim": "person:26",
+            "ageYears": 81,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:93425",
+          "month": 627,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:24",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:93424"
+          ],
+          "data": {
+            "victim": "person:24",
+            "ageYears": 84,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:94955",
+          "month": 638,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:33",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:94954"
+          ],
+          "data": {
+            "victim": "person:33",
+            "ageYears": 85,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:95850",
+          "month": 645,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:10",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:95849"
+          ],
+          "data": {
+            "victim": "person:10",
+            "ageYears": 84,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:95851",
+          "month": 645,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:10",
+              "role": "reference"
+            },
+            {
+              "id": "person:35",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:94673",
+            "event:94699",
+            "event:95850"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:95850"
+          }
+        },
+        {
+          "id": "event:97871",
+          "month": 660,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:35",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:97870"
+          ],
+          "data": {
+            "victim": "person:35",
+            "ageYears": 79,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:97872",
+          "month": 660,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:35",
+              "role": "reference"
+            },
+            {
+              "id": "person:17",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:96368",
+            "event:97856",
+            "event:97871"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:97871"
+          }
+        },
+        {
+          "id": "event:99282",
+          "month": 671,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:31",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:99281"
+          ],
+          "data": {
+            "victim": "person:31",
+            "ageYears": 85,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:99286",
+          "month": 671,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:31",
+              "role": "reference"
+            },
+            {
+              "id": "person:08",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:97844",
+            "event:97868",
+            "event:99282"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:99282"
+          }
+        },
+        {
+          "id": "event:99629",
+          "month": 673,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:28",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:99628"
+          ],
+          "data": {
+            "victim": "person:28",
+            "ageYears": 83,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:105975",
+          "month": 723,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:37",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:105974"
+          ],
+          "data": {
+            "victim": "person:37",
+            "ageYears": 84,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:105976",
+          "month": 723,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:37",
+              "role": "reference"
+            },
+            {
+              "id": "person:14",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:105603",
+            "event:105617",
+            "event:105975"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:105975"
+          }
+        },
+        {
+          "id": "event:106376",
+          "month": 726,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:09",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:106375"
+          ],
+          "data": {
+            "victim": "person:09",
+            "ageYears": 81,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:107876",
+          "month": 738,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:29",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:107875"
+          ],
+          "data": {
+            "victim": "person:29",
+            "ageYears": 84,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:107877",
+          "month": 738,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:29",
+              "role": "reference"
+            },
+            {
+              "id": "person:04",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:107181",
+            "event:107199",
+            "event:107876"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:107876"
+          }
+        },
+        {
+          "id": "event:108675",
+          "month": 744,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:11",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:108674"
+          ],
+          "data": {
+            "victim": "person:11",
+            "ageYears": 85,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:110219",
+          "month": 757,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:14",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:110218"
+          ],
+          "data": {
+            "victim": "person:14",
+            "ageYears": 84,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:110220",
+          "month": 757,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:14",
+              "role": "reference"
+            },
+            {
+              "id": "person:04",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:110090",
+            "event:110096",
+            "event:110219"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:110219"
+          }
+        },
+        {
+          "id": "event:110272",
+          "month": 757,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:30",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:110271"
+          ],
+          "data": {
+            "victim": "person:30",
+            "ageYears": 82,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:111675",
+          "month": 769,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:02",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:111674"
+          ],
+          "data": {
+            "victim": "person:02",
+            "ageYears": 86,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:113484",
+          "month": 786,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:38",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:113483"
+          ],
+          "data": {
+            "victim": "person:38",
+            "ageYears": 90,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:113724",
+          "month": 788,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:08",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:113723"
+          ],
+          "data": {
+            "victim": "person:08",
+            "ageYears": 88,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:113725",
+          "month": 788,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:08",
+              "role": "reference"
+            },
+            {
+              "id": "person:17",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:112880",
+            "event:112886",
+            "event:113724"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:113724"
+          }
+        },
+        {
+          "id": "event:116140",
+          "month": 811,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:17",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:116139"
+          ],
+          "data": {
+            "victim": "person:17",
+            "ageYears": 91,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:116141",
+          "month": 811,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:17",
+              "role": "reference"
+            },
+            {
+              "id": "person:04",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:115470",
+            "event:116140"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:116140"
+          }
+        },
+        {
+          "id": "event:117116",
+          "month": 820,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:18",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:117115"
+          ],
+          "data": {
+            "victim": "person:18",
+            "ageYears": 87,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:120134",
+          "month": 850,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:12",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:120133"
+          ],
+          "data": {
+            "victim": "person:12",
+            "ageYears": 91,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:120463",
+          "month": 853,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:20:0",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1402",
+            "event:120462"
+          ],
+          "data": {
+            "victim": "person:birth:person:20:0",
+            "ageYears": 70,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:120464",
+          "month": 853,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:20:0",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:23:0",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:119965",
+            "event:119967",
+            "event:120463"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:120463"
+          }
+        },
+        {
+          "id": "event:121395",
+          "month": 862,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:22",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:121394"
+          ],
+          "data": {
+            "victim": "person:22",
+            "ageYears": 90,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:121396",
+          "month": 862,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:22",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:01:0",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:120367",
+            "event:121225",
+            "event:121395"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:121395"
+          }
+        },
+        {
+          "id": "event:121531",
+          "month": 863,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:121530"
+          ],
+          "data": {
+            "victim": "person:03",
+            "ageYears": 90,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:121539",
+          "month": 863,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:16:8:33",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:120361",
+            "event:121273",
+            "event:121531"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:121531"
+          }
+        },
+        {
+          "id": "event:121675",
+          "month": 864,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:121674"
+          ],
+          "data": {
+            "victim": "person:00",
+            "ageYears": 90,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:122373",
+          "month": 872,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:15",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:122372"
+          ],
+          "data": {
+            "victim": "person:15",
+            "ageYears": 92,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:122964",
+          "month": 878,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:16:2",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:4479",
+            "event:122963"
+          ],
+          "data": {
+            "victim": "person:birth:person:16:2",
+            "ageYears": 70,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:122965",
+          "month": 878,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:16:2",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:07:1",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:122496",
+            "event:122498",
+            "event:122964"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:122964"
+          }
+        },
+        {
+          "id": "event:124311",
+          "month": 894,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:04",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:124310"
+          ],
+          "data": {
+            "victim": "person:04",
+            "ageYears": 92,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:128270",
+          "month": 942,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:01:0",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1400",
+            "event:128269"
+          ],
+          "data": {
+            "victim": "person:birth:person:01:0",
+            "ageYears": 77,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:128271",
+          "month": 942,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:01:0",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:23:0",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:127516",
+            "event:127518",
+            "event:128270"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:128270"
+          }
+        },
+        {
+          "id": "event:129341",
+          "month": 955,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:01:5",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:9102",
+            "event:129340"
+          ],
+          "data": {
+            "victim": "person:birth:person:01:5",
+            "ageYears": 73,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:129342",
+          "month": 955,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:01:5",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:16:5",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:128547",
+            "event:128549",
+            "event:129341"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:129341"
+          }
+        },
+        {
+          "id": "event:130167",
+          "month": 965,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:16:8",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:13810",
+            "event:130166"
+          ],
+          "data": {
+            "victim": "person:birth:person:16:8",
+            "ageYears": 71,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:130168",
+          "month": 965,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:16:8",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:23:9",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:129542",
+            "event:129544",
+            "event:130167"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:130167"
+          }
+        },
+        {
+          "id": "event:132504",
+          "month": 995,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:16:5",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:9105",
+            "event:132503"
+          ],
+          "data": {
+            "victim": "person:birth:person:16:5",
+            "ageYears": 77,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:132505",
+          "month": 995,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:16:5",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:23:0",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:132290",
+            "event:132298",
+            "event:132504"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:132504"
+          }
+        },
+        {
+          "id": "event:133439",
+          "month": 1007,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:01:8",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:13806",
+            "event:133438"
+          ],
+          "data": {
+            "victim": "person:birth:person:01:8",
+            "ageYears": 75,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:133440",
+          "month": 1007,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:01:8",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:07:7",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:133240",
+            "event:133242",
+            "event:133439"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:133439"
+          }
+        },
+        {
+          "id": "event:135702",
+          "month": 1037,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:07:7",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:12245",
+            "event:135701"
+          ],
+          "data": {
+            "victim": "person:birth:person:07:7",
+            "ageYears": 78,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:135703",
+          "month": 1037,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:07:7",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:23:0",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:135027",
+            "event:135035",
+            "event:135702"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:135702"
+          }
+        },
+        {
+          "id": "event:136285",
+          "month": 1044,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:07:1",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:2944",
+            "event:136284"
+          ],
+          "data": {
+            "victim": "person:birth:person:07:1",
+            "ageYears": 85,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:136286",
+          "month": 1044,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:07:1",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:16:8:33",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:136020",
+            "event:136053",
+            "event:136285"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:136285"
+          }
+        },
+        {
+          "id": "event:137622",
+          "month": 1063,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:23:4",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:7553",
+            "event:137621"
+          ],
+          "data": {
+            "victim": "person:birth:person:23:4",
+            "ageYears": 83,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:137623",
+          "month": 1063,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:23:4",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:20:3",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:136914",
+            "event:136916",
+            "event:137622"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:137622"
+          }
+        },
+        {
+          "id": "event:139322",
+          "month": 1087,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:birth:person:23:0:19",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:31088",
+            "event:139321"
+          ],
+          "data": {
+            "victim": "person:birth:person:birth:person:23:0:19",
+            "ageYears": 70,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:139323",
+          "month": 1087,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:birth:person:23:0:19",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:01:14",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:138623",
+            "event:138627",
+            "event:139322"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:139322"
+          }
+        },
+        {
+          "id": "event:139803",
+          "month": 1093,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:20:3",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:6016",
+            "event:139802"
+          ],
+          "data": {
+            "victim": "person:birth:person:20:3",
+            "ageYears": 87,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:139804",
+          "month": 1093,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:20:3",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:23:0",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:139493",
+            "event:139495",
+            "event:139803"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:139803"
+          }
+        },
+        {
+          "id": "event:140027",
+          "month": 1096,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:birth:person:23:0:22",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:36170",
+            "event:140026"
+          ],
+          "data": {
+            "victim": "person:birth:person:birth:person:23:0:22",
+            "ageYears": 68,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:140028",
+          "month": 1096,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:birth:person:23:0:22",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:07:20",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:139507",
+            "event:139509",
+            "event:140027"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:140027"
+          }
+        },
+        {
+          "id": "event:141756",
+          "month": 1123,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:23:0",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1404",
+            "event:141755"
+          ],
+          "data": {
+            "victim": "person:birth:person:23:0",
+            "ageYears": 92,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:141757",
+          "month": 1123,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:23:0",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:07:20",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:141117",
+            "event:141129",
+            "event:141756"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:141756"
+          }
+        },
+        {
+          "id": "event:142807",
+          "month": 1139,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:23:9",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:15362",
+            "event:142806"
+          ],
+          "data": {
+            "victim": "person:birth:person:23:9",
+            "ageYears": 85,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:142808",
+          "month": 1139,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:23:9",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:01:14",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:142642",
+            "event:142648",
+            "event:142807"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:142807"
+          }
+        },
+        {
+          "id": "event:145400",
+          "month": 1183,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:01:14",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:23173",
+            "event:145399"
+          ],
+          "data": {
+            "victim": "person:birth:person:01:14",
+            "ageYears": 83,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:145401",
+          "month": 1183,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:01:14",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:16:8:33",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:144805",
+            "event:144821",
+            "event:145400"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:145400"
+          }
+        },
+        {
+          "id": "event:146226",
+          "month": 1197,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:07:13",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:21587",
+            "event:146225"
+          ],
+          "data": {
+            "victim": "person:birth:person:07:13",
+            "ageYears": 86,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:146227",
+          "month": 1197,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:07:13",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:16:13",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:145543",
+            "event:145545",
+            "event:146226"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:146226"
+          }
+        }
+      ],
+      "biographies": [],
+      "errors": []
+    },
+    {
+      "seed": "reservado-2b-028",
+      "coreMs": 44557.17351,
+      "coreRss": 451018752,
+      "exportRss": 520990720,
+      "jsonBytes": 34986485,
+      "gzipBytes": 5748202,
+      "events": 132187,
+      "metrics": {
+        "alive": 13,
+        "householdsWithChildren": 0
+      },
+      "births": 29,
+      "declarations": 0,
+      "rejections": [
+        "utilidade de acordo supera a guerra"
+      ],
+      "conflictDeaths": 0,
+      "warWidows": 0,
+      "warCustody": 0,
+      "fullOrphans": 0,
+      "politicalEvents": [
+        {
+          "id": "event:32550",
+          "month": 236,
+          "type": "political.notice.sent",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "actor"
+            }
+          ],
+          "causes": [
+            "event:123",
+            "event:124",
+            "event:32430"
+          ],
+          "data": {
+            "incident": "event:32430",
+            "from": "settlement:1",
+            "to": "settlement:0",
+            "distanceKm": 60,
+            "travelMonths": 1,
+            "source": "person:01"
+          }
+        },
+        {
+          "id": "event:32716",
+          "month": 237,
+          "type": "war.rejected",
+          "participants": [
+            {
+              "id": "person:34",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:24863",
+            "event:32550",
+            "event:32715"
+          ],
+          "data": {
+            "from": "settlement:1",
+            "to": "settlement:0",
+            "name": "Porto das Pedras",
+            "reason": "utilidade de acordo supera a guerra",
+            "utilities": {
+              "guerra": 263,
+              "acordo": 418
+            },
+            "incident": "event:32430"
+          }
+        },
+        {
+          "id": "event:61667",
+          "month": 422,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:05",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:61666"
+          ],
+          "data": {
+            "victim": "person:05",
+            "ageYears": 70,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:62338",
+          "month": 426,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:22",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:62337"
+          ],
+          "data": {
+            "victim": "person:22",
+            "ageYears": 69,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:62341",
+          "month": 426,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:22",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:06:0",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:60740",
+            "event:61316",
+            "event:62338"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:62338"
+          }
+        },
+        {
+          "id": "event:68499",
+          "month": 464,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:38",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:68498"
+          ],
+          "data": {
+            "victim": "person:38",
+            "ageYears": 70,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:68501",
+          "month": 464,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:38",
+              "role": "reference"
+            },
+            {
+              "id": "person:04",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:67223",
+            "event:67289",
+            "event:68499"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:68499"
+          }
+        },
+        {
+          "id": "event:72127",
+          "month": 486,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:29",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:72126"
+          ],
+          "data": {
+            "victim": "person:29",
+            "ageYears": 70,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:72487",
+          "month": 488,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:35",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:72486"
+          ],
+          "data": {
+            "victim": "person:35",
+            "ageYears": 73,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:75272",
+          "month": 505,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:37",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:75271"
+          ],
+          "data": {
+            "victim": "person:37",
+            "ageYears": 76,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:75477",
+          "month": 506,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:04",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:75476"
+          ],
+          "data": {
+            "victim": "person:04",
+            "ageYears": 72,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:78459",
+          "month": 526,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:27",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:78458"
+          ],
+          "data": {
+            "victim": "person:27",
+            "ageYears": 74,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:81006",
+          "month": 543,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:11",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:81005"
+          ],
+          "data": {
+            "victim": "person:11",
+            "ageYears": 71,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:81009",
+          "month": 543,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:11",
+              "role": "reference"
+            },
+            {
+              "id": "person:08",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:80544",
+            "event:80550",
+            "event:81006"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:81006"
+          }
+        },
+        {
+          "id": "event:82223",
+          "month": 551,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:26",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:82222"
+          ],
+          "data": {
+            "victim": "person:26",
+            "ageYears": 77,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:82282",
+          "month": 551,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:32",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:82281"
+          ],
+          "data": {
+            "victim": "person:32",
+            "ageYears": 72,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:86188",
+          "month": 578,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:86187"
+          ],
+          "data": {
+            "victim": "person:01",
+            "ageYears": 79,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:86189",
+          "month": 578,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:01",
+              "role": "reference"
+            },
+            {
+              "id": "person:13",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:85859",
+            "event:85877",
+            "event:86188"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:86188"
+          }
+        },
+        {
+          "id": "event:88078",
+          "month": 591,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:06",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:88077"
+          ],
+          "data": {
+            "victim": "person:06",
+            "ageYears": 78,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:88079",
+          "month": 591,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:06",
+              "role": "reference"
+            },
+            {
+              "id": "person:25",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:87625",
+            "event:87659",
+            "event:88078"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:88078"
+          }
+        },
+        {
+          "id": "event:90333",
+          "month": 607,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:09",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:90332"
+          ],
+          "data": {
+            "victim": "person:09",
+            "ageYears": 75,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:90335",
+          "month": 607,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:09",
+              "role": "reference"
+            },
+            {
+              "id": "person:21",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:89374",
+            "event:89396",
+            "event:90333"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:90333"
+          }
+        },
+        {
+          "id": "event:91105",
+          "month": 612,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:08",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:91104"
+          ],
+          "data": {
+            "victim": "person:08",
+            "ageYears": 84,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:91108",
+          "month": 612,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:08",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:13:7:27",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:89372",
+            "event:90689",
+            "event:91105"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:91105"
+          }
+        },
+        {
+          "id": "event:91350",
+          "month": 613,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:91349"
+          ],
+          "data": {
+            "victim": "person:00",
+            "ageYears": 77,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:91351",
+          "month": 613,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:00",
+              "role": "reference"
+            },
+            {
+              "id": "person:20",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:91096",
+            "event:91191",
+            "event:91350"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:91350"
+          }
+        },
+        {
+          "id": "event:91534",
+          "month": 614,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:39",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:91533"
+          ],
+          "data": {
+            "victim": "person:39",
+            "ageYears": 80,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:91707",
+          "month": 615,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:15",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:91706"
+          ],
+          "data": {
+            "victim": "person:15",
+            "ageYears": 76,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:92778",
+          "month": 623,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:36",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:92777"
+          ],
+          "data": {
+            "victim": "person:36",
+            "ageYears": 84,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:92779",
+          "month": 623,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:36",
+              "role": "reference"
+            },
+            {
+              "id": "person:17",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:91185",
+            "event:91211",
+            "event:92778"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:92778"
+          }
+        },
+        {
+          "id": "event:93811",
+          "month": 631,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:14",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:93810"
+          ],
+          "data": {
+            "victim": "person:14",
+            "ageYears": 82,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:94644",
+          "month": 637,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:16",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:94643"
+          ],
+          "data": {
+            "victim": "person:16",
+            "ageYears": 87,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:94806",
+          "month": 638,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:13",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:94805"
+          ],
+          "data": {
+            "victim": "person:13",
+            "ageYears": 77,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:94810",
+          "month": 638,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:13",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:06:4:27",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:94122",
+            "event:94495",
+            "event:94806"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:94806"
+          }
+        },
+        {
+          "id": "event:95794",
+          "month": 646,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:25",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:95793"
+          ],
+          "data": {
+            "victim": "person:25",
+            "ageYears": 78,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:95796",
+          "month": 646,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:25",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:11:1:29",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:94513",
+            "event:95668",
+            "event:95794"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:95794"
+          }
+        },
+        {
+          "id": "event:98159",
+          "month": 666,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:18",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:98158"
+          ],
+          "data": {
+            "victim": "person:18",
+            "ageYears": 88,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:98527",
+          "month": 669,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:28",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:98526"
+          ],
+          "data": {
+            "victim": "person:28",
+            "ageYears": 75,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:99579",
+          "month": 678,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:02",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:99578"
+          ],
+          "data": {
+            "victim": "person:02",
+            "ageYears": 86,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:99817",
+          "month": 680,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:31",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:99816"
+          ],
+          "data": {
+            "victim": "person:31",
+            "ageYears": 78,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:99818",
+          "month": 680,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:31",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:21:0",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:98576",
+            "event:98957",
+            "event:99817"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:99817"
+          }
+        },
+        {
+          "id": "event:99819",
+          "month": 680,
+          "type": "guardianship.decided",
+          "participants": [
+            {
+              "id": "person:birth:person:birth:person:21:0:41",
+              "role": "beneficiary"
+            },
+            {
+              "id": "person:birth:person:21:0",
+              "role": "actor"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:2142",
+            "event:64829",
+            "event:70661",
+            "event:72783",
+            "event:74601",
+            "event:75538",
+            "event:75540",
+            "event:88956",
+            "event:88958",
+            "event:90390",
+            "event:90392",
+            "event:90394",
+            "event:91162",
+            "event:91164",
+            "event:91166",
+            "event:91168",
+            "event:91170",
+            "event:91172",
+            "event:91404",
+            "event:92531",
+            "event:92829",
+            "event:94134",
+            "event:94857",
+            "event:94859",
+            "event:94861",
+            "event:94863",
+            "event:95842",
+            "event:95844",
+            "event:95846",
+            "event:95848",
+            "event:95850",
+            "event:98624",
+            "event:99817"
+          ],
+          "data": {
+            "child": "person:birth:person:birth:person:21:0:41",
+            "candidates": [
+              {
+                "id": "person:17",
+                "utility": 99
+              },
+              {
+                "id": "person:birth:person:birth:person:21:0:19",
+                "utility": 82.3
+              },
+              {
+                "id": "person:birth:person:38:4",
+                "utility": 81
+              },
+              {
+                "id": "person:birth:person:06:11",
+                "utility": 78
+              },
+              {
+                "id": "person:birth:person:birth:person:11:1:22",
+                "utility": 71.65
+              },
+              {
+                "id": "person:birth:person:birth:person:11:1:34",
+                "utility": 67.3
+              },
+              {
+                "id": "person:birth:person:birth:person:06:4:32",
+                "utility": 65.85
+              },
+              {
+                "id": "person:birth:person:06:0",
+                "utility": 64
+              },
+              {
+                "id": "person:birth:person:13:4",
+                "utility": 63
+              },
+              {
+                "id": "person:birth:person:birth:person:13:7:35",
+                "utility": 62.5
+              },
+              {
+                "id": "person:20",
+                "utility": 61
+              },
+              {
+                "id": "person:birth:person:birth:person:13:7:27",
+                "utility": 61
+              },
+              {
+                "id": "person:birth:person:birth:person:06:4:27",
+                "utility": 55
+              },
+              {
+                "id": "person:birth:person:11:8",
+                "utility": 54.400000000000006
+              },
+              {
+                "id": "person:birth:person:11:15",
+                "utility": 53.5
+              },
+              {
+                "id": "person:birth:person:birth:person:06:4:24",
+                "utility": 53.3
+              },
+              {
+                "id": "person:33",
+                "utility": 43
+              },
+              {
+                "id": "person:birth:person:11:11",
+                "utility": 41
+              },
+              {
+                "id": "person:birth:person:21:9",
+                "utility": 34.25
+              },
+              {
+                "id": "person:birth:person:06:8",
+                "utility": 28
+              },
+              {
+                "id": "person:birth:person:21:0",
+                "utility": 24.599999999999994
+              },
+              {
+                "id": "person:birth:person:birth:person:13:7:32",
+                "utility": 21.85
+              },
+              {
+                "id": "person:23",
+                "utility": 21
+              },
+              {
+                "id": "person:birth:person:birth:person:11:1:29",
+                "utility": 17.75
+              },
+              {
+                "id": "person:07",
+                "utility": 11
+              },
+              {
+                "id": "person:birth:person:06:4",
+                "utility": 4.600000000000001
+              },
+              {
+                "id": "person:birth:person:38:1",
+                "utility": -1.0499999999999972
+              },
+              {
+                "id": "person:03",
+                "utility": -1.2000000000000028
+              },
+              {
+                "id": "person:birth:person:11:4",
+                "utility": -3.25
+              },
+              {
+                "id": "person:30",
+                "utility": -3.3500000000000014
+              },
+              {
+                "id": "person:birth:person:13:7",
+                "utility": -10.399999999999999
+              },
+              {
+                "id": "person:21",
+                "utility": -12
+              },
+              {
+                "id": "person:birth:person:11:1",
+                "utility": -23.35
+              },
+              {
+                "id": "person:10",
+                "utility": -29.35
+              },
+              {
+                "id": "person:12",
+                "utility": -43.2
+              },
+              {
+                "id": "person:24",
+                "utility": -47
+              },
+              {
+                "id": "person:34",
+                "utility": -60
+              },
+              {
+                "id": "person:19",
+                "utility": -69.4
+              }
+            ],
+            "chosen": "person:birth:person:21:0",
+            "guardians": [
+              "person:birth:person:21:0"
+            ],
+            "reason": "responsável sobrevivente mantém guarda",
+            "orphan": false
+          }
+        },
+        {
+          "id": "event:101981",
+          "month": 700,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:10",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:101980"
+          ],
+          "data": {
+            "victim": "person:10",
+            "ageYears": 86,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:102640",
+          "month": 706,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:21",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:102639"
+          ],
+          "data": {
+            "victim": "person:21",
+            "ageYears": 84,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:102641",
+          "month": 706,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:21",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:06:4:24",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:101584",
+            "event:102524",
+            "event:102640"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:102640"
+          }
+        },
+        {
+          "id": "event:102888",
+          "month": 708,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:34",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:102887"
+          ],
+          "data": {
+            "victim": "person:34",
+            "ageYears": 81,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:103638",
+          "month": 716,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:17",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:103637"
+          ],
+          "data": {
+            "victim": "person:17",
+            "ageYears": 78,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:103643",
+          "month": 716,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:17",
+              "role": "reference"
+            },
+            {
+              "id": "person:20",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:102873",
+            "event:102877",
+            "event:103638"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:103638"
+          }
+        },
+        {
+          "id": "event:104813",
+          "month": 728,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:12",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:104812"
+          ],
+          "data": {
+            "victim": "person:12",
+            "ageYears": 88,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:104851",
+          "month": 728,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:24",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:104850"
+          ],
+          "data": {
+            "victim": "person:24",
+            "ageYears": 90,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:105186",
+          "month": 731,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:19",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:105185"
+          ],
+          "data": {
+            "victim": "person:19",
+            "ageYears": 86,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:105623",
+          "month": 736,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:03",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:105622"
+          ],
+          "data": {
+            "victim": "person:03",
+            "ageYears": 87,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:106613",
+          "month": 747,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:23",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:106612"
+          ],
+          "data": {
+            "victim": "person:23",
+            "ageYears": 92,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:106789",
+          "month": 749,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:20",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:106788"
+          ],
+          "data": {
+            "victim": "person:20",
+            "ageYears": 87,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:106790",
+          "month": 749,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:20",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:21:0:41",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:106085",
+            "event:106363",
+            "event:106789"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:106789"
+          }
+        },
+        {
+          "id": "event:109726",
+          "month": 789,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:33",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:109725"
+          ],
+          "data": {
+            "victim": "person:33",
+            "ageYears": 85,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:109728",
+          "month": 789,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:33",
+              "role": "reference"
+            },
+            {
+              "id": "person:30",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:109119",
+            "event:109121",
+            "event:109726"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:109726"
+          }
+        },
+        {
+          "id": "event:110621",
+          "month": 801,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:07",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:110620"
+          ],
+          "data": {
+            "victim": "person:07",
+            "ageYears": 89,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:111090",
+          "month": 807,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:30",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1",
+            "event:111089"
+          ],
+          "data": {
+            "victim": "person:30",
+            "ageYears": 88,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:111095",
+          "month": 807,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:30",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:06:4:32",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:110694",
+            "event:110901",
+            "event:111090"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:111090"
+          }
+        },
+        {
+          "id": "event:114478",
+          "month": 858,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:38:1",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:3178",
+            "event:114477"
+          ],
+          "data": {
+            "victim": "person:birth:person:38:1",
+            "ageYears": 69,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:114479",
+          "month": 858,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:38:1",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:11:1",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:113882",
+            "event:113884",
+            "event:114478"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:114478"
+          }
+        },
+        {
+          "id": "event:116057",
+          "month": 882,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:21:0",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1522",
+            "event:116056"
+          ],
+          "data": {
+            "victim": "person:birth:person:21:0",
+            "ageYears": 72,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:116058",
+          "month": 882,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:21:0",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:06:4:27",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:115461",
+            "event:115493",
+            "event:116057"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:116057"
+          }
+        },
+        {
+          "id": "event:116442",
+          "month": 887,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:11:1",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:3176",
+            "event:116441"
+          ],
+          "data": {
+            "victim": "person:birth:person:11:1",
+            "ageYears": 72,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:116443",
+          "month": 887,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:11:1",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:13:7:35",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:116273",
+            "event:116315",
+            "event:116442"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:116442"
+          }
+        },
+        {
+          "id": "event:116657",
+          "month": 890,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:13:4",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:8020",
+            "event:116656"
+          ],
+          "data": {
+            "victim": "person:birth:person:13:4",
+            "ageYears": 69,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:116658",
+          "month": 890,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:13:4",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:38:4",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:116279",
+            "event:116281",
+            "event:116657"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:116657"
+          }
+        },
+        {
+          "id": "event:118993",
+          "month": 929,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:11:8",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:14502",
+            "event:118992"
+          ],
+          "data": {
+            "victim": "person:birth:person:11:8",
+            "ageYears": 68,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:118994",
+          "month": 929,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:11:8",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:21:9",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:118499",
+            "event:118501",
+            "event:118993"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:118993"
+          }
+        },
+        {
+          "id": "event:120902",
+          "month": 961,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:06:4",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:8014",
+            "event:120901"
+          ],
+          "data": {
+            "victim": "person:birth:person:06:4",
+            "ageYears": 75,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:120903",
+          "month": 961,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:06:4",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:11:4",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:120639",
+            "event:120641",
+            "event:120902"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:120902"
+          }
+        },
+        {
+          "id": "event:121926",
+          "month": 979,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:38:4",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:8022",
+            "event:121925"
+          ],
+          "data": {
+            "victim": "person:birth:person:38:4",
+            "ageYears": 76,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:121927",
+          "month": 979,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:38:4",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:06:4:27",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:121360",
+            "event:121380",
+            "event:121926"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:121926"
+          }
+        },
+        {
+          "id": "event:123802",
+          "month": 1013,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:13:7",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:12875",
+            "event:123801"
+          ],
+          "data": {
+            "victim": "person:birth:person:13:7",
+            "ageYears": 76,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:123803",
+          "month": 1013,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:13:7",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:06:8",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:123345",
+            "event:123347",
+            "event:123802"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:123802"
+          }
+        },
+        {
+          "id": "event:123983",
+          "month": 1016,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:11:4",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:8017",
+            "event:123982"
+          ],
+          "data": {
+            "victim": "person:birth:person:11:4",
+            "ageYears": 79,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:123984",
+          "month": 1016,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:11:4",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:13:7:35",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:123343",
+            "event:123375",
+            "event:123983"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:123983"
+          }
+        },
+        {
+          "id": "event:125299",
+          "month": 1041,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:21:9",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:16129",
+            "event:125298"
+          ],
+          "data": {
+            "victim": "person:birth:person:21:9",
+            "ageYears": 77,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:125300",
+          "month": 1041,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:21:9",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:birth:person:13:7:32:57",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:124685",
+            "event:124717",
+            "event:125299"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:125299"
+          }
+        },
+        {
+          "id": "event:125497",
+          "month": 1044,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:06:0",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:1513",
+            "event:125496"
+          ],
+          "data": {
+            "victim": "person:birth:person:06:0",
+            "ageYears": 86,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:125498",
+          "month": 1044,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:06:0",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:11:15",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:125294",
+            "event:125327",
+            "event:125497"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:125497"
+          }
+        },
+        {
+          "id": "event:127387",
+          "month": 1085,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:birth:person:21:0:19",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:32623",
+            "event:127386"
+          ],
+          "data": {
+            "victim": "person:birth:person:birth:person:21:0:19",
+            "ageYears": 70,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:127388",
+          "month": 1085,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:birth:person:21:0:19",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:birth:person:11:1:22",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:127018",
+            "event:127020",
+            "event:127387"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:127387"
+          }
+        },
+        {
+          "id": "event:129783",
+          "month": 1139,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:11:11",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:19400",
+            "event:129782"
+          ],
+          "data": {
+            "victim": "person:birth:person:11:11",
+            "ageYears": 83,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:129784",
+          "month": 1139,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:11:11",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:06:11",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:129666",
+            "event:129668",
+            "event:129783"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:129783"
+          }
+        },
+        {
+          "id": "event:130536",
+          "month": 1157,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:06:8",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:14498",
+            "event:130535"
+          ],
+          "data": {
+            "victim": "person:birth:person:06:8",
+            "ageYears": 87,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:130537",
+          "month": 1157,
+          "type": "partnership.ended",
+          "participants": [
+            {
+              "id": "person:birth:person:06:8",
+              "role": "reference"
+            },
+            {
+              "id": "person:birth:person:11:15",
+              "role": "reference"
+            }
+          ],
+          "causes": [
+            "event:130194",
+            "event:130198",
+            "event:130536"
+          ],
+          "data": {
+            "cause": "morte",
+            "death": "event:130536"
+          }
+        },
+        {
+          "id": "event:130851",
+          "month": 1164,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:06:11",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:19395",
+            "event:130850"
+          ],
+          "data": {
+            "victim": "person:birth:person:06:11",
+            "ageYears": 85,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        },
+        {
+          "id": "event:131829",
+          "month": 1190,
+          "type": "person.died",
+          "participants": [
+            {
+              "id": "person:birth:person:11:15",
+              "role": "victim"
+            }
+          ],
+          "causes": [
+            "event:25957",
+            "event:131828"
+          ],
+          "data": {
+            "victim": "person:birth:person:11:15",
+            "ageYears": 83,
+            "killer": null,
+            "killerSkill": null,
+            "cause": "morte natural: declínio fisiológico",
+            "weapon": null,
+            "bodyPart": null,
+            "natural": true
+          }
+        }
+      ],
+      "biographies": [],
+      "errors": []
+    }
+  ]
+}

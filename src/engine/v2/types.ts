@@ -183,6 +183,8 @@ export interface Work {
   material: "papel e tinta";
 }
 export type Entity =
+  | import("./politics").Settlement
+  | import("./politics").Dispute
   | Life
   | Household
   | Pregnancy
@@ -242,6 +244,7 @@ export interface Schedule {
   absentMonths: number;
 }
 export interface Scenario {
+  politics?: import("./politics").PoliticsOptions;
   dailyLife?: import("./daily").DailyOptions;
   lifeSimulation?: LifeOptions;
   seed: string;
@@ -268,6 +271,8 @@ export interface Scenario {
 export interface SliceWorld {
   version: 2;
   engine:
+    | "agents-slice-3-min"
+    | "agents-slice-2d2-recovery3"
     | "revenge-slice-1"
     | "agents-slice-1a"
     | "agents-slice-1b"

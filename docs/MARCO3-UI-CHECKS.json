@@ -1,0 +1,13 @@
+{
+  "seed": "marco3-fixture-guerra",
+  "method": "Mundo salvo na interface real; nenhuma geração extra.",
+  "checks": [
+    "assentamentos nomeados",
+    "três assentamentos",
+    "Zarek: prosa sem campos inexistentes",
+    "Zarek: cadeia causal aberta",
+    "Alda 6: prosa sem campos inexistentes",
+    "móvel sem overflow",
+    "sem erro JavaScript"
+  ]
+}
