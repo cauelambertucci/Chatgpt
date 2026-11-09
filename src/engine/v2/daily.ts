@@ -1,3 +1,4 @@
+import {byKind} from "./entity-index";
 import { themeProof, writingSaturation } from "./writing";
 /** Monthly occupations and minimal household economy; fictional design assumptions. */
 import {
@@ -67,7 +68,7 @@ export class DailySystem {
   }
   initialize() {
     const o = this.w.scenario.dailyLife!;
-    for (const h of Object.values(this.w.entities).filter(
+    for (const h of byKind(this.w,"household").filter(
       (e): e is Household => e.kind === "household",
     ))
       this.c.emit(
@@ -226,7 +227,7 @@ export class DailySystem {
       solidarity = p.values.solidariedade || 0;
     const h = this.home(id),
       economy = this.w.scenario.dailyLife?.economy;
-    const residents = Object.values(this.w.entities).filter(
+    const residents = byKind(this.w,"person").filter(
       (q): q is Person =>
         q.kind === "person" && q.alive && this.home(q.id).id === h.id,
     );
@@ -340,7 +341,7 @@ export class DailySystem {
   }
   urgentFood(id:string){
     const h=this.home(id),p=this.person(id);
-    const demand=Object.values(this.w.entities).filter((q):q is Person=>q.kind==='person'&&q.alive&&this.home(q.id).id===h.id).reduce((n,q)=>n+foodNeed(q.lifeStage),0);
+    const demand=byKind(this.w,"person").filter((q):q is Person=>q.kind==='person'&&q.alive&&this.home(q.id).id===h.id).reduce((n,q)=>n+foodNeed(q.lifeStage),0);
     return p.occupation==='cultivador' && !!h.inventory && reserveMonths(h.inventory.food,demand)<2;
   }
   work(id: string): boolean {
@@ -433,7 +434,7 @@ export class DailySystem {
   consume() {
     if (!this.w.scenario.dailyLife?.economy) return;
     const homes = new Map<string, Person[]>();
-    for (const p of Object.values(this.w.entities))
+    for (const p of byKind(this.w,"person"))
       if (p.kind === "person" && p.alive) {
         const h = this.home(p.id);
         if (!homes.has(h.id)) homes.set(h.id, []);
@@ -505,7 +506,7 @@ export class DailySystem {
     }
   }
   caregiver(owner: string, fallback: string, source: string): string {
-    const candidates = Object.values(this.w.entities).filter(
+    const candidates = byKind(this.w,"person").filter(
       (p): p is Person =>
         p.kind === "person" &&
         p.id !== owner &&
@@ -557,7 +558,7 @@ export class DailySystem {
   transfer(work: Work) {
     const p = this.person(work.creator);
     if (!p.alive || work.owner !== p.id) return;
-    const target = Object.values(this.w.entities)
+    const target = byKind(this.w,"person")
       .filter(
         (q): q is Person =>
           q.kind === "person" &&

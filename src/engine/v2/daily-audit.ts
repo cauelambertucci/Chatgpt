@@ -57,6 +57,8 @@ export function auditDailyCompact(w: CompactWorld): string[] {
     }
     if (
       [
+        "political.visit.started",
+        "political.visit.arrived",
         "occupation.care.offered",
         "activity.period",
         "work.period",
@@ -92,6 +94,10 @@ export function auditDailyCompact(w: CompactWorld): string[] {
         fail("Livro sem seis períodos de trabalho");
       if (owners.has(String(d.work))) fail("Obra duplicada");
       owners.set(String(d.work), actor!);
+    }
+    if(e.type==='property.stolen'){
+      if(d.work){if(owners.get(String(d.work))!==d.from)fail('Roubo de obra sem dono correspondente');owners.set(String(d.work),String(d.to));}
+      else {const a=stocks.get(String(d.fromHousehold)),b=stocks.get(String(d.toHousehold));if(!a||!b||d.material!=='papel'||Number(d.amount)<=0||a.paper<Number(d.amount))fail('Roubo material inválido');else{a.paper-=Number(d.amount);b.paper+=Number(d.amount);}}
     }
     if (e.type === "work.transferred") {
       if (owners.get(String(d.work)) !== d.from)

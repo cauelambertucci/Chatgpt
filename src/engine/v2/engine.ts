@@ -1,3 +1,4 @@
+import {byKind,enableEntityIndex,indexEffects,snapshotCopy} from "./entity-index";
 import {PoliticsSystem} from "./politics";
 import {experienceParticipants} from "./writing";
 import { DailySystem, domainSeed } from "./daily";
@@ -44,14 +45,14 @@ function freeze<T>(x: T): T {
   }
   return x;
 }
-export function applyEvent(entities: Record<string, Entity>, e: SliceEvent) {
+export function applyEvent(entities: Record<string, Entity>, e: SliceEvent, shareFrozen=false) {
   for (const effect of e.effects) {
     const id = effect.entity.id;
     if (effect.op === "create" && entities[id])
       throw Error(`Duplicate entity ${id}`);
     if (effect.op === "replace" && !entities[id])
       throw Error(`Unknown entity ${id}`);
-    entities[id] = clone(effect.entity);
+    entities[id] = shareFrozen ? effect.entity : clone(effect.entity);
   }
 }
 export function replay(events: readonly SliceEvent[]): Record<string, Entity> {
@@ -60,11 +61,10 @@ export function replay(events: readonly SliceEvent[]): Record<string, Entity> {
   return entities;
 }
 export const people = (w: SliceWorld) =>
-  Object.values(w.entities)
-    .filter((e): e is Person => e.kind === "person")
+  byKind(w,"person")
     .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
 export const goals = (w: SliceWorld) =>
-  Object.values(w.entities).filter((e): e is Goal => e.kind === "goal");
+  byKind(w,"goal");
 export const getPerson = (w: SliceWorld, id: string) => {
   const p = w.entities[id];
   if (!p || p.kind !== "person") throw Error(`Not a person: ${id}`);
@@ -204,7 +204,7 @@ export class SliceSimulation {
   ) {
     this.observeConception = options.observeConception;
     if (restored) {
-      const expected = restored.scenario.politics ? "agents-slice-3-min" : restored.scenario.dailyLife ? (restored.scenario.dailyLife.economy ? "agents-slice-2d2-recovery3" : "agents-slice-2d1-writing2") : restored.scenario.lifeSimulation
+      const expected = restored.scenario.politics ? "agents-slice-3-incidents" : restored.scenario.dailyLife ? (restored.scenario.dailyLife.economy ? "agents-slice-2d2-recovery3" : "agents-slice-2d1-writing2") : restored.scenario.lifeSimulation
         ? restored.scenario.lifeSimulation.fertilityPolicy
           ? "agents-slice-2c"
           : "agents-slice-2b"
@@ -246,6 +246,7 @@ export class SliceSimulation {
         } else this.state.events = this.state.events.map(freeze);
       }
       this.month = this.state.nextMonth;
+      enableEntityIndex(this.state);
       this.attachBody();
       this.attachLife();
       this.attachDaily();
@@ -259,7 +260,7 @@ export class SliceSimulation {
       throw Error("Horizon must be 1–240 months");
     this.state = {
       version: 2,
-      engine: scenario.politics ? "agents-slice-3-min" : scenario.dailyLife ? (scenario.dailyLife.economy ? "agents-slice-2d2-recovery3" : "agents-slice-2d1-writing2") : scenario.lifeSimulation
+      engine: scenario.politics ? "agents-slice-3-incidents" : scenario.dailyLife ? (scenario.dailyLife.economy ? "agents-slice-2d2-recovery3" : "agents-slice-2d1-writing2") : scenario.lifeSimulation
         ? scenario.lifeSimulation.fertilityPolicy
           ? "agents-slice-2c"
           : "agents-slice-2b"
@@ -282,6 +283,7 @@ export class SliceSimulation {
       this.log = new CompactLog();
       this.state.events = this.log.view();
     }
+    enableEntityIndex(this.state);
     this.emit(
       "world.created",
       [],
@@ -778,14 +780,14 @@ export class SliceSimulation {
       dia: (this.month % 12) * 30,
       month: this.month,
       type,
-      participants: clone(participants),
+      participants: snapshotCopy(participants),
       location: "place:void",
       causes: [...new Set(causes)].sort(
         (a, b) => Number(a.split(":")[1]) - Number(b.split(":")[1]),
       ),
-      effects: clone(effects),
-      data: clone(data),
-      ...(decision ? { decision: clone(decision) } : {}),
+      effects: snapshotCopy(effects),
+      data: snapshotCopy(data),
+      ...(decision ? { decision: snapshotCopy(decision) } : {}),
     });
     if (type !== "world.created" && !e.causes.length)
       throw Error("Missing cause");
@@ -793,7 +795,8 @@ export class SliceSimulation {
       if (this.state.events[Number(cause.split(":")[1])]?.id !== cause)
         throw Error(`Future/unknown cause ${cause}`);
     const encoded = this.log?.encodeEvent(e, this.state.entities);
-    applyEvent(this.state.entities, e);
+    applyEvent(this.state.entities, e, true);
+    indexEffects(this.state,e.effects);
     if (this.log && encoded) this.log.append(encoded);
     else this.state.events.push(e);
     this.dispatch(e);
@@ -1171,9 +1174,7 @@ export class SliceSimulation {
     return true;
   }
   private allPersonalGoals(): PersonalGoal[] {
-    return Object.values(this.state.entities).filter(
-      (x): x is PersonalGoal => x.kind === "personalGoal",
-    );
+    return byKind(this.state,"personalGoal");
   }
   private personalGoals(p: Person) {
     return (p.personalGoals || []).map(
@@ -2654,15 +2655,18 @@ export class SliceSimulation {
     if (
       !p.alive ||
       !p.present ||
+      this.politics?.occupied(id) ||
       this.reactedThisMonth.has(id) ||
       (this.daily && p.workedMonth===this.month) ||
       (p.lifeStage && p.lifeStage !== "adult" && !(this.daily && p.lifeStage==="elder"))
     )
       return;
+    let preWorkCandidates:Candidate[]|undefined,preWorkVersion=-1;
     if(this.daily){
       this.daily.choose(id);p=getPerson(this.state,id);
       // Work must not bypass a recovery decision; preserve urgent food production.
-      const preferred=this.candidates(id,roster)[0].action;
+      preWorkCandidates=this.candidates(id,roster);preWorkVersion=this.state.events.length;
+      const preferred=preWorkCandidates[0].action;
       const recovery=["recuperar","isolar","abandonar_posto"].includes(preferred);
       if((!recovery || this.daily.urgentFood(id)) && this.daily.work(id))return;
       if(this.daily.ability(id).write<0.5)for(const g of this.personalGoals(p).filter(g=>g.type==='criar_obra' && g.closed===undefined && g.workStarted)){
@@ -2698,7 +2702,7 @@ export class SliceSimulation {
     ) {
       if (this.offerAgreement(goal)) return;
     }
-    const candidates = this.candidates(id, roster),
+    const candidates = preWorkCandidates&&preWorkVersion===this.state.events.length?preWorkCandidates:this.candidates(id, roster),
       chosen = candidates[0];
     const reason = [
       "recuperar",
@@ -3177,7 +3181,7 @@ export class SliceSimulation {
         { remorse, reason: "Avaliação da própria morte causada." },
       );
     }
-    if(this.daily)for(const work of Object.values(this.state.entities).filter((e):e is Work=>e.kind==='work' && e.owner===p.id && !e.ownerEstate)){
+    if(this.daily)for(const work of byKind(this.state,'work').filter((e):e is Work=>e.kind==='work' && e.owner===p.id && !e.ownerEstate)){
       this.emit('work.estate.recorded',[{id:p.id,role:'reference'}],[id,work.ownerSource||work.source],[{op:'replace',entity:{...work,ownerEstate:true,ownerSource:this.nextId()}}],{work:work.id,owner:p.id,reason:'Espólio registrado; sem herdeiro presumido.'});
     }
     this.life?.onDeath(p.id, id);
@@ -3228,6 +3232,7 @@ export class SliceSimulation {
       this.drain();
       // Births are settled before this action phase. Reuse only the ID order;
       // every candidate reads current entities after earlier actions/reactions.
+      this.politics?.beforeActions();
       const roster = people(this.state).map((p) => p.id);
       for (const id of roster) {
         this.act(id, roster);

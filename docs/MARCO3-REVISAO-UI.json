@@ -1,0 +1,16 @@
+{
+  "seed": "marco3-livre-005",
+  "method": "Mundo salvo na interface real; nenhuma geração extra.",
+  "checks": [
+    "assentamentos nomeados",
+    "três assentamentos",
+    "Mael: prosa sem campos inexistentes",
+    "Mael: fonte causal encontrada",
+    "Mael: cadeia causal aberta",
+    "Iria: prosa sem campos inexistentes",
+    "Iria: fonte causal encontrada",
+    "Iria: cadeia causal aberta",
+    "móvel sem overflow",
+    "sem erro JavaScript"
+  ]
+}

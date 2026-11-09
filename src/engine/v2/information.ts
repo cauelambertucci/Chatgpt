@@ -1,7 +1,9 @@
 import type { Person } from './types';
 type Listener = Pick<Person,'id'|'alive'|'present'|'informed'>;
+const membership=new WeakMap<readonly string[],ReadonlySet<string>>();
+function knownFacts(facts:readonly string[]){if(!Object.isFrozen(facts))return new Set(facts);let set=membership.get(facts);if(!set){set=new Set(facts);membership.set(facts,set);}return set;}
 /** Same lexicographic choice: earliest known fact, then earliest ordered listener.
- * Work on one listener at a time; no retained index or cached decision.
+ * Membership indexes immutable fact arrays only; no recipient or decision is cached.
  */
 export function firstUnknownRecipient(facts: readonly string[], listeners: readonly Listener[]) {
   let best=facts.length, recipient:string|undefined;
@@ -12,7 +14,7 @@ export function firstUnknownRecipient(facts: readonly string[], listeners: reado
       for(let i=0;i<facts.length;i++)if(q.informed[i]!==facts[i]){prefix=false;break;}
       if(prefix)continue;
     }
-    const known=new Set(q.informed);
+    const known=knownFacts(q.informed);
     for(let i=0;i<best;i++)if(!known.has(facts[i])){best=i;recipient=q.id;break;}
     if(best===0)break;
   }

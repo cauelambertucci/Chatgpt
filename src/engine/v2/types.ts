@@ -183,6 +183,7 @@ export interface Work {
   material: "papel e tinta";
 }
 export type Entity =
+  | import("./political-incidents").PoliticalVisit
   | import("./politics").Settlement
   | import("./politics").Dispute
   | Life
@@ -272,6 +273,7 @@ export interface SliceWorld {
   version: 2;
   engine:
     | "agents-slice-3-min"
+    | "agents-slice-3-incidents"
     | "agents-slice-2d2-recovery3"
     | "revenge-slice-1"
     | "agents-slice-1a"

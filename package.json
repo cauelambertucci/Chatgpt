@@ -38,7 +38,10 @@
     "test:2d2": "vitest run src/engine/v2/livelihood.test.ts src/engine/v2/emotions.test.ts src/engine/v2/daily.test.ts src/ui/v2/model.test.ts --maxWorkers=1 --minWorkers=1",
     "test:books": "vitest run src/engine/v2/writing.test.ts src/engine/v2/daily.test.ts src/engine/v2/livelihood.test.ts src/ui/v2/model.test.ts --maxWorkers=1 --minWorkers=1",
     "test:m3": "vitest run src/engine/v2/politics.test.ts src/engine/v2/daily.test.ts src/engine/v2/livelihood.test.ts src/engine/v2/writing.test.ts src/ui/v2/model.test.ts --maxWorkers=1 --minWorkers=1",
-    "report:m3": "node scripts/m3-report.mjs"
+    "report:m3": "node scripts/m3-report.mjs",
+    "test:m3-review": "vitest run src/engine/v2/political-incidents.test.ts src/engine/v2/politics.test.ts src/engine/v2/entity-index.test.ts src/engine/v2/compact-log.test.ts src/engine/v2/information.test.ts src/engine/v2/writing.test.ts src/engine/v2/livelihood.test.ts src/engine/v2/daily.test.ts src/ui/v2/model.test.ts --maxWorkers=1 --minWorkers=1",
+    "report:m3-review": "node scripts/m3-review-report.mjs",
+    "benchmark:m3-review": "node scripts/benchmark-m3-review.mjs"
   },
   "devDependencies": {
     "typescript": "~5.9.3",

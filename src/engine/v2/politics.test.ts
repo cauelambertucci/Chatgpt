@@ -274,7 +274,7 @@ it("metamórfico no loop: mesmo incidente, líder conciliador rejeita; sem manda
   expect(
     peace.w.events.some(
       (e) =>
-        e.type === "war.rejected" && String(e.data.reason).includes("acordo"),
+        e.type === "dispute.proposed",
     ),
   ).toBe(true);
   const noAuthority = harness();

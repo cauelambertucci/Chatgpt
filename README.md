@@ -264,3 +264,7 @@ A interface Leve agora usa `dailyScenario`: 40 fundadores, 100 anos, objetivos p
 ## Marco 3 mínimo — assentamentos e conflitos
 
 [Diagnóstico demográfico (5 linhas)](docs/MARCO3-DEMOGRAFIA.md) · [relatório curto](docs/MARCO3-REPORT.md) · [duas biografias da fixture](docs/MARCO3-BIOGRAFIAS.md). A interface Leve usa três assentamentos, 40 fundadores e 100 anos. As três seeds livres preferiram acordo; os exemplos de guerra são explicitamente controlados. `npm run test:m3` verifica causalidade, autoridade, sucessão, replay e consequências familiares. Nenhuma etapa posterior foi iniciada.
+
+## Marco 3 — escassez, roubo e desempenho
+
+[Relatório curto e diagnóstico em 3 linhas](docs/MARCO3-REVISAO-REPORT.md) · [duas biografias livres](docs/MARCO3-REVISAO-BIOGRAFIAS.md) · [dados das 10 seeds](docs/MARCO3-REVISAO-DADOS.json). Experimente `marco3-livre-005` na interface. `npm run test:m3-review` verifica a revisão; `npm run report:m3-review` reproduz o lote fixo; `npm run benchmark:m3-review` compara o motor anterior às otimizações e falha se os hashes divergirem.

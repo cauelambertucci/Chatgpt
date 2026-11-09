@@ -30,6 +30,7 @@ const plain = (v: unknown): v is Record<string, unknown> =>
   !!v && typeof v === "object" && !Array.isArray(v);
 /** Append-only representation dictionaries; they do not cache or bypass decisions. */
 export class CompactLog {
+  private recentEvents = new Map<number,SliceEvent>();
   private strings: string[] = [];
   private shapes: number[][] = [];
   private rows: string[] = [];
@@ -199,12 +200,7 @@ export class CompactLog {
       const keys = this.shapes[value[1] as number];
       if (!keys) throw Error("Unknown compact shape");
       const object: Record<string, unknown> = {};
-      keys.forEach((key, i) =>
-        Object.defineProperty(object, this.strings[key], {
-          enumerable: true,
-          get: () => immutable(this.lazy(value[i + 2])),
-        }),
-      );
+      keys.forEach((key,i)=>{let ready=false,cached:unknown;Object.defineProperty(object,this.strings[key],{enumerable:true,get:()=>{if(!ready){cached=immutable(this.lazy(value[i+2]));ready=true;}return cached;}});});
       return Object.freeze(object);
     }
     return immutable(this.decode(value));
@@ -232,32 +228,35 @@ export class CompactLog {
             : this.strings[typeId],
       location: "place:void",
     };
+    let participants:unknown,causes:unknown,dataCache:unknown,decisionCache:unknown;
     Object.defineProperties(e, {
       participants: {
         enumerable: true,
-        get: () => immutable(this.decode(row()[2])),
+        get: () => participants ??= immutable(this.decode(row()[2])),
       },
       causes: {
         enumerable: true,
-        get: () => immutable(row()[3].map((i) => `event:${i}`)),
+        get: () => causes ??= immutable(row()[3].map((i) => `event:${i}`)),
       },
       data: {
         enumerable: true,
         get: () => {
+          if(dataCache!==undefined)return dataCache;
           const data = this.lazy(row()[5]);
-          return typeId < 0
+          return dataCache = typeId < 0
             ? Object.freeze({ ...data, periodMonths: 1 })
             : data;
         },
       },
       decision: {
         enumerable: true,
-        get: () => (row().length > 6 ? this.lazy(row()[6]!) : undefined),
+        get: () => decisionCache ??= (row().length > 6 ? this.lazy(row()[6]!) : undefined),
       },
     });
     return e;
   }
   event(index: number): SliceEvent {
+    const cached=this.recentEvents.get(index);if(cached)return cached;
     const e = this.metadata(index);
     // Internal history reads use metadata. Explicit legacy effect lookup is intentionally lazy, never retained.
     Object.defineProperty(e, "effects", {
@@ -268,7 +267,9 @@ export class CompactLog {
         return immutable(this.effects(index, state));
       },
     });
-    return Object.freeze(e) as SliceEvent;
+    const frozen=Object.freeze(e) as SliceEvent;
+    if(this.recentEvents.size>=2048)this.recentEvents.delete(this.recentEvents.keys().next().value!);
+    this.recentEvents.set(index,frozen);return frozen;
   }
   view(sequentialEffects = false): SliceEvent[] {
     let cursor = -1;

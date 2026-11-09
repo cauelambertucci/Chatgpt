@@ -1,3 +1,4 @@
+import {byKind} from "./entity-index";
 /** Suposição de design, não verificado. Monthly calendar, coarse human life stages. */
 import { conceptionDiagnostic, type ConceptionDiagnostic } from "./demography";
 import type { Person, Entity, Effect, SliceEvent, SliceWorld } from "./types";
@@ -89,9 +90,7 @@ export class LifeSystem {
     return this.w.entities[id] as Person;
   }
   private all() {
-    return Object.values(this.w.entities).filter(
-      (e): e is Life => e.kind === "life",
-    );
+    return byKind(this.w,"life");
   }
   get(id: string) {
     return this.w.entities[`life:${id}`] as Life | undefined;
@@ -760,7 +759,7 @@ export class LifeSystem {
       if (this.month > 0 && (this.month - l.birthMonth) % 12 === 0)
         this.grow(this.get(p.id)!);
     }
-    for (const g of Object.values(this.w.entities).filter(
+    for (const g of byKind(this.w,"pregnancy").filter(
       (e): e is Pregnancy => e.kind === "pregnancy" && e.status === "gestating",
     ))
       if (g.due <= this.month || !this.person(g.parents[0]).alive)
@@ -786,7 +785,7 @@ export class LifeSystem {
     }
   }
   balance() {
-    const persons = Object.values(this.w.entities).filter(
+    const persons = byKind(this.w,"person").filter(
       (e): e is Person => e.kind === "person",
     );
     const births = persons.length - this.w.scenario.people.length,

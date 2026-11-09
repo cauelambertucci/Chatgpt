@@ -1,3 +1,5 @@
+import { byKind } from "./entity-index";
+import { PoliticalIncidents } from "./political-incidents";
 /** Marco 3 mínimo. All weights, travel and casualty rules are unverified design assumptions. */
 import type { Effect, Person, SliceEvent, SliceWorld } from "./types";
 import type { Life } from "./life";
@@ -25,7 +27,8 @@ export interface Dispute {
   witness: string;
   sent: string;
   due: number;
-  status: "travelling" | "declared" | "closed";
+  status: "travelling" | "declared" | "negotiating" | "closed";
+  outcome?: string;
   leader?: string;
   mandate?: string;
   notice?: string;
@@ -46,6 +49,12 @@ export const politicalTypes = [
   "war.declared",
   "campaign.resolved",
   "campaign.ended",
+  "scarcity.observed",
+  "property.stolen",
+  "theft.perceived",
+  "dispute.proposed",
+  "dispute.agreed",
+  "dispute.unresolved",
 ] as const;
 export function settlementScenario(seed: string, count = 40) {
   const s = livelihoodScenario(seed, count);
@@ -89,7 +98,12 @@ export function politicalGate(
     return "sem autoridade vigente";
   if (
     !incident ||
-    !["attack.attempted", "person.died"].includes(incident.type) ||
+    ![
+      "attack.attempted",
+      "person.died",
+      "scarcity.observed",
+      "theft.perceived",
+    ].includes(incident.type) ||
     (incident.type === "person.died" && !incident.data.killer) ||
     incident.data.conflict
   )
@@ -116,7 +130,65 @@ interface Context {
   die: (id: string, cause: string, conflict: string) => void;
 }
 export class PoliticsSystem {
-  constructor(private c: Context) {}
+  private additions: PoliticalIncidents;
+  constructor(private c: Context) {
+    this.additions = new PoliticalIncidents({
+      ...c,
+      settlements: () => this.settlements(),
+      home: (id) => this.home(id),
+      petition: (e, witness, from, to) => this.petition(e, witness, from, to),
+    });
+  }
+  beforeActions() {
+    this.additions.monthly();
+  }
+  occupied(id: string) {
+    return this.additions.occupied(id);
+  }
+  petition(e: SliceEvent, witness: string, from: Settlement, to: Settlement) {
+    const p = this.person(witness);
+    if (
+      !p.alive ||
+      !p.present ||
+      this.w.scenario.blockedInformation.includes(witness) ||
+      from.id === to.id
+    )
+      return;
+    const id = `dispute:${e.id}`,
+      distance = this.distance(from, to),
+      due = this.month + Math.ceil(distance / 60),
+      source = this.next();
+    this.c.emit(
+      "political.notice.sent",
+      [{ id: witness, role: "actor" }],
+      [e.id, from.source, to.source],
+      [
+        {
+          op: "create",
+          entity: {
+            id,
+            kind: "dispute",
+            from: from.id,
+            to: to.id,
+            incident: e.id,
+            witness,
+            sent: source,
+            due,
+            status: "travelling",
+            lastEvent: source,
+          },
+        },
+      ],
+      {
+        incident: e.id,
+        from: from.id,
+        to: to.id,
+        source: witness,
+        distanceKm: distance,
+        travelMonths: due - this.month,
+      },
+    );
+  }
   private get w() {
     return this.c.world();
   }
@@ -143,7 +215,7 @@ export class PoliticsSystem {
     return this.settlements().find((s) => s.homes.includes(l?.household || ""));
   }
   private adults(s: Settlement) {
-    return Object.values(this.w.entities).filter(
+    return byKind(this.w, "person").filter(
       (p): p is Person =>
         p.kind === "person" &&
         p.alive &&
@@ -409,7 +481,46 @@ export class PoliticsSystem {
       this.month,
     );
     const scores = p ? warUtilities(p) : undefined;
-    if (denied || !scores || scores.guerra <= scores.acordo) {
+    if (!denied && scores && scores.guerra <= scores.acordo) {
+      const target = this.w.entities[d.to] as Settlement;
+      this.c.emit(
+        "dispute.proposed",
+        [{ id: p!.id, role: "actor" }],
+        [
+          notice!.id,
+          d.incident,
+          s.mandate!,
+          p!.lastBy.traits,
+          p!.lastBy.values,
+        ],
+        [
+          {
+            op: "replace",
+            entity: {
+              ...d,
+              status: "negotiating",
+              leader: p!.id,
+              mandate: s.mandate,
+              notice: notice!.id,
+              due: this.month + Math.ceil(this.distance(s, target) / 60),
+              lastEvent: this.next(),
+            },
+          },
+        ],
+        {
+          from: s.id,
+          to: target.id,
+          name: s.name,
+          targetName: target.name,
+          incident: d.incident,
+          utilities: scores,
+          reason:
+            "preferência por acordo de não agressão; sem transferência presumida de bens",
+        },
+      );
+      return;
+    }
+    if (denied || !scores) {
       this.c.emit(
         "war.rejected",
         p ? [{ id: p.id, role: "reference" }] : [],
@@ -471,6 +582,83 @@ export class PoliticsSystem {
         reason: "utilidade de confronto supera a de acordo",
         arrival: due,
         distanceKm: this.distance(s, target),
+      },
+    );
+  }
+  private negotiate(d: Dispute) {
+    const a = this.w.entities[d.from] as Settlement,
+      b = this.w.entities[d.to] as Settlement,
+      p = b.leader ? this.person(b.leader) : undefined;
+    const notice =
+      p?.alive &&
+      p.present &&
+      !this.w.scenario.blockedInformation.includes(p.id)
+        ? this.c.emit(
+            "political.notice.received",
+            [{ id: p.id, role: "actor" }],
+            [d.lastEvent, d.incident, b.mandate || b.source],
+            [],
+            {
+              incident: d.incident,
+              source: d.lastEvent,
+              witness: d.witness,
+              settlement: b.id,
+            },
+          )
+        : undefined;
+    const deniedA = politicalGate(
+        this.w,
+        a,
+        d.leader!,
+        this.event(d.incident),
+        this.event(d.notice!),
+        this.month,
+      ),
+      deniedB = politicalGate(
+        this.w,
+        b,
+        p?.id || "",
+        this.event(d.incident),
+        notice,
+        this.month,
+      );
+    const scores = p ? warUtilities(p) : undefined;
+    const accepted =
+      !deniedA &&
+      !deniedB &&
+      a.mandate === d.mandate &&
+      !!scores &&
+      scores.acordo >= scores.guerra;
+    this.c.emit(
+      accepted ? "dispute.agreed" : "dispute.unresolved",
+      p ? [{ id: p.id, role: "reference" }] : [],
+      [d.lastEvent, ...(notice ? [notice.id] : []), a.lastEvent, b.lastEvent],
+      [
+        {
+          op: "replace",
+          entity: {
+            ...d,
+            status: "closed",
+            outcome: accepted ? "agreement" : "unresolved",
+            lastEvent: this.next(),
+          },
+        },
+      ],
+      {
+        from: a.id,
+        to: b.id,
+        name: a.name,
+        targetName: b.name,
+        incident: d.incident,
+        accepted,
+        utilities: scores || null,
+        reason: accepted
+          ? "ambos os líderes vigentes aceitam não agressão; bens não transferidos"
+          : deniedA ||
+            deniedB ||
+            (a.mandate !== d.mandate
+              ? "mandato mudou durante a negociação"
+              : "outro líder recusou o acordo"),
       },
     );
   }
@@ -575,11 +763,12 @@ export class PoliticsSystem {
   monthly() {
     this.elections();
     this.incidents();
-    for (const d of Object.values(this.w.entities).filter(
+    for (const d of byKind(this.w, "dispute").filter(
       (e): e is Dispute =>
         e.kind === "dispute" && e.status !== "closed" && e.due <= this.month,
     )) {
       if (d.status === "travelling") this.decide(d);
+      else if (d.status === "negotiating") this.negotiate(d);
       else this.resolve(d);
     }
     this.elections();

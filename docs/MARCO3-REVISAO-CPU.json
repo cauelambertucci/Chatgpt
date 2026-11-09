@@ -1,0 +1,238 @@
+{
+  "method": "Mesma seed, 40 fundadores/100 anos; aquecimento 12 meses e GC antes; motor isolado. Perfis de CPU separados das medições sem profiler. Hash SHA-256 do JSON completo: cenário, log compacto com decisões e deltas, estado final. Comparação before/final após adicionar os gatilhos, antes/depois apenas das otimizações. Índices leem entidades atuais; cache de metadados limitado a 2048 eventos; compartilhamento somente de estruturas imutáveis.",
+  "measurements": {
+    "original": {
+      "seed": "reservado-2b-006",
+      "ms": 81481.753992,
+      "memory": {
+        "rssPeak": 550318080,
+        "rss": 547622912,
+        "heapTotal": 436523008,
+        "heapUsed": 277094552,
+        "external": 2308844,
+        "arrayBuffers": 143615
+      },
+      "hash": "92f216a9ee4998d3b4311e5f5d12f3ddac41d8285bcf912961a6e41f22885a49",
+      "events": 175415,
+      "jsonBytes": 51346504,
+      "profile": true
+    },
+    "before": {
+      "seed": "reservado-2b-006",
+      "ms": 95297.236348,
+      "memory": {
+        "rssPeak": 539951104,
+        "rss": 538689536,
+        "heapTotal": 447807488,
+        "heapUsed": 328092112,
+        "external": 2308844,
+        "arrayBuffers": 143615
+      },
+      "hash": "85ca70bd6aecbf690078a1bffbc67c00aac3205a5131e40c41ee078cae38627f",
+      "events": 175313,
+      "jsonBytes": 51353887,
+      "profile": false
+    },
+    "after": {
+      "seed": "reservado-2b-006",
+      "ms": 39183.745088,
+      "memory": {
+        "rssPeak": 560709632,
+        "rss": 560709632,
+        "heapTotal": 449445888,
+        "heapUsed": 363808104,
+        "external": 2308844,
+        "arrayBuffers": 143615
+      },
+      "hash": "85ca70bd6aecbf690078a1bffbc67c00aac3205a5131e40c41ee078cae38627f",
+      "events": 175313,
+      "jsonBytes": 51353887,
+      "profile": false
+    },
+    "after-profile": {
+      "seed": "reservado-2b-006",
+      "ms": 41682.683147,
+      "memory": {
+        "rssPeak": 590495744,
+        "rss": 589639680,
+        "heapTotal": 455409664,
+        "heapUsed": 192678016,
+        "external": 2308844,
+        "arrayBuffers": 143615
+      },
+      "hash": "85ca70bd6aecbf690078a1bffbc67c00aac3205a5131e40c41ee078cae38627f",
+      "events": 175313,
+      "jsonBytes": 51353887,
+      "profile": true
+    },
+    "final": {
+      "seed": "reservado-2b-006",
+      "ms": 27348.334922000002,
+      "memory": {
+        "rssPeak": 559804416,
+        "rss": 559804416,
+        "heapTotal": 446304256,
+        "heapUsed": 330429952,
+        "external": 2308844,
+        "arrayBuffers": 143615
+      },
+      "hash": "85ca70bd6aecbf690078a1bffbc67c00aac3205a5131e40c41ee078cae38627f",
+      "events": 175313,
+      "jsonBytes": 51353887,
+      "profile": false
+    }
+  },
+  "profiles": {
+    "original": {
+      "sampledSeconds": 81.518569,
+      "selfTop": [
+        {
+          "function": "metadata",
+          "percent": 11.863
+        },
+        {
+          "function": "clone",
+          "percent": 9.913
+        },
+        {
+          "function": "choose",
+          "percent": 9.582
+        },
+        {
+          "function": "(garbage collector)",
+          "percent": 7.487
+        },
+        {
+          "function": "row",
+          "percent": 7.171
+        },
+        {
+          "function": "(anônima)",
+          "percent": 7.007
+        },
+        {
+          "function": "delta",
+          "percent": 4.241
+        },
+        {
+          "function": "event",
+          "percent": 4.087
+        },
+        {
+          "function": "firstUnknownRecipient",
+          "percent": 3.898
+        },
+        {
+          "function": "emit",
+          "percent": 2.502
+        },
+        {
+          "function": "candidates",
+          "percent": 2.46
+        },
+        {
+          "function": "get",
+          "percent": 2.14
+        }
+      ],
+      "politicsInclusivePercent": {
+        "eleicoes": 0.09,
+        "relatos_e_disputas": 1.027
+      }
+    },
+    "after-profile": {
+      "sampledSeconds": 41.708903,
+      "selfTop": [
+        {
+          "function": "firstUnknownRecipient",
+          "percent": 9.663
+        },
+        {
+          "function": "(anônima)",
+          "percent": 8.329
+        },
+        {
+          "function": "(garbage collector)",
+          "percent": 6.052
+        },
+        {
+          "function": "snapshotCopy",
+          "percent": 5.52
+        },
+        {
+          "function": "candidates",
+          "percent": 4.461
+        },
+        {
+          "function": "row",
+          "percent": 4.459
+        },
+        {
+          "function": "get",
+          "percent": 3.838
+        },
+        {
+          "function": "act",
+          "percent": 3.662
+        },
+        {
+          "function": "metadata",
+          "percent": 3.589
+        },
+        {
+          "function": "delta",
+          "percent": 2.91
+        },
+        {
+          "function": "themeProof",
+          "percent": 2.828
+        },
+        {
+          "function": "choose",
+          "percent": 2.813
+        }
+      ],
+      "politicsInclusivePercent": {
+        "eleicoes": 0.182,
+        "visitas_observacao_roubo": 1.253,
+        "relatos_e_disputas": 1.25
+      }
+    }
+  },
+  "hashIdentical": true,
+  "conflictEquivalence": {
+    "seed": "marco3-livre-005",
+    "before": {
+      "seed": "marco3-livre-005",
+      "ms": 42737.47299,
+      "memory": {
+        "rssPeak": 385540096,
+        "rss": 379584512,
+        "heapTotal": 327016448,
+        "heapUsed": 243602848,
+        "external": 2308844,
+        "arrayBuffers": 143615
+      },
+      "hash": "add6d6af233f51374aaadef8fce14d715c62706b2532cc5a36330ad81ab0cdd7",
+      "events": 65597,
+      "jsonBytes": 19163590,
+      "profile": false
+    },
+    "after": {
+      "seed": "marco3-livre-005",
+      "coreMs": 15561.485804,
+      "coreRss": 367394816,
+      "exportRss": 403881984,
+      "jsonBytes": 19163590
+    },
+    "afterHash": "add6d6af233f51374aaadef8fce14d715c62706b2532cc5a36330ad81ab0cdd7",
+    "identical": true
+  },
+  "environment": {
+    "node": "v24.19.0",
+    "os": "Linux",
+    "architecture": "x86_64",
+    "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "note": "Uma execução sem profiler por versão na referência; validação adicional na seed livre 005. Não são percentis nem certificação universal do perfil."
+  }
+}

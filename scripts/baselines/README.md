@@ -1,0 +1,3 @@
+`m3-incidents-before.mjs` é o bundle autocontido do motor já com escassez, roubo e acordo bilateral, imediatamente antes das otimizações desta revisão. Inclui o corredor de benchmark: aquecimento, GC antes, tempo isolado e hash completo depois. É preservado para reprodução, não importado pela aplicação.
+
+`node scripts/benchmark-m3-review.mjs` compara esse bundle com o código atual, em processos separados, e falha se os hashes divergirem. Usa a seed de referência `reservado-2b-006`; aceita outra seed como argumento. `--profile` pode ser passado diretamente ao corredor de benchmark para produzir um perfil de CPU separado da medição sem profiler.

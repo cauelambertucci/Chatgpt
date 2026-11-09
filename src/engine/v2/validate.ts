@@ -38,6 +38,7 @@ export function validateSlice(w: SliceWorld): string[] {
         "agents-slice-2d2-writing2",
         "agents-slice-2d1-writing2",
         "agents-slice-3-min",
+        "agents-slice-3-incidents",
         "agents-slice-2d2-recovery3",
       ].includes(w.engine)
     )
@@ -110,6 +111,23 @@ export function validateSlice(w: SliceWorld): string[] {
           !p.trainAccess
         )
           fail(`${e.id}: treino sem acesso`);
+      }
+      if(e.type==='scarcity.observed'){
+        const origin=e.causes.map(id=>w.events[Number(id.slice(6))]).find(x=>x?.type==='political.visit.arrived');
+        if(!origin||Number(e.data.demand)<=0||!(Number(e.data.food)/Number(e.data.demand)<2||Number(e.data.hunger)>=40)||origin.data.food!==e.data.food||origin.data.demand!==e.data.demand||origin.data.to!==e.data.settlement)fail(`${e.id}: escassez sem observação real`);
+      }
+      if(e.type==='theft.perceived'){
+        const source=w.events[Number(String(e.data.incident).slice(6))];
+        if(source?.type!=='property.stolen'||!e.causes.includes(source.id)||source.data.to!==e.data.offender||!e.participants.some(p=>p.id===source.data.from&&p.role==='actor'))fail(`${e.id}: percepção sem roubo conhecido`);
+      }
+      if(e.type==='property.stolen'){
+        const arrival=e.causes.map(id=>w.events[Number(id.slice(6))]).find(x=>x?.type==='political.visit.arrived');
+        if(!arrival||arrival.data.visit!==e.data.visit)fail(`${e.id}: roubo sem chegada ao local`);
+        if(e.data.work){const before=state[String(e.data.work)],after=e.effects.find(f=>f.entity.id===e.data.work)?.entity;
+          if(before?.kind!=='work'||after?.kind!=='work'||before.owner!==e.data.from||after.owner!==e.data.to||before.creator!==after.creator)fail(`${e.id}: roubo de obra sem propriedade preservada`);
+        }else{const a=state[String(e.data.fromHousehold)],b=state[String(e.data.toHousehold)],x=e.effects.find(f=>f.entity.id===a?.id)?.entity,y=e.effects.find(f=>f.entity.id===b?.id)?.entity,n=Number(e.data.amount);
+          if(a?.kind!=='household'||b?.kind!=='household'||x?.kind!=='household'||y?.kind!=='household'||a.id===b.id||n<=0||!Number.isInteger(n)||e.data.material!=='papel'||!a.writingStock||!b.writingStock||a.writingStock.paper<n||x.writingStock?.paper!==a.writingStock.paper-n||y.writingStock?.paper!==b.writingStock.paper+n)fail(`${e.id}: roubo sem conservação material`);
+        }
       }
       if(e.type==='war.declared'){
         const settlement=state[String(e.data.from)] as Settlement;

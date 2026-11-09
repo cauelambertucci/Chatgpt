@@ -665,6 +665,8 @@ export class Archive {
     const relation =
       observer && subject ? this.relation(observer, subject, e.month) : "";
     if (e.type === "attack.attempted") return `a tentativa de golpe de ${this.name(e.participants.find(p=>p.role==='actor')?.id)} contra ${this.name(e.participants.find(p=>p.role==='target')?.id)}`;
+    if(e.type==='scarcity.observed')return `a escassez em ${e.data.name}`;
+    if(e.type==='theft.perceived')return `o roubo ${e.data.work?'de uma obra':`de ${e.data.amount} unidades de papel`} por ${this.name(e.data.offender)}`;
     if (e.type === "person.born")
       return `o nascimento de ${this.name(e.participants[0]?.id)}`;
     if (e.type === "partnership.formed")
@@ -1039,14 +1041,25 @@ export class Archive {
         text = `${label} de ${this.name(actor ?? e.participants[0]?.id)} chegou ao fim: ${typeof d.reason === "string" ? d.reason : "motivo não informado"}`;
         break;
       }
+      case "scarcity.observed": text=`${this.name(actor)} observou escassez em ${d.name}: ${d.reason}.`;break;
+      case "property.stolen": text=`${this.name(d.to)} roubou ${d.work?'uma obra':`${d.amount} unidades de papel`} de ${this.name(d.from)}.`;break;
+      case "theft.perceived": text=`${this.name(actor)} percebeu o roubo por ${this.name(d.offender)}.`;break;
+      case "dispute.proposed": text=`${this.name(actor)} propôs não agressão entre ${d.name} e ${d.targetName}.`;break;
+      case "dispute.agreed": text=`Os líderes de ${d.name} e ${d.targetName} aceitaram um acordo de não agressão; os bens não foram transferidos.`;break;
+      case "dispute.unresolved": text=`A disputa entre ${d.name} e ${d.targetName} terminou sem acordo: ${d.reason}.`;break;
       case "office.appointed":
         text = `${this.name(d.leader)} assumiu o cargo de ${d.office} de ${d.name}, por ${d.reason}, com mandato até o ano ${Math.floor(Number(d.termEnd)/12)}.`; break;
       case "office.vacated":
         text = `${this.name(e.participants[0]?.id)} deixou o cargo de ${d.office} de ${d.name}; motivo: ${d.reason}.`; break;
       case "political.notice.sent":
         text = `${this.name(d.source)} enviou um relato sobre ${this.factDescription(this.event(String(d.incident))!)}; a mensagem levou ${d.travelMonths} mês(es).`; break;
-      case "political.notice.received":
-        text = `${this.name(actor)} recebeu de ${this.name(d.witness)} o relato sobre ${this.factDescription(this.event(String(d.incident))!)}.`; break;
+      case "political.notice.received": {
+        const source=this.event(String(d.source));
+        text = source?.type==='dispute.proposed'
+          ? `${this.name(actor)} recebeu de ${this.name(source.participants.find(p=>p.role==='actor')?.id)} uma proposta de não agressão baseada em ${this.factDescription(this.event(String(d.incident))!)}.`
+          : `${this.name(actor)} recebeu de ${this.name(d.witness)} o relato sobre ${this.factDescription(this.event(String(d.incident))!)}.`;
+        break;
+      }
       case "war.declared":
         text = `${this.name(actor)} declarou conflito de ${d.name} contra ${d.targetName}; ${d.reason}.`; break;
       case "war.rejected":
